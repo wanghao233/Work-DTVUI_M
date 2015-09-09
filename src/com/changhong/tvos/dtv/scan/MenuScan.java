@@ -1,6 +1,5 @@
 package com.changhong.tvos.dtv.scan;
 
-import java.util.regex.Pattern;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Handler;
@@ -10,6 +9,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
 import com.changhong.menudata.menuPageData.MainMenuRootData;
 import com.changhong.softkeyboard.CHSoftKeyboardManager;
 import com.changhong.tvos.dtv.DtvRoot;
@@ -21,13 +21,15 @@ import com.changhong.tvos.dtv.tvap.DtvDialogManager;
 import com.changhong.tvos.dtv.tvap.DtvInterface;
 import com.changhong.tvos.dtv.tvap.DtvOperatorManager;
 import com.changhong.tvos.dtv.tvap.DtvSourceManager;
-import com.changhong.tvos.dtv.tvap.baseType.DtvProgram;
 import com.changhong.tvos.dtv.tvap.baseType.ConstValueClass.ConstScanParams;
+import com.changhong.tvos.dtv.tvap.baseType.DtvProgram;
 import com.changhong.tvos.dtv.userMenu.MenuSearchGuide;
 import com.changhong.tvos.dtv.vo.DTVConstant.ConstDemodType;
 import com.changhong.tvos.dtv.vo.DTVConstant.ConstServiceType;
 import com.changhong.tvos.system.commondialog.CommonInfoDialog;
 import com.changhong.tvos.system.commondialog.CommonProgressInfoDialog;
+
+import java.util.regex.Pattern;
 
 public class MenuScan extends Dialog implements android.view.View.OnKeyListener {
 
@@ -377,36 +379,36 @@ public class MenuScan extends Dialog implements android.view.View.OnKeyListener 
 		Log.i(TAG, "LL scaninit()>>curFrequency = " + curFrequencyK + ",curSymbolrate = " + curSymbolrate + ",curModulmode = " + curModulmode);
 		scanType = type;
 		switch (type) {
-		case DTV_ScanMaunal:
-		case DTV_ScanMaunal_Dmbt:
-			mChannelManager.setDtvScanType(2);
-			//			titleResid = R.string.dtv_manualscan;
-			//			menuManualScanInit();
-			menuManualScanUpdate();
-			//	manualScanLayout.setVisibility(View.VISIBLE);
-			isSavingData = false;
-			syncScanStart();
-			break;
-		case DTV_ScanList:
-			mChannelManager.setDtvScanType(1);
-			//			titleResid = R.string.dtv_listscan;
-			// menuAutoScanInit();
-			menuListScanUpdate();//****
-			//	autoScanLayout.setVisibility(View.VISIBLE);
-			isSavingData = false;
-			syncScanStart();
-			break;
-		case DTV_ScanAuto:
-		case DTV_ScanAutoExtra:
-		default:
-			mChannelManager.setDtvScanType(0);
-			// titleResid = R.string.dtv_autoscan;
-			//	menuAutoScanInit();
-			menuAutoScanUpdate();
-			//	autoScanLayout.setVisibility(View.VISIBLE);
-			isSavingData = false;
-			syncScanStart();
-			break;
+			case DTV_ScanMaunal:
+			case DTV_ScanMaunal_Dmbt:
+				mChannelManager.setDtvScanType(2);
+				//			titleResid = R.string.dtv_manualscan;
+				//			menuManualScanInit();
+				menuManualScanUpdate();
+				//	manualScanLayout.setVisibility(View.VISIBLE);
+				isSavingData = false;
+				syncScanStart();
+				break;
+			case DTV_ScanList:
+				mChannelManager.setDtvScanType(1);
+				//			titleResid = R.string.dtv_listscan;
+				// menuAutoScanInit();
+				menuListScanUpdate();//****
+				//	autoScanLayout.setVisibility(View.VISIBLE);
+				isSavingData = false;
+				syncScanStart();
+				break;
+			case DTV_ScanAuto:
+			case DTV_ScanAutoExtra:
+			default:
+				mChannelManager.setDtvScanType(0);
+				// titleResid = R.string.dtv_autoscan;
+				//	menuAutoScanInit();
+				menuAutoScanUpdate();
+				//	autoScanLayout.setVisibility(View.VISIBLE);
+				isSavingData = false;
+				syncScanStart();
+				break;
 		}
 	}
 
@@ -505,26 +507,26 @@ public class MenuScan extends Dialog implements android.view.View.OnKeyListener 
 					return;
 				}
 				switch (msg.what) {
-				case MenuScan.SCAN_UPDATE_MESSAGE:
-					Log.i(TAG, "FYYY0000 SCAN_UPDATE_MESSAGE");
-					if (scanType == scantype.DTV_ScanMaunal) {
-						menuManualScanUpdate();
-					} else if (scanType == scantype.DTV_ScanList) {
-						menuListScanUpdate();
-					} else {
-						menuAutoScanUpdate();
-					}
-					break;
+					case MenuScan.SCAN_UPDATE_MESSAGE:
+						Log.i(TAG, "FYYY0000 SCAN_UPDATE_MESSAGE");
+						if (scanType == scantype.DTV_ScanMaunal) {
+							menuManualScanUpdate();
+						} else if (scanType == scantype.DTV_ScanList) {
+							menuListScanUpdate();
+						} else {
+							menuAutoScanUpdate();
+						}
+						break;
 
-				case MenuScan.SAVE_DATA_MESSAGE:
-					Log.i(TAG, "FYYY0000 SAVE_DATA_MESSAGE");
-					if (scanType == scantype.DTV_ScanMaunal) {
-						menuManualScanUpdate();
-					} else if (scanType == scantype.DTV_ScanList) {
-						menuListScanUpdate();
-					} else {
-						menuAutoScanUpdate();
-					}
+					case MenuScan.SAVE_DATA_MESSAGE:
+						Log.i(TAG, "FYYY0000 SAVE_DATA_MESSAGE");
+						if (scanType == scantype.DTV_ScanMaunal) {
+							menuManualScanUpdate();
+						} else if (scanType == scantype.DTV_ScanList) {
+							menuListScanUpdate();
+						} else {
+							menuAutoScanUpdate();
+						}
 					/*
 					 * if(progressDiglog ==null && scanType
 					 * !=scantype.DTV_ScanMaunal){ progressDiglog = new
@@ -536,67 +538,67 @@ public class MenuScan extends Dialog implements android.view.View.OnKeyListener 
 					 * (mContext.getString(R.string.dtv_scan_store_program));
 					 * isSavingData = true; progressDiglog.show(); }
 					 */
-					isSavingData = true;
-					break;
-				case MenuScan.DIALOG_EXIT_MESSAGE:
-					Log.i(TAG, "FYYY0000 DIALOG_EXIT_MESSAGE	| terminated=" + terminated);
-					// 停止搜索
-					syncScanStop();
-					if (scanManager.scanProgress != 100) {
-						scanManager.scanProgress = 100;
-						Log.i(TAG, "LL setProgressBar to full ***");
-						// scanProgressBar.setProgress(scanManager.scanProgress);
-					}
-					scanStopFinish();
-					Log.i(TAG, "MenuScan.DIALOG_EXIT_MESSAGE-->scanStopFinish");
+						isSavingData = true;
+						break;
+					case MenuScan.DIALOG_EXIT_MESSAGE:
+						Log.i(TAG, "FYYY0000 DIALOG_EXIT_MESSAGE	| terminated=" + terminated);
+						// 停止搜索
+						syncScanStop();
+						if (scanManager.scanProgress != 100) {
+							scanManager.scanProgress = 100;
+							Log.i(TAG, "LL setProgressBar to full ***");
+							// scanProgressBar.setProgress(scanManager.scanProgress);
+						}
+						scanStopFinish();
+						Log.i(TAG, "MenuScan.DIALOG_EXIT_MESSAGE-->scanStopFinish");
 
-					/**
-					 * 添加搜索结束后提醒用户是否过滤的功能：
-					 */
-					Log.i(TAG, "MenuScan isTerminated-->" + terminated);
-					if (!terminated) {//!terminated
-						terminated = true;
-						Log.i(TAG, "isCurDemodeType=" + DtvSourceManager.getInstance().getCurDemodeType() + "	0表示C，1表示T");
-						Log.i(TAG, "isCurOperator=" + DtvOperatorManager.getInstance().getCurOperator().getOperatorName() + "------operatorCode="
-								+ DtvOperatorManager.getInstance().getCurOperator().getOperatorCode());
-						Log.i(TAG, "isCurScanType=" + scanType);
-						Log.i(TAG, "isCurScanResult=" + scanManager.resultOfData + "|" + scanManager.resultOfDTV);
+						/**
+						 * 添加搜索结束后提醒用户是否过滤的功能：
+						 */
+						Log.i(TAG, "MenuScan isTerminated-->" + terminated);
+						if (!terminated) {//!terminated
+							terminated = true;
+							Log.i(TAG, "isCurDemodeType=" + DtvSourceManager.getInstance().getCurDemodeType() + "	0表示C，1表示T");
+							Log.i(TAG, "isCurOperator=" + DtvOperatorManager.getInstance().getCurOperator().getOperatorName() + "------operatorCode="
+									+ DtvOperatorManager.getInstance().getCurOperator().getOperatorCode());
+							Log.i(TAG, "isCurScanType=" + scanType);
+							Log.i(TAG, "isCurScanResult=" + scanManager.resultOfData + "|" + scanManager.resultOfDTV);
 
-						boolean isCurDemodeType_C = (ConstDemodType.DVB_C == DtvSourceManager.getInstance().getCurDemodeType()) ? true : false;
-						boolean isCurOperator_TongYong = ((-16777215 == DtvOperatorManager.getInstance().getCurOperator().getOperatorCode())
-								|| (1 == DtvOperatorManager.getInstance().getCurOperator().getOperatorCode()) || (2 == DtvOperatorManager.getInstance().getCurOperator().getOperatorCode()) || (3 == DtvOperatorManager
-								.getInstance().getCurOperator().getOperatorCode())) ? true : false;
-						boolean isCurScanType_Manual = (scanType == scantype.DTV_ScanMaunal) ? true : false;
-						boolean isCurScanHasResults = (scanManager.resultOfData > 0 || scanManager.resultOfDTV > 0) ? true : false;
+							boolean isCurDemodeType_C = (ConstDemodType.DVB_C == DtvSourceManager.getInstance().getCurDemodeType()) ? true : false;
+							boolean isCurOperator_TongYong = ((-16777215 == DtvOperatorManager.getInstance().getCurOperator().getOperatorCode())
+									|| (1 == DtvOperatorManager.getInstance().getCurOperator().getOperatorCode()) || (2 == DtvOperatorManager.getInstance().getCurOperator().getOperatorCode()) || (3 == DtvOperatorManager
+									.getInstance().getCurOperator().getOperatorCode())) ? true : false;
+							boolean isCurScanType_Manual = (scanType == scantype.DTV_ScanMaunal) ? true : false;
+							boolean isCurScanHasResults = (scanManager.resultOfData > 0 || scanManager.resultOfDTV > 0) ? true : false;
 
-						if (!isCurDemodeType_C && !isCurScanType_Manual && isCurScanHasResults) {
-							Log.i(TAG, "MenuScan-->T-->ShowFilterMenu");
-							MainMenuRootData.ShowFilterMenu();
-						} else if (isCurDemodeType_C && isCurOperator_TongYong && !isCurScanType_Manual && isCurScanHasResults) {
-							Log.i(TAG, "MenuScan-->C.TongYong-->ShowFilterMenu");
-							MainMenuRootData.ShowFilterMenu();
-						} else {
-							MainMenuRootData.HideScanMenuDetail();// add by cxy
+							if (!isCurDemodeType_C && !isCurScanType_Manual && isCurScanHasResults) {
+								Log.i(TAG, "MenuScan-->T-->ShowFilterMenu");
+								MainMenuRootData.ShowFilterMenu();
+							} else if (isCurDemodeType_C && isCurOperator_TongYong && !isCurScanType_Manual && isCurScanHasResults) {
+								Log.i(TAG, "MenuScan-->C.TongYong-->ShowFilterMenu");
+								MainMenuRootData.ShowFilterMenu();
+							} else {
+								MainMenuRootData.HideScanMenuDetail();// add by cxy
 
-							/**
-							 * 修改手动搜素频点无节目时播放上一个节目 2014-12-05
-							 */
-							Log.i(TAG, "isCurScanType_Manual=" + isCurScanType_Manual + "	\nisCurScanHasResults=" + isCurScanHasResults);
-							if (isCurScanType_Manual && !isCurScanHasResults) {
-								if (mChannelManager != null) {
-									DtvProgram ch = mChannelManager.getCurProgram();
-									if (ch != null) {
-										mChannelManager.channelForceChangeByProgramServiceIndex(ch.mServiceIndex, false);
-										if (mContext instanceof DtvRoot) {
-											((DtvRoot) mContext).getViewChannelInfo().show();
+								/**
+								 * 修改手动搜素频点无节目时播放上一个节目 2014-12-05
+								 */
+								Log.i(TAG, "isCurScanType_Manual=" + isCurScanType_Manual + "	\nisCurScanHasResults=" + isCurScanHasResults);
+								if (isCurScanType_Manual && !isCurScanHasResults) {
+									if (mChannelManager != null) {
+										DtvProgram ch = mChannelManager.getCurProgram();
+										if (ch != null) {
+											mChannelManager.channelForceChangeByProgramServiceIndex(ch.mServiceIndex, false);
+											if (mContext instanceof DtvRoot) {
+												((DtvRoot) mContext).getViewChannelInfo().show();
+											}
+										} else {
+											Log.i("YangLiu", "ch==null");
 										}
-									} else {
-										Log.i("YangLiu", "ch==null");
 									}
 								}
 							}
 						}
-					}
 
 					/*if (!terminated) {
 						terminated = true;
@@ -612,8 +614,8 @@ public class MenuScan extends Dialog implements android.view.View.OnKeyListener 
 							MainMenuRootData.HideScanMenuDetail();// add by cxy
 
 							*//**
-						* 修改手动搜素频点无节目时播放上一个节目 2014-12-05
-						*/
+					 * 修改手动搜素频点无节目时播放上一个节目 2014-12-05
+					 */
 					/*
 					if ((scanManager.resultOfRadio + scanManager.resultOfDTV) == 0) {
 					if (mChannelManager != null) {
@@ -630,9 +632,9 @@ public class MenuScan extends Dialog implements android.view.View.OnKeyListener 
 					}
 					}
 					}*/
-					break;
-				default:
-					break;
+						break;
+					default:
+						break;
 				}
 			}
 		};
@@ -722,22 +724,22 @@ public class MenuScan extends Dialog implements android.view.View.OnKeyListener 
 	@Override
 	public boolean onKeyUp(int keyCode, KeyEvent event) {
 		switch (keyCode) {
-		case KeyEvent.KEYCODE_CHANGHONGIR_SOFTKEYBOARD:
-			if (mAdjustCHSKM == null) {
-				mAdjustCHSKM = AdjustCHSoftKeyboardManager.getAdjustSoftKeyboardInstance(mContext);
-			}
-			if (null != mAdjustCHSKM) {
-				if (mAdjustCHSKM.isSoftKeyPanelOnShow()) {
-					mAdjustCHSKM.processNumberSoftKeyPanel(KeyEvent.KEYCODE_BACK, 0);
-				} else {
-
-					mAdjustCHSKM.processNumberSoftKeyPanel(KeyEvent.KEYCODE_CHANGHONGIR_SOFTKEYBOARD, CHSoftKeyboardManager.POS_BOTTOM_CENTER);
-					return true;
+			case KeyEvent.KEYCODE_CHANGHONGIR_SOFTKEYBOARD:
+				if (mAdjustCHSKM == null) {
+					mAdjustCHSKM = AdjustCHSoftKeyboardManager.getAdjustSoftKeyboardInstance(mContext);
 				}
-			}
-			break;
-		default:
-			break;
+				if (null != mAdjustCHSKM) {
+					if (mAdjustCHSKM.isSoftKeyPanelOnShow()) {
+						mAdjustCHSKM.processNumberSoftKeyPanel(KeyEvent.KEYCODE_BACK, 0);
+					} else {
+
+						mAdjustCHSKM.processNumberSoftKeyPanel(KeyEvent.KEYCODE_CHANGHONGIR_SOFTKEYBOARD, CHSoftKeyboardManager.POS_BOTTOM_CENTER);
+						return true;
+					}
+				}
+				break;
+			default:
+				break;
 		}
 		return super.onKeyUp(keyCode, event);
 	}
@@ -747,21 +749,21 @@ public class MenuScan extends Dialog implements android.view.View.OnKeyListener 
 		// TODO Auto-generated method stub
 		Log.v(TAG, "LL MenuScan>>onKeyDown>>keyCode = " + keyCode);
 		switch (event.getScanCode()) {
-		case 231://keyboard Menu
-		case 233://keyboard Channel Up
-		case 234://keyboard Channel Down
-			break;
-		case 232://keyboard Source 
-			keyCode = KeyEvent.KEYCODE_DPAD_CENTER;
-			//			this.onKey(startButton, keyCode, event);
-			return true;
+			case 231://keyboard Menu
+			case 233://keyboard Channel Up
+			case 234://keyboard Channel Down
+				break;
+			case 232://keyboard Source
+				keyCode = KeyEvent.KEYCODE_DPAD_CENTER;
+				//			this.onKey(startButton, keyCode, event);
+				return true;
 
-		case 235://keyboard Volume Down
-			return true;
-		case 236://keyboard Volume Up
-			return true;
-		default:
-			break;
+			case 235://keyboard Volume Down
+				return true;
+			case 236://keyboard Volume Up
+				return true;
+			default:
+				break;
 		}
 		if ((keyCode == KeyEvent.KEYCODE_CHANGHONGIR_TV || keyCode == 170) && isSavingData == false) {
 			if (ScanManager.isSearching()) {
@@ -818,56 +820,56 @@ public class MenuScan extends Dialog implements android.view.View.OnKeyListener 
 		if (event.getAction() == KeyEvent.ACTION_DOWN) {
 			if (isSavingData == false) {
 				switch (keyCode) {
-				case KeyEvent.KEYCODE_DPAD_CENTER:
-				case KeyEvent.KEYCODE_ENTER:
-					if (ScanManager.isSearching()) {
-						isSavingData = true;
-						syncScanStop();
-						Log.i(TAG, "LL intent to stop scanning ***");
-						// handler.post(stopScan);
-						// handler.postDelayed(stopScan, 300);
-						// handler.sendEmptyMessage(DtvScanDialog.SCAN_STOP_MESSAGE);
-						// handler.sendEmptyMessageDelayed(DtvScanDialog.SCAN_STOP_MESSAGE,
-						// 300);
-						if (progressDiglog == null) {
-							progressDiglog = new CommonProgressInfoDialog(mContext);
-							progressDiglog.setDuration(DURATION);
-							progressDiglog.setButtonVisible(false);
-							progressDiglog.setCancelable(false);
-							progressDiglog.setMessage(mContext.getString(R.string.dtv_scan_store_program));
+					case KeyEvent.KEYCODE_DPAD_CENTER:
+					case KeyEvent.KEYCODE_ENTER:
+						if (ScanManager.isSearching()) {
+							isSavingData = true;
+							syncScanStop();
+							Log.i(TAG, "LL intent to stop scanning ***");
+							// handler.post(stopScan);
+							// handler.postDelayed(stopScan, 300);
+							// handler.sendEmptyMessage(DtvScanDialog.SCAN_STOP_MESSAGE);
+							// handler.sendEmptyMessageDelayed(DtvScanDialog.SCAN_STOP_MESSAGE,
+							// 300);
+							if (progressDiglog == null) {
+								progressDiglog = new CommonProgressInfoDialog(mContext);
+								progressDiglog.setDuration(DURATION);
+								progressDiglog.setButtonVisible(false);
+								progressDiglog.setCancelable(false);
+								progressDiglog.setMessage(mContext.getString(R.string.dtv_scan_store_program));
+							}
+							progressDiglog.show();
+						} else {
+							isSavingData = false;
+							syncScanStart();
 						}
-						progressDiglog.show();
-					} else {
-						isSavingData = false;
-						syncScanStart();
-					}
-					return true;
-				case KeyEvent.KEYCODE_MENU:
-				case KeyEvent.KEYCODE_BACK:
-					Log.v("DtvAutoScan", "onKey KEYCODE_BACK");
-					if (ScanManager.isSearching()) {
-						isSavingData = true;
-						syncScanStop();
-						if (progressDiglog == null) {
-							progressDiglog = new CommonProgressInfoDialog(mContext);
-							progressDiglog.setDuration(DURATION);
-							progressDiglog.setButtonVisible(false);
-							progressDiglog.setCancelable(false);
-							progressDiglog.setMessage(mContext.getString(R.string.dtv_scan_store_program));
-						}
-						progressDiglog.show();
-					}
-					break;
-				case KeyEvent.KEYCODE_DPAD_LEFT:
-					return true;
-				case KeyEvent.KEYCODE_DPAD_UP:
-				case KeyEvent.KEYCODE_DPAD_DOWN:
-					if (ScanManager.isSearching()) {
 						return true;
-					}
-					break;
-				default:
-					break;
+					case KeyEvent.KEYCODE_MENU:
+					case KeyEvent.KEYCODE_BACK:
+						Log.v("DtvAutoScan", "onKey KEYCODE_BACK");
+						if (ScanManager.isSearching()) {
+							isSavingData = true;
+							syncScanStop();
+							if (progressDiglog == null) {
+								progressDiglog = new CommonProgressInfoDialog(mContext);
+								progressDiglog.setDuration(DURATION);
+								progressDiglog.setButtonVisible(false);
+								progressDiglog.setCancelable(false);
+								progressDiglog.setMessage(mContext.getString(R.string.dtv_scan_store_program));
+							}
+							progressDiglog.show();
+						}
+						break;
+					case KeyEvent.KEYCODE_DPAD_LEFT:
+						return true;
+					case KeyEvent.KEYCODE_DPAD_UP:
+					case KeyEvent.KEYCODE_DPAD_DOWN:
+						if (ScanManager.isSearching()) {
+							return true;
+						}
+						break;
+					default:
+						break;
 				}
 			} else {
 				Log.v(TAG, "LL onKey savaDate ==true");

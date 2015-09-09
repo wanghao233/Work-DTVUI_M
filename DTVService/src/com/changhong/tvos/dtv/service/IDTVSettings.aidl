@@ -16,6 +16,7 @@ import com.changhong.tvos.dtv.vo.VersionInfo;
 import com.changhong.tvos.dtv.vo.InterTVOSVersion;
 import com.changhong.tvos.dtv.vo.InterPanelInfo;
 import android.view.KeyEvent;
+
 interface IDTVSettings {
 
 String getDtvInfo(int type);

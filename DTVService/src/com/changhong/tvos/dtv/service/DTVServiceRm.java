@@ -1,28 +1,30 @@
 /**
  * @filename ��DTVServiceRm.java
- * 	DTV������ؽӿ�
+ * DTV������ؽӿ�
  * @author:
- * @date: 
+ * @date:
  * @version 0.1
- * @history:
- *  2012-12-25 ���ͷ���Դ��ʱ��λ��ǰ���Ž�Ŀ����Ϣ
+ * @history: 2012-12-25 ���ͷ���Դ��ʱ��λ��ǰ���Ž�Ŀ����Ϣ
  */
 package com.changhong.tvos.dtv.service;
 
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
 import android.content.Context;
 import android.os.RemoteException;
 import android.util.Log;
 import android.util.Xml;
-import org.xmlpull.v1.XmlPullParser;
+
 import com.changhong.tvos.common.IResourceManager.IResourceListener;
 import com.changhong.tvos.common.ITVPlayer;
 import com.changhong.tvos.common.SoundManager;
 import com.changhong.tvos.common.TVManager;
 import com.changhong.tvos.common.exception.TVManagerNotInitException;
 import com.changhong.tvos.model.EnumInputSource;
+
+import org.xmlpull.v1.XmlPullParser;
+
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DTVServiceRm implements IResourceListener {
 
@@ -36,17 +38,23 @@ public class DTVServiceRm implements IResourceListener {
 		boolean tvos_used;
 		public List<DTVPlayer> playerlist;
 		public int RouterID;
-	};
+	}
 
-	final static String TAG = "dtvservice.DTVServiceRm";
+	final static String TAG = "DtvService.DTVServiceRm";
 
 	public static final int request_auto = 0;
-	/**�Զ���������Դ�Ż�����ɹ� **/
+	/**
+	 * �Զ���������Դ�Ż�����ɹ�
+	 **/
 	public static final int request_force = 1;
-	/**ǿ������������û����Դ��Ҫ������ɹ� **/
+	/**
+	 * ǿ������������û����Դ��Ҫ������ɹ�
+	 **/
 	public static final int request_share = 2;
 	public static final int request_prioity = 3;
-	/**����Ӧ�����ȼ������� **/
+	/**
+	 * ����Ӧ�����ȼ�������
+	 **/
 
 	public static final String tvos_clientid = "tvos_clientid";
 	TVOSService tvos = null;
@@ -54,13 +62,19 @@ public class DTVServiceRm implements IResourceListener {
 
 	private boolean isUseTVOS = false;
 	static private boolean isTVOSGetDTVRs = false;
-	/**�Ƿ���TVOS�����DTV��Դ��TVOS�ͷ�DTV��Դʱ��Ҫ�ָ���false **/
+	/**
+	 * �Ƿ���TVOS�����DTV��Դ��TVOS�ͷ�DTV��Դʱ��Ҫ�ָ���false
+	 **/
 
 	private IRmlistener Rmlistener = null;
-	/**��Դ�ص��ӿڶ��� **/
+	/**
+	 * ��Դ�ص��ӿڶ���
+	 **/
 
 	private List<Resource> RsList = null;
-	/**��Դ�б� **/
+	/**
+	 * ��Դ�б�
+	 **/
 	public List<DTVRouterInfo> RouterList = null;
 	private static boolean isRecordMode = false;
 	private static EnumInputSource curSource;
@@ -131,51 +145,51 @@ public class DTVServiceRm implements IResourceListener {
 
 		while (evenType != XmlPullParser.END_DOCUMENT) {
 			switch (evenType) {
-			case XmlPullParser.START_DOCUMENT:
-				resources = new ArrayList<Resource>();
-				Log.i(TAG, "in START_DOCUMENT");
-				break;
-			case XmlPullParser.START_TAG: {
-				String tag_name = pullParser.getName();
-				Log.i(TAG, "in START_TAG tag_name = " + tag_name);
-				if ("Resource".equals(tag_name)) {
-					resource = new Resource();
-					Log.i(TAG, "in START_TAG Resource");
-				}
+				case XmlPullParser.START_DOCUMENT:
+					resources = new ArrayList<Resource>();
+					Log.i(TAG, "in START_DOCUMENT");
+					break;
+				case XmlPullParser.START_TAG: {
+					String tag_name = pullParser.getName();
+					Log.i(TAG, "in START_TAG tag_name = " + tag_name);
+					if ("Resource".equals(tag_name)) {
+						resource = new Resource();
+						Log.i(TAG, "in START_TAG Resource");
+					}
 
-				if (resource != null) {
-					if ("ResouceID".equals(tag_name)) {
-						resource.RsID = Integer.parseInt(pullParser.nextText());
+					if (resource != null) {
+						if ("ResouceID".equals(tag_name)) {
+							resource.RsID = Integer.parseInt(pullParser.nextText());
 
-						Log.i(TAG, "in START_TAG ResouceID=" + resource.RsID);
+							Log.i(TAG, "in START_TAG ResouceID=" + resource.RsID);
+						}
+					}
+					if (resource != null) {
+						if ("ResouceType".equals(tag_name)) {
+							resource.RsType = Integer.parseInt(pullParser.nextText());
+							Log.i(TAG, "in START_TAG ResouceType=" + resource.RsType);
+						}
+					}
+					if (resource != null) {
+						if ("ResouceTVOS".equals(tag_name)) {
+							resource.TVOSUsed = Integer.parseInt(pullParser.nextText());
+							Log.i(TAG, "in START_TAG ResouceTVOS=" + resource.TVOSUsed);
+						}
 					}
 				}
-				if (resource != null) {
-					if ("ResouceType".equals(tag_name)) {
-						resource.RsType = Integer.parseInt(pullParser.nextText());
-						Log.i(TAG, "in START_TAG ResouceType=" + resource.RsType);
-					}
-				}
-				if (resource != null) {
-					if ("ResouceTVOS".equals(tag_name)) {
-						resource.TVOSUsed = Integer.parseInt(pullParser.nextText());
-						Log.i(TAG, "in START_TAG ResouceTVOS=" + resource.TVOSUsed);
-					}
-				}
-			}
 				break;
-			case XmlPullParser.END_TAG:
-				String tag_name = pullParser.getName();
-				Log.i(TAG, "in END_TAG tag_name = " + tag_name);
-				if ("Resource".equals(tag_name)) {
-					resources.add(resource);
-					resource = null;
-					Log.i(TAG, "in END_TAG Resource");
-				}
-				break;
+				case XmlPullParser.END_TAG:
+					String tag_name = pullParser.getName();
+					Log.i(TAG, "in END_TAG tag_name = " + tag_name);
+					if ("Resource".equals(tag_name)) {
+						resources.add(resource);
+						resource = null;
+						Log.i(TAG, "in END_TAG Resource");
+					}
+					break;
 
-			default:
-				break;
+				default:
+					break;
 			}
 			evenType = pullParser.next();
 		}
@@ -786,7 +800,9 @@ public class DTVServiceRm implements IResourceListener {
 		return 0;
 	}
 
-	/**�ͷŸ���һ��Ӧ��**/
+	/**
+	 * �ͷŸ���һ��Ӧ��
+	 **/
 	public int DestroyRouteIDForBack(int Tuner_RsID, int Vdecoder_RsID, int Vwindown_RsID, DTVPlayer playobj) {
 		int i;
 		int j;

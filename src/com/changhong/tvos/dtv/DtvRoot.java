@@ -434,7 +434,7 @@ public class DtvRoot extends Activity {
 			PackageInfo pinfo = getPackageManager().getPackageInfo("com.changhong.tvos.dtv", PackageManager.GET_CONFIGURATIONS);
 			String versionName = pinfo.versionName;
 			String versionCode = String.valueOf(pinfo.versionCode);
-			String versionInfo = "当前DTV名称为：" + versionName + "\n当前DTV版本为：" + versionCode;
+			String versionInfo = "\n\n当前DTV版本为：" + versionName + "——" + versionCode;
 			Log.i(TAG, versionInfo);
 			return versionInfo;
 		} catch (NameNotFoundException e) {
@@ -1928,6 +1928,7 @@ public class DtvRoot extends Activity {
 		mOperatorManager = DtvOperatorManager.getInstance();
 		mSourceManager = DtvSourceManager.getInstance();
 		mDtvMsgManager = DtvMsgManager.getInstance(DtvRoot.this);
+		mChannelManager = DtvChannelManager.getInstance();
 		mInterface = DtvInterface.getInstance();
 		Log.i(TAG, "initManagers inThread end: " + Thread.currentThread().getId());
 	}
@@ -2193,12 +2194,12 @@ public class DtvRoot extends Activity {
 				if (showInfo == null || showInfo.trim().length() <= 0 || showInfo.trim().equals("null")) {
 					showInfo = null;
 				}
-
 				mStrCiCaPrompt = showInfo;
 
 				if (null != mStrPlayerPrompt) {
 					showInfo = mStrPlayerPrompt;
 				}
+
 				if (DtvRoot.this.isNeedPromptInfo()) {
 					/**
 					 * deleted by YangLiu 2014-12-25
@@ -2261,8 +2262,9 @@ public class DtvRoot extends Activity {
 					Log.e(TAG, "onMsgForceScan>> failed because dtvroot is stop");
 					return;
 				}
+
 				List<DtvProgram> channelList = mChannelManager.getChannelList();
-				Log.i("YangLiu", "onMsgForceScan--->channelList.size" + channelList.size());
+				Log.i(TAG, "onMsgForceScan--->channelList.size" + channelList.size());
 				if (channelList == null || channelList.size() <= 0) {
 					mCommonAcionDialog = new CommonAcionDialog(DtvRoot.this, 0, R.string.dtv_menu_no_channel_prompt, 0, 10);
 				} else {
@@ -2354,6 +2356,7 @@ public class DtvRoot extends Activity {
 					Log.e(TAG, "onMsgForceChannel>> failed because dtvroot is stop");
 					return;
 				}
+
 				Log.i(TAG, "LL [enter]onMsgForceChannel>>channelIndex = " + forceChannel.miChannelIndex + ", opType = " + forceChannel.miOpType);
 				switch (forceChannel.miOpType) {
 					case 0: // 0: 应急广播 (需要锁按键)
@@ -2369,6 +2372,7 @@ public class DtvRoot extends Activity {
 						mChannelInfoView.show();
 						mChannelInfoView.updateEpgShow();
 						break;
+
 					case 1: // 1：应急广播结束、返回（解锁按键、返回观看之前的节目）
 						if (null != mViewBootTextInfo) {
 							mBgLayout.removeView(mViewBootTextInfo);
@@ -2378,6 +2382,7 @@ public class DtvRoot extends Activity {
 						mChannelInfoView.show();
 						mChannelInfoView.updateEpgShow();
 						break;
+
 					case 2: // 2：应急广播结束（解锁按键）
 						if (null != mViewBootTextInfo) {
 							mBgLayout.removeView(mViewBootTextInfo);
@@ -2386,20 +2391,22 @@ public class DtvRoot extends Activity {
 						mChannelInfoView.show();
 						mChannelInfoView.updateEpgShow();
 						break;
+
 					case 3: // 3：强制换台（不锁按键）
 						mChannelManager.channelForceChangeByProgramServiceIndex(forceChannel.miChannelIndex, false);
 						mChannelInfoView.show();
 						mChannelInfoView.updateEpgShow();
 						break;
+
 					case 4: // 4: 智能跳台(miChannelIndex：-1——结束；正数——跳台的channel index)
 						if (null == mFilterChannel) {
 							mFilterChannel = FilterChannels.getInstance(mContext);
 						}
-
 						// if(mFilterChannel.isShowing())
 						if (mFilterChannel.isFilter()) {
 							mFilterChannel.update(forceChannel.miChannelIndex);
 						}
+
 					default:
 						break;
 				}
@@ -2427,6 +2434,7 @@ public class DtvRoot extends Activity {
 
 				String showInfo = null;
 				boolean isNeedSaverScreen = false;
+				Log.d(TAG, "LL onPlayStatusUpdate>> playStatusInfo.miPlayEvent=" + playStatusInfo.miPlayEvent);
 				switch (playStatusInfo.miPlayEvent) {
 					case ConstPlayerEvent.OK:
 						Log.i(TAG, "LL onPlayStatusUpdate>>ConstPlayerEvent.OK str = " + playStatusInfo.mstrPrompt);
@@ -2690,6 +2698,7 @@ public class DtvRoot extends Activity {
 								msg.what = DTV_START_BOOT;
 								serviceHandler.sendMessage(msg);
 							} else {
+								/** 语音换台 **/
 								boolean ishasVoice = false;
 								mInterface.SetDtvBusyState(0);
 								if (null != activityIntent) {
@@ -2700,12 +2709,16 @@ public class DtvRoot extends Activity {
 										changeChannelForVoice(voiceNum, true);
 									}
 								}
+
+								/** DTV换台 **/
 								if (!ishasVoice) {//开机启动 查询开机节目num
 									mInputNum = mChannelManager.getBootChannelNum();
 									Log.i(TAG, "LL DTV_START_SERVICE_END()>>playProgNum = " + mInputNum);
 									mHandler.removeCallbacks(mRunForceProgNum);
 									mHandler.post(mRunForceProgNum);
 								}
+
+								/** 更新当前状态 **/
 								checkOperateChanged();
 								setDtvRootCurStatus(ConstActivityStatus.ACTIVITY_ONRESUME_STATUS);
 								if (isDisplayMainMenu() && (MainMenuReceiver.isRemoved) || (mMainMenuRootData != null && !mMainMenuRootData.IsVSettingMenuShowing())) {
@@ -2713,36 +2726,31 @@ public class DtvRoot extends Activity {
 									mDtvCommonManager.updateKeyboardConvertFlag(false);
 									mPromptInfoView.show();
 								}
-							}
 
-							if (is5508Q2) {
-								/**
-								 * 切换运营商，搜台后重新刷新EPG 2015-7-6 YangLiu
-								 */
-								DtvChannelManager.refreshEPG();
+								/** 智能导视弹出框 **/
+								if (is5508Q2) {
+									//切换运营商，搜台后重新刷新EPG 2015-7-6 YangLiu
+									DtvChannelManager.refreshEPG();
 
-								/**
-								 * 开机第一次弹出欢网预约海报 2015-7-6 YangLiu
-								 */
-								Log.i("YangLiu", "开机第一次弹出本地推荐*******");
-								if (mChannelManager.getChannelList() != null && mChannelManager.getChannelList().size() > 0) {
-									Log.i("YangLiu", "有节目信息，可以弹窗");
-									Intent pushoutservice = new Intent(mContext, PushoutService.class);
-									TimerInfo timerInfo = null;
-									Bundle bundle = new Bundle();
-									bundle.putParcelable(BroadcastConst.MSG_INFO_NAME, timerInfo);// add by YangLiu
-									pushoutservice.putExtras(bundle);
-									pushoutservice.putExtra("control", "show");
-									mContext.startService(pushoutservice);
-								} else {
-									Log.i("YangLiu", "本地没有节目信息，所以不弹窗");
+									//开机第一次弹出欢网预约海报 2015-7-6 YangLiu
+									Log.i("YangLiu", "开机第一次弹出本地推荐*******");
+									if (mChannelManager.getChannelList() != null && mChannelManager.getChannelList().size() > 0) {
+										Log.i("YangLiu", "有节目信息，可以弹窗");
+										Intent pushoutservice = new Intent(mContext, PushoutService.class);
+										TimerInfo timerInfo = null;
+										Bundle bundle = new Bundle();
+										bundle.putParcelable(BroadcastConst.MSG_INFO_NAME, timerInfo);// add by YangLiu
+										pushoutservice.putExtras(bundle);
+										pushoutservice.putExtra("control", "show");
+										mContext.startService(pushoutservice);
+									} else {
+										Log.i("YangLiu", "本地没有节目信息，所以不弹窗");
+									}
 								}
-							}
 
-							/**
-							 * 启动数据上报 2015-5-18 YangLiu
-							 */
-							DtvChannelManager.getInstance().startPosProInfoThread();
+								/** 启动数据上报 2015-5-18 YangLiu **/
+								DtvChannelManager.getInstance().startPosProInfoThread();
+							}
 						} else {
 							Log.i(TAG, "isBootException is true so has to do bootservice again");
 							DtvRoot.isStartControlEnd = false;
@@ -3011,10 +3019,13 @@ public class DtvRoot extends Activity {
 	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		Log.i(TAG, "LL [enter] onCreate***" + Thread.currentThread());
 		super.onCreate(savedInstanceState);
+		// DTV版本信息
+		getDtvInfo();
 
-		getDtvInfo();// 打印DTV信息
+		// DTV onCreate
+		Log.i(TAG, "\n\nLL [enter] onCreate***" + Thread.currentThread());
+
 		DtvChannelData = this.getSharedPreferences("dtvChannelData", MODE_WORLD_READABLE);// sharedPreferences可以让其他应用程序读取
 		if (DtvChannelData == null) {
 			Log.i(TAG, "LL DtvRoot.onCreate() DtvChannelData   == NULL ***");
@@ -3301,6 +3312,7 @@ public class DtvRoot extends Activity {
 			mChannelManager.channelStop();
 			Log.i(TAG, "LL DtvRoot.onStop()>>channelStop()***");
 		}
+
 		//退出菜单
 		if (mMainMenuRootData != null && mMainMenuRootData.IsVSettingMenuShowing()) {
 			mMainMenuRootData.VSettingMenuVisibilityControl(false);
@@ -3408,7 +3420,6 @@ public class DtvRoot extends Activity {
 				// TODO: handle exception
 			}
 		}
-
 		super.onDestroy();
 
 		//退出屏保锁定

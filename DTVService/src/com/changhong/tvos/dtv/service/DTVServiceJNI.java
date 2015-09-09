@@ -12,84 +12,84 @@ import com.changhong.tvos.dtv.service.jni.system;
 
 public class DTVServiceJNI {
 
-    /**
-     * avplayer
-     *
-     * @return
-     */
-    public static avplayer get_avplayer_instance() {
-        return avplayer.getinstance();
-    }
+	/**
+	 * avplayer
+	 *
+	 * @return
+	 */
+	public static avplayer get_avplayer_instance() {
+		return avplayer.getinstance();
+	}
 
-    /**
-     * epg
-     *
-     * @return
-     */
-    public static epg get_epg_instance() {
-        return epg.getinstance();
-    }
+	/**
+	 * epg
+	 *
+	 * @return
+	 */
+	public static epg get_epg_instance() {
+		return epg.getinstance();
+	}
 
-    /**
-     * scan
-     *
-     * @return
-     */
-    public static scan get_scan_instance() {
-        return scan.getinstance();
-    }
+	/**
+	 * scan
+	 *
+	 * @return
+	 */
+	public static scan get_scan_instance() {
+		return scan.getinstance();
+	}
 
-    /**
-     * DTVSetting
-     *
-     * @return
-     */
-    public static settings get_settings_instance() {
-        return settings.getinstance();
-    }
+	/**
+	 * DTVSetting
+	 *
+	 * @return
+	 */
+	public static settings get_settings_instance() {
+		return settings.getinstance();
+	}
 
-    /**
-     * system
-     *
-     * @return
-     */
-    public static system get_system_instance() {
-        return system.getinstance();
-    }
+	/**
+	 * system
+	 *
+	 * @return
+	 */
+	public static system get_system_instance() {
+		return system.getinstance();
+	}
 
-    /**
-     * NVOD
-     *
-     * @return
-     */
-    public static nvod get_nvod_instance() {
-        return nvod.getinstance();
-    }
+	/**
+	 * NVOD
+	 *
+	 * @return
+	 */
+	public static nvod get_nvod_instance() {
+		return nvod.getinstance();
+	}
 
-    /**
-     * CICA
-     *
-     * @return
-     */
-    public static caci get_caci_instance() {
-        return caci.getinstance();
-    }
+	/**
+	 * CICA
+	 *
+	 * @return
+	 */
+	public static caci get_caci_instance() {
+		return caci.getinstance();
+	}
 
-    /**
-     * channelmanager
-     *
-     * @return
-     */
-    public static channelmanager get_channelmanager_instance() {
-        return channelmanager.getinstance();
-    }
+	/**
+	 * channelmanager
+	 *
+	 * @return
+	 */
+	public static channelmanager get_channelmanager_instance() {
+		return channelmanager.getinstance();
+	}
 
-    /**
-     * DFA
-     *
-     * @return
-     */
-    public static DFA get_dfa_instance() {
-        return DFA.getinstance();
-    }
+	/**
+	 * DFA
+	 *
+	 * @return
+	 */
+	public static DFA get_dfa_instance() {
+		return DFA.getinstance();
+	}
 }

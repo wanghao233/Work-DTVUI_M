@@ -1,15 +1,15 @@
 /**
- * @filename 
- * 	DTV ��ع��ܽӿڷ�װ
+ * @filename DTV ��ع��ܽӿڷ�װ
  * @author:
- * @date: 
+ * @date:
  * @version 0.1
  * history:
- * 	2012-7-17 ����getSmartCardStatus�ӿ� 
+ * 2012-7-17 ����getSmartCardStatus�ӿ�
  */
 package com.changhong.tvos.dtv;
 
 import java.util.UUID;
+
 import com.changhong.tvos.dtv.service.IDTVPlayer;
 import com.changhong.tvos.dtv.service.IDTVService;
 import com.changhong.tvos.dtv.vo.AudioTrack;
@@ -32,6 +32,7 @@ import com.changhong.tvos.dtv.vo.NvodRefEvent;
 import com.changhong.tvos.dtv.vo.NvodRefService;
 import com.changhong.tvos.dtv.vo.NvodShiftEvent;
 import com.changhong.tvos.dtv.vo.DTVCardStatus;
+
 import android.content.Context;
 import android.os.IBinder;
 import android.os.RemoteException;
@@ -39,8 +40,8 @@ import android.os.ServiceManager;
 import android.util.Log;
 
 /**
- *	DTV ���ܽӿڷ�װ.<br>
- *	��������Ҫ�ǶԽӿڵķ�װ
+ * DTV ���ܽӿڷ�װ.<br>
+ * ��������Ҫ�ǶԽӿڵķ�װ
  */
 public class DTVPlayer {
 
@@ -55,23 +56,37 @@ public class DTVPlayer {
 
 	public static int DtvUIActivityState = 0;
 
-	/** �μ�{@link DTVConstant#ConstVideoLayerType ConstVideoLayerType}*/
+	/**
+	 * �μ�{@link DTVConstant#ConstVideoLayerType ConstVideoLayerType}
+	 */
 	private int miLayerType;
 	private int miLayerIndex;
 
 	public Play play = new Play();
 
-	/** NVOD���ƽӿ� **/
+	/**
+	 * NVOD���ƽӿ�
+	 **/
 	public Nvod nvod = new Nvod();
-	/** epg���ƽӿ� **/
+	/**
+	 * epg���ƽӿ�
+	 **/
 	public Epg epg = new Epg();
-	/** �������ƽӿ� **/
+	/**
+	 * �������ƽӿ�
+	 **/
 	public Scan scan = new Scan();
-	/** �����������ƽӿ� **/
+	/**
+	 * �����������ƽӿ�
+	 **/
 	public DFA dfa = new DFA();
-	/** CI/CAģ����ƽӿ� **/
+	/**
+	 * CI/CAģ����ƽӿ�
+	 **/
 	public Cicam cicam = new Cicam();
-	/** ����������ƽӿ�**/
+	/**
+	 * ����������ƽӿ�
+	 **/
 	public StartControl startControl = new StartControl();
 
 	private int hasPrepare = 0;
@@ -112,9 +127,9 @@ public class DTVPlayer {
 		return true;
 	}
 
-	/** 
+	/**
 	 * ���캯�� .<br>
-	*/
+	 */
 	public DTVPlayer(Context context) {
 		mUuid = UUID.randomUUID();
 		miTunerID = 0;
@@ -131,11 +146,12 @@ public class DTVPlayer {
 
 	/**
 	 * ���캯��<br>
-	 * @param iTunerID ��playerҪʹ�õ�tuner���
+	 *
+	 * @param iTunerID   ��playerҪʹ�õ�tuner���
 	 * @param eLayerType ��player���Ҫʹ�õ�����Ƶ�㻹��surface,�μ�{@link DTVConstant#ConstVideoLayerType ConstVideoLayerType}
-	 * @param iIndex ��player������ʹ�õ�����Ƶ�㣬��ò�����ʾʹ�õ��ǵڼ��㣬���ֻ֧��һ�㣬��Ϊ0
-	 * @param context Ӧ�õ�������
-	 * @exception û���쳣�׳�
+	 * @param iIndex     ��player������ʹ�õ�����Ƶ�㣬��ò�����ʾʹ�õ��ǵڼ��㣬���ֻ֧��һ�㣬��Ϊ0
+	 * @param context    Ӧ�õ�������
+	 * @throws û���쳣�׳�
 	 */
 	public DTVPlayer(int iTunerID, int iLayerType, int iIndex, Context context) {
 		mUuid = UUID.randomUUID();
@@ -155,10 +171,10 @@ public class DTVPlayer {
 	public class Nvod {
 		/**
 		 * ��ʼ���ݽ���
-		 * 
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int start() {
 			if (!checkServiceOK()) {
@@ -177,10 +193,10 @@ public class DTVPlayer {
 
 		/**
 		 * �������ݽ���
-		 * 
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int stop() {
 			if (!checkServiceOK()) {
@@ -198,10 +214,10 @@ public class DTVPlayer {
 		/**
 		 * ��ͣ���ݽ���.<br>
 		 * �ͷŹ�������������ɾ������
-		 * 
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int suspend() {
 			if (!checkServiceOK()) {
@@ -219,9 +235,10 @@ public class DTVPlayer {
 		/**
 		 * �������ݽ���.<br>
 		 * ��suspend���ʹ��
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int resume() {
 			if (!checkServiceOK()) {
@@ -239,9 +256,9 @@ public class DTVPlayer {
 
 		/**
 		 * ��ȡ�ο�ҵ���б�
-		 *		 
+		 *
 		 * @return null:ʧ�� ����:�ο�ҵ���б�
-		 * @exception û���쳣�׳�
+		 * @throws û���쳣�׳�
 		 */
 		public NvodRefService[] getRefServices() {
 			if (!checkServiceOK()) {
@@ -259,10 +276,10 @@ public class DTVPlayer {
 
 		/**
 		 * ��ȡ�ο��¼��б�
-		 * @param serviceId
-		 * 		ҵ��ID	 
+		 *
+		 * @param serviceId ҵ��ID
 		 * @return null:ʧ�� ����:�ο��¼��б�
-		 * @exception û���쳣�׳�
+		 * @throws û���쳣�׳�
 		 */
 		public NvodRefEvent[] getRefEvents(int serviceId) {
 			if (!checkServiceOK()) {
@@ -280,12 +297,11 @@ public class DTVPlayer {
 
 		/**
 		 * ��ȡʱ���¼��б�
-		 * @param serviceId
-		 * 		ҵ��ID	 
-		 * @param refEventId
-		 * 		�ο��¼�ID	 
+		 *
+		 * @param serviceId  ҵ��ID
+		 * @param refEventId �ο��¼�ID
 		 * @return null:ʧ�� ����:ʱ���¼��б�
-		 * @exception û���쳣�׳�
+		 * @throws û���쳣�׳�
 		 */
 		public NvodShiftEvent[] getShiftEvents(int serviceId, int refEventId) {
 			if (!checkServiceOK()) {
@@ -309,10 +325,10 @@ public class DTVPlayer {
 	public class Epg {
 		/**
 		 * ��ʼ���ݽ���
-		 * 
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int start() {
 			if (!checkServiceOK()) {
@@ -330,10 +346,10 @@ public class DTVPlayer {
 
 		/**
 		 * �������ݽ���
-		 * 
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int stop() {
 			if (!checkServiceOK()) {
@@ -352,10 +368,10 @@ public class DTVPlayer {
 		/**
 		 * ��ͣ���ݽ���.<br>
 		 * �ͷŹ�������������ɾ��EPG����
-		 * 
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int suspend() {
 			if (!checkServiceOK()) {
@@ -374,9 +390,10 @@ public class DTVPlayer {
 		/**
 		 * �������ݽ���.<br>
 		 * ��suspend���ʹ��
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int resume() {
 			if (!checkServiceOK()) {
@@ -394,12 +411,11 @@ public class DTVPlayer {
 
 		/**
 		 * ��ȡ��Ŀ�ĵ�ǰ����¼�
-		 * 
-		 * @param iChannelIndex
-		 *            ��Ŀ����, �μ�{@link vo.DTVChannelBaseInfo#miChannelIndex
-		 *            DTVChannelBaseInfo.miChannelIndex}
+		 *
+		 * @param iChannelIndex ��Ŀ����, �μ�{@link vo.DTVChannelBaseInfo#miChannelIndex
+		 *                      DTVChannelBaseInfo.miChannelIndex}
 		 * @return null:ʧ�� ����:ָ����Ŀ��PF�¼�
-		 * @exception û���쳣�׳�
+		 * @throws û���쳣�׳�
 		 */
 		public EPGEvent[] getPFEvent(int iChannelIndex) {
 			if (!checkServiceOK()) {
@@ -418,12 +434,11 @@ public class DTVPlayer {
 
 		/**
 		 * ��ȡ��Ŀ���ܱ���Ϣ
-		 * 
-		 * @param iChannelIndex
-		 *            ��Ŀ����, �μ�{@link vo.DTVChannelBaseInfo#miChannelIndex
-		 *            DTVChannelBaseInfo.miChannelIndex}
+		 *
+		 * @param iChannelIndex ��Ŀ����, �μ�{@link vo.DTVChannelBaseInfo#miChannelIndex
+		 *                      DTVChannelBaseInfo.miChannelIndex}
 		 * @return null:ʧ�� ����:ָ����Ŀ���ܱ��¼�
-		 * @exception û���쳣�׳�
+		 * @throws û���쳣�׳�
 		 */
 		public EPGEvent[] getSchelueEvent(int iChannelIndex) {
 			if (!checkServiceOK()) {
@@ -442,16 +457,13 @@ public class DTVPlayer {
 		/**
 		 * ��ȡ��Ŀ���ܱ�ָ��ʱ��ε��ܱ���Ϣ<br>
 		 * ˵�����Դ˺��������Ϊ�õ�event�Ŀ�ʼʱ����UI������ʼ�ͽ���ʱ��֮���events����
-		 * 
-		 * @param iChannelIndex
-		 *            ��Ŀ����, �μ�{@link vo.DTVChannelBaseInfo#miChannelIndex
-		 *            DTVChannelBaseInfo.miChannelIndex}
-		 * @param startTime
-		 *            ��ʼʱ��
-		 * @param endTime
-		 *            ����ʱ��
+		 *
+		 * @param iChannelIndex ��Ŀ����, �μ�{@link vo.DTVChannelBaseInfo#miChannelIndex
+		 *                      DTVChannelBaseInfo.miChannelIndex}
+		 * @param startTime     ��ʼʱ��
+		 * @param endTime       ����ʱ��
 		 * @return null:ʧ�� ����:ָ����Ŀ��ָ��ʱ��ε��ܱ��¼�
-		 * @exception û���쳣�׳�
+		 * @throws û���쳣�׳�
 		 */
 		public EPGEvent[] getSchelueEventByTime(int channelIndex, DTVDTTime startTime, DTVDTTime endTime) {
 			if (!checkServiceOK()) {
@@ -469,15 +481,13 @@ public class DTVPlayer {
 
 		/**
 		 * ��ȡ��Ŀ��PF�¼�����չ��Ϣ
-		 * 
-		 * @param iChannelIndex
-		 *            ��Ŀ����, �μ�{@link vo.DTVChannelBaseInfo#miChannelIndex
-		 *            DTVChannelBaseInfo.miChannelIndex}
-		 * @param iEventID
-		 *            �¼����, �μ�{@link vo.EPGEvent#miEventID EPGEvent.miEventID}
+		 *
+		 * @param iChannelIndex ��Ŀ����, �μ�{@link vo.DTVChannelBaseInfo#miChannelIndex
+		 *                      DTVChannelBaseInfo.miChannelIndex}
+		 * @param iEventID      �¼����, �μ�{@link vo.EPGEvent#miEventID EPGEvent.miEventID}
 		 * @return NULL:���¼�����չ��Ϣ<br>
 		 * ����ֵ�� ���¼�����չ����
-		 * @exception û���쳣�׳�
+		 * @throws û���쳣�׳�
 		 */
 		public String getPFEventExtendInfo(int iChannelIndex, int iEventID) {
 			if (!checkServiceOK()) {
@@ -495,15 +505,13 @@ public class DTVPlayer {
 
 		/**
 		 * ��ȡ��Ŀ��Schelue�¼�����չ��Ϣ
-		 * 
-		 * @param iChannelIndex
-		 *            ��Ŀ����, �μ�{@link vo.DTVChannelBaseInfo#miChannelIndex
-		 *            DTVChannelBaseInfo.miChannelIndex}
-		 * @param iEventID
-		 *            �¼����, �μ�{@link vo.EPGEvent#miEventID EPGEvent.miEventID}
+		 *
+		 * @param iChannelIndex ��Ŀ����, �μ�{@link vo.DTVChannelBaseInfo#miChannelIndex
+		 *                      DTVChannelBaseInfo.miChannelIndex}
+		 * @param iEventID      �¼����, �μ�{@link vo.EPGEvent#miEventID EPGEvent.miEventID}
 		 * @return NULL:���¼�����չ��Ϣ<br>
 		 * ����ֵ�� ���¼�����չ����
-		 * @exception û���쳣�׳�
+		 * @throws û���쳣�׳�
 		 */
 		public String getSchelueEventExtendInfo(int iChannelIndex, int iEventID) {
 			if (!checkServiceOK()) {
@@ -521,9 +529,9 @@ public class DTVPlayer {
 
 		/**
 		 * ���ʱ���
-		 * @param iChannelIndex
-		 *            ��Ŀ����, �μ�{@link vo.DTVChannelBaseInfo#miChannelIndex
-		 *            DTVChannelBaseInfo.miChannelIndex}
+		 *
+		 * @param iChannelIndex ��Ŀ����, �μ�{@link vo.DTVChannelBaseInfo#miChannelIndex
+		 *                      DTVChannelBaseInfo.miChannelIndex}
 		 * @param ʱ��
 		 * @return
 		 */
@@ -550,23 +558,21 @@ public class DTVPlayer {
 		/**
 		 * ��������.<br>
 		 * ���Զ�����{@link vo.DTVConstant.ScanMode#SCAN_MODE_NIT SCAN_MODE_NIT}<br>
-		 *  (1) ��freqListΪnull,<br>
-		 * 		���OPIDΪ�ƶ���Ӫ�̣���DTV M/Wʹ��Ĭ�ϵ���Ӫ�̶�Ӧ��Ƶ�����NIT����<br>
-		 * 		���OPIDΪͨ����Ӫ�̣���DTV M/Wʹ��ȫƵ��ɨƵ�ķ�ʽ��������<br>
-		 *  (2) ��Ƶ����Ϣ����Ϊ1,��DTV MWʹ��UI�����ao_CtunerInfo����������Ƶ�ͽ���NIT����<br>
+		 * (1) ��freqListΪnull,<br>
+		 * ���OPIDΪ�ƶ���Ӫ�̣���DTV M/Wʹ��Ĭ�ϵ���Ӫ�̶�Ӧ��Ƶ�����NIT����<br>
+		 * ���OPIDΪͨ����Ӫ�̣���DTV M/Wʹ��ȫƵ��ɨƵ�ķ�ʽ��������<br>
+		 * (2) ��Ƶ����Ϣ����Ϊ1,��DTV MWʹ��UI�����ao_CtunerInfo����������Ƶ�ͽ���NIT����<br>
 		 * ���ֶ�����{@link vo.DTVConstant.ScanMode#SCAN_MODE_MANUAL SCAN_MODE_MANUAL}ʱ��<br>
-		 * 			freqListֻʹ�õ�1��Ƶ��<br>
+		 * freqListֻʹ�õ�1��Ƶ��<br>
 		 * ���б�����{@link vo.DTVConstant.ScanMode#SCAN_MODE_LIST SCAN_MODE_LIST}ʱ��<br>
-		 *  ��������̲������û��ֶ���������lFreqList�ɴ�null,�ɵײ������Ӫ��Ҫ���������<br>
-		 * 
-		 * @param iScanMode
-		 *            ����ģʽ���μ�{@link vo.DTVConstant.ScanMode DTVConstant.ScanMode}
-		 * @param lFreqList
-		 *        Ƶ���б�,Ƶ����Ϣ��miIndex����Ҫ����<br>
-		 *        �ھ�������ʱ�������������ʣ�ʵ����carrier����
+		 * ��������̲������û��ֶ���������lFreqList�ɴ�null,�ɵײ������Ӫ��Ҫ���������<br>
+		 *
+		 * @param iScanMode ����ģʽ���μ�{@link vo.DTVConstant.ScanMode DTVConstant.ScanMode}
+		 * @param lFreqList Ƶ���б�,Ƶ����Ϣ��miIndex����Ҫ����<br>
+		 *                  �ھ�������ʱ�������������ʣ�ʵ����carrier����
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 
 		public int setParam(int iScanMode, CarrierInfo[] lFreqList) {
@@ -618,12 +624,13 @@ public class DTVPlayer {
 
 		/**
 		 * ����Ҫ����������(DVB-Sʹ��).<br>
-		 *   �������õ����Ǳ��������ȱ༭�����ǲ�������ͨ��{@link ChannelManager.SatelliteManager SatelliteManager}
-		 *   ���浽���ݿ��е�����<br>
-		 *   �ڵ�����������ǰ����Ҫ�ȵ��ñ��ӿ�ѡ�������
+		 * �������õ����Ǳ��������ȱ༭�����ǲ�������ͨ��{@link ChannelManager.SatelliteManager SatelliteManager}
+		 * ���浽���ݿ��е�����<br>
+		 * �ڵ�����������ǰ����Ҫ�ȵ��ñ��ӿ�ѡ�������
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int setSatellite(int iSatelliteID) {
 			if (!checkServiceOK()) {
@@ -641,10 +648,11 @@ public class DTVPlayer {
 
 		/**
 		 * ��������.<br>
-		 *   ����������ǰ����Ҫ����setParam�������������ú�
+		 * ����������ǰ����Ҫ����setParam�������������ú�
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int start() {
 			if (!checkServiceOK()) {
@@ -662,10 +670,10 @@ public class DTVPlayer {
 
 		/**
 		 * ֹͣ����
-		 * 
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int stop() {
 			if (!checkServiceOK()) {
@@ -683,27 +691,27 @@ public class DTVPlayer {
 
 		/**
 		 * ȡ��(��ֹ)
-		 * 
+		 *
 		 * @return 0:�ɹ�<br>
 		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
 		 * @exception û���쳣�׳�
 		 */
-		/**		public int cancel() {
-					if(!checkServiceOK())
-					{
-						return ErrorCode.ERROR_BINDER_FAILD;
-					}
-					
-					try
-					{
-						return mIDTVPlayer.scanCancel();
-					}
-					catch (RemoteException exception)
-					{
-						return ErrorCode.ERROR_BINDER_FAILD;
-					}
-				}
-		**/
+		/**        public int cancel() {
+		 if(!checkServiceOK())
+		 {
+		 return ErrorCode.ERROR_BINDER_FAILD;
+		 }
+
+		 try
+		 {
+		 return mIDTVPlayer.scanCancel();
+		 }
+		 catch (RemoteException exception)
+		 {
+		 return ErrorCode.ERROR_BINDER_FAILD;
+		 }
+		 }
+		 **/
 	}
 
 	/**
@@ -713,11 +721,11 @@ public class DTVPlayer {
 
 		/**
 		 * ���û�̨ʱ��Ƶģʽ����֡/������
-		 * 
+		 *
 		 * @param eSwitchMode �μ�{@link DTVConstant.ConstSwitchMode ConstSwitchMode}
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int setSwitchMode(int iSwitchMode) {
 			if (!checkServiceOK()) {
@@ -735,12 +743,11 @@ public class DTVPlayer {
 
 		/**
 		 * ���õ�ǰ��Ŀ������
-		 * 
-		 * @param volume
-		 * 		 ��������Χ0~64
+		 *
+		 * @param volume ��������Χ0~64
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int setVolume(int volume) {
 			if (!checkServiceOK()) {
@@ -759,9 +766,10 @@ public class DTVPlayer {
 		/**
 		 * ��ȡ��ǰ��Ŀ����������<br>
 		 * ������������Χ-10~-10;
+		 *
 		 * @return ��ǰ��Ŀ��ǰʹ�õ�������
-		 * 		   <-10�� �������
-		 * @exception û���쳣�׳�
+		 * <-10�� �������
+		 * @throws û���쳣�׳�
 		 */
 		public int getVolume() {
 			if (!checkServiceOK()) {
@@ -779,13 +787,12 @@ public class DTVPlayer {
 
 		/**
 		 * ���Ž�Ŀ
-		 * 
-		 * @param iChannelIndex
-		 *            ��Ŀ����, �μ�{@link vo.DTVChannelBaseInfo#miChannelIndex
-		 *            DTVChannelBaseInfo.miChannelIndex}
+		 *
+		 * @param iChannelIndex ��Ŀ����, �μ�{@link vo.DTVChannelBaseInfo#miChannelIndex
+		 *                      DTVChannelBaseInfo.miChannelIndex}
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int play(int iChannelIndex) {
 			if (!checkServiceOK()) {
@@ -804,21 +811,17 @@ public class DTVPlayer {
 
 		/**
 		 * ͨ������������Ž�Ŀ.<br>
-		 *  �ýӿ���Ҫ����VOD������Ӧ�ó��ϲ��Ž�Ŀ������һ����ǰ�˷���<br>
-		 *  ��ʹ�õĲ�����ֵ-1������ģʽ�����ʹ������㸳ֵ
-		 * @param iFrequencyKd
-		 *    	Ƶ��
-		 * @param iSymbolRateK
-		 *    	������
-		 * @param eQamMode
-		 *    	����ģʽ,�μ�{@link DTVConstant.ConstQAMMode ConstQAMMode}
-		 * @param iServiceID
-		 *    	����ID
-		 * @param PMTPID
-		 *    	PMT���PID
+		 * �ýӿ���Ҫ����VOD������Ӧ�ó��ϲ��Ž�Ŀ������һ����ǰ�˷���<br>
+		 * ��ʹ�õĲ�����ֵ-1������ģʽ�����ʹ������㸳ֵ
+		 *
+		 * @param iFrequencyKd Ƶ��
+		 * @param iSymbolRateK ������
+		 * @param eQamMode     ����ģʽ,�μ�{@link DTVConstant.ConstQAMMode ConstQAMMode}
+		 * @param iServiceID   ����ID
+		 * @param PMTPID       PMT���PID
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int play(int iFrequencyK, int iSymbolRateK, int iQamMode, int iServiceID, int PMTPID) {
 			if (!checkServiceOK()) {
@@ -836,10 +839,10 @@ public class DTVPlayer {
 
 		/**
 		 * ֹͣ����
-		 * 
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int stop() {
 			Log.i(TAG, "[stop]");
@@ -858,10 +861,10 @@ public class DTVPlayer {
 
 		/**
 		 * ��ͣ��Ƶ����
-		 * 
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int Pausevideo() {
 			if (!checkServiceOK()) {
@@ -879,10 +882,10 @@ public class DTVPlayer {
 
 		/**
 		 * ������Ƶ����
-		 * 
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 **/
 		public int Resumevideo() {
 			if (!checkServiceOK()) {
@@ -900,10 +903,10 @@ public class DTVPlayer {
 
 		/**
 		 * ��ͣ��Ƶ����
-		 * 
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int PauseAudio() {
 			if (!checkServiceOK()) {
@@ -921,10 +924,10 @@ public class DTVPlayer {
 
 		/**
 		 * ������Ƶ����
-		 * 
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 **/
 		public int ResumeAudio() {
 			if (!checkServiceOK()) {
@@ -942,9 +945,9 @@ public class DTVPlayer {
 
 		/**
 		 * ��ȡ��Ŀ�������Ϣ����ǰ��Ŀ�İ�����Ϣ��
-		 * 
+		 *
 		 * @return NULL:�ý�Ŀ�޶������??AudioTrack:�������??
-		 * @exception û���쳣�׳�
+		 * @throws û���쳣�׳�
 		 */
 		public AudioTrack getChannelAudioTrack() {
 			if (!checkServiceOK()) {
@@ -962,13 +965,12 @@ public class DTVPlayer {
 
 		/**
 		 * �л����� (��ǰ��Ŀ)
-		 * 
-		 * @param iAudioTrack
-		 *            ��Ҫ�л��İ�����Ϣ,�μ�{@link vo.AudioTrack#audioLanguagelist
-		 *            AudioTrack.audioLanguagelist}
+		 *
+		 * @param iAudioTrack ��Ҫ�л��İ�����Ϣ,�μ�{@link vo.AudioTrack#audioLanguagelist
+		 *                    AudioTrack.audioLanguagelist}
 		 * @return 0:�ɹ�<br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int setChannelAudioTrack(int iAudioTrack) {
 			if (!checkServiceOK()) {
@@ -986,9 +988,9 @@ public class DTVPlayer {
 
 		/**
 		 * ��ȡ��ǰ��Ŀ����Ƶ��Ϣ
-		 * 
+		 *
 		 * @return DTVVideoInfo, ��ǰ��Ŀ����Ƶ��Ϣ
-		 * @exception û���쳣�׳�
+		 * @throws û���쳣�׳�
 		 */
 		public DTVVideoInfo getVideoInfo() {
 			if (!checkServiceOK()) {
@@ -1006,9 +1008,10 @@ public class DTVPlayer {
 
 		/**
 		 * ���video��ʾ����
+		 *
 		 * @return 0:�ɹ�<br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int clearVideoBuffer() {
 			if (!checkServiceOK()) {
@@ -1026,9 +1029,9 @@ public class DTVPlayer {
 
 		/**
 		 * ��ȡ��ĿƵ����Ϣ����ǰ��Ŀ��Ƶ����Ϣ��
-		 * 
+		 *
 		 * @return NULL:��ȡ�ý�ĿƵ����Ϣ�쳣??DVBCCarrier:��ȡ�ý�ĿƵ����Ϣ����??
-		 * @exception û���쳣�׳�
+		 * @throws û���쳣�׳�
 		 */
 		public DVBCCarrier getDVBCCurTunerInfo() {
 			if (!checkServiceOK()) {
@@ -1053,9 +1056,9 @@ public class DTVPlayer {
 
 		/**
 		 * ��ȡCAM��ģ����??
-		 * 
+		 *
 		 * @return CAM��Ϣ
-		 * @exception û���쳣�׳�
+		 * @throws û���쳣�׳�
 		 */
 		public CICAMInformation getInfo() {
 			if (!checkServiceOK()) {
@@ -1074,10 +1077,10 @@ public class DTVPlayer {
 
 		/**
 		 * ��ȡ���ܿ����ţ�˵��������ֵ����Ϊ�޿������ܿ��Ż�������ڹ����˵�
-		 * 
+		 *
 		 * @return null����ȡʧ��
-		 * 		   ����ֵ������
-		 * @exception û���쳣�׳�
+		 * ����ֵ������
+		 * @throws û���쳣�׳�
 		 */
 		public String getSmartCardID() {
 			if (!checkServiceOK()) {
@@ -1095,8 +1098,9 @@ public class DTVPlayer {
 
 		/**
 		 * ��ȡ��״̬.<br>
+		 *
 		 * @return ��״̬�����������ͺ�״̬��
-		 * @exception û���쳣�׳�
+		 * @throws û���쳣�׳�
 		 */
 		public DTVCardStatus getSmartCardStatus() {
 			if (!checkServiceOK()) {
@@ -1115,10 +1119,10 @@ public class DTVPlayer {
 
 		/**
 		 * ����û����ݣ������ʼ�����Ϣ��
-		 * 
+		 *
 		 * @return 0:�ɹ� <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int clearUserData() {
 			if (!checkServiceOK()) {
@@ -1136,48 +1140,40 @@ public class DTVPlayer {
 
 		/**
 		 * ��ѯ���ƽӿ�. <br>
-		 * <p>
+		 * <p/>
 		 * ˵��<br>
 		 * 1. ����CA,CI���˵�ʱ�����ã�<br>
-		 * 	CH_DTV_CICA_QueryControl(CH_DTV_CICA_MsgType.MSG_USER_MENU, -1,<br>
-		 * 	CH_DTV_CICA_Constant.MENU_ID_MAIN, <br>
-		 * 	CH_DTV_CICA_Constant.DEFAULT_OP_CODE_CONFIRM,<br>
-		 * 	-1, NULL); <br>
-		 * 	2. ��ĳһ��CA,CI�˵������ϼ��˵���ʱ�����ã�<br>
-		 * 	CH_DTV_CICA_QueryControl(CH_DTV_CICA_MsgType.MSG_USER_MENU, -1<br>
-		 * 	��ǰ�˵�ID,-1,-1, CH_DTV_CICA_Constant.DEFAULT_OP_CODE_BACK,<br>
-		 * 	-1, NULL);<br>
-		 * 	3. ��ĳһ��CA,CI�˵�ֱ���˳��༶�˵��ص�CA,CI���˵�����һ���˵�ʱ�����ã�<br>
-		 * 	CH_DTV_CICA_QueryControl(CH_DTV_CICA_MsgType.MSG_USER_MENU, -1<br>
-		 * 	��ǰ�˵�ID,-1,-1,<br>
-		 * 	CH_DTV_CICA_Constant.DEFAULT_OP_CODE_EXIT,<br>
-		 * 	-1, NULL);<br>
-		 * 	4. ��ѯ�ʼ��Ĺ��ܣ�ͨ�������ʼ�֪ͨ��Ϣ�����ID��CA/CIģ��ͨ�����Ͳ˵���Ϣ�ķ�ʽʵ��<br>
+		 * CH_DTV_CICA_QueryControl(CH_DTV_CICA_MsgType.MSG_USER_MENU, -1,<br>
+		 * CH_DTV_CICA_Constant.MENU_ID_MAIN, <br>
+		 * CH_DTV_CICA_Constant.DEFAULT_OP_CODE_CONFIRM,<br>
+		 * -1, NULL); <br>
+		 * 2. ��ĳһ��CA,CI�˵������ϼ��˵���ʱ�����ã�<br>
+		 * CH_DTV_CICA_QueryControl(CH_DTV_CICA_MsgType.MSG_USER_MENU, -1<br>
+		 * ��ǰ�˵�ID,-1,-1, CH_DTV_CICA_Constant.DEFAULT_OP_CODE_BACK,<br>
+		 * -1, NULL);<br>
+		 * 3. ��ĳһ��CA,CI�˵�ֱ���˳��༶�˵��ص�CA,CI���˵�����һ���˵�ʱ�����ã�<br>
+		 * CH_DTV_CICA_QueryControl(CH_DTV_CICA_MsgType.MSG_USER_MENU, -1<br>
+		 * ��ǰ�˵�ID,-1,-1,<br>
+		 * CH_DTV_CICA_Constant.DEFAULT_OP_CODE_EXIT,<br>
+		 * -1, NULL);<br>
+		 * 4. ��ѯ�ʼ��Ĺ��ܣ�ͨ�������ʼ�֪ͨ��Ϣ�����ID��CA/CIģ��ͨ�����Ͳ˵���Ϣ�ķ�ʽʵ��<br>
 		 * <br>
-		 * 
-		 * @param iMsgType
-		 *            ��Ϣ����,(��CAM���ͳ�����Ϣ�д�������)���μ�{@linkCICAMMessageBase#ConstMsgType
-		 *            ConstCICAMsgType}
-		 * @param iMsgID
-		 *            ��Ϣ��ʶ(��CAM���ͳ�����Ϣ�д�������)���μ�{@linkCICAMMessageBase#miMsgID
-		 *            miMsgID}
-		 * @param iMenuID
-		 *            �˵�ID,(��CAM���ͳ�����Ϣ�д�������)���μ�{@linkCICAMMenuBase#miMenuID
-		 *            miMenuID}
-		 * @param operand
-		 *            �����������ͨ�˵��е�mastr_ContentList������
-		 * @param opcode
-		 *            �����룬�μ�{@link vo.DTVConstant.ConstCICAMOpCode ConstCICAMOpCode})
-		 *            INVALID_OPERATE_CODE��ʾ��ʹ�ô˲���
-		 * @param defOpcode
-		 *            Ĭ�ϲ����룬�μ�{@link vo.DTVConstant.CICAMOpCode CICAMOpCode})<br>
-		 *            �����ڲ˵��У���ȷ�ϡ����¼��˵��������ص��ϼ��˵������˳����в˵���<br>
-		 *            INVALID_OPERATE_CODE��ʾ��ʹ�ô˲���
-		 * @param inputItems
-		 *            �������
-		 * @param inputList
-		 *            ���������б�
-		 * @exception û���쳣�׳�
+		 *
+		 * @param iMsgType   ��Ϣ����,(��CAM���ͳ�����Ϣ�д�������)���μ�{@linkCICAMMessageBase#ConstMsgType
+		 *                   ConstCICAMsgType}
+		 * @param iMsgID     ��Ϣ��ʶ(��CAM���ͳ�����Ϣ�д�������)���μ�{@linkCICAMMessageBase#miMsgID
+		 *                   miMsgID}
+		 * @param iMenuID    �˵�ID,(��CAM���ͳ�����Ϣ�д�������)���μ�{@linkCICAMMenuBase#miMenuID
+		 *                   miMenuID}
+		 * @param operand    �����������ͨ�˵��е�mastr_ContentList������
+		 * @param opcode     �����룬�μ�{@link vo.DTVConstant.ConstCICAMOpCode ConstCICAMOpCode})
+		 *                   INVALID_OPERATE_CODE��ʾ��ʹ�ô˲���
+		 * @param defOpcode  Ĭ�ϲ����룬�μ�{@link vo.DTVConstant.CICAMOpCode CICAMOpCode})<br>
+		 *                   �����ڲ˵��У���ȷ�ϡ����¼��˵��������ص��ϼ��˵������˳����в˵���<br>
+		 *                   INVALID_OPERATE_CODE��ʾ��ʹ�ô˲���
+		 * @param inputItems �������
+		 * @param inputList  ���������б�
+		 * @throws û���쳣�׳�
 		 */
 		public void queryControl(int iMsgType, int iMsgID, int iMenuID, int operand, int opcode, int defOpcode, int inputItems, String[] inputList) throws RemoteException {
 			if (!checkServiceOK()) {
@@ -1202,20 +1198,15 @@ public class DTVPlayer {
 		/**
 		 * ��������.<br>
 		 * ˵����ͨ��type��msgID��ȷ�����ƶ����Ƕ��Ǹ���Ϣ�ķ���
-		 * 
-		 * @param type
-		 *        ��Ϣ����, (�μ�{@link vo.DfaMessageBase#ConstCICAMsgType DfaMessageBase.ConstCICAMsgType})
-		 * @param iMsgID
-		 *        ��Ϣ���(�μ�{@link vo.DfaMessageBase#miMsgID DfaMessageBase.miMsgID})
-		 * @param iOperand
-		 *            ��������������Ϣ������ѡ���б����??
-		 * @param iOpcode
-		 *            �����룬0��ȡ����1-Ϊȷ��
-		 * @param strInputList
-		 *            �������б�����·����Ϣ
+		 *
+		 * @param type         ��Ϣ����, (�μ�{@link vo.DfaMessageBase#ConstCICAMsgType DfaMessageBase.ConstCICAMsgType})
+		 * @param iMsgID       ��Ϣ���(�μ�{@link vo.DfaMessageBase#miMsgID DfaMessageBase.miMsgID})
+		 * @param iOperand     ��������������Ϣ������ѡ���б����??
+		 * @param iOpcode      �����룬0��ȡ����1-Ϊȷ��
+		 * @param strInputList �������б�����·����Ϣ
 		 * @return 0:�ɹ�; <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int DFAControl(int iType, int iMsgID, int iOperand, int iOpcode, String[] strInputList) {
 			if (!checkServiceOK()) {
@@ -1239,9 +1230,10 @@ public class DTVPlayer {
 
 		/**
 		 * ��ʼ�����������<br>
+		 *
 		 * @return 0:�ɹ�; <br>
-		 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-		 * @exception û���쳣�׳�
+		 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+		 * @throws û���쳣�׳�
 		 */
 		public int start() {
 			if (!checkServiceOK()) {
@@ -1260,9 +1252,10 @@ public class DTVPlayer {
 
 	/**
 	 * ���汾�Ƿ�仯<br>
+	 *
 	 * @return 0:�ɹ�; <br>
-	 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-	 * @exception û���쳣�׳�
+	 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+	 * @throws û���쳣�׳�
 	 */
 	public int checkVersion(int curVersion) {
 		if (!checkServiceOK()) {
@@ -1280,8 +1273,9 @@ public class DTVPlayer {
 
 	/**
 	 * ��ȡ��⵽��TDTʱ��
+	 *
 	 * @return CHDTVDTTime, ��ǰ��Ŀ����Ƶ��
-	 * @exception û���쳣�׳�
+	 * @throws û���쳣�׳�
 	 */
 	public DTVDTTime getTDTTime() {
 		//		if(!checkServiceOK())
@@ -1305,8 +1299,9 @@ public class DTVPlayer {
 
 	/**
 	 * ���õ�ǰ���Ž�Ŀ������ID
+	 *
 	 * @param nProgramID
-	 * @return  �����ķ���ֵ�������õĽ�Ŀ����ֵ
+	 * @return �����ķ���ֵ�������õĽ�Ŀ����ֵ
 	 * @throws RemoteException
 	 */
 	public int setPlayingProgramID(int nProgramID) throws RemoteException {
@@ -1326,10 +1321,10 @@ public class DTVPlayer {
 	 * ׼����Դ.<br>
 	 * ���ñ��ӿں��ײ����ʽ���������Դ������ʹ��ʱ���뼰ʱ����Release�����ͷ�
 	 * �ڵ���player����ҪӲ����Դ�Ľӿ�ǰ�������ȵ��ñ��ӿڽ�����Դ����
-	 * 
+	 *
 	 * @return 0:�ɹ� <br>
-	 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-	 * @exception û���쳣�׳�
+	 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+	 * @throws û���쳣�׳�
 	 */
 	public int prepare() {
 		Log.i(TAG, "API prepare return 0000  DtvUIActivityState:" + DtvUIActivityState);
@@ -1382,10 +1377,10 @@ public class DTVPlayer {
 	 * �ͷ���Դ.<br>
 	 * ���ӿ���prepare���ʹ��??
 	 * ���ñ��ӿں������Դ�����ͷţ���Ҫ���µ���prepare����ܵ���player�ȿ��ƽӿ�
-	 * 
+	 *
 	 * @return 0:�ɹ� <br>
-	 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-	 * @exception û���쳣�׳�
+	 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+	 * @throws û���쳣�׳�
 	 */
 	public int Release() {
 		if (!checkServiceOK()) {
@@ -1416,13 +1411,12 @@ public class DTVPlayer {
 
 	/**
 	 * ǿ�Ƶ�г��ĳ��Ƶ��
-	 * 
-	 * @param carrierInfo
-	 *     Ƶ����Ϣ.<br>
-	 *     �ýӿ�ֻʹ����CarrierInfo�е�Ƶ�������ص���Ϣ��Ƶ���ţ�TSID���ɹ��ܲ��ṩ�ĵ���Ϣ���Բ���
+	 *
+	 * @param carrierInfo Ƶ����Ϣ.<br>
+	 *                    �ýӿ�ֻʹ����CarrierInfo�е�Ƶ�������ص���Ϣ��Ƶ���ţ�TSID���ɹ��ܲ��ṩ�ĵ���Ϣ���Բ���
 	 * @return 0:�ɹ�; <br>
-	 * 		       С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
-	 * @exception û���쳣�׳�
+	 * С��0�� �����룺�μ�{@link DTVConstant.ErrorCode ErrorCode}
+	 * @throws û���쳣�׳�
 	 */
 	public int SetTuner(CarrierInfo carrierInfo) {
 		if (carrierInfo == null) {
@@ -1453,8 +1447,9 @@ public class DTVPlayer {
 
 	/**
 	 * ��ȡTUNER״̬
+	 *
 	 * @return DTVTunerStatus, ��ǰtuner״̬
-	 * @exception û���쳣�׳�
+	 * @throws û���쳣�׳�
 	 */
 	public DTVTunerStatus getTunerStatus() {
 		if (!checkServiceOK()) {
@@ -1471,8 +1466,9 @@ public class DTVPlayer {
 
 	/**
 	 * ��ȡ��ǰƵ����Ϣ
+	 *
 	 * @return CarrierInfo, ��ǰƵ����Ϣ
-	 * @exception û���쳣�׳�
+	 * @throws û���쳣�׳�
 	 */
 	public CarrierInfo getCurTunerInfo() {
 		if (!checkServiceOK()) {
@@ -1515,8 +1511,9 @@ public class DTVPlayer {
 	/**
 	 * ��ȡplayer��UUID.<br>
 	 * UUIDΪ�����Ψһ��ʶ����������ֵ��Ҫ���ڷֱ�㲥�Ƿ��͸���player
+	 *
 	 * @return UUID
-	 * @exception û���쳣�׳�
+	 * @throws û���쳣�׳�
 	 */
 	public UUID getUuid() {
 		return mUuid;
@@ -1524,13 +1521,14 @@ public class DTVPlayer {
 
 	/**
 	 * ��ȡplayer��״̬.<br>
-	 * @return <br> 
-	 * 	0�����ž���
-	 *  1��û��������Դ��δ��prepare��
-	 *  2: ������DTVӦ��ռ����Դ
-	 *  3��������Դ��ռ��Դ
-	 *  -1: ͨѶʧ��
-	 * @exception û���쳣�׳�
+	 *
+	 * @return <br>
+	 * 0�����ž���
+	 * 1��û��������Դ��δ��prepare��
+	 * 2: ������DTVӦ��ռ����Դ
+	 * 3��������Դ��ռ��Դ
+	 * -1: ͨѶʧ��
+	 * @throws û���쳣�׳�
 	 */
 	public int getPlayerStatus() {
 		if (!checkServiceOK()) {
@@ -1549,9 +1547,9 @@ public class DTVPlayer {
 
 	/**
 	 * ���ò���Դ����ĿԴ��ID��
-	 * 
+	 *
 	 * @return 0:??
-	 * @exception û���쳣�׳�
+	 * @throws û���쳣�׳�
 	 */
 	public int setSource(int iSourceID) {
 		if (!checkServiceOK()) {
@@ -1568,9 +1566,9 @@ public class DTVPlayer {
 
 	/**
 	 * ���ص�ǰ����Դ
-	 * 
+	 *
 	 * @return 0:??
-	 * @exception û���쳣�׳�
+	 * @throws û���쳣�׳�
 	 */
 	public DTVSource getSource() {
 		if (!checkServiceOK()) {
@@ -1587,9 +1585,9 @@ public class DTVPlayer {
 
 	/**
 	 * ���ص�ǰ��Ʒ����
-	 * 
+	 *
 	 * @return ����0:??
-	 * @exception û���쳣�׳�
+	 * @throws û���쳣�׳�
 	 */
 	public int getProductType() {
 
@@ -1607,9 +1605,9 @@ public class DTVPlayer {
 
 	/**
 	 * ��ʼ������̨
-	 * 
+	 *
 	 * @return 0:??
-	 * @exception û���쳣�׳�
+	 * @throws û���쳣�׳�
 	 */
 	public int SmartSkip(int iType) {
 		if (!checkServiceOK()) {
@@ -1626,9 +1624,9 @@ public class DTVPlayer {
 
 	/**
 	 * ����DTV״̬ BUSY
-	 * 
+	 *
 	 * @return 0:??
-	 * @exception û���쳣�׳�
+	 * @throws û���쳣�׳�
 	 */
 	public int SetDtvBusyState(int iType) {
 		if (!checkServiceOK()) {
@@ -1661,9 +1659,9 @@ public class DTVPlayer {
 
 	/**
 	 * ֹͣ������̨
-	 * 
+	 *
 	 * @return 0:??
-	 * @exception û���쳣�׳�
+	 * @throws û���쳣�׳�
 	 */
 	public int SmartSkipStop() {
 		if (!checkServiceOK()) {

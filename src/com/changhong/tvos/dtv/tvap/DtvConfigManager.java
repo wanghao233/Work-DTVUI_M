@@ -1,13 +1,17 @@
 package com.changhong.tvos.dtv.tvap;
 
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
+
+import com.changhong.tvos.dtv.DtvRoot;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
-import android.os.Handler;
-import android.util.Log;
 
 /**
  * 读取properties文件
@@ -20,6 +24,7 @@ public class DtvConfigManager {
 	private static DtvConfigManager instance = null;
 	private Handler mHandler = null;
 	private Runnable mRunnable = null;
+	private Looper mLooper = null;
 
 	/**
 	 * 初始化Configuration类
@@ -42,7 +47,11 @@ public class DtvConfigManager {
 		mDtvInterface = DtvInterface.getInstance();
 		propertie = new Properties();
 		loadFile(CONFIG_FILE_PATH);
-		mHandler = new Handler();
+
+		if (DtvRoot.mContext != null) {
+			mLooper = DtvRoot.mContext.getMainLooper();
+		}
+		mHandler = new Handler(mLooper);
 		mRunnable = new Runnable() {
 
 			public void run() {
@@ -108,7 +117,7 @@ public class DtvConfigManager {
 
 	/**
 	 * 用于读取不分T和C 存储的值
-	 * 
+	 *
 	 * @param key
 	 * @return
 	 */
@@ -127,7 +136,7 @@ public class DtvConfigManager {
 
 	/**
 	 * 用于存储不分源存储的值
-	 * 
+	 *
 	 * @param key
 	 * @return
 	 */

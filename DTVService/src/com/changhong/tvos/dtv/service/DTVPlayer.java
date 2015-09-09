@@ -1,24 +1,21 @@
 /**
  * @filename 锟斤拷DTVPlayer
- * 	DTV锟斤拷锟斤拷锟斤拷亟涌锟�
+ * DTV锟斤拷锟斤拷锟斤拷亟涌锟�
  * @author:
- * @date: 
+ * @date:
  * @version 0.1
- * @history:
- * 	2012-9-13  锟斤拷锟接匡拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷沤锟侥匡拷锟脚革拷为锟斤拷态锟斤拷锟斤拷锟斤拷busy锟斤拷锟�
- *  2012-12-25 锟斤拷锟狡碉拷前锟斤拷目锟斤拷锟斤拷锟节诧拷锟斤拷锟斤拷息锟斤拷锟斤拷锟矫和革拷位
- *  2012-12-28 锟斤拷锟接凤拷锟酵伙拷台锟姐播
+ * @history: 2012-9-13  锟斤拷锟接匡拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷沤锟侥匡拷锟脚革拷为锟斤拷态锟斤拷锟斤拷锟斤拷busy锟斤拷锟�
+ * 2012-12-25 锟斤拷锟狡碉拷前锟斤拷目锟斤拷锟斤拷锟节诧拷锟斤拷锟斤拷息锟斤拷锟斤拷锟矫和革拷位
+ * 2012-12-28 锟斤拷锟接凤拷锟酵伙拷台锟姐播
  */
 package com.changhong.tvos.dtv.service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.util.Log;
+
 import com.changhong.tvos.common.HotelManager;
 import com.changhong.tvos.common.ITVPlayer;
 import com.changhong.tvos.common.SoundManager;
@@ -59,9 +56,13 @@ import com.changhong.tvos.dtv.vo.PlayStatusInfo;
 import com.changhong.tvos.dtv.vo.ScanStatusInfo;
 import com.changhong.tvos.dtv.vo.StartControlInfo;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
 public class DTVPlayer extends IDTVPlayer.Stub implements IRmlistener {
 
-	final static String TAG = "dtvservice.DTVPlayer";
+	final static String TAG = "DtvService.DTVPlayer";
 
 	/**
 	 * ROUTER状态锟斤拷DTVRouterInfo锟斤拷状态
@@ -98,6 +99,7 @@ public class DTVPlayer extends IDTVPlayer.Stub implements IRmlistener {
 	public static boolean isRelease = false; //release resources...
 	public static boolean isPrepare = false;
 	public static List<Integer> rmLock = new ArrayList<Integer>(2);
+
 	/**0:unused;1:play;2:pvr**/
 	static {
 		Log.i(TAG, "[lsy static]");
@@ -184,7 +186,7 @@ public class DTVPlayer extends IDTVPlayer.Stub implements IRmlistener {
 						e.printStackTrace();
 					}
 				}
-			};
+			}
 		}.start();
 		pvr = PVRRecord.getInstance(context);
 		pvr.setPlayer(this);
@@ -984,41 +986,40 @@ public class DTVPlayer extends IDTVPlayer.Stub implements IRmlistener {
 	public void RmlistenCallback(int Staus, int RsID, int RsType, String ClientID) {
 		Log.i(TAG, "Enter RmlistenCallback-->Staus:" + Staus + " RsID:" + RsID + "RsType:" + RsType + " ClientID:" + ClientID);
 		switch (Staus) {
-		case Resource.STATUS_FREEED:
-			Log.i(TAG, "RmlistenCallback STATUS_FREEED,RsID=" + RsID + "ClientID =" + ClientID);
-			break;
-		case Resource.STATUS_USED:
-			Log.i(TAG, "RmlistenCallback STATUS_USED,RsID=" + RsID + "ClientID =" + ClientID);
-			break;
-		case Resource.STATUS_FORCEUSED:
-			Log.i(TAG, "RmlistenCallback STATUS_FORCEUSED,RsID=" + RsID + "ClientID =" + ClientID);
-			if (ClientID != objmUuid)/*涓嶆槸锟斤拷锟芥湰韬姠鍗犲紩璧风殑callback*/
-			{
-				int result;
-				//閲婃斁鐩稿叧璧勬簮鍙婂?
-				result = rmManager.RmRelease(RsID, RsType, objmUuid);
-				Log.i(TAG, "RmlistenCallback RmRelease RsType=" + RsType + "result=" + result);
-			}
-			isDTV_Busying = 0;
-			Log.i(TAG, "objRouterStatus=3,destroied");
-			objRouterStatus = ROUTER_DESTROIED;
-			//com.changhong.tvos.dtv.DTV_PLAYER_STATUS_CHANGE
-			Intent intent = new Intent(DTVConstant.DTV_PLAYER_STATUS_CHANGE);
-			Bundle bundle = new Bundle();
+			case Resource.STATUS_FREEED:
+				Log.i(TAG, "RmlistenCallback STATUS_FREEED,RsID=" + RsID + "ClientID =" + ClientID);
+				break;
+			case Resource.STATUS_USED:
+				Log.i(TAG, "RmlistenCallback STATUS_USED,RsID=" + RsID + "ClientID =" + ClientID);
+				break;
+			case Resource.STATUS_FORCEUSED:
+				Log.i(TAG, "RmlistenCallback STATUS_FORCEUSED,RsID=" + RsID + "ClientID =" + ClientID);
+				if (ClientID != objmUuid)/*涓嶆槸锟斤拷锟芥湰韬姠鍗犲紩璧风殑callback*/ {
+					int result;
+					//閲婃斁鐩稿叧璧勬簮鍙婂?
+					result = rmManager.RmRelease(RsID, RsType, objmUuid);
+					Log.i(TAG, "RmlistenCallback RmRelease RsType=" + RsType + "result=" + result);
+				}
+				isDTV_Busying = 0;
+				Log.i(TAG, "objRouterStatus=3,destroied");
+				objRouterStatus = ROUTER_DESTROIED;
+				//com.changhong.tvos.dtv.DTV_PLAYER_STATUS_CHANGE
+				Intent intent = new Intent(DTVConstant.DTV_PLAYER_STATUS_CHANGE);
+				Bundle bundle = new Bundle();
 
-			PlayStatusInfo status = new PlayStatusInfo();
-			status.mbIsUseUUID = true;
-			status.mPlayerUuid = UUID.fromString(objmUuid);
-			status.miPlayEvent = DTVConstant.ConstPlayerEvent.FORCE_PAUSE;
-			status.mstrPrompt = null;
+				PlayStatusInfo status = new PlayStatusInfo();
+				status.mbIsUseUUID = true;
+				status.mPlayerUuid = UUID.fromString(objmUuid);
+				status.miPlayEvent = DTVConstant.ConstPlayerEvent.FORCE_PAUSE;
+				status.mstrPrompt = null;
 
-			bundle.putInt(DTVConstant.BroadcastConst.MSG_TYPE_NAME, 0);
-			bundle.putParcelable(DTVConstant.BroadcastConst.MSG_INFO_NAME, status);
-			intent.putExtras(bundle);
-			context.sendBroadcast(intent);
-			break;
-		default:
-			break;
+				bundle.putInt(DTVConstant.BroadcastConst.MSG_TYPE_NAME, 0);
+				bundle.putParcelable(DTVConstant.BroadcastConst.MSG_INFO_NAME, status);
+				intent.putExtras(bundle);
+				context.sendBroadcast(intent);
+				break;
+			default:
+				break;
 		}
 	}
 
@@ -1124,68 +1125,68 @@ public class DTVPlayer extends IDTVPlayer.Stub implements IRmlistener {
 
 			Log.i(TAG, "ScanStatusInfo_Callback eventid: " + obj.miStatus);
 			switch (obj.miStatus) {
-			case ScanStatusInfo.ScanEvent.STATUS_INIT://0
-			case ScanStatusInfo.ScanEvent.STATUS_NIT_BEGIN://2
-			case ScanStatusInfo.ScanEvent.STATUS_NIT_NEXT://4
-			case ScanStatusInfo.ScanEvent.STATUS_SORTED://9
-			case ScanStatusInfo.ScanEvent.STATUS_SORTING://8
-			case ScanStatusInfo.ScanEvent.STATUS_SAVING://10
-			case ScanStatusInfo.ScanEvent.STATUS_SAVED://11
-				break;
+				case ScanStatusInfo.ScanEvent.STATUS_INIT://0
+				case ScanStatusInfo.ScanEvent.STATUS_NIT_BEGIN://2
+				case ScanStatusInfo.ScanEvent.STATUS_NIT_NEXT://4
+				case ScanStatusInfo.ScanEvent.STATUS_SORTED://9
+				case ScanStatusInfo.ScanEvent.STATUS_SORTING://8
+				case ScanStatusInfo.ScanEvent.STATUS_SAVING://10
+				case ScanStatusInfo.ScanEvent.STATUS_SAVED://11
+					break;
 
-			case ScanStatusInfo.ScanEvent.STATUS_END://12
-			case ScanStatusInfo.ScanEvent.STATUS_FAIL://13
-				isDTV_Busying = 0;
-				//节目列表改变（搜台/信号源改变等）
-				new Thread() {
-					public void run() {
-						DTVService.createChlistTmpFile();
-					}
-				}.start();
-				break;
+				case ScanStatusInfo.ScanEvent.STATUS_END://12
+				case ScanStatusInfo.ScanEvent.STATUS_FAIL://13
+					isDTV_Busying = 0;
+					//节目列表改变（搜台/信号源改变等）
+					new Thread() {
+						public void run() {
+							DTVService.createChlistTmpFile();
+						}
+					}.start();
+					break;
 
-			case ScanStatusInfo.ScanEvent.STATUS_INIT_END://1
-				break;
+				case ScanStatusInfo.ScanEvent.STATUS_INIT_END://1
+					break;
 
-			case ScanStatusInfo.ScanEvent.STATUS_NIT_DONE://3
-				if (lCarrier != null) {
-					bundle.putParcelableArray(BroadcastConst.MSG_INFO_NAME_1, lCarrier);
-				} else {
-					Log.e(TAG, "No Carrierlist find by nit !!!!!");
-					return 0;
-				}
-				break;
-
-			case ScanStatusInfo.ScanEvent.STATUS_TUNING_BEGIN://5
-				if ((lCarrier != null) && (lCarrier.length > 0)) {
-					if (obj.miCurCarrierIndex < lCarrier.length) {
-						bundle.putParcelable(BroadcastConst.MSG_INFO_NAME_1, lCarrier[obj.miCurCarrierIndex]);
+				case ScanStatusInfo.ScanEvent.STATUS_NIT_DONE://3
+					if (lCarrier != null) {
+						bundle.putParcelableArray(BroadcastConst.MSG_INFO_NAME_1, lCarrier);
 					} else {
-						bundle.putParcelable(BroadcastConst.MSG_INFO_NAME_1, lCarrier[0]);
+						Log.e(TAG, "No Carrierlist find by nit !!!!!");
+						return 0;
 					}
-				} else {
-					Log.e(TAG, "no current carrierInfo!!!!!");
-					return 0;
-				}
-				break;
+					break;
 
-			case ScanStatusInfo.ScanEvent.STATUS_TUNING_STATUS_FLUSH://6
-				if (turnerStatus != null) {
-					bundle.putParcelable(BroadcastConst.MSG_INFO_NAME_1, turnerStatus);
-				} else {
-					Log.e(TAG, "no tuner status!!!!!");
-					return 0;
-				}
-				break;
+				case ScanStatusInfo.ScanEvent.STATUS_TUNING_BEGIN://5
+					if ((lCarrier != null) && (lCarrier.length > 0)) {
+						if (obj.miCurCarrierIndex < lCarrier.length) {
+							bundle.putParcelable(BroadcastConst.MSG_INFO_NAME_1, lCarrier[obj.miCurCarrierIndex]);
+						} else {
+							bundle.putParcelable(BroadcastConst.MSG_INFO_NAME_1, lCarrier[0]);
+						}
+					} else {
+						Log.e(TAG, "no current carrierInfo!!!!!");
+						return 0;
+					}
+					break;
 
-			case ScanStatusInfo.ScanEvent.STATUS_SERVICE_DONE://7
-				if ((lService != null) && (lService.length > 0)) {
-					bundle.putParcelableArray(BroadcastConst.MSG_INFO_NAME_1, lService);
-				} else {
-					Log.e(TAG, "no channel list!!!!!");
-					return 0;
-				}
-				break;
+				case ScanStatusInfo.ScanEvent.STATUS_TUNING_STATUS_FLUSH://6
+					if (turnerStatus != null) {
+						bundle.putParcelable(BroadcastConst.MSG_INFO_NAME_1, turnerStatus);
+					} else {
+						Log.e(TAG, "no tuner status!!!!!");
+						return 0;
+					}
+					break;
+
+				case ScanStatusInfo.ScanEvent.STATUS_SERVICE_DONE://7
+					if ((lService != null) && (lService.length > 0)) {
+						bundle.putParcelableArray(BroadcastConst.MSG_INFO_NAME_1, lService);
+					} else {
+						Log.e(TAG, "no channel list!!!!!");
+						return 0;
+					}
+					break;
 			}
 
 			myintent.putExtras(bundle);
@@ -1194,54 +1195,52 @@ public class DTVPlayer extends IDTVPlayer.Stub implements IRmlistener {
 		}
 
 		/** 锟斤拷锟姐播锟较诧拷锟斤拷一锟斤拷锟斤拷锟解几锟斤拷锟接口诧拷锟斤拷使锟斤拷
-		    @Override
-			public int ScanStatusInfo_Callback(int routerID,ScanStatusInfo obj,CarrierInfo[] lCarrier, DTVChannelBaseInfo[] lService)
-				// TODO Auto-generated method stub
-				Intent myintent = new Intent(DTVConstant.SCAN_STATUS_BROADCAST);
-			    Bundle bundle = new Bundle();  
-		        Log.i(TAG,"ScanStatusInfo_Callback"); 
-		   
-		        bundle.putString("calientid", objmUuid);
-		        bundle.putParcelable("scan_msg_info", obj);
-		        myintent.putExtras(bundle);
-		        context.sendBroadcast(myintent);
-				return 0;
-			}
+		 @Override public int ScanStatusInfo_Callback(int routerID,ScanStatusInfo obj,CarrierInfo[] lCarrier, DTVChannelBaseInfo[] lService)
+		 // TODO Auto-generated method stub
+		 Intent myintent = new Intent(DTVConstant.SCAN_STATUS_BROADCAST);
+		 Bundle bundle = new Bundle();
+		 Log.i(TAG,"ScanStatusInfo_Callback");
 
-			//@Override
-			public int CarrierInfo_Callback(int routerID, CarrierInfo obj) {
-				// TODO Auto-generated method stub
-				Intent myintent = new Intent(DTVConstant.SCAN_STATUS_BROADCAST);
-			    Bundle bundle = new Bundle();  
-		        Log.i(TAG,"CarrierInfo_Callback"); 
-		   
-		        bundle.putString("calientid", objmUuid);
-		        bundle.putParcelable("scan_msg_info", obj);
-		        myintent.putExtras(bundle);
-		        context.sendBroadcast(myintent);
-				return 0;
-			}
+		 bundle.putString("calientid", objmUuid);
+		 bundle.putParcelable("scan_msg_info", obj);
+		 myintent.putExtras(bundle);
+		 context.sendBroadcast(myintent);
+		 return 0;
+		 }
 
-			//@Override
-			public int ScanChannelInfo_Callback(int routerID, ScanChannelInfo obj) {
-				// TODO Auto-generated method stub
-				Intent myintent = new Intent(DTVConstant.SCAN_STATUS_BROADCAST);
-			    Bundle bundle = new Bundle();  
-		        Log.i(TAG,"ScanChannelInfo_Callback"); 
-		   
-		        bundle.putString("calientid", objmUuid);
-		        bundle.putParcelable("scan_msg_info", obj);
-		        myintent.putExtras(bundle);
-		        context.sendBroadcast(myintent);
-				return 0;
-			}
+		 //@Override
+		 public int CarrierInfo_Callback(int routerID, CarrierInfo obj) {
+		 // TODO Auto-generated method stub
+		 Intent myintent = new Intent(DTVConstant.SCAN_STATUS_BROADCAST);
+		 Bundle bundle = new Bundle();
+		 Log.i(TAG,"CarrierInfo_Callback");
 
-			@Override
-			public int ScanStatusInfo_Callback(int routerID, ScanStatusInfo obj,
-					CarrierInfo[] obj_Carrier, DTVChannelBaseInfo[] obj_Service) {
-				// TODO Auto-generated method stub
-				return 0;
-			}
+		 bundle.putString("calientid", objmUuid);
+		 bundle.putParcelable("scan_msg_info", obj);
+		 myintent.putExtras(bundle);
+		 context.sendBroadcast(myintent);
+		 return 0;
+		 }
+
+		 //@Override
+		 public int ScanChannelInfo_Callback(int routerID, ScanChannelInfo obj) {
+		 // TODO Auto-generated method stub
+		 Intent myintent = new Intent(DTVConstant.SCAN_STATUS_BROADCAST);
+		 Bundle bundle = new Bundle();
+		 Log.i(TAG,"ScanChannelInfo_Callback");
+
+		 bundle.putString("calientid", objmUuid);
+		 bundle.putParcelable("scan_msg_info", obj);
+		 myintent.putExtras(bundle);
+		 context.sendBroadcast(myintent);
+		 return 0;
+		 }
+
+		 @Override public int ScanStatusInfo_Callback(int routerID, ScanStatusInfo obj,
+		 CarrierInfo[] obj_Carrier, DTVChannelBaseInfo[] obj_Service) {
+		 // TODO Auto-generated method stub
+		 return 0;
+		 }
 		 **/
 
 	}
@@ -1272,26 +1271,26 @@ public class DTVPlayer extends IDTVPlayer.Stub implements IRmlistener {
 			}
 
 			switch (obj.miMsgType) {
-			case ConstCICAMsgType.MSG_MAIL:
-			case ConstCICAMsgType.MSG_FINGER:
-			case ConstCICAMsgType.MSG_PROMPT:
-			case ConstCICAMsgType.MSG_SUBTITLE:
-			case ConstCICAMsgType.MSG_ANNOUNCE:
-			case ConstCICAMsgType.MSG_USER_MENU:
-			case ConstCICAMsgType.MSG_FORCE_MENU:
-			case ConstCICAMsgType.MSG_FORCE_RESORT:
-			case ConstCICAMsgType.MSG_FORCE_RESCAN:
-				break;
-			case ConstCICAMsgType.MSG_FORCE_CHANNEL:
-				lastProgramID = currentProgramID;
-				currentProgramID = -1;
-				break;
-			case ConstCICAMsgType.MSG_NO_CARD_SETS:
-			case ConstCICAMsgType.MSG_CHANNEL_UPDATE:
-				break;
-			default:
-				Log.e(TAG, "Menu_notify_Callback: not support type");
-				return 0;
+				case ConstCICAMsgType.MSG_MAIL:
+				case ConstCICAMsgType.MSG_FINGER:
+				case ConstCICAMsgType.MSG_PROMPT:
+				case ConstCICAMsgType.MSG_SUBTITLE:
+				case ConstCICAMsgType.MSG_ANNOUNCE:
+				case ConstCICAMsgType.MSG_USER_MENU:
+				case ConstCICAMsgType.MSG_FORCE_MENU:
+				case ConstCICAMsgType.MSG_FORCE_RESORT:
+				case ConstCICAMsgType.MSG_FORCE_RESCAN:
+					break;
+				case ConstCICAMsgType.MSG_FORCE_CHANNEL:
+					lastProgramID = currentProgramID;
+					currentProgramID = -1;
+					break;
+				case ConstCICAMsgType.MSG_NO_CARD_SETS:
+				case ConstCICAMsgType.MSG_CHANNEL_UPDATE:
+					break;
+				default:
+					Log.e(TAG, "Menu_notify_Callback: not support type");
+					return 0;
 			}
 
 			bundle.putString("calientid", objmUuid);
@@ -1359,38 +1358,38 @@ public class DTVPlayer extends IDTVPlayer.Stub implements IRmlistener {
 		public int player_TvosCallback(int routerID, int event) {
 			// TODO Auto-generated method stub
 			switch (event) {
-			case DTVConstant.ConstPlayerTvosEvent.MUTE:
-				if (soundM != null) {
-					//						soundM
-				}
-				break;
-			case DTVConstant.ConstPlayerTvosEvent.UNMUTE:
-				if (soundM != null) {
-					//						soundM
-				}
-				break;
-			case DTVConstant.ConstPlayerTvosEvent.HIDE_VIDEO:
-				if (tvplayer != null) {
-					tvplayer.muteVideo();
-				}
-				break;
-			case DTVConstant.ConstPlayerTvosEvent.SHOW_VIDEO:
-				if (tvplayer != null) {
-					tvplayer.unmuteVideo();
-				}
-				break;
-			case DTVConstant.ConstPlayerTvosEvent.FREEZE_VIDEO:
-				if (tvplayer != null) {
-					tvplayer.freezeVideo();
-				}
-				break;
-			case DTVConstant.ConstPlayerTvosEvent.UNFREEZE_VIDEO:
-				if (tvplayer != null) {
-					tvplayer.unFreezeVideo();
-				}
-				break;
-			case DTVConstant.ConstPlayerTvosEvent.CLEAR_VIDDEO_BUFFER:
-				break;
+				case DTVConstant.ConstPlayerTvosEvent.MUTE:
+					if (soundM != null) {
+						//						soundM
+					}
+					break;
+				case DTVConstant.ConstPlayerTvosEvent.UNMUTE:
+					if (soundM != null) {
+						//						soundM
+					}
+					break;
+				case DTVConstant.ConstPlayerTvosEvent.HIDE_VIDEO:
+					if (tvplayer != null) {
+						tvplayer.muteVideo();
+					}
+					break;
+				case DTVConstant.ConstPlayerTvosEvent.SHOW_VIDEO:
+					if (tvplayer != null) {
+						tvplayer.unmuteVideo();
+					}
+					break;
+				case DTVConstant.ConstPlayerTvosEvent.FREEZE_VIDEO:
+					if (tvplayer != null) {
+						tvplayer.freezeVideo();
+					}
+					break;
+				case DTVConstant.ConstPlayerTvosEvent.UNFREEZE_VIDEO:
+					if (tvplayer != null) {
+						tvplayer.unFreezeVideo();
+					}
+					break;
+				case DTVConstant.ConstPlayerTvosEvent.CLEAR_VIDDEO_BUFFER:
+					break;
 			}
 			return 0;
 		}
@@ -1523,14 +1522,14 @@ public class DTVPlayer extends IDTVPlayer.Stub implements IRmlistener {
 		// TODO Auto-generated method stub
 		Log.i(TAG, "getPlayerStatus=" + objRouterStatus);
 		switch (objRouterStatus) {
-		case ROUTER_VALID:
-			return 0;
-		case ROUTER_INIT:
-			return 1;
-		case ROUTER_USED_BY_OTHER:
-			return 2;
-		case ROUTER_DESTROIED:
-			return 3;
+			case ROUTER_VALID:
+				return 0;
+			case ROUTER_INIT:
+				return 1;
+			case ROUTER_USED_BY_OTHER:
+				return 2;
+			case ROUTER_DESTROIED:
+				return 3;
 		}
 		return 0;
 	}
@@ -1585,7 +1584,7 @@ public class DTVPlayer extends IDTVPlayer.Stub implements IRmlistener {
 
 	@Override
 	public void setHotelMode(boolean bHotelMode) throws RemoteException {
-		// TODO Auto-generated method stub		
+		// TODO Auto-generated method stub
 
 		Log.i(TAG, "setHotelMode-->>>>>>" + bHotelMode);
 		hotelM.setHotelMode(bHotelMode);

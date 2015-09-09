@@ -1,8 +1,5 @@
 package com.changhong.tvos.dtv.scan;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.regex.Pattern;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -11,18 +8,19 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcelable;
 import android.util.Log;
+
 import com.changhong.menudata.MainMenuReceiver;
 import com.changhong.tvos.dtv.R;
-import com.changhong.tvos.dtv.tvap.DtvSourceManager;
 import com.changhong.tvos.dtv.tvap.DtvChannelManager;
 import com.changhong.tvos.dtv.tvap.DtvConfigManager;
 import com.changhong.tvos.dtv.tvap.DtvInterface;
 import com.changhong.tvos.dtv.tvap.DtvOperatorManager;
 import com.changhong.tvos.dtv.tvap.DtvScheduleManager;
-import com.changhong.tvos.dtv.tvap.baseType.DtvTunerInfo;
-import com.changhong.tvos.dtv.tvap.baseType.DtvTunerStatus;
+import com.changhong.tvos.dtv.tvap.DtvSourceManager;
 import com.changhong.tvos.dtv.tvap.baseType.ConstValueClass.ConstScanParams;
 import com.changhong.tvos.dtv.tvap.baseType.ConstValueClass.ConstStringKey;
+import com.changhong.tvos.dtv.tvap.baseType.DtvTunerInfo;
+import com.changhong.tvos.dtv.tvap.baseType.DtvTunerStatus;
 import com.changhong.tvos.dtv.vo.CarrierInfo;
 import com.changhong.tvos.dtv.vo.DMBTHCarrier;
 import com.changhong.tvos.dtv.vo.DTVChannelBaseInfo;
@@ -32,13 +30,17 @@ import com.changhong.tvos.dtv.vo.DTVConstant.ConstDemodType;
 import com.changhong.tvos.dtv.vo.ScanStatusInfo;
 import com.changhong.tvos.dtv.vo.ScanStatusInfo.ScanEvent;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Pattern;
+
 public class ScanManager {
 	private DtvOperatorManager mOperatorManager = DtvOperatorManager.getInstance();
 	private DtvSourceManager mDemodeTypeManager = DtvSourceManager.getInstance();
 
 	public enum scantype {
 		DTV_ScanAuto, DTV_ScanList, DTV_ScanMaunal, DTV_ScanMaunal_Dmbt, DTV_ScanAutoExtra, DTV_ScanAutoExtra_Dmbt, DTV_ScanAutoExtra_SearchGuide,
-	};
+	}
 
 	private final static int SCAN_MODE_NIT = 1;
 	private final static int SCAN_MODE_LIST = 2;
@@ -48,7 +50,7 @@ public class ScanManager {
 	public Context mContext;
 	public static final String TAG = "ScanManager";
 	public int scanProgress = 0;
-
+	public String scanPrompt = "";
 	public int currentFrequency = 400000;
 	public int symbolRate = 6875;
 	//	public int modulMode = 64;
@@ -227,7 +229,9 @@ public class ScanManager {
 	public int getSignalLevel() {
 		signalStrength = tunerStatus.getSignalLevel();
 		return signalStrength;
-	};
+	}
+
+	;
 
 	public int getSignalQuality() {
 		signalQuality = tunerStatus.getSignalQuality();
@@ -245,65 +249,66 @@ public class ScanManager {
 		resultOfData = 0;
 		isSearching = true;
 		switch (scanType) {
-		case DTV_ScanAuto: {
-			Log.i(TAG, "LL enter DTV_ScanAuto *** ");
-			// DtvChannelManager.getInstance().getChannelList().clear();
-			DtvChannelManager.getInstance().reset();
-			DtvScheduleManager.getInstance().delAllScheduleEvents();
-			List<DtvTunerInfo> opMianTunerList = mOperatorManager.getOPMainTunerList();
+			case DTV_ScanAuto: {
+				Log.i(TAG, "LL enter DTV_ScanAuto *** ");
+				// DtvChannelManager.getInstance().getChannelList().clear();
+				DtvChannelManager.getInstance().reset();
+				DtvScheduleManager.getInstance().delAllScheduleEvents();
+				List<DtvTunerInfo> opMianTunerList = mOperatorManager.getOPMainTunerList();
 
-			DtvTunerInfo tunerInfo = new DtvTunerInfo(frequency, symbolRate, modulMode + 1);
-			List<DtvTunerInfo> list = this.getFreqParams(opMianTunerList, tunerInfo);
-			DtvTunerInfo[] tuners = null;
-			if (null != list) {
-				tuners = new DtvTunerInfo[list.size()];
-				for (int index = 0; index < list.size(); index++) {
-					//		tuners[index] = new DtvTunerInfo(list.get(index).getFrequency(), symbolRate, getQamModeIndex(modulMode));
-					tuners[index] = new DtvTunerInfo(list.get(index).getFrequency(), symbolRate, modulMode + 1);
+				DtvTunerInfo tunerInfo = new DtvTunerInfo(frequency, symbolRate, modulMode + 1);
+				List<DtvTunerInfo> list = this.getFreqParams(opMianTunerList, tunerInfo);
+				DtvTunerInfo[] tuners = null;
+				if (null != list) {
+					tuners = new DtvTunerInfo[list.size()];
+					for (int index = 0; index < list.size(); index++) {
+						//		tuners[index] = new DtvTunerInfo(list.get(index).getFrequency(), symbolRate, getQamModeIndex(modulMode));
+						tuners[index] = new DtvTunerInfo(list.get(index).getFrequency(), symbolRate, modulMode + 1);
+					}
+				} else {
+					tuners = new DtvTunerInfo[1];
+					tuners[0] = tunerInfo;
 				}
-			} else {
-				tuners = new DtvTunerInfo[1];
-				tuners[0] = tunerInfo;
+				dtvInterface.scanStart(SCAN_MODE_NIT, tuners);
+				break;
 			}
-			dtvInterface.scanStart(SCAN_MODE_NIT, tuners);
-			break;
-		}
 
-		case DTV_ScanList: {
-			Log.i(TAG, "LL enter DTV_ScanList *** ");
-			// DtvChannelManager.getInstance().getChannelList().clear();
-			DtvChannelManager.getInstance().reset();
-			DtvScheduleManager.getInstance().delAllScheduleEvents();
-			dtvScanFreTable = getFreTable();
-			DtvTunerInfo[] tunerList = new DtvTunerInfo[dtvScanFreTable.length];
-			for (int index = 0; index < dtvScanFreTable.length; index++) {
-				tunerList[index] = new DtvTunerInfo(dtvScanFreTable[index], symbolRate, modulMode + 1);
+			case DTV_ScanList: {
+				Log.i(TAG, "LL enter DTV_ScanList *** ");
+				// DtvChannelManager.getInstance().getChannelList().clear();
+				DtvChannelManager.getInstance().reset();
+				DtvScheduleManager.getInstance().delAllScheduleEvents();
+				dtvScanFreTable = getFreTable();
+				DtvTunerInfo[] tunerList = new DtvTunerInfo[dtvScanFreTable.length];
+				for (int index = 0; index < dtvScanFreTable.length; index++) {
+					tunerList[index] = new DtvTunerInfo(dtvScanFreTable[index], symbolRate, modulMode + 1);
+				}
+				dtvInterface.scanStart(SCAN_MODE_LIST, tunerList);
+				break;
 			}
-			dtvInterface.scanStart(SCAN_MODE_LIST, tunerList);
-			break;
-		}
 
-		case DTV_ScanMaunal: {
-			Log.i(TAG, "LL enter DTV_ScanMaunal *** " + SCAN_MODE_MANUAL);
-			DtvTunerInfo tuner = new DtvTunerInfo(frequency, symbolRate, modulMode + 1);
-			DtvTunerInfo[] tunerList = null;
-			if (listFreMax <= frequency) {
-				tunerList = new DtvTunerInfo[] { tuner, tuner };
-			} else {
-				tunerList = new DtvTunerInfo[] { tuner, new DtvTunerInfo(listFreMax, symbolRate, modulMode + 1) };
+			case DTV_ScanMaunal: {
+				Log.i(TAG, "LL enter DTV_ScanMaunal *** " + SCAN_MODE_MANUAL);
+				DtvTunerInfo tuner = new DtvTunerInfo(frequency, symbolRate, modulMode + 1);
+				DtvTunerInfo[] tunerList = null;
+				if (listFreMax <= frequency) {
+					tunerList = new DtvTunerInfo[]{tuner, tuner};
+				} else {
+					tunerList = new DtvTunerInfo[]{tuner, new DtvTunerInfo(listFreMax, symbolRate, modulMode + 1)};
+				}
+				dtvInterface.scanStart(SCAN_MODE_MANUAL, tunerList);
+				break;
 			}
-			dtvInterface.scanStart(SCAN_MODE_MANUAL, tunerList);
-			break;
-		}
 
-		default:
-			break;
+			default:
+				break;
 		}
 	}
 
 	/**
 	 * getDMBTParams()
 	 * 锟斤拷实锟斤拷要锟斤拷锟斤拷锟斤拷频锟绞ｏ拷锟斤拷锟斤拷锟斤拷锟斤拷璨伙拷瓒硷拷锟接帮拷锟
+	 *
 	 * @return
 	 */
 	public boolean getDMBTParams() {
@@ -354,55 +359,55 @@ public class ScanManager {
 		}
 
 		switch (scanType) {
-		case DTV_ScanAuto:{
-			Log.i(TAG, "LL enter DTV_ScanAuto *** ");
-			// DtvChannelManager.getInstance().getChannelList().clear();
-			DtvChannelManager.getInstance().reset();
-			DtvScheduleManager.getInstance().delAllScheduleEvents();
+			case DTV_ScanAuto: {
+				Log.i(TAG, "LL enter DTV_ScanAuto *** ");
+				// DtvChannelManager.getInstance().getChannelList().clear();
+				DtvChannelManager.getInstance().reset();
+				DtvScheduleManager.getInstance().delAllScheduleEvents();
 
-			DtvTunerInfo info = new DtvTunerInfo(miCarrierMode, frequency, miNCOFrequency, miDTMBTHQamMode, miLDPCRate, miFrameHeader, miInterleaverMode);
-			List<DtvTunerInfo> opMianTunerList = mOperatorManager.getOPMainTunerList();
-			List<DtvTunerInfo> list = this.getFreqParams(opMianTunerList, info);
-			DtvTunerInfo[] tuners = null;
-			if (null != list && list.size() > 0) {
-				tuners = new DtvTunerInfo[list.size()];
+				DtvTunerInfo info = new DtvTunerInfo(miCarrierMode, frequency, miNCOFrequency, miDTMBTHQamMode, miLDPCRate, miFrameHeader, miInterleaverMode);
+				List<DtvTunerInfo> opMianTunerList = mOperatorManager.getOPMainTunerList();
+				List<DtvTunerInfo> list = this.getFreqParams(opMianTunerList, info);
+				DtvTunerInfo[] tuners = null;
+				if (null != list && list.size() > 0) {
+					tuners = new DtvTunerInfo[list.size()];
 
-				for (int index = 0; index < list.size(); index++) {
-					Log.i(TAG, "Frequancy is + " + list.get(index).getFrequency());
-					tuners[index] = new DtvTunerInfo(miCarrierMode, list.get(index).getFrequency(), miNCOFrequency, miDTMBTHQamMode, miLDPCRate, miFrameHeader, miInterleaverMode);
+					for (int index = 0; index < list.size(); index++) {
+						Log.i(TAG, "Frequancy is + " + list.get(index).getFrequency());
+						tuners[index] = new DtvTunerInfo(miCarrierMode, list.get(index).getFrequency(), miNCOFrequency, miDTMBTHQamMode, miLDPCRate, miFrameHeader, miInterleaverMode);
+					}
+				} else {
+					tuners = new DtvTunerInfo[1];
+					tuners[0] = info;
 				}
-			} else {
-				tuners = new DtvTunerInfo[1];
-				tuners[0] = info;
+				dtvInterface.scanStart(SCAN_MODE_NIT, tuners);
+				break;
 			}
-			dtvInterface.scanStart(SCAN_MODE_NIT, tuners);
-			break;
-		}
 
-		case DTV_ScanList: {
-			Log.i(TAG, "LL enter DTV_ScanList *** ");
-			// DtvChannelManager.getInstance().getChannelList().clear();
-			DtvChannelManager.getInstance().reset();
-			DtvScheduleManager.getInstance().delAllScheduleEvents();
-			dtvScanFreTable = getFreTable();
-			DtvTunerInfo[] tunerList = new DtvTunerInfo[dtvScanFreTable.length];
-			for (int index = 0; index < dtvScanFreTable.length; index++) {
-				tunerList[index] = new DtvTunerInfo(miCarrierMode, dtvScanFreTable[index], miNCOFrequency, miDTMBTHQamMode, miLDPCRate, miFrameHeader, miInterleaverMode);
+			case DTV_ScanList: {
+				Log.i(TAG, "LL enter DTV_ScanList *** ");
+				// DtvChannelManager.getInstance().getChannelList().clear();
+				DtvChannelManager.getInstance().reset();
+				DtvScheduleManager.getInstance().delAllScheduleEvents();
+				dtvScanFreTable = getFreTable();
+				DtvTunerInfo[] tunerList = new DtvTunerInfo[dtvScanFreTable.length];
+				for (int index = 0; index < dtvScanFreTable.length; index++) {
+					tunerList[index] = new DtvTunerInfo(miCarrierMode, dtvScanFreTable[index], miNCOFrequency, miDTMBTHQamMode, miLDPCRate, miFrameHeader, miInterleaverMode);
+				}
+				dtvInterface.scanStart(SCAN_MODE_LIST, tunerList);
+				break;
 			}
-			dtvInterface.scanStart(SCAN_MODE_LIST, tunerList);
-			break;
-		}
 
-		case DTV_ScanMaunal:{
-			Log.i(TAG, "LL enter DTV_ScanMaunal *** " + SCAN_MODE_MANUAL);
-			DtvTunerInfo tuner = new DtvTunerInfo(miCarrierMode, frequency, miNCOFrequency, miDTMBTHQamMode, miLDPCRate, miFrameHeader, miInterleaverMode);
-			DtvTunerInfo[] tunerList = { tuner };
-			dtvInterface.scanStart(SCAN_MODE_MANUAL, tunerList);
-			break;
-		}
+			case DTV_ScanMaunal: {
+				Log.i(TAG, "LL enter DTV_ScanMaunal *** " + SCAN_MODE_MANUAL);
+				DtvTunerInfo tuner = new DtvTunerInfo(miCarrierMode, frequency, miNCOFrequency, miDTMBTHQamMode, miLDPCRate, miFrameHeader, miInterleaverMode);
+				DtvTunerInfo[] tunerList = {tuner};
+				dtvInterface.scanStart(SCAN_MODE_MANUAL, tunerList);
+				break;
+			}
 
-		default:
-			break;
+			default:
+				break;
 		}
 	}
 
@@ -503,8 +508,10 @@ public class ScanManager {
 				Log.e(TAG, "LL statusInfo = null");
 				return;
 			}
-                        scanProgress = statusInfo.miProgress;
+			scanProgress = statusInfo.miProgress;
+			scanPrompt = statusInfo.mstrPrompt;
 			Log.i(TAG, "LL statusInfo.miProgress = " + statusInfo.miProgress);
+			Log.i(TAG, "LL statusInfo.mstrPrompt = " + statusInfo.mstrPrompt);
 			/*if(handler == null){
 				Log.e(TAG, "LL handler = null");
 				return;
@@ -521,128 +528,128 @@ public class ScanManager {
 
 			Log.i(TAG, "LL statusInfo.miStatus= " + statusInfo.miStatus);
 			switch (statusInfo.miStatus) {
-			case ScanEvent.STATUS_INIT:
-				Log.i(TAG, "Reveiced STATUS_INIT");
-				break;
+				case ScanEvent.STATUS_INIT:
+					Log.i(TAG, "Reveiced STATUS_INIT");
+					break;
 
-			case ScanEvent.STATUS_INIT_END:
-				Log.i(TAG, "Reveiced STATUS_INIT_END");
-				break;
+				case ScanEvent.STATUS_INIT_END:
+					Log.i(TAG, "Reveiced STATUS_INIT_END");
+					break;
 
-			case ScanEvent.STATUS_NIT_BEGIN:
-				Log.i(TAG, "STATUS_NIT_BEGIN");
-				break;
+				case ScanEvent.STATUS_NIT_BEGIN:
+					Log.i(TAG, "STATUS_NIT_BEGIN");
+					break;
 
-			case ScanEvent.STATUS_NIT_DONE:
-				Log.i(TAG, "STATUS_NIT_DONE");
-				break;
+				case ScanEvent.STATUS_NIT_DONE:
+					Log.i(TAG, "STATUS_NIT_DONE");
+					break;
 
-			case ScanEvent.STATUS_NIT_NEXT:
-				Log.i(TAG, "STATUS_NIT_NEXT");
-				break;
+				case ScanEvent.STATUS_NIT_NEXT:
+					Log.i(TAG, "STATUS_NIT_NEXT");
+					break;
 
-			case ScanEvent.STATUS_TUNING_BEGIN:
-				Log.i(TAG, "STATUS_TUNING_BEGIN");
-				CarrierInfo o_Car = null;
-				o_Car = (CarrierInfo) bd_Get.getParcelable(BroadcastConst.MSG_INFO_NAME_1);
-				Log.i(TAG, "LL o_Car.miFrequencyK = " + o_Car.miFrequencyK);
-				currentFrequency = o_Car.miFrequencyK;
-				try {
-					if (demodType == ConstDemodType.DMB_TH) {
-						miNCOFrequency = ((DMBTHCarrier) o_Car).miNCOFrequencyKhz;
+				case ScanEvent.STATUS_TUNING_BEGIN:
+					Log.i(TAG, "STATUS_TUNING_BEGIN");
+					CarrierInfo o_Car = null;
+					o_Car = (CarrierInfo) bd_Get.getParcelable(BroadcastConst.MSG_INFO_NAME_1);
+					Log.i(TAG, "LL o_Car.miFrequencyK = " + o_Car.miFrequencyK);
+					currentFrequency = o_Car.miFrequencyK;
+					try {
+						if (demodType == ConstDemodType.DMB_TH) {
+							miNCOFrequency = ((DMBTHCarrier) o_Car).miNCOFrequencyKhz;
+						}
+					} catch (Exception e) {
 					}
-				} catch (Exception e) {
-				}
-				Log.i(TAG, "sendEmptyMessage fy011111");
-				if (handler != null) {//2015-4-14 YangLiu
-					handler.sendEmptyMessage(MenuScan.SCAN_UPDATE_MESSAGE);
-				} else {
-					Log.i(TAG, "handler=" + handler);
-				}
-				//handler.sendEmptyMessage(MainMenuRootData.Auto_SCAN_UPDATE_MESSAGE);
-				break;
-
-			case ScanEvent.STATUS_TUNING_STATUS_FLUSH:
-				Log.i(TAG, "STATUS_TUNING_STATUS_FLUSH");
-				break;
-
-			case ScanEvent.STATUS_SERVICE_DONE:
-				Log.i(TAG, "STATUS_SERVICE_DONE");
-				Parcelable[] tmpParcelable = bd_Get.getParcelableArray(BroadcastConst.MSG_INFO_NAME_1);
-				DTVChannelBaseInfo o_Ch = null;
-				Log.i(TAG, "LL tmpParcelable.length = " + tmpParcelable.length);
-				for (int i = 0; i < tmpParcelable.length; i++) {
-					Log.i(TAG, "LL tmpParcelable[" + i + "] = " + tmpParcelable[i]);
-					o_Ch = (DTVChannelBaseInfo) tmpParcelable[i];
-
-					switch (o_Ch.miServiceType) {
-					case DTVConstant.ConstServiceType.SERVICE_TYPE_RADIO:
-						resultOfRadio++;
-						break;
-					case DTVConstant.ConstServiceType.SERVICE_TYPE_TV:
-					case 101:
-					case 102:
-					case 103:
-						resultOfDTV++;
-						break;
-
-					default:
-						break;
+					Log.i(TAG, "sendEmptyMessage fy011111");
+					if (handler != null) {//2015-4-14 YangLiu
+						handler.sendEmptyMessage(MenuScan.SCAN_UPDATE_MESSAGE);
+					} else {
+						Log.i(TAG, "handler=" + handler);
 					}
-				}
-				if (handler != null) {//2015-4-14 YangLiu
-					handler.sendEmptyMessage(MenuScan.SCAN_UPDATE_MESSAGE);
-				} else {
-					Log.i(TAG, "handler=" + handler);
-				}
-				break;
+					//handler.sendEmptyMessage(MainMenuRootData.Auto_SCAN_UPDATE_MESSAGE);
+					break;
 
-			case ScanEvent.STATUS_SORTING:
-				Log.i(TAG, "STATUS_SORTING");
-				break;
+				case ScanEvent.STATUS_TUNING_STATUS_FLUSH:
+					Log.i(TAG, "STATUS_TUNING_STATUS_FLUSH");
+					break;
 
-			case ScanEvent.STATUS_SORTED:
-				Log.i(TAG, "STATUS_SORTED");
-				break;
+				case ScanEvent.STATUS_SERVICE_DONE:
+					Log.i(TAG, "STATUS_SERVICE_DONE");
+					Parcelable[] tmpParcelable = bd_Get.getParcelableArray(BroadcastConst.MSG_INFO_NAME_1);
+					DTVChannelBaseInfo o_Ch = null;
+					Log.i(TAG, "LL tmpParcelable.length = " + tmpParcelable.length);
+					for (int i = 0; i < tmpParcelable.length; i++) {
+						Log.i(TAG, "LL tmpParcelable[" + i + "] = " + tmpParcelable[i]);
+						o_Ch = (DTVChannelBaseInfo) tmpParcelable[i];
 
-			case ScanEvent.STATUS_SAVING:
-				Log.i(TAG, "STATUS_SAVING");
-				scanProgress = 100;
-				Log.i(TAG, "LL saving data and set scanProgress to full ***");
-				if (handler != null) {//2015-4-14 YangLiu
-					handler.sendEmptyMessage(MenuScan.SAVE_DATA_MESSAGE);
-				} else {
-					Log.i(TAG, "handler=" + handler);
-				}
-				break;
+						switch (o_Ch.miServiceType) {
+							case DTVConstant.ConstServiceType.SERVICE_TYPE_RADIO:
+								resultOfRadio++;
+								break;
+							case DTVConstant.ConstServiceType.SERVICE_TYPE_TV:
+							case 101:
+							case 102:
+							case 103:
+								resultOfDTV++;
+								break;
 
-			case ScanEvent.STATUS_SAVED:
-				Log.i(TAG, "STATUS_SAVED");
-				break;
+							default:
+								break;
+						}
+					}
+					if (handler != null) {//2015-4-14 YangLiu
+						handler.sendEmptyMessage(MenuScan.SCAN_UPDATE_MESSAGE);
+					} else {
+						Log.i(TAG, "handler=" + handler);
+					}
+					break;
 
-			case ScanEvent.STATUS_FAIL:
-				Log.i(TAG, "STATUS_FAIL");
-				isSearching = false;
-				if (handler != null) {//2015-4-14 YangLiu
-					handler.sendEmptyMessage(MenuScan.DIALOG_EXIT_MESSAGE);
-				} else {
-					Log.i(TAG, "handler=" + handler);
-				}
-				break;
+				case ScanEvent.STATUS_SORTING:
+					Log.i(TAG, "STATUS_SORTING");
+					break;
 
-			case ScanEvent.STATUS_END:
-				Log.i(TAG, "STATUS_END");
+				case ScanEvent.STATUS_SORTED:
+					Log.i(TAG, "STATUS_SORTED");
+					break;
 
-				isSearching = false;
-				if (handler != null) {//2015-4-14 YangLiu
-					handler.sendEmptyMessage(MenuScan.DIALOG_EXIT_MESSAGE);
-				} else {
-					Log.i(TAG, "handler=" + handler);
-				}
-				break;
+				case ScanEvent.STATUS_SAVING:
+					Log.i(TAG, "STATUS_SAVING");
+					scanProgress = 100;
+					Log.i(TAG, "LL saving data and set scanProgress to full ***");
+					if (handler != null) {//2015-4-14 YangLiu
+						handler.sendEmptyMessage(MenuScan.SAVE_DATA_MESSAGE);
+					} else {
+						Log.i(TAG, "handler=" + handler);
+					}
+					break;
 
-			default:
-				break;
+				case ScanEvent.STATUS_SAVED:
+					Log.i(TAG, "STATUS_SAVED");
+					break;
+
+				case ScanEvent.STATUS_FAIL:
+					Log.i(TAG, "STATUS_FAIL");
+					isSearching = false;
+					if (handler != null) {//2015-4-14 YangLiu
+						handler.sendEmptyMessage(MenuScan.DIALOG_EXIT_MESSAGE);
+					} else {
+						Log.i(TAG, "handler=" + handler);
+					}
+					break;
+
+				case ScanEvent.STATUS_END:
+					Log.i(TAG, "STATUS_END");
+
+					isSearching = false;
+					if (handler != null) {//2015-4-14 YangLiu
+						handler.sendEmptyMessage(MenuScan.DIALOG_EXIT_MESSAGE);
+					} else {
+						Log.i(TAG, "handler=" + handler);
+					}
+					break;
+
+				default:
+					break;
 			}
 		}
 	}

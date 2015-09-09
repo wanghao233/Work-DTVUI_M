@@ -45,7 +45,7 @@ import java.util.UUID;
  * TV
  */
 public class DTVM {
-	final static String TAG = "DTV.DTVM";
+	final static String TAG = "DTVAPI.DTVM";
 
 	private static DTVM instance = null;
 

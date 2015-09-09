@@ -1,5 +1,16 @@
 package com.changhong.tvos.dtv.service;
 
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.RemoteException;
+import android.util.Log;
+
+import com.changhong.tvos.dtv.provider.BaseProgramManager;
+import com.changhong.tvos.dtv.vo.DTVConstant;
+import com.changhong.tvos.dtv.vo.TimerInfo;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,18 +18,9 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.RemoteException;
-import android.util.Log;
-import com.changhong.tvos.dtv.provider.BaseProgramManager;
-import com.changhong.tvos.dtv.vo.DTVConstant;
-import com.changhong.tvos.dtv.vo.TimerInfo;
 
 public class TimerShedule extends ITimerShedule.Stub {
-	final static String TAG = "dtvservice.TimerShedule";
+	final static String TAG = "DtvService.TimerShedule";
 
 	boolean TimerChanged = false;
 	private static TimerShedule mInstance = null;
@@ -65,7 +67,9 @@ public class TimerShedule extends ITimerShedule.Stub {
 		}
 	}
 
-	/**ѭ��**/
+	/**
+	 * init
+	 */
 	private int init() {
 		final Thread thread = new Thread() {
 			public void run() {
@@ -164,7 +168,7 @@ public class TimerShedule extends ITimerShedule.Stub {
 	}
 
 	/**
-	 * return 
+	 * return
 	 * 0-success;1-
 	 */
 	@Override

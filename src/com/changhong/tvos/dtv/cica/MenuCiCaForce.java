@@ -1,24 +1,5 @@
 package com.changhong.tvos.dtv.cica;
 
-import com.changhong.softkeyboard.CHSoftKeyboardManager;
-import com.changhong.tvos.dtv.R;
-import com.changhong.tvos.dtv.tvap.DtvAcrossPlatformAdaptationManager.AdjustCHSoftKeyboardManager;
-import com.changhong.tvos.dtv.tvap.DtvCicaManager;
-import com.changhong.tvos.dtv.tvap.DtvDialogManager;
-import com.changhong.tvos.dtv.tvap.baseType.DtvCardStatus;
-import com.changhong.tvos.dtv.util.SimpleListView;
-import com.changhong.tvos.dtv.util.SimpleListView.OnInnerKeyDownListener;
-import com.changhong.tvos.dtv.vo.CICAMMenuBase;
-import com.changhong.tvos.dtv.vo.CICAMMenuConfirm;
-import com.changhong.tvos.dtv.vo.CICAMMenuInput;
-import com.changhong.tvos.dtv.vo.CICAMMenuList;
-import com.changhong.tvos.dtv.vo.CICAMMenuNormal;
-import com.changhong.tvos.dtv.vo.CICAMMessageBase.ConstCICAMsgType;
-import com.changhong.tvos.dtv.vo.DTVCardStatus.CardStatus;
-import com.changhong.tvos.dtv.vo.DTVConstant.BroadcastConst;
-import com.changhong.tvos.dtv.vo.DTVConstant.ConstCICAMMenuID;
-import com.changhong.tvos.dtv.vo.DTVConstant.ConstCICAMMenuType;
-import com.changhong.tvos.dtv.vo.DTVConstant.ConstCICAMOpCode;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -41,6 +22,26 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.changhong.softkeyboard.CHSoftKeyboardManager;
+import com.changhong.tvos.dtv.R;
+import com.changhong.tvos.dtv.tvap.DtvAcrossPlatformAdaptationManager.AdjustCHSoftKeyboardManager;
+import com.changhong.tvos.dtv.tvap.DtvCicaManager;
+import com.changhong.tvos.dtv.tvap.DtvDialogManager;
+import com.changhong.tvos.dtv.tvap.baseType.DtvCardStatus;
+import com.changhong.tvos.dtv.util.SimpleListView;
+import com.changhong.tvos.dtv.util.SimpleListView.OnInnerKeyDownListener;
+import com.changhong.tvos.dtv.vo.CICAMMenuBase;
+import com.changhong.tvos.dtv.vo.CICAMMenuConfirm;
+import com.changhong.tvos.dtv.vo.CICAMMenuInput;
+import com.changhong.tvos.dtv.vo.CICAMMenuList;
+import com.changhong.tvos.dtv.vo.CICAMMenuNormal;
+import com.changhong.tvos.dtv.vo.CICAMMessageBase.ConstCICAMsgType;
+import com.changhong.tvos.dtv.vo.DTVCardStatus.CardStatus;
+import com.changhong.tvos.dtv.vo.DTVConstant.BroadcastConst;
+import com.changhong.tvos.dtv.vo.DTVConstant.ConstCICAMMenuID;
+import com.changhong.tvos.dtv.vo.DTVConstant.ConstCICAMMenuType;
+import com.changhong.tvos.dtv.vo.DTVConstant.ConstCICAMOpCode;
 
 public class MenuCiCaForce extends Dialog {
 	private final static String TAG = "DtvCiCaUserMenu";
@@ -115,7 +116,7 @@ public class MenuCiCaForce extends Dialog {
 		contentListView.setOnItemClickListener(mListener);
 		itemAdapter = new CicaAdapter(context);
 		titledapter = new CicaAdapter(context);
-		String Info[] = { wait };
+		String Info[] = {wait};
 		itemAdapter.cicaInfoInit(Info, 1, 1);
 		contentListView.setAdapter(itemAdapter);
 		titleListView.setAdapter(titledapter);
@@ -129,9 +130,9 @@ public class MenuCiCaForce extends Dialog {
 				//				sendMsg(ConstCICAMsgType.MSG_USER_MENU, curMenuType,
 				//						curMenuId, -1, -1,
 				//						ConstCICAMOpCode.DEFAULT_OP_CODE_EIXT, 0, null);
-				//				
+				//
 				//				Log.e(TAG, "Runnable EXIT");
-				//				MenuCiCaForce.this.dismiss(); 
+				//				MenuCiCaForce.this.dismiss();
 				isMoving = true;
 				handler.post(moveRun);
 				Log.i(TAG, "LL showRun>>start to move***");
@@ -170,35 +171,35 @@ public class MenuCiCaForce extends Dialog {
 	}
 
 	public void updateMenu(Bundle mBundle) {
-		CICAMMenuBase menuBase = (CICAMMenuBase) mBundle.getParcelable(BroadcastConst.MSG_INFO_NAME);//DTVPlayer 1201	
+		CICAMMenuBase menuBase = (CICAMMenuBase) mBundle.getParcelable(BroadcastConst.MSG_INFO_NAME);//DTVPlayer 1201
 		//cacicallback_class implements cacicallback中的cica_notify_Callback方法，发送bundle.putParcelable(BroadcastConst.MSG_INFO_NAME, obj);
 		//cacicallback_class的实例化对象callback_obj3被底层DTVServiceJNI.get_caci_instance().RegisterCallback(objRouterID, callback_obj3);调用
 		//即通过DTVServiceJNI.get_caci_instance().RegisterCallback(objRouterID, callback_obj3);发送obj广播
-		Log.i(TAG, "" + menuBase.miMenuType);
+		Log.i(TAG, "updateMenu miMenuType=" + menuBase.miMenuType);
 		switch (menuBase.miMenuType) {
-		case ConstCICAMMenuType.MENU_LIST:
-			Log.v(TAG, "DtvCiCaReceiver>>MENU_LIST");
-			curMenuType = ConstCICAMMenuType.MENU_LIST;
-			InstallDataList(mBundle);
-			break;
-		case ConstCICAMMenuType.MENU_CONFIRM:
-			Log.v(TAG, "DtvCiCaReceiver>>MENU_CONFIRM");
-			curMenuType = ConstCICAMMenuType.MENU_CONFIRM;
-			InstallDataConfirm(mBundle);
-			break;
-		case ConstCICAMMenuType.MENU_INPUT:
-			Log.v(TAG, "DtvCiCaReceiver>>MENU_INPUT");
-			curMenuType = ConstCICAMMenuType.MENU_INPUT;
-			InstallDataInput(mBundle);
-			break;
-		case ConstCICAMMenuType.MENU_NORMAL:
-			Log.v(TAG, "DtvCiCaReceiver>>MENU_NORMAL");
-			curMenuType = ConstCICAMMenuType.MENU_NORMAL;
-			InstallDataNormal(mBundle);
-			break;
-		default:
-			Log.v(TAG, "DtvCiCaReceiver>>onReceive>>msgClass>>default:");
-			break;
+			case ConstCICAMMenuType.MENU_LIST:
+				Log.v(TAG, "DtvCiCaReceiver>>MENU_LIST");
+				curMenuType = ConstCICAMMenuType.MENU_LIST;
+				InstallDataList(mBundle);
+				break;
+			case ConstCICAMMenuType.MENU_CONFIRM:
+				Log.v(TAG, "DtvCiCaReceiver>>MENU_CONFIRM");
+				curMenuType = ConstCICAMMenuType.MENU_CONFIRM;
+				InstallDataConfirm(mBundle);
+				break;
+			case ConstCICAMMenuType.MENU_INPUT:
+				Log.v(TAG, "DtvCiCaReceiver>>MENU_INPUT");
+				curMenuType = ConstCICAMMenuType.MENU_INPUT;
+				InstallDataInput(mBundle);
+				break;
+			case ConstCICAMMenuType.MENU_NORMAL:
+				Log.v(TAG, "DtvCiCaReceiver>>MENU_NORMAL");
+				curMenuType = ConstCICAMMenuType.MENU_NORMAL;
+				InstallDataNormal(mBundle);
+				break;
+			default:
+				Log.v(TAG, "DtvCiCaReceiver>>onReceive>>msgClass>>default:");
+				break;
 		}
 	}
 
@@ -247,6 +248,8 @@ public class MenuCiCaForce extends Dialog {
 			return;
 		}
 		menuConfirm = (CICAMMenuConfirm) p_Bundle.getParcelable(BroadcastConst.MSG_INFO_NAME);
+		Log.d(TAG, "InstallDataConfirm menuConfirm.mstrPrompt=" + menuConfirm.mstrPrompt);
+		Log.d(TAG, "InstallDataConfirm menuConfirm.mstrTitle=" + menuConfirm.mstrTitle);
 		final MenuCiCaInput mydialog = new MenuCiCaInput(mContext, p_Bundle, 1);
 		removeMoveRunCallback();
 		handler.removeCallbacks(showRun);
@@ -379,17 +382,17 @@ public class MenuCiCaForce extends Dialog {
 			handler.postDelayed(showRun, showTime);
 			Log.v(TAG, "LL InstallData onItemClick>>handler.postDelayed***");
 			switch (curMenuType) {
-			case ConstCICAMMenuType.MENU_LIST:
-			case ConstCICAMMenuType.MENU_CONFIRM:
-			case ConstCICAMMenuType.MENU_INPUT:
-				break;
-			case ConstCICAMMenuType.MENU_NORMAL:
-				operand = i_contentListItemSel;
-				opcode = position;
-				defOpcode = -1;
-				break;
-			default:
-				return;
+				case ConstCICAMMenuType.MENU_LIST:
+				case ConstCICAMMenuType.MENU_CONFIRM:
+				case ConstCICAMMenuType.MENU_INPUT:
+					break;
+				case ConstCICAMMenuType.MENU_NORMAL:
+					operand = i_contentListItemSel;
+					opcode = position;
+					defOpcode = -1;
+					break;
+				default:
+					return;
 			}
 
 			sendMsg(ConstCICAMsgType.MSG_USER_MENU, curMenuType, curMenuId, operand, opcode, defOpcode, 0, null);
@@ -401,25 +404,25 @@ public class MenuCiCaForce extends Dialog {
 	public boolean onKeyUp(int arg0, KeyEvent arg1) {
 		Log.i(TAG, "LL onKeyUp()>>arg0 = " + arg0);
 		switch (arg0) {
-		case KeyEvent.KEYCODE_CHANGHONGIR_SOFTKEYBOARD: //软键盘
-			if (mAdjustCHSKM == null) {
-				mAdjustCHSKM = AdjustCHSoftKeyboardManager.getAdjustSoftKeyboardInstance(mContext);
-				Log.i(TAG, "LL onKeyUp()>>mAdjustCHSKM为空");
-			}
-			if (null != mAdjustCHSKM) {
-				if (mAdjustCHSKM.isSoftKeyPanelOnShow()) {
-					mAdjustCHSKM.processNumberSoftKeyPanel(KeyEvent.KEYCODE_BACK, 0);
-					Log.i(TAG, "LL onKeyUp()>>mAdjustCHSKM键盘显示");
-				} else {
-
-					mAdjustCHSKM.processNumberSoftKeyPanel(KeyEvent.KEYCODE_CHANGHONGIR_SOFTKEYBOARD, CHSoftKeyboardManager.POS_BOTTOM_CENTER);
-					Log.i(TAG, "LL onKeyUp()>>mAdjustCHSKM键盘不显示");
-					return true;
+			case KeyEvent.KEYCODE_CHANGHONGIR_SOFTKEYBOARD: //软键盘
+				if (mAdjustCHSKM == null) {
+					mAdjustCHSKM = AdjustCHSoftKeyboardManager.getAdjustSoftKeyboardInstance(mContext);
+					Log.i(TAG, "LL onKeyUp()>>mAdjustCHSKM为空");
 				}
-			}
-			break;
-		default:
-			break;
+				if (null != mAdjustCHSKM) {
+					if (mAdjustCHSKM.isSoftKeyPanelOnShow()) {
+						mAdjustCHSKM.processNumberSoftKeyPanel(KeyEvent.KEYCODE_BACK, 0);
+						Log.i(TAG, "LL onKeyUp()>>mAdjustCHSKM键盘显示");
+					} else {
+
+						mAdjustCHSKM.processNumberSoftKeyPanel(KeyEvent.KEYCODE_CHANGHONGIR_SOFTKEYBOARD, CHSoftKeyboardManager.POS_BOTTOM_CENTER);
+						Log.i(TAG, "LL onKeyUp()>>mAdjustCHSKM键盘不显示");
+						return true;
+					}
+				}
+				break;
+			default:
+				break;
 		}
 		return true;
 	}
@@ -433,113 +436,113 @@ public class MenuCiCaForce extends Dialog {
 		handler.postDelayed(showRun, showTime);
 		Log.v(TAG, "LL MenuCiCaForce>>keyCode == " + arg0 + ", ScanCode" + arg1.getScanCode());
 		switch (arg1.getScanCode()) {
-		case 231://keyboard Menu
-		case 233://keyboard Channel Up
-		case 234://keyboard Channel Down
-			break;
-		case 232://keyboard Source 
-			Log.i(TAG, "LL onKeyDown>>clickSelectView***");
-			int operand = contentListView.getSelectedItemPosition();
-			int opcode = -1;
-			int defOpcode = ConstCICAMOpCode.DEFAULT_OP_CODE_CONFIRM;
-			handler.removeCallbacks(showRun);
-			handler.postDelayed(showRun, showTime);
-			Log.v(TAG, "InstallData onItemClick");
-			switch (curMenuType) {
-			case ConstCICAMMenuType.MENU_LIST:
-			case ConstCICAMMenuType.MENU_CONFIRM:
-			case ConstCICAMMenuType.MENU_INPUT:
+			case 231://keyboard Menu
+			case 233://keyboard Channel Up
+			case 234://keyboard Channel Down
 				break;
-			case ConstCICAMMenuType.MENU_NORMAL:
-				operand = i_contentListItemSel;
-				opcode = contentListView.getSelectedItemPosition();
-				defOpcode = -1;
-				break;
-			default:
-				return false;
-			}
+			case 232://keyboard Source
+				Log.i(TAG, "LL onKeyDown>>clickSelectView***");
+				int operand = contentListView.getSelectedItemPosition();
+				int opcode = -1;
+				int defOpcode = ConstCICAMOpCode.DEFAULT_OP_CODE_CONFIRM;
+				handler.removeCallbacks(showRun);
+				handler.postDelayed(showRun, showTime);
+				Log.v(TAG, "InstallData onItemClick");
+				switch (curMenuType) {
+					case ConstCICAMMenuType.MENU_LIST:
+					case ConstCICAMMenuType.MENU_CONFIRM:
+					case ConstCICAMMenuType.MENU_INPUT:
+						break;
+					case ConstCICAMMenuType.MENU_NORMAL:
+						operand = i_contentListItemSel;
+						opcode = contentListView.getSelectedItemPosition();
+						defOpcode = -1;
+						break;
+					default:
+						return false;
+				}
 
-			sendMsg(ConstCICAMsgType.MSG_USER_MENU, curMenuType, curMenuId, operand, opcode, defOpcode, 0, null);
-			Log.i(TAG, "LL keyboard Source");
-			//			tv_help.setText(wait);
-			return true;
-		case 235://keyboard Volume Down
-		case 236://keyboard Volume Up
-			return true;
-		default:
-			break;
+				sendMsg(ConstCICAMsgType.MSG_USER_MENU, curMenuType, curMenuId, operand, opcode, defOpcode, 0, null);
+				Log.i(TAG, "LL keyboard Source");
+				//			tv_help.setText(wait);
+				return true;
+			case 235://keyboard Volume Down
+			case 236://keyboard Volume Up
+				return true;
+			default:
+				break;
 		}
 		switch (arg0) {
-		case KeyEvent.KEYCODE_BACK:
-			DtvCardStatus mCardStatus = null;
-			Log.v(TAG, "onKeyDown>>KEYCODE_BACK");
+			case KeyEvent.KEYCODE_BACK:
+				DtvCardStatus mCardStatus = null;
+				Log.v(TAG, "onKeyDown>>KEYCODE_BACK");
 
-			mCardStatus = DtvCicaManager.getCardStatus();
-			if (mCardStatus != null && mCardStatus.getCardStatus() == CardStatus.CARD_STATUS_OK) {
-				sendMsg(ConstCICAMsgType.MSG_USER_MENU, curMenuType, curMenuId, -1, -1, ConstCICAMOpCode.DEFAULT_OP_CODE_BACK, 0, null);
-			} else {
+				mCardStatus = DtvCicaManager.getCardStatus();
+				if (mCardStatus != null && mCardStatus.getCardStatus() == CardStatus.CARD_STATUS_OK) {
+					sendMsg(ConstCICAMsgType.MSG_USER_MENU, curMenuType, curMenuId, -1, -1, ConstCICAMOpCode.DEFAULT_OP_CODE_BACK, 0, null);
+				} else {
+					sendMsg(ConstCICAMsgType.MSG_USER_MENU, curMenuType, curMenuId, -1, -1, ConstCICAMOpCode.DEFAULT_OP_CODE_EIXT, 0, null);
+					dismiss();
+				}
+
+				break;
+			case KeyEvent.KEYCODE_SOURCE:
+				//		case KeyEvent.KEYCODE_CHANGHONGIR_TOOLBAR:
+			case 4126://KEYCODE_CHANGHONGIR_TOOLBAR
+			case 170://KEYCODE_CHANGHONGIR_TV
+			case 4135:
+			case KeyEvent.KEYCODE_MENU:
+				Log.v(TAG, "onKeyDown>>KEYCODE_MENU");
+
+				mCardStatus = DtvCicaManager.getCardStatus();
+				if (mCardStatus != null && mCardStatus.getCardStatus() == CardStatus.CARD_STATUS_OK) {
+					sendMsg(ConstCICAMsgType.MSG_USER_MENU, curMenuType, curMenuId, -1, -1, ConstCICAMOpCode.DEFAULT_OP_CODE_EIXT, 0, null);
+				} else {
+					sendMsg(ConstCICAMsgType.MSG_USER_MENU, curMenuType, curMenuId, -1, -1, ConstCICAMOpCode.DEFAULT_OP_CODE_EIXT, 0, null);
+					dismiss();
+				}
+				break;
+			case KeyEvent.KEYCODE_0:
+			case KeyEvent.KEYCODE_1:
+			case KeyEvent.KEYCODE_2:
+			case KeyEvent.KEYCODE_3:
+			case KeyEvent.KEYCODE_4:
+			case KeyEvent.KEYCODE_5:
+			case KeyEvent.KEYCODE_6:
+			case KeyEvent.KEYCODE_7:
+			case KeyEvent.KEYCODE_8:
+			case KeyEvent.KEYCODE_9:
+			case KeyEvent.KEYCODE_CHANNEL_UP://KEYCODE_STAIR_CHANNEL_UP:
+			case KeyEvent.KEYCODE_CHANNEL_DOWN://KEYCODE_STAIR_CHANNEL_DOWN:
+			case KeyEvent.KEYCODE_DPAD_DOWN://KEYCODE_STAIR_CHANNEL_UP:
+				//case KeyEvent.KEYCODE_CHANNEL_DOWN://KEYCODE_STAIR_CHANNEL_DOWN:
+			case KeyEvent.KEYCODE_DPAD_UP:
+
+				Log.i(TAG, "LL 虚拟键按下");
+
+				if (mOnVirtualKeyDownListener != null) {
+					mOnVirtualKeyDownListener.onVirtualKeyDownListener(arg0, arg1);
+				}
+				//		sendKey(arg0);
 				sendMsg(ConstCICAMsgType.MSG_USER_MENU, curMenuType, curMenuId, -1, -1, ConstCICAMOpCode.DEFAULT_OP_CODE_EIXT, 0, null);
 				dismiss();
-			}
-
-			break;
-		case KeyEvent.KEYCODE_SOURCE:
-			//		case KeyEvent.KEYCODE_CHANGHONGIR_TOOLBAR:
-		case 4126://KEYCODE_CHANGHONGIR_TOOLBAR
-		case 170://KEYCODE_CHANGHONGIR_TV
-		case 4135:
-		case KeyEvent.KEYCODE_MENU:
-			Log.v(TAG, "onKeyDown>>KEYCODE_MENU");
-
-			mCardStatus = DtvCicaManager.getCardStatus();
-			if (mCardStatus != null && mCardStatus.getCardStatus() == CardStatus.CARD_STATUS_OK) {
-				sendMsg(ConstCICAMsgType.MSG_USER_MENU, curMenuType, curMenuId, -1, -1, ConstCICAMOpCode.DEFAULT_OP_CODE_EIXT, 0, null);
-			} else {
-				sendMsg(ConstCICAMsgType.MSG_USER_MENU, curMenuType, curMenuId, -1, -1, ConstCICAMOpCode.DEFAULT_OP_CODE_EIXT, 0, null);
-				dismiss();
-			}
-			break;
-		case KeyEvent.KEYCODE_0:
-		case KeyEvent.KEYCODE_1:
-		case KeyEvent.KEYCODE_2:
-		case KeyEvent.KEYCODE_3:
-		case KeyEvent.KEYCODE_4:
-		case KeyEvent.KEYCODE_5:
-		case KeyEvent.KEYCODE_6:
-		case KeyEvent.KEYCODE_7:
-		case KeyEvent.KEYCODE_8:
-		case KeyEvent.KEYCODE_9:
-		case KeyEvent.KEYCODE_CHANNEL_UP://KEYCODE_STAIR_CHANNEL_UP:
-		case KeyEvent.KEYCODE_CHANNEL_DOWN://KEYCODE_STAIR_CHANNEL_DOWN:
-		case KeyEvent.KEYCODE_DPAD_DOWN://KEYCODE_STAIR_CHANNEL_UP:
-			//case KeyEvent.KEYCODE_CHANNEL_DOWN://KEYCODE_STAIR_CHANNEL_DOWN:
-		case KeyEvent.KEYCODE_DPAD_UP:
-
-			Log.i(TAG, "LL 虚拟键按下");
-
-			if (mOnVirtualKeyDownListener != null) {
-				mOnVirtualKeyDownListener.onVirtualKeyDownListener(arg0, arg1);
-			}
-			//		sendKey(arg0);
-			sendMsg(ConstCICAMsgType.MSG_USER_MENU, curMenuType, curMenuId, -1, -1, ConstCICAMOpCode.DEFAULT_OP_CODE_EIXT, 0, null);
-			dismiss();
-			break;
-		//		case KeyEvent.KEYCODE_CHANGHONGIR_SOFTKEYBOARD: //KEYCODE_CHANGHONGIR_SOFTKEYBOARD 软键盘
-		//			if (mAdjustCHSKM == null) {
-		//				mAdjustCHSKM = AdjustCHSoftKeyboardManager.getAdjustSoftKeyboardInstance(mContext);		
-		//			}
-		//			if(null != mAdjustCHSKM){
-		//				if(mAdjustCHSKM.isSoftKeyPanelOnShow()){
-		//		
-		//					mAdjustCHSKM.processNumberSoftKeyPanel(KeyEvent.KEYCODE_BACK, 0);
-		//				}else{
-		//					mAdjustCHSKM.processNumberSoftKeyPanel(KeyEvent.KEYCODE_CHANGHONGIR_SOFTKEYBOARD, CHSoftKeyboardManager.POS_BOTTOM_LEFT);
-		//					return true;
-		//				}
-		//			}
-		//			break;
-		default:
-			break;
+				break;
+			//		case KeyEvent.KEYCODE_CHANGHONGIR_SOFTKEYBOARD: //KEYCODE_CHANGHONGIR_SOFTKEYBOARD 软键盘
+			//			if (mAdjustCHSKM == null) {
+			//				mAdjustCHSKM = AdjustCHSoftKeyboardManager.getAdjustSoftKeyboardInstance(mContext);
+			//			}
+			//			if(null != mAdjustCHSKM){
+			//				if(mAdjustCHSKM.isSoftKeyPanelOnShow()){
+			//
+			//					mAdjustCHSKM.processNumberSoftKeyPanel(KeyEvent.KEYCODE_BACK, 0);
+			//				}else{
+			//					mAdjustCHSKM.processNumberSoftKeyPanel(KeyEvent.KEYCODE_CHANGHONGIR_SOFTKEYBOARD, CHSoftKeyboardManager.POS_BOTTOM_LEFT);
+			//					return true;
+			//				}
+			//			}
+			//			break;
+			default:
+				break;
 		}
 
 		return super.onKeyDown(arg0, arg1);
@@ -564,8 +567,8 @@ public class MenuCiCaForce extends Dialog {
 	//					manager.injectKeyEvent(keydown, false);
 	//				} catch (Exception e) {
 	//					e.printStackTrace();
-	//				}	
-	//			}	
+	//				}
+	//			}
 	//		};
 	//		mThread.start();
 	//	}
@@ -592,7 +595,7 @@ public class MenuCiCaForce extends Dialog {
 			String str2 = str1.replace(mContext.getString(R.string.menu_setting_foot_exit), mContext.getResources().getString(R.string.menu_setting_foot_back));
 			//			tv_help.setText(str2+","+mContext.getString(R.string.dtv_help_exit));
 		} else {
-			//			tv_help.setText(mContext.getString(R.string.dtv_help_exit)); 
+			//			tv_help.setText(mContext.getString(R.string.dtv_help_exit));
 
 		}
 	}
@@ -716,7 +719,7 @@ public class MenuCiCaForce extends Dialog {
 					textInfo.setText("       " + dataInfo[0]);
 					return textInfo;
 				}
-				//textInfo.setFocusable(true);	
+				//textInfo.setFocusable(true);
 			}
 			return layout;
 		}

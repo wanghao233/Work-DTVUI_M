@@ -1,13 +1,5 @@
 package com.changhong.tvos.dtv.service;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -19,6 +11,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.util.Log;
+
 import com.changhong.tvos.dtv.provider.BaseChannelUtil;
 import com.changhong.tvos.dtv.service.jni.ResourceManager;
 import com.changhong.tvos.dtv.vo.DTVChannelBaseInfo;
@@ -30,11 +23,22 @@ import com.changhong.tvos.dtv.vo.InterPanelInfo;
 import com.changhong.tvos.dtv.vo.Operator;
 import com.changhong.tvos.model.PanelInfo;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class DTVService extends Service {
 
 	public static final boolean V_5508Q2 = true;
 
-	final static String TAG = "dtvservice.DTVService";
+	private final static String TAG = "DtvService.DTVService";
+	private final static String DTVServiceVersion = "2015-09-08";
+	private static final String changeDate = "rebuild-2015-05-26";
 	private static boolean iSStartActivity = false;
 	private static boolean isCallbackLoopReady = false;
 	private static long mlThreadid = 0;
@@ -46,7 +50,6 @@ public class DTVService extends Service {
 	private static DTVChannelBaseInfo[] oldChList = null;
 	IBinder ib_Service = null;
 	PVRRecord pvr;
-	private static final String changeDate = "rebuild-2015-05-26";
 
 	static {
 		try {
@@ -424,10 +427,14 @@ public class DTVService extends Service {
 	// @Override
 	public void onCreate() {
 		super.onCreate();
+		// DTVService version
+		Log.i(TAG, "\n\n当前DTVService版本为：" + DTVServiceVersion);
+
+		Log.i(TAG, "\n\nonCreate DTVService start");
 
 		// registerNeedRunBaseChannelUtilReceiver();//2015-2-6 YangLiu
 
-		Log.i(TAG, "onCreate DTVService");
+		Log.i(TAG, "onCreate DTVService done");
 	}
 
 	// @Override
@@ -550,7 +557,9 @@ public class DTVService extends Service {
 						e.printStackTrace();
 					}
 				}
-			};
+			}
+
+			;
 		}.start();
 
 		timerShedulobj = TimerShedule.getInstance(context);
@@ -570,6 +579,7 @@ public class DTVService extends Service {
 		return ib_Service;
 	}
 
+
 	public class DTVServiceOm extends IDTVService.Stub {
 
 		private class playerClient {
@@ -579,12 +589,12 @@ public class DTVService extends Service {
 			private int iIndex;
 			private int iCLientType;
 			private DTVPlayer obj;
-		};
+		}
 
 		private class channelmanagerClient {
 			private String mUuid;
 			private ChannelManager obj;
-		};
+		}
 
 		private DTVSettings DTVSettingsobj = null;
 		private PVRRecord pvr = null;

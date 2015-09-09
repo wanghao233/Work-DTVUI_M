@@ -1,7 +1,6 @@
 package com.changhong.tvos.dtv.service;
 
 import java.util.List;
-
 import com.changhong.tvos.dtv.vo.CICAMInformation;
 import com.changhong.tvos.dtv.vo.EPGEvent;
 import com.changhong.tvos.dtv.vo.DTVDTTime;
@@ -22,7 +21,6 @@ import com.changhong.tvos.dtv.vo.NvodRefEvent;
 import com.changhong.tvos.dtv.vo.NvodShiftEvent;
 import com.changhong.tvos.dtv.vo.DTVCardStatus;
 import com.changhong.tvos.dtv.vo.DTVSource;
-
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -83,7 +81,7 @@ int getPlayingProgramID();
 int setPlayingProgramID(int nProgramID);
 int getLastProgramID();
 int isPlaying();
-//CI/CAM����
+//CI/CAM
 CICAMInformation getInfo();
 String getSmartCardID();
 
@@ -92,10 +90,10 @@ DTVCardStatus getCardStatus();
 int clearUserData();
 void queryControl(int iMsgType, int iMsgID, int iMenuID,int operand, int opcode, int defOpcode, int inputItems,in String[] inputList);
 
-//DFA�����?
+//DFA
 int DFAControl(int iType, int iMsgID,int iOperand, int iOpcode, in String[] strInputList);
 
-//����������
+//
 int start();
 int checkVersion(int curVersion);
 DTVDTTime getTDTTime();
@@ -130,33 +128,33 @@ int getPlayerStatus();
 
 void SetDtvUIActivityState(int iState);
 ////////////////Hotel mode func////////////fy 2014-2-25
-void setHotelMode(boolean bHotelMode); //�����ƿ�/�أ�
+void setHotelMode(boolean bHotelMode);
 boolean getHotelMode();
 
-int getHotelPowerOnMode();            //������ģʽ 1��,2�Σ�   int =0/1 ?��
+int getHotelPowerOnMode();
 void setHotelPowerOnMode(int iPowerOnMode);
 
-int getHotelPowerOnSource();                      // ���ÿ���Դ�� ATV : 0?, DTV �� ����
+int getHotelPowerOnSource();
 void setHotelPowerOnSource(int iPowerOnSource);
 
-void setHotelMaxVolume(int iMaxVolume);   ////�������
+void setHotelMaxVolume(int iMaxVolume);
 int getHotelMaxVolume();
 
-int getHotelPowerOnVolume();              //��������
+int getHotelPowerOnVolume();
 void setHotelPowerOnVolume(int iPowerOnVolume);
 
-int getHotelPowerOnChannel();            //����Ƶ��
+int getHotelPowerOnChannel();
 void setHotelPowerOnChannel(int iPowerOnChannel);
 
-boolean getHotelLocalKeyLockFlag();    //���α�������
+boolean getHotelLocalKeyLockFlag();
 void setHotelLocalKeyLockFlag(boolean bLocalKeyLockFlag);
 
-boolean getHotelTuneLockFlag();        //���������˵�
+boolean getHotelTuneLockFlag();
 void setHotelTuneLockFlag(boolean bTuneLockFlag);
 
-int getHotelMusicMode();         //��ȡ����Ƶ��ģʽ
+int getHotelMusicMode();
 void setHotelMusicMode(int iMusicMode);
 
-boolean getHotelAutoPresetFlag();                   //�Զ��ָ���ϵͳ+DTV����)
+boolean getHotelAutoPresetFlag();
 void setHotelAutoPresetFlag(boolean bAutoPresetFlag);
 }

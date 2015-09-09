@@ -265,8 +265,14 @@ public class DtvMsgManager {
 	class BootServiceReceiver extends BroadcastReceiver {
 		public void onReceive(final Context context, Intent intent) {
 
+			Log.d(TAG,"receive BootServiceReceiver");
 			Bundle mBundle = intent.getExtras();
+			if (mOnMsgReceive!=null) {
+				Log.d(TAG,"mOnMsgReceive!=null, DtvRoot onBootService mBundle="+mBundle);
 			mOnMsgReceive.onBootService(mBundle);
+			}else {
+				Log.d(TAG,"mOnMsgReceive = null");
+			}
 		}
 	}
 

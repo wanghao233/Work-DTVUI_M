@@ -185,14 +185,14 @@
 		  </intent-filter>
 		</receiver>
         -->
-        <service
+        <!--<service
             android:name="com.changhong.tvos.dtv.update.dtvUpdateService"
             android:excludeFromRecents="true"
-            android:process=":remote">
+            android:process=":remote" >
             <intent-filter>
-                <action android:name="com.changhong.tvos.dtv.update.dtvUpdateService"/>
+                <action android:name="com.changhong.tvos.dtv.update.dtvUpdateService" />
             </intent-filter>
-        </service>
+        </service>-->
         <!--
 		<receiver android:name=".BootReceiver" android:excludeFromRecents ="true">
         	<intent-filter >

@@ -1,25 +1,26 @@
 /**
- * @filename 
+ * @filename
  * @describe
- * 	  ϵͳ������ؽӿڷ�װ���������������ص�ֻ����STB����һ�������ϵͳ�ӹܣ�	
  * @author:
- * @date: 
+ * @date:
  * @version 0.1
  * history:
- * 	 2012-7-17  ���ӻ�ȡ��Ӫ����Ƶ���б�ӿ�getOPMainFreqList
+ * 2012-7-17
  */
 package com.changhong.tvos.dtv;
 
-import java.util.List;
-import com.changhong.tvos.dtv.service.IDTVService;
-import com.changhong.tvos.dtv.service.ITimerShedule;
-import com.changhong.tvos.dtv.vo.DTVConstant;
-import com.changhong.tvos.dtv.vo.TimerInfo;
-import android.util.Log;
 import android.content.Context;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.ServiceManager;
+import android.util.Log;
+
+import com.changhong.tvos.dtv.service.IDTVService;
+import com.changhong.tvos.dtv.service.ITimerShedule;
+import com.changhong.tvos.dtv.vo.DTVConstant;
+import com.changhong.tvos.dtv.vo.TimerInfo;
+
+import java.util.List;
 
 /**
  * DTV 的预约节目管理
@@ -39,6 +40,7 @@ public class TimerManager {
 	 */
 	private TimerManager() {
 	}
+
 	public static TimerManager getInstance(Context context) {
 		if (msInstance != null) {
 			return msInstance;
@@ -47,8 +49,8 @@ public class TimerManager {
 		bindService();
 		return msInstance;
 	}
-	
-	private static void bindService(){
+
+	private static void bindService() {
 		IDTVService dtvServer = null;
 		ITimerShedule timerServer = null;
 		IBinder bind = ServiceManager.getService(DTVConstant.DTV_SERVICE_NAME);
@@ -70,9 +72,10 @@ public class TimerManager {
 		msInstance.mDTVServer = dtvServer;
 		msInstance.ITimerServer = timerServer;
 	}
-	
+
 	/**
 	 * 检查Service是否OK，解决EPG不能预约问题	2015-6-9		YangLiu
+	 *
 	 * @return
 	 */
 	private boolean checkServiceOK() {
@@ -124,9 +127,10 @@ public class TimerManager {
 
 	/**
 	 * EPG不能预约问题 checkServiceOK is not OK，添加Timer
+	 *
 	 * @param timer
 	 * @return
-	 * @exception
+	 * @throws
 	 */
 	public int addTimer(TimerInfo timer) {
 		if (!checkServiceOK()) {
@@ -146,6 +150,7 @@ public class TimerManager {
 
 	/**
 	 * 删除某个Timer
+	 *
 	 * @param timer
 	 * @return
 	 */
@@ -164,6 +169,7 @@ public class TimerManager {
 
 	/**
 	 * 获取Timer列表
+	 *
 	 * @param type
 	 * @return
 	 */
@@ -182,6 +188,7 @@ public class TimerManager {
 
 	/**
 	 * 删除所有Timer列表
+	 *
 	 * @return
 	 */
 	public int deleteAllTimer() {

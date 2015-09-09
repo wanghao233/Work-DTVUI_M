@@ -1,15 +1,11 @@
 package com.changhong.tvos.dtv.tvap;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.RemoteException;
 import android.util.Log;
 import android.view.KeyEvent;
+
 import com.changhong.tvos.dtv.ChannelManager;
 import com.changhong.tvos.dtv.DTVPlayer;
 import com.changhong.tvos.dtv.DTVSettings;
@@ -32,7 +28,6 @@ import com.changhong.tvos.dtv.vo.DTVChannelDetailInfo;
 import com.changhong.tvos.dtv.vo.DTVConstant;
 import com.changhong.tvos.dtv.vo.DTVConstant.ConstDemodType;
 import com.changhong.tvos.dtv.vo.DTVConstant.ConstServiceType;
-import com.changhong.tvos.dtv.vo.TimerInfo.TimerType;
 import com.changhong.tvos.dtv.vo.DTVDTTime;
 import com.changhong.tvos.dtv.vo.DTVSource;
 import com.changhong.tvos.dtv.vo.DTVTunerStatus;
@@ -42,9 +37,16 @@ import com.changhong.tvos.dtv.vo.InterTVOSVersion;
 import com.changhong.tvos.dtv.vo.OPFeatureInfo;
 import com.changhong.tvos.dtv.vo.Operator;
 import com.changhong.tvos.dtv.vo.TimerInfo;
+import com.changhong.tvos.dtv.vo.TimerInfo.TimerType;
 import com.changhong.tvos.dtv.vo.UTCDate;
 import com.changhong.tvos.dtv.vo.UTCTime;
 import com.changhong.tvos.dtv.vo.VersionInfo;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 public class DtvInterface {
 	public static final String TAG = "DtvInterface";
@@ -58,7 +60,7 @@ public class DtvInterface {
 	private DTVPlayer.Scan mScan = null;
 	private DTVPlayer.Cicam mCicam = null;
 	private DTVPlayer.StartControl startControl = null;
-	private ChannelManager mChannelManager = null;
+	public ChannelManager mChannelManager = null;
 	private ChannelManager.ChannelInfoManager mChannelInfoMagager = null;
 	private ChannelManager.CarrierInfoManager mCarrierInfoManager = null;
 	private TimerManager mTimerManager = null;
@@ -112,26 +114,26 @@ public class DtvInterface {
 		int curKeyCode = keyCode;
 		Log.i(TAG, "revertKeyCode getScanCode = " + event.getScanCode());
 		switch (event.getScanCode()) {
-		case 231:// keyboard Menu
-			curKeyCode = KeyEvent.KEYCODE_MENU;
-			break;
-		case 232:// keyboard Source
-			curKeyCode = KeyEvent.KEYCODE_DPAD_CENTER;
-			break;
-		case 233:// keyboard Channel Up
-			curKeyCode = KeyEvent.KEYCODE_DPAD_UP;
-			break;
-		case 234:// keyboard Channel Down
-			curKeyCode = KeyEvent.KEYCODE_DPAD_DOWN;
-			break;
-		case 235:// keyboard Volume Down
-			curKeyCode = KeyEvent.KEYCODE_DPAD_LEFT;
-			break;
-		case 236:// keyboard Volume Up
-			curKeyCode = KeyEvent.KEYCODE_DPAD_RIGHT;
-			break;
-		default:
-			break;
+			case 231:// keyboard Menu
+				curKeyCode = KeyEvent.KEYCODE_MENU;
+				break;
+			case 232:// keyboard Source
+				curKeyCode = KeyEvent.KEYCODE_DPAD_CENTER;
+				break;
+			case 233:// keyboard Channel Up
+				curKeyCode = KeyEvent.KEYCODE_DPAD_UP;
+				break;
+			case 234:// keyboard Channel Down
+				curKeyCode = KeyEvent.KEYCODE_DPAD_DOWN;
+				break;
+			case 235:// keyboard Volume Down
+				curKeyCode = KeyEvent.KEYCODE_DPAD_LEFT;
+				break;
+			case 236:// keyboard Volume Up
+				curKeyCode = KeyEvent.KEYCODE_DPAD_RIGHT;
+				break;
+			default:
+				break;
 		}
 		return curKeyCode;
 	}
@@ -338,7 +340,7 @@ public class DtvInterface {
 	}
 
 	public DtvEvent[] getPFInfo(int proramIndex) {
-		DtvEvent[] pfEvent = new DtvEvent[] { null, null };
+		DtvEvent[] pfEvent = new DtvEvent[]{null, null};
 		EPGEvent[] events = mEpg.getPFEvent(proramIndex);
 		if (events != null && events[0] != null && chTimeToLong(events[0].duringTime) > 0) {
 			pfEvent[0] = new DtvEvent(events[0]);
@@ -545,7 +547,7 @@ public class DtvInterface {
 					FreqArr[iLoop].miNCOFrequencyKhz = fre[iLoop].getMi_NCOFreqKHz();
 					FreqArr[iLoop].miLDPCRate = fre[iLoop].getMi_LDPCRate();
 					String str = String.format("LL FreqArr[%d].miCarrierMode = %d, " + "FreqArr[%d].miDTMBTHQamMode = %d, " + "FreqArr[%d].miFrameHeader = %d " + "FreqArr[%d].miFrequencyK = %d,"
-							+ "FreqArr[%d].miInterleaverMode = %d, " + "FreqArr[%d].miNCOFrequencyKhz = %d " + "FreqArr[iLoop].miLDPCRate = %d", iLoop, FreqArr[iLoop].miCarrierMode, iLoop,
+									+ "FreqArr[%d].miInterleaverMode = %d, " + "FreqArr[%d].miNCOFrequencyKhz = %d " + "FreqArr[iLoop].miLDPCRate = %d", iLoop, FreqArr[iLoop].miCarrierMode, iLoop,
 							FreqArr[iLoop].miDTMBTHQamMode, iLoop, FreqArr[iLoop].miFrameHeader, iLoop, FreqArr[iLoop].miFrequencyK, iLoop, FreqArr[iLoop].miInterleaverMode, iLoop,
 							FreqArr[iLoop].miNCOFrequencyKhz, iLoop, FreqArr[iLoop].miLDPCRate);
 					Log.i(TAG, str);
@@ -812,7 +814,7 @@ public class DtvInterface {
 
 	// 0:本地EPG预约 1:主场景预约 2:欢网预约
 	public List<TimerInfo> getEPGScheduleEventsByOriginal(int original) {// 2015-3-23
-																			// YangLiu
+		// YangLiu
 		List<TimerInfo> timerInfos = new ArrayList<TimerInfo>();
 
 		List<TimerInfo> tempTimerInfos = new ArrayList<TimerInfo>();
@@ -930,6 +932,7 @@ public class DtvInterface {
 
 	/**
 	 * action to start filter unused channels
+	 *
 	 * @return
 	 */
 	public int startSmartSkip() {
@@ -944,6 +947,7 @@ public class DtvInterface {
 
 	/**
 	 * action to cancel filter unused channels
+	 *
 	 * @return
 	 */
 	public int cancellSmartSkip() {
@@ -983,6 +987,7 @@ public class DtvInterface {
 
 	/**
 	 * C <1> T<2> T+C<3>
+	 *
 	 * @return
 	 */
 	public int getProductType() {
@@ -1025,7 +1030,7 @@ public class DtvInterface {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	public synchronized Bitmap getSubtitle() {
 		byte[] data = new byte[1024];
