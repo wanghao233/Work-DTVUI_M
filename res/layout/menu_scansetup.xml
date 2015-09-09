@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_alignParentTop="true"
+        android:layout_height="463dip"
+        android:gravity="left"
+        android:layout_width="175dip">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="170dip"
+            android:background="@drawable/scan_setup_operator_bg"
+            android:layout_height="match_parent"
+/>
+
+        <com.changhong.tvos.dtv.scan.ViewCityList
+            android:id="@+id/cityListView"
+            android:layout_width="wrap_content"
+            android:layout_height="440dip"
+            android:layout_marginTop="7dip"
+            android:layout_alignRight="@+id/relativeLayout2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2dip"
+            android:divider="@drawable/narrow_main_menu_divider"/>
+    </RelativeLayout>
+</RelativeLayout>

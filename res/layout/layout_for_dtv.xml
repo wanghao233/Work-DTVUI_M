@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout 
+    	android:id="@+id/hour"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent">
+       <com.vwidget.wheel.WheelView
+            android:id="@+id/province_scroller"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:layout_weight="1"/>
+       <com.vwidget.wheel.WheelView
+            android:id="@+id/provider_scroller"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:layout_weight="1"/>  
+    </LinearLayout>  
+    
+
+</LinearLayout>

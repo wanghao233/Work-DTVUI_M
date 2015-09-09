@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="wrap_content"
+android:layout_height ="wrap_content">
+<LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayout3" android:layout_width="wrap_content" android:orientation="vertical">
+    <LinearLayout android:paddingLeft="8dip" android:gravity="center_vertical" android:layout_width="fill_parent" android:orientation="horizontal" android:paddingRight="8dip" android:layout_height="62dip">
+        <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:gravity="center_vertical" style="@style/item_bg_layout" android:layout_width="220dip">
+            <RelativeLayout android:layout_height="wrap_content" android:id="@+id/ItemImageBg" android:layout_width="wrap_content" android:gravity="left|center_vertical">
+                <RelativeLayout android:layout_height="wrap_content" android:id="@+id/ItemImage" android:layout_width="wrap_content"></RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/ItemNameBg" android:gravity="left|center_vertical">
+                <TextView android:layout_height="wrap_content" android:textSize="20dip" android:text="@string/noText" android:layout_width="wrap_content" android:id="@+id/ItemName"></TextView>
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout android:id="@+id/LImage" android:background="@drawable/main_menu_group_direction_left_selector" android:layout_width="wrap_content" android:layout_height="wrap_content"></RelativeLayout>
+        <RelativeLayout android:id="@+id/OptionValue" android:layout_width="140dip" android:layout_height="match_parent">
+            <TextView android:layout_height="wrap_content" android:layout_centerInParent="true" android:textSize="20dip" android:text="@string/noText" android:layout_width="wrap_content" android:id="@+id/Value" android:singleLine="true"></TextView>
+            <LinearLayout android:id="@+id/linearLayout2" android:layout_width="wrap_content" android:layout_centerHorizontal="true" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_marginBottom="10dip">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:id="@+id/DotL"></LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:id="@+id/DotM" android:background="@drawable/dot_sel"></LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:id="@+id/DotR"></LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/RImage" android:background="@drawable/main_menu_group_direction_right_selector" android:layout_width="wrap_content" android:layout_height="wrap_content"></RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,63 @@
+﻿<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/useraddmainiew"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout
+        android:id="@+id/useraddview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="73dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:gravity="right|bottom"
+        android:orientation="horizontal" >
+        <!-- android:layout_marginRight="10dp"  add yangliu 2015-3-13 -->
+        <ImageView
+            android:id="@+id/push_out_user_want_bg"
+            android:layout_width="153dp"
+            android:layout_height="233dp"
+            android:scaleType="fitXY" />
+        <!-- android:scaleType="fitXY" add yangliu 2015-3-13 -->
+        <LinearLayout
+            android:id="@+id/push_out_user_want_text"
+            android:layout_width="180dp"
+            android:layout_height="233dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/push_out_user_want_text_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_horizontal"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/push_out_user_want_text_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_horizontal"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/push_out_user_want_text_explain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.2"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

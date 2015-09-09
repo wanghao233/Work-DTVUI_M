@@ -1,0 +1,128 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vch_setting"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/vch_channel_info"
+        android:layout_width="480dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/vch_program_num"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/vch_text_content_Color"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/vch_program_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/vch_text_content_Color"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/vch_cur_freq"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/vch_text_content_Color"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/vch_audio_track"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/vch_text_content_Color"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/vch_av_encode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/vch_text_content_Color"
+            android:textSize="21sp" />
+
+        <LinearLayout
+            android:id="@+id/vch_signal_strength"
+            android:layout_width="480dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/vch_signal_strength_str"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+	            android:layout_marginLeft="10dp"
+	            android:layout_gravity="center_vertical"
+	            android:textColor="@color/vch_text_content_Color"
+	            android:textSize="21sp" />
+
+            <ProgressBar
+                android:id="@+id/vch_signal_strength_value"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="225dp"
+                android:layout_height="6dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+		        android:progressDrawable="@drawable/vch_seek_back1"
+		        android:thumb="@drawable/vch_seek_img"
+                android:max="100"
+		        android:paddingLeft="30dip"
+		        android:paddingRight="30dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vch_signal_quality"
+            android:layout_width="480dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/vch_signal_quality_str"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+	            android:layout_marginLeft="10dp"
+	            android:layout_gravity="center_vertical"
+	            android:textColor="@color/vch_text_content_Color"
+	            android:textSize="21sp" />
+
+            <ProgressBar
+                android:id="@+id/vch_signal_quality_value"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="225dp"
+                android:layout_height="6dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:max="100"
+		        android:progressDrawable="@drawable/vch_seek_back1"
+		        android:thumb="@drawable/vch_seek_img"
+		        android:paddingLeft="30dip"
+		        android:paddingRight="30dip" />
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/vch_error_rate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/vch_text_content_Color"
+            android:textSize="21sp" />
+    </LinearLayout>
+
+</LinearLayout>

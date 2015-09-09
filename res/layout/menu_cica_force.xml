@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout0"
+    android:layout_width="437dip"
+    android:layout_height="551dip"
+    android:background="@drawable/dtv_cica_force_menu1"
+    android:orientation="vertical"
+    android:paddingBottom="5dip"
+    android:paddingLeft="0dip"
+    android:paddingRight="0dip"
+    android:paddingTop="5dip" >
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="83dip"
+    	android:gravity="center"
+    	android:orientation="vertical">
+    <TextView
+        android:id="@+id/id_ca_main_title"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="@string/dtv_caci_system"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/id_ca_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="@string/noText"
+        android:textColor="@color/black"
+        android:textSize="22sp" >
+    </TextView>
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="384dip" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.changhong.tvos.dtv.util.SimpleListView
+                android:id="@+id/id_title_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:paddingLeft="2dip"
+                android:paddingRight="2dip"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip">
+            </com.changhong.tvos.dtv.util.SimpleListView>
+
+            <com.changhong.tvos.dtv.util.SimpleListView
+                android:id="@+id/id_ca_main_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadeScrollbars="true"
+                android:listSelector="@drawable/dtv_cica_item_list_selector"
+                android:paddingLeft="2dip"
+                android:paddingRight="2dip"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip">
+            </com.changhong.tvos.dtv.util.SimpleListView>
+        </LinearLayout>
+    </LinearLayout>
+
+  <LinearLayout
+        android:id="@+id/mBgHelp"
+        android:layout_width="match_parent"
+        android:layout_height="58dip"
+        android:layout_marginLeft="50dip"
+        android:layout_marginRight="50dip"
+        android:layout_marginTop="10dip"
+        android:gravity="center_vertical"
+        android:weightSum="4" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/help1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/main_help_up_down"
+                android:gravity="center"
+                android:text="@string/helpinfo_select"
+                android:textColor="#000000"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/help2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"               
+                android:drawableLeft="@drawable/main_help_left_right"
+                android:gravity="center"
+                android:text="@string/helpinfo_adjust"
+                android:textColor="#000000"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/help3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                
+                android:drawableLeft="@drawable/main_help_sure"
+                android:gravity="center"
+                android:text="@string/helpinfo_ok"
+                android:textColor="#000000"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/help4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"               
+                android:drawableLeft="@drawable/main_help_back"
+                android:gravity="center"
+                android:text="@string/helpinfo_return"
+                android:textColor="#000000"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

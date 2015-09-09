@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/epg_bg"
+    android:orientation="horizontal" >
+    <FrameLayout
+        android:id="@+id/type"
+        android:layout_width="350dp"
+        android:layout_height="match_parent" />
+    <FrameLayout
+        android:layout_width="350dip"
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:id="@+id/right1"
+            android:layout_width="41dip"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="horizontal" >
+            <View
+                android:layout_width="15dip"
+                android:layout_height="20dip"
+                android:layout_gravity="center"
+                android:background="@drawable/right" />
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/channel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="350dip"
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:id="@+id/right2"
+            android:layout_width="41dip"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+            <View
+                android:layout_width="15dip"
+                android:layout_height="20dip"
+                android:layout_gravity="center"
+                android:background="@drawable/right" />
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/program"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:id="@+id/right3"
+            android:layout_width="41dip"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+            <View
+                android:layout_width="15dip"
+                android:layout_height="20dip"
+                android:layout_gravity="center"
+                android:background="@drawable/right" />
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/week"
+            android:layout_width="100dip"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</LinearLayout>

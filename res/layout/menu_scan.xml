@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="542dip"
+    android:layout_height="321dip"
+    android:background="@drawable/menu_scan_auto" >
+    <LinearLayout
+        android:id="@+id/autoScanLayout"
+        android:layout_width="450dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dip"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:weightSum="1" >
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:text="@string/dtv_autoscan"
+            android:textColor="@color/black"
+            android:textSize="24sp" >
+        </TextView>
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:weightSum="2" >
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/dtv_scan_frequency"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+            <TextView
+                android:id="@+id/dtv_scan_source"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="7dip"
+                android:text="@string/dtv_scan_source"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:focusable="false"
+            android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/dtv_scan_Symbolrate"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="7dip"
+                android:text="@string/dtv_scan_Modulmode"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:weightSum="2" >
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/dtv_scan_resultDTV"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="8dip"
+                android:text="@string/dtv_scan_resultbroadcast"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="30dip" >
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="@style/dtv_scan_progress_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true" >
+            </ProgressBar>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="50dip" >
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="80dip"
+                android:layout_height="30dip"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/dtv_menu_button"
+                android:gravity="center"
+                android:text="@string/dtv_scan_stop"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </Button>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/mBgHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dip"
+            android:gravity="center_horizontal" >
+            <!--
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/auto_scan_help1" android:drawableLeft="@drawable/main_help_up_down" android:text="@string/helpinfo_select" android:textColor="@color/menu_help_info_color" android:gravity="center" android:textSize="16dip" android:paddingLeft="10dip" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/auto_scan_help2" android:drawableLeft="@drawable/main_help_left_right" android:text="@string/helpinfo_adjust" android:textColor="@color/menu_help_info_color" android:gravity="center" android:textSize="16dip" android:paddingLeft="10dip" />
+            -->
+            <TextView
+                android:id="@+id/auto_scan_help3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/main_help_sure"
+                android:gravity="center"
+                android:paddingLeft="10dip"
+                android:text="@string/helpinfo_ok"
+                android:textColor="@color/menu_help_info_color"
+                android:textSize="16dip" >
+            </TextView>
+            <TextView
+                android:id="@+id/auto_scan_help4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/main_help_back"
+                android:gravity="center"
+                android:paddingLeft="10dip"
+                android:text="@string/helpinfo_return"
+                android:textColor="@color/menu_help_info_color"
+                android:textSize="16dip" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/manualScanLayout"
+        android:layout_width="460dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dip"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:weightSum="1" >
+        <TextView
+            android:id="@+id/manual_textView7"
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:text="@string/dtv_manualscan"
+            android:textColor="@color/black"
+            android:textSize="24sp" >
+        </TextView>
+        <LinearLayout
+            android:id="@+id/manual_linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:layout_gravity="center"
+            android:focusable="false"
+            android:focusableInTouchMode="false" >
+            <TextView
+                android:id="@+id/manual_textView1"
+                android:layout_width="85dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="false"
+                android:text="@string/dtv_scan_frequency"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+            <com.changhong.tvos.dtv.util.ViewFreqInputText
+                android:id="@+id/editText1"
+                android:layout_width="80dip"
+                android:layout_height="28dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/scan_inputview_selector"
+                android:gravity="center"
+                android:maxLength="5"
+                android:textSize="20sp" >
+                <requestFocus>
+                </requestFocus>
+            </com.changhong.tvos.dtv.util.ViewFreqInputText>
+            <TextView
+                android:id="@+id/text_KHz"
+                android:layout_width="55dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="false"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text="KHz"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+            <TextView
+                android:id="@+id/manual_dtv_scan_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="15dip"
+                android:text="@string/dtv_scan_source"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+            <com.changhong.tvos.dtv.util.ViewFreqInputText
+                android:id="@+id/endFreq"
+                android:layout_width="80dip"
+                android:layout_height="28dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/scan_inputview_selector"
+                android:gravity="center"
+                android:maxLength="5"
+                android:textSize="20sp"
+                android:visibility="gone" >
+            </com.changhong.tvos.dtv.util.ViewFreqInputText>
+            <TextView
+                android:id="@+id/text_endfre"
+                android:layout_width="55dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="false"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text="MHz"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:visibility="gone" >
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/manual_linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:focusable="false"
+            android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/manual_textView2"
+                android:layout_width="85dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/dtv_scan_Symbolrate"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+            <com.changhong.tvos.dtv.util.ViewInputOptionText
+                android:id="@+id/editText2"
+                android:layout_width="80dip"
+                android:layout_height="28dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/scan_inputview_selector"
+                android:gravity="center"
+                android:maxLength="4"
+                android:textSize="20sp" >
+            </com.changhong.tvos.dtv.util.ViewInputOptionText>
+            <TextView
+                android:id="@+id/text_K"
+                android:layout_width="55dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="false"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text="Kbps"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+            <TextView
+                android:id="@+id/manual_textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="15dip"
+                android:text="@string/dtv_scan_Modulmode"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+            <com.changhong.tvos.dtv.util.ViewInputOptionText
+                android:id="@+id/editText3"
+                android:layout_width="80dip"
+                android:layout_height="28dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/scan_inputview_selector"
+                android:gravity="center"
+                android:maxLength="6"
+                android:textSize="20sp" >
+            </com.changhong.tvos.dtv.util.ViewInputOptionText>
+            <TextView
+                android:id="@+id/text_QAM"
+                android:layout_width="55dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="false"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text="QAM"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:layout_weight="1"
+            android:baselineAligned="true"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/drv_scan_signalquality"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="@style/dtv_scan_progress_style"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="5dip" >
+            </ProgressBar>
+            <TextView
+                android:id="@+id/manual_textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingLeft="15dip"
+                android:text="@string/dtv_scan_signalstrength"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+            <ProgressBar
+                android:id="@+id/progressBar3"
+                style="@style/dtv_scan_progress_style"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="5dip" >
+            </ProgressBar>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/manual_linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:layout_weight="0.24"
+            android:weightSum="2" >
+            <TextView
+                android:id="@+id/manual_textView4"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/dtv_scan_resultDTV"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+            <TextView
+                android:id="@+id/manual_textView5"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="8dip"
+                android:text="@string/dtv_scan_resultbroadcast"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </TextView>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/manual_relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="20dip" >
+            <ProgressBar
+                android:id="@+id/manual_progressBar1"
+                style="@style/dtv_scan_progress_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true" >
+            </ProgressBar>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/manual_relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1.86" >
+            <Button
+                android:id="@+id/manual_button1"
+                android:layout_width="80dip"
+                android:layout_height="30dip"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/dtv_menu_button"
+                android:gravity="center"
+                android:nextFocusLeft="@id/button1"
+                android:text="@string/dtv_scan_stop"
+                android:textColor="@color/black"
+                android:textSize="20sp" >
+            </Button>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/manual_mBgHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="center"
+            android:weightSum="4" >
+            <TextView
+                android:id="@+id/manual_scan_help1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/main_help_up_down"
+                android:gravity="center"
+                android:paddingLeft="10dip"
+                android:text="@string/helpinfo_select"
+                android:textColor="@color/menu_help_info_color"
+                android:textSize="16dip" >
+            </TextView>
+            <TextView
+                android:id="@+id/manual_scan_help2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/main_help_left_right"
+                android:gravity="center"
+                android:paddingLeft="10dip"
+                android:text="@string/helpinfo_adjust"
+                android:textColor="@color/menu_help_info_color"
+                android:textSize="16dip" >
+            </TextView>
+            <TextView
+                android:id="@+id/manual_scan_help3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/main_help_sure"
+                android:gravity="center"
+                android:paddingLeft="10dip"
+                android:text="@string/helpinfo_ok"
+                android:textColor="@color/menu_help_info_color"
+                android:textSize="16dip" >
+            </TextView>
+            <TextView
+                android:id="@+id/manual_scan_help4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/main_help_back"
+                android:gravity="center"
+                android:paddingLeft="10dip"
+                android:text="@string/helpinfo_return"
+                android:textColor="@color/menu_help_info_color"
+                android:textSize="16dip" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

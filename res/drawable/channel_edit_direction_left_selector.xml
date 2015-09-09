@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 注释  -->
+		<item android:state_pressed="true" 
+	android:drawable="@drawable/channel_edit_page_turn_left_arrow_red" /> 
+	<item android:drawable="@drawable/channel_edit_page_turn_left_arrow_white"/>
+</selector> 

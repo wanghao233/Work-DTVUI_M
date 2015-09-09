@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!--
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:nextFocusRight="@+id/weeklist"
+        android:nextFocusLeft="@+id/channellist"
+        android:text="@string/menu_channel_list"
+        android:textSize="24sp"
+        android:alpha="0.4" />
+        YangLiu delete 2015-4-23
+    -->
+    <RelativeLayout
+        android:id="@+id/program_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dip" >
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:alpha="0.4"
+            android:nextFocusLeft="@+id/channellist"
+            android:nextFocusRight="@+id/weeklist"
+            android:text="@string/menu_program_list"
+            android:textSize="24sp" />
+        <!--
+         android:layout_marginLeft="56dip"
+            android:layout_marginTop="57dip"
+            android:alpha="0.4"
+            
+        	changed By YangLiu 2014-12-04  2015-2-11 2015-3-24 alpha
+        -->
+    </RelativeLayout>
+    <com.changhong.tvos.dtv.epg.minify.EpgListView
+        android:id="@+id/programlist"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dip"
+        android:layout_marginTop="120dip"
+        android:choiceMode="singleChoice"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:nextFocusDown="@+id/programlist"
+        android:nextFocusLeft="@+id/channellist"
+        android:nextFocusRight="@+id/weeklist" />
+    <TextView
+        android:id="@+id/NoChInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dip"
+        android:paddingLeft="80dip"
+        android:text="@string/menu_epg_event_null"
+        android:textSize="20sp"
+        android:visibility="gone" />
+    <View
+        android:layout_width="1dip"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="#10ffffff" />
+</RelativeLayout>

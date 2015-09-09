@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="334dp" 
+    android:layout_height="172dp"
+    android:orientation="vertical"
+     > 
+    <LinearLayout 
+    android:id="@+id/vch_item_setting_bg"
+    android:layout_width="334dp" 
+    android:layout_height="92dp" 
+    android:layout_marginTop="52dp"
+     >     
+       <TextView           
+            android:id="@+id/vch_menu_item_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:paddingTop="6dp"
+	        android:textSize="50sp"
+	        android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever" 
+	        android:textColor="@color/vch_text_title_Color"     
+        	/>  
+     </LinearLayout>
+</LinearLayout>

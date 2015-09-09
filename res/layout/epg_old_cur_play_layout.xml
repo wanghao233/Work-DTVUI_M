@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/linear_epg"
+        android:layout_width="416dp"
+        android:layout_height="120dp"
+        android:background="@drawable/epg_expand_bg"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/tv_curTitle"
+            style="@style/smartview_content_font_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="48"
+            android:text="@string/menu_epg_pre_title" />
+        <RelativeLayout
+            android:id="@+id/progresslayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="48" >
+            <!--
+            style="?android:attr/progressBarStyleHorizontal"
+		    android:background="@drawable/epg_progress_no"
+            -->
+            <ProgressBar
+                android:id="@+id/epg_progressBar"
+                style="@style/epg_curPlay_progress_style"
+                android:layout_width="338dp"
+                android:layout_height="3dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:progress="40" />
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/epg_progressBar"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="00:00" />
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_start_time"
+                android:layout_marginLeft="260dp"
+                android:layout_toRightOf="@+id/tv_start_time"
+                android:gravity="center"
+                android:text="00:00" />
+            <TextView
+                android:id="@+id/tv_cur_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="TextView" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

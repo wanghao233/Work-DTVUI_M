@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="1280dp"
+	android:layout_height="298dp" android:background="@drawable/common_action_dialog_bg">
+
+	<TextView android:id="@+id/view_action_info_title"
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:gravity="center|top" 
+		android:text="@string/stringTitle"
+		android:singleLine="true" 
+		android:layout_marginLeft="40dp"
+		android:layout_marginRight="65dp"
+		android:textSize="24sp"
+		android:textColor="@color/black"/>
+	<TextView android:id="@+id/view_action_info_title_2"
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:layout_marginLeft="40dp"
+		android:layout_marginRight="65dp"
+		android:gravity="center|top" 
+		android:text="@string/stringTitle2"
+		android:singleLine="false"
+		android:textSize="24sp"
+		android:textColor="@color/black"/>
+
+	<TextView android:id="@+id/view_action_info_hintmessage"
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		android:text="@string/stringMessage" 
+		android:gravity="center"
+		android:layout_marginTop="10dp"
+		android:layout_marginLeft="40dp"
+		android:layout_marginRight="65dp"
+		android:textSize="24sp"
+		android:textColor="@color/black"/>
+
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:gravity="center"
+		android:orientation="horizontal" android:layout_marginTop="20dp"
+		android:layout_marginBottom="20dp" android:layout_marginLeft="40dp"
+		android:layout_marginRight="65dp" android:layout_weight="0.2">
+
+		<Button android:id="@+id/view_action_info_btn_ok"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:gravity="center" android:singleLine="true"
+			android:text="@string/stringOk"
+			android:layout_marginRight="20dp"
+			android:width="134dp"
+			android:height="54dp"
+			android:textColor ="@drawable/view_action_button_text_style"
+			android:textSize="20sp"
+			android:nextFocusLeft="@+id/view_action_info_btn_cancel"
+			android:background="@drawable/view_action_button_style"/>
+
+		<Button android:id="@+id/view_action_info_btn_cancel"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginLeft="20dp"
+			android:gravity="center" android:singleLine="true"
+			android:text="@string/stringCancel"
+			android:width="134dp"
+			android:height="54dp"
+			android:textColor ="@drawable/view_action_button_text_style"
+			android:textSize="20sp"
+			android:nextFocusRight="@+id/view_action_info_btn_ok"
+			android:background="@drawable/view_action_button_style"/>
+	</LinearLayout>
+
+</LinearLayout>

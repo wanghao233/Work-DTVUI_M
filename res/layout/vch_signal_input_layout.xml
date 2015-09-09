@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/warning_dialog"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="480dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="480dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/signal_input_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/vch_dtv_item_bg"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/no_string"
+            android:textColor="@color/vch_text_content_Color"
+            android:textSize="21sp" />
+
+        <Button
+            android:id="@+id/yes"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/vch_dtv_item_bg"
+            android:text="@string/menu_yes"
+            android:textColor="@color/vch_text_content_Color"
+            android:textSize="21sp" />
+
+        <Button
+            android:id="@+id/no"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/vch_dtv_item_bg"
+            android:text="@string/menu_no"
+            android:textColor="@color/vch_text_content_Color"
+            android:textSize="21sp" />
+    </LinearLayout>
+
+</LinearLayout>

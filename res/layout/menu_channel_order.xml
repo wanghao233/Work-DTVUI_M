@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout
+        android:id="@+id/sort_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sort_bg"
+        android:focusable="false" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:focusable="false"
+            android:orientation="vertical" >
+            <ScrollView
+                android:id="@+id/sort_list_scroll1"
+                android:layout_width="fill_parent"
+                android:layout_height="105dip"
+                android:focusable="false"
+                android:orientation="horizontal" >
+                <LinearLayout
+                    android:id="@+id/prelist1"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </ScrollView>
+            <ScrollView
+                android:id="@+id/sort_list_scroll2"
+                android:layout_width="match_parent"
+                android:layout_height="105dip"
+                android:focusable="false"
+                android:orientation="horizontal" >
+                <LinearLayout
+                    android:id="@+id/prelist2"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/turn_channel_on_off_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dip" >
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dip" >
+                <TextView
+                    android:id="@+id/channel_manager_type_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dtv_menu_diy_sort"
+                    android:textSize="39sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout1"
+                android:layout_marginTop="-1dip"
+                android:gravity="center"
+                android:orientation="vertical" >
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="80dip"
+                    android:gravity="center" >
+                    <ImageView
+                        android:id="@+id/page_pre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dip"
+                        android:layout_marginTop="-3dip"
+                        android:background="@drawable/sort_up_arrow" />
+                    <!-- android:src="@drawable/channel_edit_page_turn_left_arrow_white" -->
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="405dip"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+                    <ViewFlipper
+                        android:id="@+id/fliperView"
+                        android:layout_width="1030dip"
+                        android:layout_height="wrap_content" >
+                        <RelativeLayout
+                            android:id="@+id/mainLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="396dip"
+                            android:gravity="top" >
+                            <!-- alpha00 change By YangLiu -->
+                            <com.changhong.tvos.dtv.util.ViewChannelSort
+                                android:id="@+id/channel_sort_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:focusable="true"
+                                android:listSelector="@drawable/menu_sort_dtv_selector"
+                                android:numColumns="6"
+                                android:paddingLeft="30dip"
+                                android:paddingRight="10dip"
+                                android:scrollbars="none" >
+                            </com.changhong.tvos.dtv.util.ViewChannelSort>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/mainLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="396dip"
+                            android:gravity="top" >
+                            <!-- alpha00 change By YangLiu -->
+                            <com.changhong.tvos.dtv.util.ViewChannelSort
+                                android:id="@+id/channel_sort_view1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="top"
+                                android:focusable="true"
+                                android:listSelector="@drawable/menu_sort_dtv_selector"
+                                android:numColumns="6"
+                                android:paddingLeft="30dip"
+                                android:paddingRight="10dip"
+                                android:scrollbars="none" >
+                            </com.changhong.tvos.dtv.util.ViewChannelSort>
+                        </RelativeLayout>
+                    </ViewFlipper>
+                    <ProgressBar
+                        android:id="@+id/sort_progress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="1dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/sort_v_divider"
+                        android:clickable="false"
+                        android:clipOrientation="vertical"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:max="100"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="5dip"
+                        android:progressDrawable="@drawable/probar_ver"
+                        android:scaleType="center" >
+                    </ProgressBar>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="25dip"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+                        <Button
+                            android:id="@+id/channelManager"
+                            android:layout_width="150dip"
+                            android:layout_height="50dip"
+                            android:layout_marginTop="30dip"
+                            android:background="@drawable/dtv_menu_button"
+                            android:gravity="center"
+                            android:text="@string/channel_sort_ser"
+                            android:textColor="#222222"
+                            android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/channelSortQuit"
+                            android:layout_width="150dip"
+                            android:layout_height="50dip"
+                            android:layout_marginTop="100dip"
+                            android:background="@drawable/dtv_menu_button"
+                            android:gravity="center"
+                            android:text="@string/channel_sort_quit"
+                            android:textColor="#222222"
+                            android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/channelSave"
+                            android:layout_width="150dip"
+                            android:layout_height="50dip"
+                            android:layout_marginTop="100dip"
+                            android:background="@drawable/dtv_menu_button"
+                            android:gravity="center"
+                            android:text="@string/channel_sort_exit"
+                            android:textColor="#222222"
+                            android:textSize="24sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="80dip"
+                    android:layout_marginTop="-10dip"
+                    android:gravity="center" >
+                    <ImageView
+                        android:id="@+id/page_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dip"
+                        android:layout_marginTop="-3dip"
+                        android:background="@drawable/sort_down_arrow" />
+                    <!-- android:src="@drawable/channel_edit_page_turn_right_arrow_white" -->
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/preShowLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/sort_ser_bg"
+        android:visibility="gone" >
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="80dip"
+            android:layout_marginLeft="90dip"
+            android:paddingTop="15dip" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dtv_menu_diy_sort"
+                android:textSize="39sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+                <ImageView
+                    android:id="@+id/page_pre_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sort_up_arrow" />
+                <!-- android:src="@drawable/channel_edit_page_turn_left_arrow_white" -->
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="250dip"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dip"
+                android:gravity="left"
+                android:orientation="horizontal" >
+                <com.changhong.tvos.dtv.util.ViewSortEdit
+                    android:id="@+id/sort_edit_Grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="251dip"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:listSelector="@drawable/dtv_program_select_back"
+                    android:numColumns="9"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="1dp"
+                    android:scrollbars="vertical"
+                    android:scrollingCache="false"
+                    android:smoothScrollbar="true"
+                    android:verticalSpacing="1dp" >
+                </com.changhong.tvos.dtv.util.ViewSortEdit>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center" >
+                <ImageView
+                    android:id="@+id/page_next_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sort_down_arrow" />
+                <!-- android:src="@drawable/channel_edit_page_turn_right_arrow_white" -->
+            </RelativeLayout>
+        </LinearLayout>
+        <com.changhong.tvos.dtv.util.ViewDtvProgramPreview
+            android:id="@+id/curChooseDtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:visibility="gone" >
+        </com.changhong.tvos.dtv.util.ViewDtvProgramPreview>
+    </RelativeLayout>
+    <com.changhong.tvos.dtv.util.ViewDtvProgram
+        android:id="@+id/preEditChooseDtv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+    </com.changhong.tvos.dtv.util.ViewDtvProgram>
+</RelativeLayout>

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 上报信息词条 -->
+    <string name="collect1">Info setting</string>
+    <string name="collect2">Setting</string>
+    <string name="collect3">DTV</string>
+    <string name="pull_down">Expansion</string>
+    <string name="pull_up">Recover</string>
+    <string name="dvbc_source">DVBC</string>
+    <string name="dtmb_source">TH DTMB</string>
+    
+    <string name="collect11">TV user behavior</string>
+    <string name="collect12">DTV_Channel</string>
+    <string name="collect13">DTV_Program</string>
+    
+    <string name="collect1_Intelligent_guide">Intelligent guide</string>
+    <string name="collect2_launcher_v2">Main scene</string>
+    <string name="collect2_dtv">DTV</string>
+    <string name="collect3_epg_hot">EPG hot</string>
+    <string name="all_show">All show</string>
+    <string name="popular_program">Popular program</string>
+    <string name="collect3_livehot_recommend">Real-time network popular recommend</string>
+    <string name="collect3_localchannel_recommend">Local Common channel recommend</string>
+    <string name="collect3_currentprogarm_connection">Current program connect online</string>
+    <string name="collect3_automatic_recommend">Changhong program recommend automatically</string>
+    <string name="collect3_reservation_localprogram_play">Local ordered program play</string>
+    <string name="collect3_reservation_localprogram_record">Local ordered program record</string>
+    <!-- 上报信息词条 -->
+  
+    
+    <!-- DTV详细信息 -->
+    <string name="hello">Hello World!</string>
+    <string name="default_text">TextView</string>
+    <string name="no_string"></string>
+    <string name="app_name">DTV</string>
+    <string name="dtv_func">DTV</string>
+    <string name="sure">Confirm</string>
+    <string name="ignore">Ignore</string>
+    <string name="back">Return</string>
+    <string name="yes">Yes</string>
+    <string name="no">No </string>
+    <string name="year">Year</string>
+    <string name="month">Mon</string>
+    <string name="day">Day</string>
+    <string name="helpinfo_ok">Confirm</string>
+    <string name="helpinfo_return">Return</string>
+    <string name="helpinfo_exit">Exit</string>
+    <string name="helpinfo_select">Select</string>
+    <string name="helpinfo_adjust">Adjust</string>
+    <string name="noText">""</string>
+    <string name="menu_audio_mode">Channel</string>
+    <string name="menu_audio_track">Audio Track</string>
+    <string name="menu_audio">Sound</string>
+    <string name="dtv_info_tv">DTV</string>
+    <string name="dtv_info_radio">Digital broadcast</string>
+    <string name="dtv_info_null">No program</string>
+    <string name="dtv_info_encryption">""</string>
+    <string name="dtv_info_cryption">Encryp</string>
+    <string name="dtv_do_upgrade">Upgrade</string>
+    <string name="bandwidth">Bandwidth</string>
+    <string name="dtv_scan_source">Signal access:</string>
+    <string name="dtv_scan_start_fre">Start frequency:</string>
+    <string name="dtv_scan_end_fre">Cutoff frequency:</string>
+    <string name="dtv_info_noeffect">Invalid</string>
+    <string name="dtv_providor">Operator select</string>
+    <string name="dtv_scan_fre">Frequency:</string>
+    <string name="scan_bandwidth">Bandwidth</string>
+    <string name="scan_source">Signal access</string>
+    <string name="source_dvbc">Wired</string>
+    <string name="source_dtmb">Terrestrial broadcasting</string>
+    <string name="scan_start_fre">Main frequency</string>
+    <string name="channel_type_tv">TV</string>
+    <string name="channel_type_radio">Broadcast</string>
+    <string name="channel_info_cable">Wired digital</string>
+    <string name="channel_info_wireless">Wireless digital</string>
+    <string name="action_settings">Settings</string>
+    <!-- DTV详细信息 -->
+    
+    
+    <!-- 网络设置词条 -->
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="none">NA</string>
+    <string name="newwork_setting">Network</string>
+    <string name="network_wifi_setting">Wireless network</string>
+    <string name="network_ethernet_setting">Wired network</string>
+    <string name="network_no_con">Not connected</string>
+    <string name="connected">Connected</string>
+    <string name="wifi_connecting">Connecting ...</string>
+    <string name="network_add_net">Add network</string>
+    <string name="network_onekey">One-key network access</string>
+    <string name="exit">Exit</string>
+    <string name="network_advance_setting">Advanced settings</string>
+    <string name="network_test">Net test</string>
+    <string name="network_handip">Manual IP</string>
+    <string name="network_del_net">Ignore this network</string>
+    <string name="network_del_finish">Ignored</string>
+    <string name="network_account">"Please enter the network name"</string>
+    <string name="networkdetect_device">"Network device"</string>
+    <string name="networkdetect_ipaddress">"IP address"</string>
+    <string name="networkdetect_gateway">"Default Gateway"</string>
+    <string name="networkdetect_netmask">"Subnet mask"</string>
+    <string name="networkdetect_dnsserver">"DNS"</string>
+    <string name="networkdetect_internet">"Internet detection"</string>
+    <string name="networkdetect_macaddress">"MAC address"</string>
+    <string name="networkdetect_errorstate">"Error status"</string>
+    <string name="networkdetect_device_eth">"Wired access"</string>
+    <string name="networkdetect_device_wifi">"Wireless access"</string>
+    <string name="networkdetect_device_pppoe">"Dial-in access"</string>
+    <string name="networkdetect_device_no">"No device accessed"</string>
+    <string name="networkdetect_device_u">"Accessed"</string>
+    <string name="net_not_connect">"Cannot connect"</string>
+    <string name="net_can_connect">"Connection normal"</string>
+    <string name="IP">IP address:</string>
+    <string name="Netmask">Subnet mask:</string>
+    <string name="Gateway">Gateway:</string>
+    <string name="DNS">DNS:</string>
+    <string name="pppoe_pass_visible">"Password Visible"</string>
+    <string name="advanced_setting_wifi_encryption">"Encryption mode"</string>
+    <string name="wifi_pass_word">Please enter the wireless network </string>
+    <string name="advanced_setting_wifi_password">"Password"</string>
+    <string name="usename">Account</string>
+    <string name="advanced_setting_item_name">"Network name"</string>
+    <string name="wifi_connect_button">"Connect"</string>
+    <string name="wps_tips">"Please press the WPS(PBC) button on the router within 120 seconds"</string>
+    <string name="wps_time">"Remaining time:"</string>
+    <string name="secend">"Seconds"</string>
+    <string name="cancel">Cancel </string>
+    <string name="phy_connect">The network cable has been connected to the TV, and your TV can be connected to the network!</string>
+    <string name="phy_connect_fail">No connection between the network cable and the device detected. Please check!</string>
+    <string name="softap_title">"WIFI hot spot"</string>
+    <string name="softap_setting">"WIFI hot spot switch"</string>
+    <string name="softap_ssid">"WIFI hot spot name"</string>
+    <string name="softap_ssid_hink">Please enter the hot spot name</string>
+    <string name="softap_pass">"WIFI hot spot password"</string>
+    <string name="softap_pass_hink">Please enter the hot spot password</string>
+    <string name="softAP_ERROR_SSID_NULL">The name cannot be empty!</string>
+    <string name="softAP_ERROR_SSID_chinese">The name cannot contain any Chinese character!</string>
+    <string name="softAP_ERROR_pass_length">The password shall have at least 8 bytes!</string>
+    <string name="softAP_ERROR_pass_chinese">The password cannot contain any Chinese character!</string>
+    <string name="softAP_switch_on_note">Opening hot spot</string>
+    <string name="softAP_switch_off_note">Closing hot spot</string>
+    <string name="softap_open">Standby switch</string>
+    <string name="pppoe_title">"PPPOE"</string>
+    <string name="retry">Retry</string>
+    <string name="ppoe_fail1">"Connection failed. Please try the following operations:"</string>
+    <string name="ppoe_fail2">"1. Please check whether the network cable between your TV and the router is properly connected."</string>
+    <string name="ppoe_fail3">"2. Please restart the router or check whether the router configuration is correct."</string>
+    <string name="ppoe_fail4">"3. Please try the following operations."</string>
+    <string name="fail">Connection Failed</string>
+    <string name="fail_retry">Connection failed. Please retry!</string>
+    <string name="success">Connection Succeeded</string>
+    <string name="ethernet_fail1">"Wired connection failed. Please try the following operations:"</string>
+    <string name="ethernet_fail2">"1. Please check the network cable connection between the router and the Internet"</string>
+    <string name="ethernet_fail3">"2. Please contact the Internet service provider"</string>
+    <string name="ethernet_fail4">"3. Please try the following operations"</string>
+    <string name="cut_down">Disconnect and reconnect</string>
+    <string name="cut_down_status">Network disconnected. Please reconnect!</string>
+    <string name="connecting">Connecting network. Please wait ...</string>
+    <string name="wifi_advanced_setting_item_manualset">"Manual setting"</string>
+    <string name="account">"Please enter the network name"</string>
+    <string name="advanced_wifi_password_hint">"Please enter the password"</string>
+    <string name="password_tx">Please enter the correct wireless network password!</string>
+    <string name="ppoe_tx_to">Please enter the username and password!</string>
+    <string name="ppoe_auto">Connection</string>
+    <string name="wifi_null">No wireless network detected. Please search again or use wired network!</string>
+    <string name="research">Search again</string>
+    <string name="not_null">The entered content cannot be empty!</string>
+    <string name="add_net_account_tx">Please enter the network name</string>
+    <string name="add_net_password_tx">Please enter the password</string>
+    <string name="ppoe_tx">Please enter the broadband account number</string>
+    <!-- 网络设置词条 -->
+    
+    
+    <!-- 情景模式词条 -->
+    <string name="vch_videoset">Scene mode</string>
+    <string name="vch_videoset_image">"Image""</string>
+    <string name="vch_videoset_voice">"Sound"</string>
+    <string name="vch_videoset_compare">"Contrast"</string>
+    <string name="vch_videoset_brightness">Brightness</string>
+    <string name="vch_videoset_saturation">Saturation</string>
+    <string name="vch_videoset_clarity">Sharpness</string>
+    <string name="vch_videoset_backlight">Back Light</string>
+    <string name="vch_videoset_colortone">Tint</string>
+    <string name="vch_videoset_colortemperature">Color Temp</string>
+    <string name="vch_videoset_sportopt">Motion Optimization</string>
+    <string name="vch_videoset_redgain">Red Gain</string>
+    <string name="vch_videoset_greengain">Green Gain</string>
+    <string name="vch_videoset_bluegain">Blue Gain</string>
+    <string name="vch_videoset_image_setting">Image setting</string>
+    <string name="vch_videoset_surround">Surround</string>
+    <string name="vch_videoset_voice_setting">Sound setting</string>
+    <string name="vch_videoset_own">My mode</string>
+    <string name="vch_videoset_standard">Standard</string>
+    <string name="vch_videoset_night">Theater</string>
+    <string name="vch_videoset_moive">Cinema</string>
+    <string name="vch_videoset_text">Reading</string>
+    <string name="vch_videoset_music">Music</string>
+    <string name="vch_videoset_sport">Sports</string>
+    <string name="vch_videoset_game">Game</string>
+    <string name="vch_actionset">Info setting</string>
+    <string name="vch_easysetting">Setting</string>
+    <!-- 情景模式词条 -->
+    
+    
+    <!-- 智能导视弹出框词条 -->
+    <string name="dtv_press_ok_get_more_program_infor">Press OK to see more information!</string>
+    <string name="hotrecommend_Name">Recommendation</string>
+    <string name="hotrecommend_Fullstory">Full Story</string>
+    <string name="hotrecommend_Percentage">Hot:</string>
+    <string name="pushoutview_hottext">Hot View:</string>
+    <string name="pushoutview_percent">%</string>
+    <string name="pushoutview_specialprogram">View Collection</string>
+    <string name="pushoutview_programehelp">The scheduled program will play\nClick \'OK\' Watching \nClick \'↑\' Recording</string>
+    <string name="pushoutview_progrm_time">\tDuration\t\t</string>
+    <string name="pushoutview_progrm_time_minute">Minute</string>
+    <string name="pushoutview_Pvr">Recorded programs</string>
+    <string name="pvr_Filed_AlreadyRecordedPro">A program Has begun recording, The current program will be unable to record</string>
+    <string name="filedNotRightSCENESPvrHit">The scheduled program can not be recorded, the current program source is DTV or ATV, please try to record in other sources Or click "OK key" to play！</string>
+    <string name="pvr_Filed_3288DevNotConnectedSuccess">Dear users, the appointment program can not record, the module is not inserted, Please check whether the module is inserted or the network is normal!</string>
+    <string name="pvr_Filed_3288NetdisConnected">Dear users, the appointment program can not record, the module is not inserted, please check the network status!</string>
+    <string name="pvr_Filed_EncryptPro"> will not be able to record, It is recommended to switch to the DTV and confirm the status of the card!</string>
+    <string name="pvr_Filed_CurEncryptPro">The current program will not be able to record, It is recommended to switch to the DTV and confirm the status of the card!</string>
+    <string name="pvr_Filed_NetDisconnectedPro"> will not be able to record, The network is disconnected, Check the network status, Please！</string>
+    <string name="pvr_Filed_CurNetDisconnectedPro">The current program will not be able to record, The network is disconnected, Check the network status, Please！</string>
+    <string name="pvr_Started_Pro">Start recording:</string>
+    <string name="pvr_Started_CurSchPro">Start recording the scheduled program!</string>
+    <string name="pvr_Done_Pro"> has finished recording!</string>
+    <string name="pvr_Done_curSchPro">The scheduled program has finished recording!</string>
+    <!-- 智能导视弹出框词条 -->
+    
+    
+    <!-- 数据上报欢网String -->
+    <string name="huanWang">HuanWang</string>
+    <string name="huanWang_ID">HuanWangID</string>
+    <!-- 数据上报欢网String -->
+</resources>

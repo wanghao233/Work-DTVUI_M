@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<!-- pressed -->
+	<item android:state_pressed="true"
+		android:drawable="@drawable/vch_common_button_selected_bg" />
+	<!-- focused -->
+	<item android:state_focused="true"
+		android:drawable="@drawable/vch_common_button_selected_bg" />
+	
+	<item android:drawable="@drawable/vch_common_button_unselected_bg" />
+</selector>

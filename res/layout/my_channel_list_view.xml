@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="430dip"
+    android:layout_height="match_parent"
+    android:background="@drawable/channel_list_bg" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="430dip"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/title_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dip" />
+
+      	<!--  <include
+            android:id="@+id/help_info"
+            android:layout_below="@+id/title_text"
+            android:layout_centerHorizontal="true"
+            layout="@layout/buttom_help_info" /> -->
+
+        <TextView
+            android:id="@+id/firstTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dip"
+            android:layout_marginTop="42dip"
+            android:text="@string/dtv_menu_main_title"
+            android:textColor="#FF828282"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/title_divide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="35dip"
+            android:layout_toRightOf="@id/firstTitle"
+            android:text="/"
+            android:textColor="#FF828282"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/title_flag"
+            style="@style/epg_tilte_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="30dip"
+            android:layout_toRightOf="@id/title_divide"
+            android:text="@string/menu_program_list" />
+    </RelativeLayout>
+
+    <com.changhong.tvos.dtv.channel_list.Channel_Type_Layout
+        android:id="@+id/channel_Type_Layout"
+        android:layout_width="431dip"
+        android:layout_height="65dip"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="110dip"
+        android:textColor="#FF999999" >
+
+        <requestFocus />
+    </com.changhong.tvos.dtv.channel_list.Channel_Type_Layout>
+
+    <ImageView
+        android:id="@+id/divider0"
+        android:layout_width="430dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/channel_Type_Layout"
+        android:src="@drawable/setting_picture_divider" />
+
+    <LinearLayout
+        android:id="@+id/channelnametextView"
+        android:layout_width="430dip"
+        android:layout_height="65dip"
+        android:layout_below="@+id/divider0"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="30dip" >
+
+        <TextView
+            android:layout_width="120dip"
+            android:layout_height="40dip"
+            android:singleLine="true"
+            android:text="@string/channel_number"
+            android:textColor="#FF999999"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/channel_name"
+            android:layout_width="200dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="20dip"
+            android:gravity="center_vertical|left"
+            android:text="@string/channel_name"
+            android:textColor="#FF999999"
+            android:textSize="26sp" >
+        </TextView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/divider1"
+        android:layout_width="430dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/channelnametextView"
+        android:src="@drawable/setting_picture_divider" />
+
+    <com.changhong.tvos.dtv.channel_list.ChannelList
+        android:id="@+id/channel_list"
+        android:layout_width="432dip"
+        android:layout_height="380dip"
+        android:layout_below="@+id/channelnametextView"
+        android:fadeScrollbars="true"
+        android:listSelector="@drawable/setting_picture_sel"
+        android:scrollbars="vertical"
+        android:textColor="#FF565656" >
+
+        <requestFocus />
+    </com.changhong.tvos.dtv.channel_list.ChannelList>
+
+    <LinearLayout
+        android:id="@+id/forword_down_flag"
+        android:layout_width="430dip"
+        android:layout_height="24dip"
+        android:layout_alignLeft="@+id/channel_list"
+        android:layout_below="@+id/channel_list"
+        android:focusable="false"
+        android:gravity="center_horizontal|top" >
+
+        <ImageView
+            android:id="@+id/chanel_nextPage"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:background="@drawable/arrow_flag" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/help_info"
+        android:layout_width="430dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forword_down_flag"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dip"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_help_up_down" />
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/channel_list_helpstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:text="@string/menu_background_updown" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dip"
+            android:src="@drawable/main_help_left_right" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/channel_list_helpstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:singleLine="true"
+            android:text="@string/menu_help_change_source" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dip"
+            android:src="@drawable/help_flitter" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/channel_list_helpstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:text="@string/menu_help_page" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dip"
+            android:src="@drawable/main_help_back" />
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/channel_list_helpstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:singleLine="true"
+            android:text="@string/back" />
+    </LinearLayout>
+
+</RelativeLayout>

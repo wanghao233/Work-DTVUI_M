@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="fill_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:minHeight="120dip"
+    android:padding="3dip" >
+    <RelativeLayout
+        android:id="@+id/image_item"
+        android:layout_width="90dip"
+        android:layout_height="114dip" >
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="90dip"
+            android:layout_height="114dip"
+            android:scaleType="fitXY" />
+        <RelativeLayout
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true" >
+            <ImageView
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:background="@drawable/epg_hot_top_bg"
+                android:scaleType="fitXY" />
+            <com.changhong.tvos.dtv.epg.normal.RotateTextView
+                android:id="@+id/rtext"
+                android:layout_width="wrap_content"
+                android:layout_height="45dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="3dip"
+                android:layout_marginTop="3dip"
+                android:textColor="#FFFFFF"
+                android:textSize="10dip" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="5dip"
+        android:layout_toRightOf="@id/image_item"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/hot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="20dip"
+        android:singleLine="true"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="10dip"
+        android:layout_toRightOf="@id/image_item"
+        android:maxLines="3"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+</RelativeLayout>

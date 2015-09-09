@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Theme.ActivityTransparent"
+    android:layout_width="215dip"
+    android:layout_height="96dip"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="215dip"
+        android:layout_height="96dip"
+        android:src="@drawable/channel_sort_bg" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/msg_indicate"
+        android:layout_width="match_parent"
+        android:layout_height="80dip"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_marginTop="1dip"
+        android:gravity="center"
+        android:textColor="#222222"
+        android:textSize="19sp" />
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!--
+	<TextView android:id="@+id/TextView1"
+		android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:text="@string/hello" />
+    -->
+
+    <TextView
+        android:id="@+id/channelNum"
+        android:layout_width="225dip"
+        android:layout_height="92dip"
+        android:layout_marginLeft="1055dip"
+        android:background="@drawable/channel_input_num_bg"
+        android:gravity="center"
+        android:textColor="@color/channel_num"
+        android:visibility="gone"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/mail_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingRight="100dip"
+        android:paddingTop="100dip"
+        android:visibility="invisible">
+        <ImageView
+            android:id="@+id/mail_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dtv_cica_mail1" />
+
+        <TextView
+            android:id="@+id/mail_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/mail_log"
+            android:text="@string/dtv_cica_mail_num"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

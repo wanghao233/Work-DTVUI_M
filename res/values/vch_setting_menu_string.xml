@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vch_mainmenu_title">设  置</string>
+    <string name="vch_mainmenu_scene_mode">情景模式</string>
+    <string name="vch_mainmenu_program_manage">节目管理</string>
+    <string name="vch_mainmenu_channel_manage">频道管理</string>
+    <string name="vch_mainmenu_more_setting">更多设置</string>
+    <string name="scene_mode_stand">标准模式</string>
+    <string name="scene_mode_theatre">剧场</string>
+    <string name="scene_mode_umax">UMAX模式</string>
+    <string name="scene_mode_reading">阅读</string>
+    <string name="scene_mode_mv">MV</string>
+    <string name="scene_mode_sports">体育</string>
+    <string name="scene_mode_game">游戏</string>
+    <string name="scene_mode_custom">自定义</string>
+    <string name="program_manage_prog_switch">节目开关</string>
+    <string name="program_manage_manual_sort">手动排序</string>
+    <string name="program_manage_prog_filter">节目过滤</string>
+    <string name="program_manage_fav_sort">喜爱节目排序</string>
+    <string name="channel_manage_search_guide">搜索向导</string>
+    <string name="channel_manage_auto_search">自动搜索</string>
+    <string name="channel_manage_senior">高级</string>
+    <string name="channel_manage_senior_full_search">全频道搜索</string>
+    <string name="channel_manage_senior_search_setting">搜索设置</string>
+    <string name="channel_manage_senior_signal_input">信号接入</string>
+	<string name="channel_manage_senior_operator">运营商</string>
+	<string name="vch_str_operator_info">运营商：    %1$s</string>
+	<string name="vch_str_card_type_info">卡类型：    %1$s</string>
+	<string name="vch_str_card_status_info">卡状态：    %1$s</string>
+	<string name="vch_str_hw_version">硬件版本：    %1$s</string>
+	<string name="vch_str_app_version">应用版本：    %1$s</string>
+	<string name="vch_str_dtv_version">驱动版本：    %1$s</string>
+	<string name="vch_str_release_time">发布时间：    %1$s</string>
+	<string name="vch_str_build_time">发布时间：    %1$s</string>
+	<string name="vch_str_channel_num">节目号：    %1$d</string>
+	<string name="vch_str_channel_name">节目名：    %1$s</string>
+	<string name="vch_str_channel_frequency">频\u3000率：    %1$sMHz</string>
+	<string name="vch_str_channel_audio">声\u3000音：    %1$s    %2$s</string>
+	<string name="vch_str_channel_audio_vedio_encode">音/视频编码：    %1$s/%2$s</string>
+	<string name="vch_str_channel_signal_strength">信号强度：    </string>
+	<string name="vch_str_channel_signal_quality">信号质量：    </string>
+	<string name="vch_str_channel_erro_rate">误码率：    %1$s</string>
+	<string name="vch_str_search_warning_title">将覆盖原有频道，是否继续？</string>
+	<string name="vch_str_filter_warning_title">节目搜索完成，是否过滤？</string>
+	<string name="vch_str_scan">搜索</string>
+</resources>

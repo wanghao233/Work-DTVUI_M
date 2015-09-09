@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/search_guide_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dip"
+            android:paddingTop="36dip"
+            android:text="@string/dtv_search_guide_title"
+            android:textColor="@android:color/white"
+            android:textSize="48sp" />
+
+        <ImageView
+            android:id="@+id/guide_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="40dip" >
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/flipperdetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dip"
+            android:layout_marginTop="80dip"
+            android:src="@drawable/icon_seartch_guide" />
+
+        <ViewFlipper
+            android:id="@+id/flipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left" >
+
+                <LinearLayout
+                    android:id="@+id/signalinput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="80dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="50dip"
+                        android:text="@string/dtv_scan_source"
+                        android:textColor="@android:color/white"
+                        android:textSize="33sp" />
+
+                    <com.changhong.menuView.itemView.ItemRadioButtonView
+                        android:id="@+id/btnCable"
+                        android:layout_width="490dip"
+                        android:layout_height="62dip"
+                        android:background="@drawable/item_square_slector"
+                        android:focusable="true"
+                        android:textSize="33sp" >
+                    </com.changhong.menuView.itemView.ItemRadioButtonView>
+
+                    <com.changhong.menuView.itemView.ItemRadioButtonView
+                        android:id="@+id/btnWireLess"
+                        android:layout_width="490dip"
+                        android:layout_height="62dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/item_square_slector"
+                        android:focusable="true"
+                        android:textSize="33sp" >
+                    </com.changhong.menuView.itemView.ItemRadioButtonView>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/providor_reboot"
+                android:layout_width="550dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/guide_reboot"
+                android:layout_width="match_parent"
+                android:layout_height="400dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/msg_warning"
+                    android:layout_width="600dip"
+                    android:layout_height="400dip"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/dtv_search_guide_reboot"
+                    android:textColor="#565656"
+                    android:textSize="33sp" />
+            </LinearLayout>
+        </ViewFlipper>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/guidescanfilterdetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dip"
+            android:layout_marginTop="80dip"
+            android:src="@drawable/icon_seartch_guide" />
+        <LinearLayout
+            android:layout_width="100dip"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/guide_autoscanfilter"
+            android:layout_width="550dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/guidesearch_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dip"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/dtvscan_autoscan"
+                    android:layout_width="450dip"
+                    android:layout_height="45dip"
+                    android:gravity="center"
+                    android:text="@string/dtv_autoscan"
+                    android:textColor="@android:color/white"
+                    android:textSize="33sp" >
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/dtvscan_FrequencyScansource"
+                    android:layout_width="550dip"
+                    android:layout_height="45dip"
+                    android:focusable="false"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/dtvscan_Frequency"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/dtv_scan_fre"
+                        android:textColor="#565656"
+                        android:textSize="21sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dtvscan_Scansource"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="7dip"
+                        android:text="@string/dtv_scan_source"
+                        android:textColor="#565656"
+                        android:textSize="21sp" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dtvscan_SymbolrateModulmode"
+                    android:layout_width="550dip"
+                    android:layout_height="45dip"
+                    android:focusable="false"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/dtvscan_Symbolrate"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/dtv_scan_Symbolrate"
+                        android:textColor="#565656"
+                        android:textSize="21sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dtvscan_Modulmode"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="7dip"
+                        android:text="@string/dtv_scan_Modulmode"
+                        android:textColor="#565656"
+                        android:textSize="21sp" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dtvscan_resultDTVRadio"
+                    android:layout_width="550dip"
+                    android:layout_height="45dip"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/dtvscan_resultDTV"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/dtv_scan_resultDTV"
+                        android:textColor="#565656"
+                        android:textSize="21sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dtvscan_resultbroadcast"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="8dip"
+                        android:text="@string/dtv_scan_resultbroadcast"
+                        android:textColor="#565656"
+                        android:textSize="21sp" >
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/guidefilter_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/dtvscan_filter_title"
+                    android:layout_width="450dip"
+                    android:layout_height="45dip"
+                    android:gravity="center"
+                    android:text="@string/dtv_filter_title"
+                    android:textColor="@android:color/white"
+                    android:textSize="33sp" >
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/dtvscan_FilterChannel"
+                    android:layout_width="550dip"
+                    android:layout_height="45dip"
+                    android:focusable="false"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/dtvscan_FilterChannelName"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:text="@string/no_string"
+                        android:textColor="#565656"
+                        android:textSize="21sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dtvscan_FilterStep"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_weight="2"
+                        android:text="@string/no_string"
+                        android:textColor="#565656"
+                        android:textSize="21sp" >
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="500dip"
+                android:layout_height="30dip"
+                android:layout_marginTop="15dip"
+                android:layout_gravity="left" >
+
+                <ProgressBar
+                    android:id="@+id/dtvscan_progressBar"
+                    style="@style/dtv_scan_progress_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" >
+                </ProgressBar>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="150dip"
+        android:layout_height="50dip"
+        android:layout_gravity="right"
+        android:layout_marginRight="135dip"
+        android:layout_marginTop="25dip"
+        android:background="@drawable/btn_square_selector"
+        android:gravity="center"
+        android:text="@string/dtv_search_guide_next"
+        android:textColor="#565656"
+        android:textSize="33sp" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="150dip"
+        android:layout_height="50dip"
+        android:layout_gravity="right"
+        android:layout_marginRight="135dip"
+        android:layout_marginTop="120dip"
+        android:visibility="gone"
+        android:background="@drawable/btn_square_selector"
+        android:gravity="center"
+        android:text="@string/dtv_scan_stop"
+        android:textColor="#565656"
+        android:textSize="33sp" />
+
+    <LinearLayout
+        android:id="@+id/dtvscan_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dip"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="150dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="80dip"
+            android:background="@drawable/btn_square_selector"
+            android:gravity="center"
+            android:text="@string/no"
+            android:textColor="#565656"
+            android:textSize="33sp" />
+
+        <Button
+            android:id="@+id/btnSure"
+            android:layout_width="150dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="630dip"
+            android:background="@drawable/btn_square_selector"
+            android:gravity="center"
+            android:text="@string/yes"
+            android:textColor="#565656"
+            android:textSize="33sp" />
+    </LinearLayout>
+
+</LinearLayout>

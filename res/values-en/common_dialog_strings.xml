@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="stringPCSleep">No signal sleep</string>
+  <string name="stringTV15">No signal</string>
+  <string name="stringUserSleep">Sleep</string>
+  <string name="stringFanError">Fan Error</string>
+  <string name="stringAnyKeyPressed">Press any key to cancel</string>
+  <string name="stringTest">Any key to cancel</string>
+  <string name="stringTitle">Title</string>
+  <string name="stringTitle2">Sub Title</string>
+  <string name="stringMessage">Message</string>
+  <string name="stringRequest">Watch reservation program?</string>
+  <string name="dtv_scan_warn_title"></string>
+  <string name="dtv_scan_warn_info">Will clear the database and program settings!Continue?</string>
+  <string name="dtv_reset_warn_info">Will clear the database and related settings!Continue?</string>
+  <string name="stringYes">Yes</string>
+  <string name="stringNo">No </string>
+  <string name="stringOk">Confirm</string>
+  <string name="stringCancel">Cancel </string>
+  <string name="stringLoading">Loading, please wait ...</string>
+  <string name="stringNotice">Press any key to exit</string>
+  <string name="stringSecond">Second</string>
+  <string name="stringAfter">Shutdown!</string>
+  <string name="stringWaitReboot">Wait to Reboot</string>
+  <string name="dtv_filter_title">Filter unavailable channel</string>
+  <string name="dtv_filter_warn">Will remove all unavailable channels,continue?</string>
+  <string name="dtv_filter_info_curprogress">Progress: </string>
+  <string name="dtv_filter_info_curfilter">Filter: </string>
+  <string name="dtv_channelmanager_channel_filter">Filter</string>
+  <string name="dtv_wait_service">Starting service...</string>
+  <string name="dtv_service_refresh">Updating service</string>
+  <string name="code_input">Please enter the password</string>
+  <string name="code_err_info">Wrong password</string>
+  <string name="code_string">Password:</string>
+</resources>

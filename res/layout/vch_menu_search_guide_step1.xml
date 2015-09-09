@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vch_search_guide_step_1"
+    android:layout_width="480dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible" >
+    <TextView
+        android:id="@+id/vch_cur_signal_input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/vch_dtv_item_bg"
+        android:gravity="center_vertical"
+        android:text="@string/stringNo"
+        android:textColor="@color/vch_text_content_Color"
+        android:textSize="21sp" />
+    <LinearLayout
+        android:id="@+id/vch_search_guide_content_1"
+        android:layout_width="480dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnStep1Next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/vch_dtv_item_bg"
+        android:text="@string/dtv_search_guide_next"
+        android:textColor="@color/vch_text_content_Color"
+        android:textSize="21sp" />
+</LinearLayout>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 上报信息词条 -->
+    <string name="collect1">设置行为</string>
+    <string name="collect2">极简设置</string>
+    <string name="collect3">DTV</string>
+    <string name="pull_down">展开</string>
+    <string name="pull_up">回收</string>
+    <string name="dvbc_source">有线</string>
+    <string name="dtmb_source">无线</string>
+    
+	<string name="collect11">TV用户行为</string>
+    <string name="collect12">DTV_Channel</string>
+    <string name="collect13">DTV_Program</string>
+    
+    <string name="collect1_Intelligent_guide">智能导视</string>
+    <string name="collect2_launcher_v2">主场景</string>
+    <string name="collect2_dtv">DTV</string>
+    <string name="collect3_epg_hot">EPG热门</string>
+    <string name="all_show">全部剧集</string>
+    <string name="popular_program">热门节目</string>
+    <string name="collect3_livehot_recommend">实时网络热门推荐</string>
+    <string name="collect3_localchannel_recommend">本地常用频道推荐</string>
+    <string name="collect3_currentprogarm_connection">当前节目的网络关联</string>
+    <string name="collect3_automatic_recommend">长虹自动节目推荐</string>
+    <string name="collect3_reservation_localprogram_play">本地预约节目播放</string>
+    <string name="collect3_reservation_localprogram_record">本地预约节目录制</string>
+    <!-- 上报信息词条 -->
+    
+    
+    <!-- DTV详细信息 -->
+    <string name="hello">Hello World!</string>
+    <string name="default_text">TextView</string>
+    <string name="no_string"></string>
+    <string name="app_name">数字电视</string>
+    <string name="dtv_func">数字电视功能</string>
+    <string name="sure">确认</string>
+    <string name="ignore">忽略</string>
+    <string name="back">返回</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="helpinfo_ok">确认</string>
+    <string name="helpinfo_return">返回</string>
+    <string name="helpinfo_exit">退出</string>
+    <string name="helpinfo_select">选择</string>
+    <string name="helpinfo_adjust">调节</string>
+    <string name="noText">""</string>
+    <string name="menu_audio_mode">声道</string>
+    <string name="menu_audio_track">音轨</string>
+    <string name="menu_audio">声音</string>
+    <string name="dtv_info_tv">数字电视</string>
+    <string name="dtv_info_radio">数字广播</string>
+    <string name="dtv_info_null">无节目</string>
+    <string name="dtv_info_encryption">""</string>
+    <string name="dtv_info_cryption">加密</string>
+    <string name="dtv_do_upgrade">升级</string>
+    <string name="bandwidth">带宽:</string>
+    <string name="dtv_scan_source">信号接入:</string>
+    <string name="dtv_scan_start_fre">起始频率:</string>
+    <string name="dtv_scan_end_fre">截止频率:</string>
+    <string name="dtv_info_noeffect">无效</string>
+    <string name="dtv_providor">运营商选择</string>
+    <string name="dtv_scan_fre">频率:</string>
+    <string name="scan_bandwidth">带宽</string>
+    <string name="scan_source">信号接入</string>
+    <string name="source_dvbc">有线</string>
+    <string name="source_dtmb">地面波</string>
+    <string name="scan_start_fre">主频率</string>
+    <string name="channel_type_tv">电视</string>
+    <string name="channel_type_radio">广播</string>
+    <string name="channel_info_cable">有线数字</string>
+    <string name="channel_info_wireless">无线数字</string>
+    <string name="action_settings">Settings</string>
+	<!-- DTV详细信息 -->
+	
+    
+    <!-- 网络设置词条 -->
+    <string name="on">开</string>
+    <string name="off">关</string>
+    <string name="none">无</string>
+    <string name="newwork_setting">网络设置</string>
+    <string name="network_wifi_setting">无线网络</string>
+    <string name="network_ethernet_setting">有线网络</string>
+    <string name="network_no_con">未连接</string>
+    <string name="connected">已连接</string>
+    <string name="wifi_connecting">正在连接...</string>
+    <string name="network_add_net">添加网络</string>
+    <string name="network_onekey">一键联网</string>
+    <string name="exit">退出</string>
+    <string name="network_advance_setting">高级设置</string>
+    <string name="network_test">网络测试</string>
+    <string name="network_handip">手动IP</string>
+    <string name="network_del_net">忽略此网络</string>
+    <string name="network_del_finish">已忽略</string>
+    <string name="network_account">"请输入网络名称"</string>
+    <string name="networkdetect_device">"网络设备"</string>
+    <string name="networkdetect_ipaddress">"IP地址"</string>
+    <string name="networkdetect_gateway">"默认网关"</string>
+    <string name="networkdetect_netmask">"子网掩码"</string>
+    <string name="networkdetect_dnsserver">"DNS"</string>
+    <string name="networkdetect_internet">"Internet检测"</string>
+    <string name="networkdetect_macaddress">"MAC地址"</string>
+    <string name="networkdetect_errorstate">"错误状态"</string>
+    <string name="networkdetect_device_eth">"有线接入"</string>
+    <string name="networkdetect_device_wifi">"无线接入"</string>
+    <string name="networkdetect_device_pppoe">"拨号接入"</string>
+    <string name="networkdetect_device_no">"无设备接入"</string>
+    <string name="networkdetect_device_u">"已接入"</string>
+    <string name="net_not_connect">"不可连接"</string>
+    <string name="net_can_connect">"连接正常"</string>
+    <string name="IP">IP地址:</string>
+    <string name="Netmask">子网掩码:</string>
+    <string name="Gateway">网关:</string>
+    <string name="DNS">DNS:</string>
+    <string name="pppoe_pass_visible">"密码可见"</string>
+    <string name="advanced_setting_wifi_encryption">"加密方式"</string>
+    <string name="wifi_pass_word">请输入无线网络</string>
+    <string name="advanced_setting_wifi_password">"密码"</string>
+    <string name="usename">账号</string>
+    <string name="advanced_setting_item_name">"网络名称"</string>
+    <string name="wifi_connect_button">"连接"</string>
+    <string name="wps_tips">"请在120秒内按下路由器上的WPS(PBC)按钮"</string>
+    <string name="wps_time">"剩余时间:"</string>
+    <string name="secend">"秒"</string>
+    <string name="cancel">取消</string>
+    <string name="phy_connect">网线已连接电视，您的电视可以连接网络!</string>
+    <string name="phy_connect_fail">未检测到网线与设备相连，请检查！</string>
+    <string name="softap_title">"WIFI热点"</string>
+    <string name="softap_setting">"WIFI热点开关"</string>
+    <string name="softap_ssid">"WIFI热点名称"</string>
+    <string name="softap_ssid_hink">请输入热点名称</string>
+    <string name="softap_pass">"WIFI热点密码"</string>
+    <string name="softap_pass_hink">请输入热点密码</string>
+    <string name="softAP_ERROR_SSID_NULL">名称不能为空！</string>
+    <string name="softAP_ERROR_SSID_chinese">名称不能包含中文字符！</string>
+    <string name="softAP_ERROR_pass_length">密码至少为8位！</string>
+    <string name="softAP_ERROR_pass_chinese">密码不能包含中文字符！</string>
+    <string name="softAP_switch_on_note">正在开启热点</string>
+    <string name="softAP_switch_off_note">正在关闭热点</string>
+    <string name="softap_open">待机开关</string>
+    <string name="pppoe_title">"宽带拨号"</string>
+    <string name="retry">重试</string>
+    <string name="ppoe_fail1">"连接失败，请尝试以下操作:"</string>
+    <string name="ppoe_fail2">"1.请检查您的电视和路由器之间的网线是否正确连接。"</string>
+    <string name="ppoe_fail3">"2.请重启路由器或检查路由器配置是否正确。"</string>
+    <string name="ppoe_fail4">"3.请尝试以下操作。"</string>
+    <string name="fail">连接失败</string>
+    <string name="fail_retry">连接失败，请重试！</string>
+    <string name="success">连接成功</string>
+    <string name="ethernet_fail1">"有线连接失败，请尝试以下操作："</string>
+    <string name="ethernet_fail2">"1.请检查路由器跟Internet的网线连接"</string>
+    <string name="ethernet_fail3">"2.请与Internet提供服务商联系"</string>
+    <string name="ethernet_fail4">"3.请尝试以下操作"</string>
+    <string name="cut_down">断开重新连接</string>
+    <string name="cut_down_status">网络断开,请重新连接！</string>
+    <string name="connecting">正在连接网络，请稍候...</string>
+    <string name="wifi_advanced_setting_item_manualset">"手动设置"</string>
+    <string name="account">"请输入网络名称"</string>
+    <string name="advanced_wifi_password_hint">"请输入密码"</string>
+    <string name="password_tx">请输入正确的无线网络密码！</string>
+    <string name="ppoe_tx_to">请输入用户名和密码！</string>
+    <string name="ppoe_auto">自动连接</string>
+    <string name="wifi_null">未搜索到无线网络,请重新搜索或使用有线网络!</string>
+    <string name="research">重新搜索</string>
+    <string name="not_null">输入内容不能为空！</string>
+    <string name="add_net_account_tx">请输入网络名称</string>
+    <string name="add_net_password_tx">请输入密码</string>
+    <string name="ppoe_tx">请输入宽带账号</string>
+    <!-- 网络设置词条 -->
+
+
+    <!-- 情景模式词条 -->
+    <string name="vch_videoset">情景模式</string>
+    <string name="vch_videoset_image">"图像"</string>
+    <string name="vch_videoset_voice">"声音"</string>
+    <string name="vch_videoset_compare">"对比度"</string>
+    <string name="vch_videoset_brightness">亮度</string>
+    <string name="vch_videoset_saturation">饱和度</string>
+    <string name="vch_videoset_clarity">清晰度</string>
+    <string name="vch_videoset_backlight">背光亮度</string>
+    <string name="vch_videoset_colortone">色调</string>
+    <string name="vch_videoset_colortemperature">色温</string>
+    <string name="vch_videoset_sportopt">运动优化</string>
+    <string name="vch_videoset_redgain">红色增益</string>
+    <string name="vch_videoset_greengain">绿色增益</string>
+    <string name="vch_videoset_bluegain">蓝色增益</string>
+    <string name="vch_videoset_image_setting">图像设置</string>
+    <string name="vch_videoset_surround">环绕声</string>
+    <string name="vch_videoset_voice_setting">声音设置</string>
+    <string name="vch_videoset_own">我的模式</string>
+    <string name="vch_videoset_standard">标准模式</string>
+    <string name="vch_videoset_night">晚间剧场</string>
+    <string name="vch_videoset_moive">超级影院</string>
+    <string name="vch_videoset_text">文字阅读</string>
+    <string name="vch_videoset_music">高质音乐</string>
+    <string name="vch_videoset_sport">劲爆体育</string>
+    <string name="vch_videoset_game">极速游戏</string>
+    <string name="vch_actionset">设置行为</string>
+    <string name="vch_easysetting">极简设置</string>
+    <!-- 情景模式词条 -->
+
+
+    <!-- 智能导视弹出框词条 -->
+    <string name="dtv_press_ok_get_more_program_infor">按"OK"键查看更多信息</string>
+    <string name="hotrecommend_Name">推荐</string>
+    <string name="hotrecommend_Fullstory">全部剧情</string>
+    <string name="hotrecommend_Percentage">热度:</string>
+    <string name="pushoutview_hottext">观看热度:</string>
+    <string name="pushoutview_percent">%</string>
+    <string name="pushoutview_specialprogram">查看全集</string>
+    <string name="pushoutview_programehelp">预约节目即将播出\n点击\'OK\'立即观看\n点击\'↑\'进行节目录制</string>
+    <string name="pushoutview_progrm_time">\t时长\t\t</string>
+    <string name="pushoutview_progrm_time_minute">分钟</string>
+	<string name="pushoutview_Pvr">已录制节目</string>
+    <string name="pvr_Filed_AlreadyRecordedPro">已经有节目开始录制，当前预约节目将无法录制！</string>
+    <string name="filedNotRightSCENESPvrHit">该预约节目不能录制，当前节目源为DTV或者ATV，请尝试在其他源下录制或者点击“OK键”进行播放！</string>
+    <string name="pvr_Filed_3288DevNotConnectedSuccess">尊敬的用户，该预约节目不能录制，模块已断开，请检查模块是否插入或者网络是否正常！</string>
+    <string name="pvr_Filed_3288NetdisConnected">尊敬的用户，该预约节目不能录制，模块已断开，请检查网络状态！</string>
+    <string name="pvr_Filed_EncryptPro"> 将无法录制，建议切换到DTV下确认一下卡的状态！</string>
+    <string name="pvr_Filed_CurEncryptPro">当前预约节目将无法录制，建议切换到DTV下确认一下卡的状态！</string>
+    <string name="pvr_Filed_NetDisconnectedPro"> 将无法录制，网络已断开，请检查网络状态！</string>
+    <string name="pvr_Filed_CurNetDisconnectedPro">当前预约节目将无法录制，网络已断开，请检查网络状态！</string>
+    <string name="pvr_Started_Pro">开始录制：</string>
+    <string name="pvr_Started_CurSchPro">开始录制该预约节目</string>
+    <string name="pvr_Done_Pro"> 已录制结束</string>
+    <string name="pvr_Done_curSchPro">该预约节目已录制结束</string>
+    <!-- 智能导视弹出框词条 -->
+    
+    
+    <!-- 数据上报欢网String -->
+	<string name="huanWang">欢网</string>
+    <string name="huanWang_ID">欢网ID</string>
+    <!-- 数据上报欢网String -->
+</resources>

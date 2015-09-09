@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/turn_channel_on_off_root_help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <include
+                android:layout_width="match_parent"
+                layout="@layout/buttom_help_info" >
+            </include>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/quick_channel_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="35dip" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_marginLeft="60dip" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dtv_quick_channel_pic_title" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayout1"
+            android:layout_marginTop="-7dip"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/page_pre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/channel_edit_direction_left_selector" />
+                <!-- android:src="@drawable/channel_edit_page_turn_left_arrow_white" -->
+            </RelativeLayout>
+
+            <ViewFlipper
+                android:id="@+id/fliperView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                    android:id="@+id/mainLayout"
+                android:layout_width="1090dip"
+                android:layout_height="567dip"
+                android:background="@drawable/channel_edit_bg"
+                android:gravity="top" >
+
+                <com.changhong.tvos.dtv.util.ViewQuickChannel
+                    android:id="@+id/quick_channel_grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:focusable="true"
+                    android:listSelector="@drawable/alpha00"
+                    android:numColumns="6"
+                    android:paddingBottom="28dip"
+                    android:paddingLeft="22dip"
+                    android:paddingRight="18dip"
+                    android:paddingTop="14dip"
+                    android:scrollbars="none" >
+                </com.changhong.tvos.dtv.util.ViewQuickChannel>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/mainLayout2"
+                    android:layout_width="1090dip"
+                    android:layout_height="567dip"
+                    android:background="@drawable/channel_edit_bg"
+                    android:gravity="top" >
+
+                    <com.changhong.tvos.dtv.util.ViewQuickChannel
+                        android:id="@+id/quick_channel_grid_view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="top"
+                        android:focusable="true"
+                        android:listSelector="@drawable/alpha00"
+                        android:numColumns="6"
+                        android:paddingBottom="28dip"
+                        android:paddingLeft="22dip"
+                        android:paddingRight="18dip"
+                        android:paddingTop="14dip"
+                        android:scrollbars="none" >
+                    </com.changhong.tvos.dtv.util.ViewQuickChannel>
+                </RelativeLayout>
+            </ViewFlipper>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/page_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/channel_edit_direction_right_selector" />
+                <!-- android:src="@drawable/channel_edit_page_turn_right_arrow_white" -->
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayout2"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+             android:layout_marginTop="-15dip" >
+
+            <com.changhong.tvos.dtv.util.PageIndexView
+                android:id="@+id/page_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

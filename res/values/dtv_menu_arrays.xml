@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+<string-array name="menu_scan_mode">
+        <item>自动搜索</item>
+        <item>手动搜索</item>
+        <item>全频率搜索</item>
+    </string-array>
+    <string-array name="menu_scan_modulation_dmbt">
+        <item>4_NR</item>
+        <item>4</item>
+        <item>16</item>
+        <item>32</item>
+        <item>64</item>
+    </string-array>
+    <string-array name="menu_scan_modulation">
+        <item>4</item>
+        <item>8</item>
+        <item>16</item>
+        <item>32</item>
+        <item>64</item>
+        <item>128</item>
+        <item>256</item>
+        <item>512</item>
+        <item>1024</item>
+    </string-array>
+    <string-array name="menu_scan_symbol_rate">
+        <item>6875</item>
+        <item>6900</item>
+    </string-array>
+    <string-array name="menu_scan_demod_type">
+        <item>DVB-C</item>
+        <item>DMBT-TH</item>
+    </string-array>
+    <string-array name="menu_scan_carrier_mode">
+        <item>单载波</item>
+        <item>多载波</item>
+    </string-array>
+    <string-array name="menu_scan_ldpc_rate">
+        <item>LDPC 0.4</item>
+        <item>LDPC 0.6</item>
+        <item>LDPC 0.8</item>
+    </string-array>
+    <string-array name="menu_scan_frame_header">
+        <item>PN945</item>
+        <item>PN595</item>
+        <item>PN420</item>
+    </string-array>
+    <string-array name="menu_scan_inter_leaver_mod">
+        <item>M720</item>
+        <item>M240</item>
+    </string-array>
+    <string-array name="menu_audio_mode">
+        <item>立体声</item>
+        <item>左声道</item>
+        <item>右声道</item>
+        <item>单声道</item>
+        <item>自动</item>
+    </string-array>
+    <string-array name="menu_audio_track">
+        <item>英语</item>
+        <item>中文</item>
+        <item>繁体中文</item>
+        <item>印度语</item>
+        <item>孟加拉语</item>
+        <item>德语</item>
+        <item>法语</item>
+        <item>俄罗斯语</item>
+        <item>印度语</item>
+        <item>德国语</item>
+        <item>意大利语</item>
+        <item>西班牙语</item>
+        <item>波兰语</item>
+        <item>中文</item>
+    </string-array>
+    <string-array name="menu_caption_language">
+        <item>英文</item>
+        <item>简体中文</item>
+    </string-array>
+    <string-array name="week_7_days">
+        <item>星期日</item>
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+    </string-array>
+    <string-array name="str_dtv_usrset_newchannelmode">
+        <item>黑屏</item>
+        <item>静帧</item>
+    </string-array>
+    <string-array name="str_dtv_usrset_fav_switch">
+        <item>开</item>
+        <item>关</item>
+    </string-array>
+    <string-array name="str_dtv_hotel_music_modes">
+        <item>单频道</item>
+        <item>多频道</item>
+    </string-array>
+    <string-array name="str_scene_modes">
+        <item>标准模式</item>
+        <item>剧场</item>
+        <item>UMAX模式</item>
+        <item>阅读</item>
+        <item>MV</item>
+        <item>体育</item>
+        <item>游戏</item>
+        <item>自定义</item>
+    </string-array>
+    <string-array name="str_signal_input_mode">
+        <item>有线</item>
+        <item>无线</item>
+    </string-array>
+    <string-array name="menu_scan_modulation_str">
+        <item>4QAM</item>
+        <item>8QAM</item>
+        <item>16QAM</item>
+        <item>32QAM</item>
+        <item>64QAM</item>
+        <item>128QAM</item>
+        <item>256QAM</item>
+        <item>512QAM</item>
+        <item>1024QAM</item>
+    </string-array>
+    <string-array name="str_dtv_3d_modes">
+        <item>3D关</item>
+        <item>左右</item>
+        <item>上下</item>
+        <item>2D转3D</item>
+    </string-array>
+    
+</resources>

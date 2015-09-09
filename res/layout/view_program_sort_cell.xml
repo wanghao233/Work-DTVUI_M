@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="140dip"
+    android:layout_height="125dip"
+    android:gravity="center" >
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="140dip"
+        android:layout_height="125dip"
+        android:background="@drawable/menu_sort_dtv_selector"
+        android:gravity="center_horizontal" >
+        <RelativeLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="140dip"
+            android:layout_height="105dip" >
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/noText"
+                android:textColor="#ffffffff"
+                android:textSize="20sp" >
+            </TextView>
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:paddingTop="10dip" >
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="96dip"
+                    android:layout_height="67dip" >
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="5dip" >
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/noText"
+                    android:textColor="#ffffffff"
+                    android:textSize="20sp" >
+                </TextView>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

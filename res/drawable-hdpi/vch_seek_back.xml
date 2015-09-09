@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 背景图 -->
+    <item
+        android:id="@+android:id/background"
+        android:drawable="@drawable/vch_slider_empty_"
+        android:paddingBottom="-3px"
+        android:paddingTop="0px"/>
+    <!-- 全部能量图 -->
+
+    <item
+        android:id="@+android:id/secondaryProgress"
+        android:drawable="@drawable/vch_slider_empty_"/>
+    <!-- 进和能量图 -->
+
+    <item
+        android:id="@+android:id/progress"
+        android:drawable="@drawable/vch_slider_full_"/>
+</layer-list>

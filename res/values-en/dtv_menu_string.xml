@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- dtv_mainmenu -->
+    <string name="dtv_mainmenu_channel_list">Channel list</string>
+    <string name="dtv_mainmenu_channel_manager">Channel management</string>
+    <string name="dtv_mainmenu_channel_scan">Channel search</string>
+    <string name="dtv_mainmenu_channel_info">Channel info</string>
+    <string name="dtv_mainmenu_system_setup">System Setting</string>
+    <string name="dtv_mainmenu_start_wasu_tv">Hua Shu TV</string>
+    
+    <!-- dtv_Mainmenu -->
+    <string name="dtv_Mainmenu_Dtv">Settings\u3000</string>
+    <string name="dtv_Mainmenu_EPGInfo">EPG info</string>
+    <string name="dtv_Mainmenu_ProgramManager">Channel management</string>
+    <string name="dtv_Mainmenu_ScanManager">Search management</string>
+    <string name="dtv_Mainmenu_MoreSetting">More settings</string>
+    
+	<!-- dtv_ProgramManager -->
+    <string name="dtv_ProgramManager_ManualSort">Manual sorting</string>
+    <string name="dtv_ProgramManager_ProgramInfo">Channel info</string>
+    <string name="dtv_ProgramManager_ProgramFilter">Channel filter</string>
+    <string name="dtv_ProgramManager_DtvRadio">Digital broadcast</string>
+    <string name="dtv_ProgramManager_ProgarmAll">All channels</string>
+    
+    <!-- dtv_ScanManager -->
+    <string name="dtv_ScanManager_Guide">Serach guide</string>
+    <string name="dtv_ScanManager_AutoScan">Auto search</string>
+    <string name="dtv_ScanManager_Advanced">Advanced\u3000</string>
+    <string name="dtv_ScanManager_Progressing">Progress</string>
+    <string name="dtv_ScanManager_CancelFilter">Remove filter</string>
+    
+    <!-- dtv_ScanManager_Advanced -->
+    <string name="dtv_ScanManager_Advanced_Customer">Custom search</string>
+    <string name="dtv_ScanManager_Advanced_Customer_ListScan">Full-band search</string>
+    <string name="dtv_ScanManager_Advanced_Customer_UserScan">Specify frequency point search</string>
+    <string name="dtv_ScanManager_Advanced_Customer_Scan">Search</string>
+    <string name="dtv_ScanManager_Advanced_Customer_ManualScan">Manual search</string>
+    <string name="dtv_ScanManager_Advanced_Customer_Freq">Frequency point MHz</string>
+    <string name="dtv_ScanManager_Advanced_Customer_Symbol">Symbol Kbps</string>
+    <string name="dtv_ScanManager_Advanced_Customer_Qam">QAM</string>
+    <string name="dtv_ScanManager_Advanced_Customer_BandWidth">Band\u3000</string>
+    <string name="dtv_ScanManager_Advanced_AntennaInput">Signal access</string>
+    <string name="dtv_ScanManager_Advanced_OperatorSetting">Operator set</string>
+    <string name="dtv_ScanManager_Advanced_Manual_StartFreq">STRT freq MHz</string>
+    <string name="dtv_ScanManager_Advanced_Manual_EndFreq">END freq MHz</string>
+    <string name="dtv_ScanManager_Advanced_Manual_Symbol">Symbol Kbps</string>
+    <string name="dtv_ScanManager_Advanced_Manual_Qam">QAM</string>
+    
+    <!-- dtv_MoreSetting_3DMode -->
+    <string name="dtv_MoreSetting_3DMode">3D mode</string>
+    <string name="dtv_3DMode_Off">3D Off</string>
+    <string name="dtv_3DMode_LeftRight">Left and right</string>
+    <string name="dtv_3DMode_UpDown">Up and down</string>
+    <string name="dtv_2DMode23D">2D-&gt;3D</string>
+    
+    <!-- dtv_MoreSetting_DTVSetting -->
+    <string name="dtv_MoreSetting_DTVSetting">DTV settings</string>
+    <string name="dtv_DTVSetting_AudioSetting">Sound setting</string>
+    <string name="dtv_DTVSetting_DTVUpGrade">DTV upgrade</string>
+    <string name="dtv_DTVSetting_DTVFactoryOut">DTV factory reset</string>
+    <string name="dtv_factory_over">Factory reset completed</string>
+    <string name="dtv_DTVSetting_DTV_Info">DTV info</string>
+    <string name="dtv_DTVSetting_CICA_Info">Encryption info</string>
+    <string name="dtv_AudioSetting_mode">Channel\u3000</string>
+    <string name="dtv_AudioSetting_track">Track\u3000</string>
+    <string name="dtv_MoreSetting_AllSetting">All settings</string>
+    
+    <!-- dtv_channelmanager -->
+    <string name="dtv_channelmanager_channel_on_and_off">Program skip</string>
+    <string name="dtv_channelmanager_channel_swap">Program swap</string>
+    <string name="dtv_channelmanager_fav_sort">Channel sorting</string>
+    
+    <!-- dtv_channelscan -->
+    <string name="dtv_channelscan_auto_scan">Auto search</string>
+    <string name="dtv_channelscan_list_scan">Full-band search</string>
+    <string name="dtv_channelscan_manual_scan">Manual search</string>
+    <string name="dtv_channelscan_scansettings">Search Settings</string>
+    <string name="dtv_channelscan_channel_count_prompt">Searched %s channels</string>
+    <string name="dtv_channelscan_scan_frequency">Frequency:</string>
+    <string name="dtv_channelscan_scan_symbole_rate">Symbol rate:</string>
+    <string name="dtv_channelscan_scan_qam">Modulation:</string>
+    
+    <!-- dtv_systemsetup -->
+    <string name="dtv_systemsetup_CA_system">Encryption info</string>
+    <string name="dtv_systemsetup_audio_settings">Sound setting</string>
+    <string name="dtv_systemsetup_aerial_type_settings">Antenna type</string>
+    <string name="dtv_systemsetup_password_settings">Password setting</string>
+    <string name="dtv_systemsetup_module_upgrade">Module upgrade</string>
+    <string name="dtv_systemsetup_information">Module info</string>
+    <string name="dtv_systemsetup_factory_settings">Factory reset</string>
+    
+    <!-- dtv_audiosettings -->
+    <string name="dtv_audiosettings_audio_mode">Channel</string>
+    <string name="dtv_audiosettings_audio_track">Audio Track</string>
+    <string name="dtv_audiosettings_audio_volume">Volume</string>
+    
+    <!-- dtv_scan -->
+    <string name="dtv_scan_start">Start</string>
+    <string name="dtv_autoscan">Auto search</string>
+    <string name="dtv_listscan">Full-band search</string>
+    <string name="dtv_manualscan">Manual search</string>
+    <string name="dtv_scansetup">Search Settings</string>
+    <string name="dtv_scan_frequency">Frequency:\u3000</string>
+    <string name="dtv_scan_Symbolrate">Symbol rate:</string>
+    <string name="dtv_scan_Modulmode">Modulation:</string>
+    <string name="dtv_scan_resultDTV">TV:</string>
+    <string name="dtv_scan_resultbroadcast">Broadcast:</string>
+    <string name="dtv_scan_programing">Searching</string>
+    <string name="dtv_scan_operatoring">Matching</string>
+    <string name="dtv_smartskip_programing">Filtering</string>
+    <string name="dtv_scan_resultdata">Data:</string>
+    <string name="dtv_scan_stop">stop</string>
+    <string name="dtv_scan_main_frequency">main frequency</string>
+    <string name="dtv_scan_MHZ">MHz</string>
+    <string name="dtv_scan_store_program">Refreshing database,please wait</string>
+    <string name="dtv_system_reboot">Restarting system,please wait</string>
+    <string name="dtv_start_service_scan_program">Detecting channel updates...</string>
+    <string name="menu_dtv_emergency_broadcast">Emergency broadcasting...</string>
+    <string name="dtv_cica_force_scan">Channel list is updated,please search again</string>
+    <string name="dtv_scan_store_count">No saved channel!</string>
+    <string name="NoRadioChannel">No broadcast!</string>
+    <string name="NoDtvChannel">No DTV channel!</string>
+    <string name="InvalidDtvChannel">The channel number does not exist</string>
+    <string name="dtv_scan_signalstrength">Signal strength:</string>
+    <string name="drv_scan_signalquality">Signal quality:</string>
+    <string name="desc_dtv_boot_image">Display advertise during boot</string>
+    
+    <!-- menu -->
+    <string name="menu_sure">Confirm</string>
+    <string name="menu_cancel">Cancel </string>
+    <string name="menu_ignore">Ignore</string>
+    <string name="menu_exit">Exit</string>
+    <string name="menu_yes">Yes</string>
+    <string name="menu_no">No </string>
+    <string name="menu_setting_foot_ok">Confirm</string>
+    <string name="menu_setting_foot_back">Return</string>
+    <string name="menu_setting_foot_exit">Exit</string>
+    <string name="menu_dtv_version_information">Digital module info</string>
+    <string name="menu_soft_ware_operator_info">Operator:</string>
+    <string name="menu_soft_ware_card_type_info">Card type:</string>
+    <string name="menu_soft_ware_card_status_info">Card status:</string>
+    <string name="menu_soft_ware_card_cas_info">CAS:</string>
+    <string name="menu_soft_ware_version_info">Version:</string>
+    <string name="menu_soft_ware_build_time">Compile date;</string>
+    <string name="menu_soft_ware_release_time">Time:</string>
+    <string name="menu_soft_ware_card_type_ca">CA card</string>
+    <string name="menu_soft_ware_card_type_ci">CI card</string>
+    <string name="menu_soft_ware_card_type_unknown">Unknown card type</string>
+    <string name="menu_soft_ware_card_status_ok">Normal</string>
+    <string name="menu_soft_ware_card_status_out">No card</string>
+    <string name="menu_soft_ware_card_status_exception">Unknown card status</string>
+    <string name="menu_soft_ware_no_info">.com</string>
+    <string name="menu_help_page">Turn page</string>
+    <string name="menu_help_change_source">Switch</string>
+    <string name="menu_help_change_date">Change date</string>
+    
+    <!-- dtv_caci -->
+    <string name="dtv_caci_system">CA system</string>
+    <string name="dtv_ca_wait">Acquiring info,please wait!</string>
+    <string name="dtv_caci_info">Digital TV encryption system</string>
+    <string name="dtv_help_exit">Press \'Menu\' to exit</string>
+    <string name="dtv_cica_mail">You have unread mail!</string>
+    <string name="dtv_cica_mail_num"></string>
+    <string name="dtv_cica_mail_full">Inbox is full</string>
+    <string name="dtv_cica_mail_ok">Check</string>
+    <string name="dtv_cica_mail_cancle">Ignore</string>
+    <string name="dtv_cica_input_ok">Confirm</string>
+    <string name="dtv_cica_input_cancle">Cancel </string>
+    
+    <!-- dtv_menu -->
+    <string name="dtv_menu_main_title">Menu</string>
+    <string name="dtv_menu_audio_setup_title">Sound setting</string>
+    <string name="dtv_menu_channel_scan_title">Channel search</string>
+    <string name="dtv_menu_channel_manager_title">Channel management</string>
+    <string name="dtv_menu_system_setup_title">System Setting</string>
+    <string name="dtv_menu_channel_scan_setup_title">Search Settings</string>
+    <string name="dtv_menu_channel_info_title">Channel info</string>
+    <string name="dtv_menu_system_information_title">Info</string>
+    
+    <!-- dtv_scansettings -->
+    <string name="dtv_scansettings_operator_setup_title">Operator</string>
+    <string name="dtv_scansettings_operator_setup">Operator</string>
+    <string name="dtv_scansettings_frequency_setup">Freq.</string>
+    <string name="dtv_scansettings_symbol_rate_setup">Symbol rate</string>
+    <string name="dtv_scansettings_qam_setup">Modulation</string>
+    <string name="dtv_scansettings_operator_general">通用</string>
+    <string name="dtv_scansettings_operator_countrywide">National</string>
+    <string name="dtv_scansettings_source_setup_title">Antenna type</string>
+    <string name="dtv_scansettings_source_setup">Network Type</string>
+    <string name="dtv_scansettings_carrier_mode_setup">Carrier mode</string>
+    <string name="dtv_scansettings_ldpc_rate_setup">LDCP inner code error correction</string>
+    <string name="dtv_scansettings_frame_header_setup">Frame header format</string>
+    <string name="dtv_scansettings_inter_leaver_mod_setup">Interleave mode</string>
+    <string name="dtv_scansettings_mi_frequency_setup">Downstream frequency</string>
+    <string name="dtv_scansettings_mi_NCOFreqKHz_setup">NCO frequency</string>
+    <string name="dtv_scansetting_change_source_title">Switch signal</string>
+    <string name="dtv_scansetting_change_source_normal_confirm">Switch signal to %s?</string>
+    
+    <!-- dtv_scan_setup -->
+    <string name="dtv_scan_setup_waring">Message</string>
+    <string name="dtv_scan_setup_waring_info">Changing operator may cause some probelm,\npress \"OK\" to restart TV and change operator</string>
+    <string name="dtv_scan_setup_change_operator_normal_confirm">TV will restrat in 5s,continue?</string>
+    <string name="dtv_scan_setup_search_operator">Searching for matching operator, please wait a moment...</string>
+ 	<string name="dtv_scan_setup_searched_operator">Switching to the matched operator %s</string>
+ 	<string name="dtv_scan_setup_searched_done">Matched operator</string>
+    <string name="dtv_scan_setup_cur_operator">Current operator:%s</string>
+    
+    <!-- dtv_menu_channel_info_channel -->
+    <string name="dtv_menu_channel_info_channel_num">Channel number:</string>
+    <string name="dtv_menu_channel_info_channel_name">Channel name:</string>
+    <string name="dtv_menu_channel_info_channel_audio">Audio:\u3000</string>
+    <string name="dtv_menu_channel_info_channel_frequency">Frequency:\u3000</string>
+    <string name="dtv_menu_channel_info_channel_bandwidth">Bandwidth:\u3000</string>
+    <string name="dtv_menu_channel_info_channel_ts_service_id">Business info</string>
+    <string name="dtv_menu_channel_info_channel_audio_vedio_type">A/V type:</string>
+    <string name="dtv_menu_channel_info_channel_audio_vedio_encode">A/V format:</string>
+    <string name="dtv_menu_channel_info_channel_audio_vedio_pid">A/V PID:</string>
+    <string name="dtv_menu_channel_info_channel_audio_mode">Channel:</string>
+    <string name="dtv_menu_channel_info_channel_audio_track">Track:</string>
+    <string name="dtv_menu_channel_info_channel_sybol_rate">Symbol rate:</string>
+    <string name="dtv_menu_channel_info_channel_qam">Modulation:</string>
+    <string name="dtv_menu_channel_info_channel_erro_rate">Bit error rate:</string>
+    <string name="dtv_menu_channel_info_channel_signal_strength">Signal strength:</string>
+    <string name="dtv_menu_channel_info_channel_signal_quality">Signal quality:</string>
+    
+    <!-- dtv_menu_info -->
+    <string name="dtv_menu_info_vendor">Operator:</string>
+    <string name="dtv_menu_info_vendor_name">Chang Hong</string>
+    <string name="dtv_menu_info_hw_version">HW version:</string>
+    <string name="dtv_menu_info_app_sw_version">App version:</string>
+    <string name="dtv_menu_info_drv_sw_version">Driver version:</string>
+    <string name="dtv_menu_info_release_time">Time:</string>
+    <string name="dtv_menu_info_app_release_time">App release Date:</string>
+    <string name="dtv_menu_info_drv_release_time">Driver release Date:</string>
+    <string name="dtv_menu_quick_channel_help_info">Long press the OK button to sort channel</string>
+    <string name="dtv_menu_swap_channel_help_info">Press the OK button to swap channel</string>
+    <string name="dtv_menu_turn_channel_on_off_help_info">Press the OK button to enable/disable channel</string>
+    
+    <string name="dtv_menu_no_channel_prompt">No channel,please search!</string>
+    <string name="dtv_menu_no_wasu_app">Sorry,Hua Shu TV is not installed!</string>
+    <string name="dtv_menu_no_cica_prompt">No smart card module</string>
+    
+    <string name="dtv_menu_after_upgrade_setup_title">Tips </string>
+    <string name="dtv_menu_after_upgrade_setup_content">The upgrade is complete,configure operator information now?</string>
+    <string name="dtv_menu_operation_title">Current operator:</string>
+    <string name="dtv_menu_diy_sort">Manual sorting</string>
+    <string name="dtv_menu_self_order_info">Please enter the channel number you want to use</string>
+    <string name="dtv_menu_saved_info">Channel list has been saved</string>
+    
+    <!-- channel_sort -->
+    <string name="channel_sort_quit">Cancel</string>
+    <string name="channel_sort_ser">Edit</string>
+    <string name="channel_sort_exit">Save</string>
+    
+    <!-- dtv_menu_system -->
+    <string name="dtv_menu_system_debug">Debug</string>
+    <string name="dtv_menu_out_system_log">Export system log</string>
+    <string name="dtv_menu_system_tvos_version">TVOS version:</string>
+    <string name="dtv_menu_system_android_version">Android version:  </string>
+    <string name="dtv_menu_system_platform">Platform info:</string>
+    <string name="dtv_menu_system_subtitle">Subtitle</string>
+    
+    <!-- dtv_channel_sort -->
+    <string name="dtv_channel_sort_add">Press OK to add a channel</string>
+    <string name="dtv_channel_sort_list">The rest channels will automatic sorting after exit</string>
+    <string name="dtv_channel_sort_modify">Adjust channel order</string>
+    <string name="dtv_channel_sort_cancel">Cannel channel sorting</string>
+    <string name="dtv_channel_sort_saveornot">Save current channel order?</string>
+    <string name="dtv_channel_sort_save">Save and exit</string>
+    <string name="dtv_channel_sort_edit">Press OK to select a channel,use D-PAD to sort it.</string>
+    <string name="dtv_channel_sort_none">You have no sorted channels </string>
+    <string name="dtv_channel_sort_save_ok">Channel list has been saved</string>
+    
+    <!--  tv_hotel -->
+    <string name="dtv_hotel_max_volume">Max volume</string>
+    <string name="dtv_hotel_default_volume">Boot volume</string>
+    <string name="dtv_hotel_localkey_lock">Key lock</string>
+    <string name="dtv_hotel_scan_lock">Disable search</string>
+    <string name="dtv_hotel_default_channel">Channel after booting</string>
+    <string name="dtv_hotel_default_music">Music channel</string>
+    <string name="dtv_hotel_hotel_recover">Recovery</string>
+    <string name="dtv_hotel_data_clone">U-disk backup </string>
+    <string name="dtv_hotel_data_save">Data storage</string>
+    <string name="dtv_hotel_data_recover">Data recovery</string>
+    
+    <!-- dtv_hotel_music -->
+    <string name="dtv_hotel_set">Hotel customization</string>
+    <string name="dtv_hotel_mode">Customization switch</string>
+    <string name="dtv_hotel_default_setting">Boot settings</string>
+    <string name="dtv_hotel_funcation_limit">Function restriction</string>
+    <string name="dtv_hotel_music_channel">Music channel</string>
+    <string name="dtv_hotel_music_mode">Music channel mode</string>
+    <string name="dtv_hotel_music_start_chanenl">Music channel start from:</string>
+    <string name="dtv_hotel_music_end_chanenl">Music channel end to:</string>
+    <string name="dtv_hotel_music_channel_warning">Please check music channel number range</string>
+    
+    <!-- dtv_hotel_notice -->
+    <string name="dtv_hotel_waring_no_sdcard">Please insert a USB storage device</string>
+    <string name="dtv_hotel_notice_recover_success">Recovery succeeded.Please restart system </string>
+    <string name="dtv_hotel_notice_recover_fail">Recovery failed</string>
+    <string name="dtv_hotel_notice_restore_success">Copy succeeded</string>
+    <string name="dtv_hotel_notice_restore_fail">Copy failed</string>
+    <string name="dtv_hotel_notice_saveing_data">Saving...</string>
+    <string name="dtv_hotel_warning_nofile">No files</string>
+    
+    <!-- dtv_search_guide -->
+    <string name="dtv_search_guide_title">Search guide</string>
+    <string name="dtv_search_guide_next">Next</string>
+    <string name="dtv_search_guide_reboot">Will restart in 5s.After restart,you can search signal</string>
+    <string name="dtv_search_guide_scan">Start search now?</string>
+    <string name="dtv_search_guide_noOporator">Please select the operator</string>
+    
+    <!-- str_vch_search -->
+    <string name="str_vch_search_guide_title_1">1.\u3000Signal access</string>
+    <string name="str_vch_search_guide_title_2">2.\u3000Operator selection</string>
+    <string name="str_vch_search_guide_title_3">3.\u3000Auto restart</string>
+    <string name="str_vch_search_guide_title_4">4.\u3000Serach signal</string>
+    <string name="str_vch_cur_signal_input">Current signal access:%s</string>
+</resources>

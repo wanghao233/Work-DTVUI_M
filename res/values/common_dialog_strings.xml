@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stringPCSleep">无信号休眠</string>
+    <string name="stringTV15">无信号</string>
+    <string name="stringUserSleep">睡眠定时</string>
+    <string name="stringFanError">风扇异常</string>
+    <string name="stringAnyKeyPressed">按任意键取消</string>
+    <string name="stringTest">任意键取消</string>
+    <string name="stringTitle">这里是标题</string>
+    <string name="stringTitle2">这里是次标题</string>
+    <string name="stringMessage">这里是信息显示</string> 
+    <string name="stringRequest">预约到时，是否收看？</string>
+    <string name="dtv_scan_warn_title"></string>
+    <string name="dtv_scan_warn_info">将会清空数据库以及节目相关的设置信息，是否继续！</string>
+     <string name="dtv_reset_warn_info">将会清空数据库以及相关配置信息，是否继续！</string>
+    <string name="stringYes">是</string>
+    <string name="stringNo">否</string>
+    <string name="stringOk">确定</string>
+    <string name="stringCancel">取消</string>
+    <string name="stringLoading">正在加载，请稍后......</string>
+    <string name="stringNotice">按任意键退出</string>
+    <string name="stringSecond">秒</string>
+    <string name="stringAfter">后关机！</string>
+    <string name="stringWaitReboot">正在准备重启</string>
+    
+<string name="dtv_filter_title">无效节目过滤</string>
+    <string name="dtv_filter_warn">将无效的节目过滤，是否继续！</string>
+    <string name="dtv_filter_info_curprogress"> 进度： </string>
+    <string name="dtv_filter_info_curfilter">过滤： </string>
+    <string name="dtv_channelmanager_channel_filter">节目过滤</string>
+    
+<string name="dtv_wait_service">等待服务启动...</string>
+    <string name="dtv_service_refresh">服务更新</string>
+    <string name="code_input">请输入密码</string>
+    <string name="code_err_info">密码错误</string>
+    <string name="code_string">密码：</string>
+</resources>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1200dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+  <LinearLayout 
+    android:id="@+id/vch_item_transparent"
+    android:layout_width="960dp"
+    android:layout_height="80dp"
+    android:orientation="vertical"
+    android:visibility="gone"
+   ></LinearLayout>
+<LinearLayout 
+    android:id="@+id/vch_item_first_class_total"
+    android:layout_width="1200dp"
+    android:layout_height="120dp"  
+   android:orientation="horizontal"
+    >
+<LinearLayout 
+    android:id="@+id/vch_item_first_class"
+    android:layout_width="960dp"
+    android:layout_height="100dp"
+  
+    android:orientation="horizontal"
+    >
+<LinearLayout 
+    android:id="@+id/vch_item_left"
+    android:layout_width="380dp"
+    android:layout_height="fill_parent" 
+    android:orientation="horizontal"
+    >
+   <TextView
+    android:layout_marginLeft="20dp"
+    android:id="@+id/vch_item_left_text"
+    android:layout_width="wrap_content"    
+    android:layout_height="wrap_content" 
+    android:layout_gravity="center_vertical"
+    android:singleLine="true"
+    android:ellipsize="marquee"
+    android:marqueeRepeatLimit="marquee_forever" 
+    android:textColor="@color/vch_text_content_Color" 
+    android:textSize="42sp"
+    />
+</LinearLayout>
+
+<LinearLayout 
+    android:id="@+id/vch_item_center"
+    android:layout_width="406dp" 
+    android:layout_marginRight="20dp"
+    android:layout_height="fill_parent" 
+    android:orientation="horizontal"
+    android:gravity="right"
+    android:layout_gravity="center_vertical"    
+    >
+    <TextView
+    android:id="@+id/vch_item_center_text"
+    android:layout_width="wrap_content"    
+    android:layout_height="wrap_content" 
+    android:textSize="42sp"
+    android:singleLine="true"
+    android:ellipsize="marquee"
+    android:marqueeRepeatLimit="marquee_forever" 
+    android:textColor="@color/vch_text_content_Color" 
+    android:layout_gravity="center_vertical"
+    />
+</LinearLayout>
+
+<LinearLayout 
+    android:id="@+id/vch_item_right"
+    android:layout_width="154dp"
+    android:paddingRight="36dp"
+    android:layout_height="fill_parent" 
+    android:gravity="right"
+    android:orientation="horizontal"
+       >
+    <ImageView
+    android:id="@+id/vch_Pull_down"
+    android:layout_width="wrap_content"    
+    android:layout_height="wrap_content" 
+    android:layout_gravity="center_vertical"
+    android:visibility="gone"
+    android:background="@drawable/vch_down_4k"
+     />
+    <ImageView
+    android:id="@+id/vch_Jump_To"
+    android:layout_width="wrap_content"    
+    android:layout_height="wrap_content"  
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/vch_jump_4k"
+    android:visibility="gone"
+     />
+    <ImageView
+    android:id="@+id/vch_switch_On"
+    android:layout_width="wrap_content"    
+    android:layout_height="wrap_content"  
+    android:layout_gravity="center_vertical"
+    android:visibility="gone"
+    android:background="@drawable/vch_on_4k"
+     />
+    <ImageView
+    android:id="@+id/vch_singleselec"
+    android:layout_width="wrap_content"    
+    android:layout_height="wrap_content"  
+    android:layout_gravity="center"
+    android:visibility="gone"
+     />
+</LinearLayout>
+
+<LinearLayout 
+    android:id="@+id/vch_item_right_attach"
+    android:layout_width="560dp" 
+    android:layout_height="fill_parent" 
+    android:orientation="horizontal"
+    android:visibility="gone"
+    android:gravity="right"
+    android:layout_gravity="center_vertical"    
+    >
+    <TextView
+    android:id="@+id/vch_item_right_attach_text"
+    android:layout_width="wrap_content"    
+    android:layout_height="wrap_content" 
+    android:textSize="42sp"
+    android:singleLine="true"
+    android:ellipsize="marquee"
+    android:marqueeRepeatLimit="marquee_forever" 
+    android:textColor="@color/vch_text_content_Color" 
+    android:layout_gravity="center_vertical"
+    />
+</LinearLayout>
+</LinearLayout>
+</LinearLayout>
+
+<LinearLayout 
+    android:id="@+id/vch_item_first_class_attach_total"
+    android:layout_width="1200dp"
+    android:layout_height="120dp"
+    android:layout_centerInParent="true"
+    android:visibility="gone"
+    >
+<LinearLayout 
+    android:id="@+id/vch_item_first_class_attach"
+    android:layout_width="960dp"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    >
+  <TextView 
+        android:id="@+id/vch_seekbar_title"
+       	android:layout_width="274dp"
+        android:layout_height="wrap_content"
+        android:textSize="42sp"
+        android:paddingLeft="20dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever" 
+        android:textColor="@color/vch_text_content_Color" 
+        android:layout_gravity="center_vertical"
+       />
+   <ImageView
+    android:id="@+id/vch_left_icon_attach"
+    android:layout_width="wrap_content"    
+    android:layout_height="wrap_content"  
+    android:layout_gravity="center"
+    android:visibility="invisible"
+    android:background="@drawable/vch_left_4k"
+    />
+  <RelativeLayout 
+     android:layout_width="460dp"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     android:paddingLeft="30dp"
+     android:paddingRight="30dp"
+     android:layout_gravity="center_vertical"
+    >
+     <SeekBar
+        android:id="@+id/vch_seek"   
+        android:layout_width="440dp"
+        android:layout_height="wrap_content"
+        android:minHeight="24px"
+        android:maxHeight="18px"
+        android:progress="10"
+        android:progressDrawable="@drawable/vch_seek_back1"
+        android:thumb="@drawable/vch_seek_img" >
+    </SeekBar>
+   </RelativeLayout>
+   <ImageView
+    android:id="@+id/vch_right_icon_attach"
+    android:layout_width="wrap_content"    
+    android:layout_height="wrap_content"  
+    android:layout_gravity="center"
+    android:visibility="invisible"
+    android:background="@drawable/vch_jump_4k"
+     />
+  <RelativeLayout 
+     android:layout_marginLeft="86dp"
+     android:layout_width="200dp"
+     android:layout_gravity="center_vertical"
+     android:paddingRight="20dp"
+     android:layout_height="wrap_content"   
+       >
+ <TextView 
+     android:id="@+id/vch_progress"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_gravity="right"
+     android:textSize="42sp"
+     android:singleLine="true"
+     android:ellipsize="marquee"
+     android:marqueeRepeatLimit="marquee_forever" 
+     android:textColor="@color/vch_text_content_Color" 
+    />  
+    </RelativeLayout>
+</LinearLayout>
+</LinearLayout>
+<RelativeLayout 
+    android:id="@+id/vch_item_second_class"
+    android:layout_width="1200dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone"
+    >
+</RelativeLayout>
+
+<LinearLayout 
+    android:id="@+id/vch_item_third_class_total"
+    android:layout_width="1200dp"
+    android:layout_height="120dp"  
+    android:visibility="gone"
+    android:orientation="horizontal"
+    >
+  <LinearLayout 
+    android:id="@+id/vch_item_third_class"
+    android:layout_width="960dp"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    >
+<LinearLayout 
+    android:id="@+id/vch_item_third_left"
+    android:layout_width="520dp"
+    android:layout_height="fill_parent" 
+    android:orientation="horizontal"
+    >
+   <TextView
+    android:layout_marginLeft="20dp"
+    android:id="@+id/vch_item_third_left_text"
+    android:layout_width="wrap_content"    
+    android:layout_height="wrap_content" 
+    android:layout_gravity="center_vertical"
+    android:textColor="@color/vch_text_content_Color" 
+    android:singleLine="true"
+    android:ellipsize="marquee"
+    android:marqueeRepeatLimit="marquee_forever" 
+    android:textSize="21sp"
+    />
+</LinearLayout>
+
+<LinearLayout 
+    android:id="@+id/vch_item_third_center"
+    android:layout_width="340dp" 
+    android:layout_marginRight="100dp"
+    android:layout_height="fill_parent" 
+    android:orientation="horizontal"
+    android:gravity="right"
+    android:layout_gravity="center_vertical"    
+    >
+    <TextView
+    android:id="@+id/vch_item_center_third_text"
+    android:layout_width="wrap_content"    
+    android:layout_height="wrap_content" 
+    android:textSize="21sp"
+    android:singleLine="true"
+    android:ellipsize="marquee"
+    android:marqueeRepeatLimit="marquee_forever" 
+    android:textColor="@color/vch_text_content_Color" 
+    android:layout_gravity="center_vertical"
+    />
+</LinearLayout>
+</LinearLayout>
+<LinearLayout 
+    android:id="@+id/vch_item_third_right"
+    android:layout_width="120dp" 
+    android:layout_marginRight="20dp"
+    android:layout_height="100dp" 
+    android:orientation="horizontal"
+    android:visibility="gone"
+    >
+    <Button
+    android:id="@+id/vch_third_garbage_attach"
+    android:layout_width="wrap_content"    
+    android:layout_height="wrap_content"  
+    android:layout_gravity="center"
+    android:layout_marginLeft="40dp"
+    android:background="@drawable/vch_garbage"
+    />
+</LinearLayout>
+</LinearLayout>
+
+</LinearLayout>

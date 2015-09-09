@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="wrap_content"
+android:layout_height ="wrap_content"
+>
+    <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/linearLayout1" android:layout_width="325dip">
+        <LinearLayout android:layout_height="62dip" android:gravity="center_vertical" android:id="@+id/linearLayout2" android:layout_width="325dip">
+            <RelativeLayout android:id="@+id/relativeLayout1" android:layout_height="wrap_content" android:gravity="left|center_vertical" android:layout_width="40dip" android:layout_marginLeft="35dip">
+                <ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_centerHorizontal="true" android:id="@+id/ItemImage"></ImageView>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/relativeLayout2" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_marginLeft="30dip">
+                <TextView android:text="@string/default_text" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/ItemName" android:layout_centerHorizontal="true"
+                    android:textSize="28dip" android:textStyle="normal" android:textColor="#545454"></TextView>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

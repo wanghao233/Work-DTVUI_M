@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_id"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"> 
+ <LinearLayout 
+    android:id="@+id/rlffff_id"
+    android:layout_width="480dp"
+    android:layout_height="wrap_content"
+     android:orientation="vertical"
+   > 
+ <Button
+        	android:id="@+id/test1"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content" 
+        	android:focusable="false"
+        	android:text="hello 快来改我吧 我自己的布局想怎么写就怎么写"      
+        />
+  <Button
+        	android:id="@+id/test2"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content" 
+        	android:focusable="false"
+        	android:text="hello 快来改我吧 我自己的布局想怎么写就怎么写"      
+        />
+   <Button
+        	android:id="@+id/test3"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content" 
+        	android:text="hello 快来改我吧 我自己的布局想怎么写就怎么写"      
+        />
+   
+    <Button
+        	android:id="@+id/test4"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content" 
+        	android:text="hello 快来改我吧 我自己的布局想怎么写就怎么写"      
+        />
+     <Button
+        	android:id="@+id/test5"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content" 
+        	android:text="hello 快来改我吧 我自己的布局想怎么写就怎么写"      
+        />
+</LinearLayout>
+</LinearLayout>

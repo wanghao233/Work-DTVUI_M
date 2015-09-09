@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vch_mainmenu_title">Settings</string>
+    <string name="vch_mainmenu_scene_mode">Scene mode</string>
+    <string name="vch_mainmenu_program_manage">Channel management</string>
+    <string name="vch_mainmenu_channel_manage">Program Edit</string>
+    <string name="vch_mainmenu_more_setting">More settings</string>
+    <string name="scene_mode_stand">Standard</string>
+    <string name="scene_mode_theatre">Theater</string>
+    <string name="scene_mode_umax">UMAX</string>
+    <string name="scene_mode_reading">Reading</string>
+    <string name="scene_mode_mv">MV</string>
+    <string name="scene_mode_sports">Sports</string>
+    <string name="scene_mode_game">Games</string>
+    <string name="scene_mode_custom">Custom</string>
+    <string name="program_manage_prog_switch">Program skip</string>
+    <string name="program_manage_manual_sort">Manual sorting</string>
+    <string name="program_manage_prog_filter">Filter</string>
+    <string name="program_manage_fav_sort">Channel sorting</string>
+    <string name="channel_manage_search_guide">Search guide</string>
+    <string name="channel_manage_auto_search">Auto search</string>
+    <string name="channel_manage_senior">Advanced</string>
+    <string name="channel_manage_senior_full_search">Channel search</string>
+    <string name="channel_manage_senior_search_setting">Search Settings</string>
+    <string name="channel_manage_senior_signal_input">Signal access</string>
+    <string name="channel_manage_senior_operator">Operator</string>
+    <string name="vch_str_operator_info">Operator:    %1$s</string>
+    <string name="vch_str_card_type_info">Card type:    %1$s</string>
+    <string name="vch_str_card_status_info">Card status:    %1$s</string>
+    <string name="vch_str_hw_version">HW version    %1$s</string>
+    <string name="vch_str_app_version">App version:    %1$s</string>
+    <string name="vch_str_dtv_version">Driver version    %1$s</string>
+    <string name="vch_str_release_time">Release Date:    %1$s</string>
+    <string name="vch_str_build_time">Release Date:    %1$s</string>
+    <string name="vch_str_channel_num">Channel number:    %1$d</string>
+    <string name="vch_str_channel_name">Channel name:    %1$s</string>
+    <string name="vch_str_channel_frequency">Frequency:\u3000    %1$sMHz</string>
+    <string name="vch_str_channel_audio">Audio:\u3000    %1$s    %2$s</string>
+    <string name="vch_str_channel_audio_vedio_encode">A/V format:    %1$s/%2$s</string>
+    <string name="vch_str_channel_signal_strength">Signal strength:</string>
+    <string name="vch_str_channel_signal_quality">Signal quality:</string>
+    <string name="vch_str_channel_erro_rate">Bit error rate:    %1$s</string>
+    <string name="vch_str_search_warning_title">This operation will overwrites the original channel,continue?</string>
+    <string name="vch_str_filter_warning_title">The programs\' search has completed,  Do you want to filter now</string>
+    <string name="vch_str_scan">Search</string>
+</resources>

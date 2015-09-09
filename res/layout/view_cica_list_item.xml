@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="35dip">
+
+<LinearLayout
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="35dip"
+        
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip" >
+        <!-- 删除android:background="@drawable/dtv_cica_item_list_selector" -->
+		<!-- by yangliu -->
+
+        <TextView
+            android:id="@+id/id_ca_main_list_item_name"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:ellipsize="marquee"
+            android:gravity="left|center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="20sp" >
+        </TextView>
+
+</LinearLayout>
+
+</LinearLayout>

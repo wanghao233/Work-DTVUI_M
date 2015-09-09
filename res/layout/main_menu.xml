@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:id="@+id/mBgRoot">
+    <RelativeLayout android:layout_width="325dip" android:layout_height="fill_parent" android:gravity="center_horizontal" android:id="@+id/mBgFirstListMenu" android:background="@drawable/narrow_main_menu_bg">
+        <RelativeLayout android:id="@+id/relativeLayout3" android:gravity="center_vertical" android:layout_width="wrap_content"  android:layout_height="110dip" >
+            <TextView android:typeface="normal" android:layout_width="wrap_content" android:layout_height="match_parent" android:id="@+id/textView1" android:textSize="30sp"
+                android:layout_marginLeft="35dip" android:layout_marginTop="35dip" android:textColor="@color/menu_title_color" android:text="@string/dtv_menu_main_title"></TextView>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" 
+                android:layout_marginLeft="35dip"
+                android:layout_marginTop="40dip"
+                android:visibility="gone">
+            </LinearLayout>
+
+        </RelativeLayout>
+		<RelativeLayout android:layout_width="match_parent"
+			android:gravity="left|center_vertical" android:id="@+id/mBgFirstListView"
+			android:layout_below="@id/relativeLayout3" android:layout_height="508dip">
+			<!-- 不能设置android:layout_width属性为固定值，否则菜单内容无法更新 -->
+			<com.changhong.menuView.MenuRootListView
+			    android:id="@+id/mRootListView"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_marginRight="4dip"
+			    android:divider="@drawable/narrow_main_menu_divider"
+			    android:scrollbars="none" >
+			</com.changhong.menuView.MenuRootListView>
+		</RelativeLayout>
+		<RelativeLayout android:layout_width="match_parent" android:id="@+id/mRootListArrow"
+			android:layout_below="@id/mBgFirstListView" android:layout_height="wrap_content" android:gravity="center" android:visibility="invisible">
+			<LinearLayout  android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/main_menu_instruction_arrow"></LinearLayout>
+		</RelativeLayout>
+        <RelativeLayout android:id="@+id/relativeLayout5" android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:layout_height="80dip">
+            <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:id="@+id/linearLayout2" android:layout_height="match_parent">
+                <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/main_help_up_down" android:text="@string/helpinfo_select" android:textColor="@color/menu_help_info_color" android:gravity="center" android:textSize="16dip" android:paddingRight="5dip"></TextView>
+                <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/main_help_left_right" android:text="@string/helpinfo_adjust" android:textColor="@color/menu_help_info_color" android:gravity="center" android:textSize="16dip" android:paddingRight="5dip"></TextView>
+                <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/main_help_sure" android:text="@string/helpinfo_ok" android:textColor="@color/menu_help_info_color" android:gravity="center" android:textSize="16dip" android:paddingRight="5dip"></TextView>
+                <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/main_help_back" android:text="@string/helpinfo_return" android:textColor="@color/menu_help_info_color" android:gravity="center" android:textSize="16dip" android:paddingRight="5dip"></TextView>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:layout_height="fill_parent" android:gravity="center_horizontal" android:id="@+id/mBgListMenu" android:background="@drawable/narrow_main_menu_bg" android:layout_width="436dip">
+        <LinearLayout android:id="@+id/linearLayout1" android:orientation="vertical" android:layout_width="match_parent" android:gravity="center_horizontal" android:layout_height="match_parent">
+          <RelativeLayout android:id="@+id/relativeLayout4" android:layout_width="wrap_content"  android:layout_height="110dip" >            
+            <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:id="@+id/mBgTitle" android:layout_height="110dip" android:layout_marginLeft="35dip" android:layout_marginTop="0dip" >
+                <TextView android:typeface="normal" android:text="@string/noText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/title1" android:textSize="30sp" android:textColor="@color/menu_title_color"></TextView>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/titleDivider1" android:src="@drawable/main_menu_title_divider" android:layout_marginLeft="10dip" android:layout_marginRight="10dip" android:visibility="gone" ></ImageView>
+                <TextView android:typeface="normal" android:text="@string/noText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/title2" android:textSize="30sp" android:textColor="@color/menu_title_color"></TextView>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/titleDivider2" android:src="@drawable/main_menu_title_divider" android:layout_marginLeft="10dip" android:layout_marginRight="10dip" android:visibility="gone" ></ImageView>
+                <TextView android:typeface="normal" android:text="@string/noText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/title3" android:textSize="30sp" android:textColor="@color/menu_title_color"></TextView>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/titleDivider3" android:src="@drawable/main_menu_title_divider" android:layout_marginLeft="10dip" android:layout_marginRight="10dip" android:visibility="gone" ></ImageView>
+                <TextView android:typeface="normal" android:text="@string/noText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/title4" android:textSize="30sp" android:textColor="@color/menu_title_color"></TextView>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/titleDivider4" android:src="@drawable/main_menu_title_divider" android:layout_marginLeft="10dip" android:layout_marginRight="10dip" android:visibility="gone" ></ImageView>
+	        </LinearLayout>
+            <LinearLayout
+               android:id="@+id/linearLayout4"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical" 
+               android:layout_marginLeft="35dip"
+               android:layout_marginTop="40dip"
+               android:visibility="gone">
+           	</LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="match_parent" android:gravity="left|center_vertical" android:layout_height="508dip" android:id="@+id/mBgListView">
+			<!-- 不能设置android:layout_width属性为固定值，否则菜单内容无法更新 -->
+            <com.changhong.menuView.MenuListView
+                android:id="@+id/mListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="6dip"
+                android:divider="@drawable/setting_picture_divider"
+                android:scrollbars="none" >
+			</com.changhong.menuView.MenuListView>
+        </RelativeLayout>
+        <LinearLayout android:layout_width="wrap_content" android:id="@+id/mListArrow"
+			android:layout_height="wrap_content" android:background="@drawable/main_menu_instruction_arrow" android:visibility="invisible">
+        </LinearLayout>
+        <LinearLayout android:layout_width="300dip" android:layout_height="80dip" android:weightSum="4" android:id="@+id/mBgHelp" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/help1" android:drawableLeft="@drawable/main_help_up_down" android:text="@string/helpinfo_select" android:textColor="@color/menu_help_info_color" android:gravity="center" android:layout_weight="1" android:textSize="16dip"></TextView>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/help2" android:drawableLeft="@drawable/main_help_left_right" android:text="@string/helpinfo_adjust" android:textColor="@color/menu_help_info_color" android:gravity="center" android:layout_weight="1" android:textSize="16dip"></TextView>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/help3" android:drawableLeft="@drawable/main_help_sure" android:text="@string/helpinfo_ok" android:textColor="@color/menu_help_info_color" android:gravity="center" android:layout_weight="1" android:textSize="16dip"></TextView>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/help4"  android:drawableLeft="@drawable/main_help_back" android:text="@string/helpinfo_return" android:textColor="@color/menu_help_info_color" android:gravity="center" android:layout_weight="1" android:textSize="16dip"></TextView>
+        </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/linear_smart"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/epg_item_smartview_bg_selector"
+        android:focusable="true" >
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="7dp"
+            android:focusable="false" />
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/smartview_content_font_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:focusable="false"
+            android:text="08:55" />
+        <!-- <com.changhong.tvos.dtv.util.ViewScrollingText -->
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/smartview_content_font_style"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical|left"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true" />
+        <!--
+               android:ellipsize="marquee"
+		    android:marqueeRepeatLimit="marquee_forever"
+		    android:singleLine="true"
+        -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+            <ImageView
+                android:id="@+id/stateIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dip" />
+            <TextView
+                android:id="@+id/tv_channelProgram"
+                style="@style/smartview_content_font_style"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dip"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="CCTV-7" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/linear_zipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:visibility="gone" >
+        <LinearLayout
+            android:id="@+id/zipper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+        <com.changhong.tvos.dtv.epgView.CoverEpgView
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" >
+        </com.changhong.tvos.dtv.epgView.CoverEpgView>
+    </RelativeLayout>
+</RelativeLayout>

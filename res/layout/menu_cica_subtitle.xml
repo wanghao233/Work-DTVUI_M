@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dtv_cica_toast"
+    android:layout_height="wrap_content" android:layout_width="1280dip">
+
+	<RelativeLayout
+	    android:id="@+id/dtv_cica_subtitle_bg"
+	    android:paddingBottom="10dip"
+	    android:paddingTop="10dip" android:layout_width="match_parent" android:layout_height="match_parent">
+
+	<com.changhong.tvos.dtv.util.ViewScrollText
+		android:layout_height="wrap_content" android:singleLine="true"
+		android:background="@drawable/alpha00" android:textSize="26sp"
+		android:textColor="@color/white" android:layout_width="match_parent"
+		android:text="@string/noText" android:id="@+id/dtv_cica_subtitle1" />
+	<com.changhong.tvos.dtv.util.ViewScrollText
+		android:textSize="26sp" android:singleLine="true"
+		android:layout_height="wrap_content" android:layout_width="match_parent"
+		android:textColor="@color/white" android:text="@string/noText"
+		android:background="@drawable/alpha00" android:layout_alignParentLeft="true"
+		android:id="@+id/dtv_cica_subtitle2" android:layout_alignParentBottom="true"></com.changhong.tvos.dtv.util.ViewScrollText>
+
+	</RelativeLayout>
+
+</RelativeLayout>

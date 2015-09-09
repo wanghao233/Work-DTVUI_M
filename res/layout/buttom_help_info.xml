@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/buttom_help_info"
+    android:layout_width="match_parent"
+    android:layout_height="47dip"
+    android:background="@drawable/channel_edit_help_info_bg"
+    android:gravity="center" >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:orientation="horizontal" >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp" >
+            <ImageView
+                android:id="@+id/ibt_select_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/help_all_direct" />
+            <TextView
+                style="@style/app_menu_navigate_font_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/ibt_select_image"
+                android:gravity="center"
+                android:text="@string/menu_background_updown" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="135dp" >
+            <ImageView
+                android:id="@+id/ibt_flitter_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/help_flitter" />
+            <TextView
+                style="@style/app_menu_navigate_font_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/ibt_flitter_image"
+                android:gravity="center"
+                android:text="@string/menu_help_page" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="135dip" >
+            <ImageView
+                android:id="@+id/ibt_confirm_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/app_menu_confirm_icon" />
+            <TextView
+                style="@style/app_menu_navigate_font_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/ibt_confirm_image"
+                android:gravity="center"
+                android:text="@string/menu_background_sure" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="135dip"
+            android:layout_marginRight="60dp" >
+            <ImageView
+                android:id="@+id/ibt_return_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/help_back" />
+            <TextView
+                style="@style/app_menu_navigate_font_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/ibt_return_image"
+                android:gravity="center"
+                android:text="@string/menu_background_back" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

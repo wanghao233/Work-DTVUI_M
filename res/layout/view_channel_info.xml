@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/dtv_channel_info"
+        android:layout_width="400dip"
+        android:layout_height="240dip"
+        android:layout_marginLeft="840dip"
+        android:layout_marginTop="40dip"
+        android:background="@drawable/channel_info_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/baseInformation"
+            android:layout_width="match_parent"
+            android:layout_height="56dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="15dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip" >
+
+            <TextView
+                android:id="@+id/DtvChannelNum"
+                android:layout_width="90dip"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/no_string"
+                android:textColor="#b2b2b2"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <com.changhong.tvos.dtv.util.ViewScrollingText
+                android:id="@+id/DtvChannelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="@string/no_string"
+                android:textColor="#b2b2b2"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/curTime"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip" >
+
+            <TextView
+                android:id="@+id/DtvCurTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:text="@string/no_string"
+                android:textColor="#b2b2b2"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/expandInformation"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="4dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip" >
+
+            <TextView
+                android:id="@+id/DtvAudioTrack"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="left|center_vertical"
+                android:text="@string/no_string"
+                android:textColor="#b2b2b2"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/DtvEncryption"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/no_string"
+                android:textColor="#b2b2b2"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/DtvAudioLanguage"
+                android:layout_width="140dip"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:text="@string/no_string"
+                android:textColor="#b2b2b2"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/curProgramInfo"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip" >
+
+            <TextView
+                android:id="@+id/curProTime"
+                android:layout_width="135dip"
+                android:layout_height="wrap_content"
+                android:text="@string/no_string"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <com.changhong.tvos.dtv.util.ViewScrollingText
+                android:id="@+id/curProName"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:gravity="left"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="@string/no_string"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nextProgramInfo"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip" >
+
+            <TextView
+                android:id="@+id/nextProTime"
+                android:layout_width="135dip"
+                android:layout_height="wrap_content"
+                android:text="@string/no_string"
+                android:textColor="#b2b2b2"
+                android:textSize="20sp" />
+
+            <com.changhong.tvos.dtv.util.ViewScrollingText
+                android:id="@+id/nextProName"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:gravity="left"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="@string/no_string"
+                android:textColor="#b2b2b2"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

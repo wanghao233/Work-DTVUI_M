@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+	<!-- WEEK信息 -->
+    <string-array name="week_seven_days">
+        <item>SUN</item>
+        <item>MON</item>
+        <item>TUE</item>
+        <item>WED</item>
+        <item>THU</item>
+        <item>FRI</item>
+        <item>SAT</item>
+    </string-array>
+
+    
+    <!-- EPG信息 -->
+    <string name="menu_background_updown">Select</string>
+    <string name="menu_background_back">Return</string>
+    <string name="menu_background_sure">Confirm</string>
+    <string name="menu_background_adjust">Adjust</string>
+    <string name="menu_program_info">Channel info</string>
+    <string name="menu_reserve_table">Reservation list</string>
+    <string name="menu_popup_reserve">Program reservation</string>
+    <string name="menu_popup_record">Program recording</string>
+    <string name="menu_popup_cancell">Cancel Reservation</string>
+    <string name="menu_popup_play">Play</string>
+    <string name="menu_epg_pre_title">Now Playing:</string>
+    <string name="menu_epg_program_null">No current program info!</string>
+    <string name="menu_epg_event_null">No program info!</string>
+    <string name="epg_shedule_null">No reservation program!</string>
+    <string name="menu_help_reserve">Reservation</string>
+    <string name="menu_help_cancell">Cancel </string>
+    <string name="menu_epg_event">Channel info</string>
+    <string name="menu_epg_shedule">Reservation list</string>
+    <string name="menu_epeg_shedule_none">You have no reservation</string>
+    <string name="menu_epg_program_noEPGdata">Can\'t make a reservation,no program data!</string>
+    <string name="menu_epg_program_outdated">Can\'t make a reservation,the program is outdated!</string>
+    <string name="menu_epg_schedule_count">You can only make 36 pragram reservations!</string>
+    <string name="menu_epg_schedule_conflict_title">Reservation conflict,press \n\"OK\" to overwrite</string>
+    <string name="menu_epg_schedule_conflict_message">%s</string>
+    <string name="menu_epg_get_epg">Acquiring TV guide,please wait!</string>
+    <string name="menu_epg_no_channel">NO DATA ,PLASE SELECT OTHER!</string>
+    <string name="menu_epg_schedule_success">Program reservation success</string>
+    <string name="menu_epg_unschedule_success">Cancel reservation success</string>
+    <string name="menu_epg_schedule_conflict_or_cancle">Replace current reservation?</string>
+    <string name="menu_epg_alreades_schedule">Has an appointment</string>
+    <string name="menu_liveTV_list">Live TV</string>		
+    <string name="menu_shedule_list">Reservation List</string>
+    <string name="menu_channel_list">Channel List</string>
+    <string name="menu_program_list">Program List</string>
+    <string name="menu_program_open">On</string>
+    <string name="menu_program_off">Off</string>
+    <string name="menu_program_switch">Program skip</string>
+    <string name="menu_program_swap">Program swap</string>
+    <string name="menu_program_swap_sure">Swap</string>
+    <string name="menu_program_swap_cancel">Cancel </string>
+    <string name="menu_EPG_week_list_Monday">MON</string>
+    <string name="menu_EPG_week_list_Tuesday">TUE</string>
+    <string name="menu_EPG_week_list_Wednesday">WED</string>
+    <string name="menu_EPG_week_list_Thursday">THU</string>
+    <string name="menu_EPG_week_list_Friday">FRI</string>
+    <string name="menu_EPG_week_list_Saturday">SAT</string>
+    <string name="menu_EPG_week_list_Sunday">SUN</string>
+    <string name="menu_channel_list_Current_Popular">Current Popular</string>
+    <string name="menu_channel_list_Common_Channel">Common Channels</string>
+    <string name="menu_channel_list_HD_Channel">HD Channels</string>
+    <string name="menu_channel_list_CCTV_Channel">CCTV Channels</string>
+    <string name="menu_channel_list_Satellite_Channels">Satellite TV\n Channels</string>
+    <string name="menu_channel_list_Other_Channels">Other Channels</string>
+
+    
+    <!-- colors -->
+    <color name="chooseable">#FF565656</color>
+    <color name="unablechosse">#FF222222</color>
+    <color name="unselectedable">#FF999999</color>
+    <color name="selected">#FFd40000</color>
+    <color name="title_white">#FF565656</color>
+    
+    
+    <!-- style -->
+    <style name="epg_tilte_style">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">#565656</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="smartgroup_date_font_style">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="app_menu_navigate_font_style">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">#222222</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="smartview_content_font_style">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">#fffefe</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="channel_list_focusable">
+        <item name="android:textColor">#FF565656</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="channel_list_unfocusable">
+        <item name="android:textColor">#FF999999</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="channel_list_helpstyle">
+        <item name="android:textColor">#FF222222</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="epg_curPlay_progress_style" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/epg_curplay_progress_drawable</item>
+    </style>
+
+</resources>

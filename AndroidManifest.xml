@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.changhong.tvos.dtv"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="20150909"
+    android:versionName="MTK5508_CHD01.02">
+
+    <uses-sdk android:minSdkVersion="16"/>
+
+    <uses-permission android:name="android.permission.REBOOT"/>
+    <uses-permission android:name="android.permission.SHUTDOWN"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.GETLOGO"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.changhong.permesion.receiver"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_SECURE_SETTINGS"/>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"/>
+    <application
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+        <!-- 
+        多窗口父节点，添加如下两个属性
+        android:hardwareAccelerated="false"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" 
+        -->
+        <meta-data
+            android:name="ChipModel"
+            android:value="MTK5508">
+        </meta-data>
+        <meta-data
+            android:name="androidsdk"
+            android:value="19">
+        </meta-data>
+        <meta-data
+            android:name="UIVersion"
+            android:value="ANDROID_4.4.2_UI_14_5508.02">
+        </meta-data>
+        <meta-data
+            android:name="HardVersion"
+            android:value="HW4.0_MW2.0">
+        </meta-data>
+        <meta-data
+            android:name="apkMainVersion"
+            android:value="CHD5508.02">
+        </meta-data>
+        <meta-data
+            android:name="apkSubVersion"
+            android:value="_150909">
+        </meta-data>
+        <meta-data
+            android:name="apkReleaseTime"
+            android:value="2015-09-09 17:00">
+        </meta-data>
+        <meta-data
+            android:name="region"
+            android:value="0x00000001">
+        </meta-data>
+        <meta-data
+            android:name="koversion"
+            android:value="00.00.01">
+        </meta-data>
+        <meta-data
+            android:name="forcesign"
+            android:value="0">
+        </meta-data>
+        <meta-data
+            android:name="packagename"
+            android:value="com.changhong.tvos.dtv">
+        </meta-data>
+        <meta-data
+            android:name="apkinfomation"
+            android:value="@string/dtv_func">
+        </meta-data>
+        <!--
+                  please don't change the format of uiversion, just like "HW2.0_MW2.0_|0.0.1.d|2013-08-01 18:00" 
+	    	divided by '|', first part is midversion ,second is uiversion, last is ui release time
+        -->
+        <!-- <meta-data android:name="uiversion" android:value="HW3.2_MW3.0_|0.3.7.t|2013-12-24 16:00"></meta-data> -->
+        <activity
+            android:name="com.changhong.tvos.dtv.DtvRoot"
+            android:theme="@style/Theme.ActivityTransparent">
+            <!--
+            多窗口取消DtvRoot的以下属性
+            android:excludeFromRecents="true"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+            android:launchMode="singleTask"
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <!--
+                <action android:name="android.intent.action.DtvRoot" />
+                <category android:name="android.intent.category.DEFAULT" />
+                -->
+            </intent-filter>
+        </activity>
+        <!--
+		<activity android:name="com.changhong.menudata.MainMenu" android:theme="@android:style/Theme.Translucent.NoTitleBar"
+		    android:excludeFromRecents ="true"
+		    android:launchMode="singleTask">
+		</activity>
+        -->
+        <activity
+            android:name="com.changhong.tvos.dtv.epg.normal.EpgActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <!--
+                必须要有此属性，不然EPG显示不出来
+                android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+                -->
+        </activity>
+        <activity
+            android:name="com.changhong.tvos.dtv.epg.minify.EpgActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+        </activity>
+
+        <service
+            android:name=".service.DTVService"
+            android:excludeFromRecents="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.changhong.tvos.dtv.service.DTVService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".for3rd.DTV3rdService"
+            android:excludeFromRecents="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.changhong.tvos.dtv.for3rd.DTV3rdService"/>
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".tvap.DtvScheduleManager$ScheduleEventReceiver"
+            android:enabled="true"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="com.changhong.tvos.dtv.tvap.DtvScheduleManager.EVENT_SCHEDUL_BROADCAST"/>
+                <action android:name="com.changhong.system.suspend_app.show"/>
+                <action android:name="com.changhong.pvr.start"/>
+                <action android:name="com.changhong.pvr.stop"/>
+                <action android:name="com.changhong.pvr.encryptprogram"/>
+                <action android:name="netwrok.dcc.cs.creat"/>
+            </intent-filter>
+        </receiver>
+        <!-- 2015-1-15 -->
+        <provider
+            android:name="com.changhong.tvos.dtv.provider.BaseChannelProvider"
+            android:authorities="com.changhong.tvos.dtv.basechannelprovider"
+            android:exported="true"/>
+        <!--
+		<receiver android:name="com.changhong.menudata.menuPageData.MainMenuRootData$mAutoSearchBroadcastReceiver" android:enabled="true"
+		    android:excludeFromRecents="true">
+			<intent-filter>
+			    <action android:name="com.start.search.dtv"></action>
+			</intent-filter>
+		</receiver>
+        -->
+        <!--
+		<receiver android:name="com.changhong.menudata.MainMenuReceiver" android:excludeFromRecents="true"> 
+		  <intent-filter>
+		  	<action android:name="com.changhong.menudata.intent.action.MainMenuReceiver" /> 
+		  </intent-filter>
+		</receiver>
+        -->
+        <service
+            android:name="com.changhong.tvos.dtv.update.dtvUpdateService"
+            android:excludeFromRecents="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.changhong.tvos.dtv.update.dtvUpdateService"/>
+            </intent-filter>
+        </service>
+        <!--
+		<receiver android:name=".BootReceiver" android:excludeFromRecents ="true">
+        	<intent-filter >
+        		<action android:name="android.intent.action.BOOT_COMPLETED"/>
+        		<category android:name="android.intent.category.DEFAULT" />      
+        	</intent-filter>
+        </receiver>
+        -->
+        <receiver
+            android:name=".tvap.DtvChannelManager$aliasNameDoneReceiver"
+            android:enabled="true"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="com.changhong.tvos.dtv.BaseChannelUtil.CreatAliasNameListDone"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".tvap.DtvChannelManager$httpBroadcastReceiver"
+            android:enabled="true"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.changhong.pushoutView.PushoutReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="network.dcc.device.sync.video.poster.broadcast"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.changhong.pushoutView.PushoutService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.changhong.pushoutView.PushoutService"/>
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

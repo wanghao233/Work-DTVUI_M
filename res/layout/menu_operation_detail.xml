@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#cbcbcb"
+    android:orientation="vertical" >
+    <ImageView
+        android:id="@+id/guide_lable_oprator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp" >
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="56dp"
+            android:text="@string/dtv_menu_operation_title"
+            android:textColor="#565656"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/curOperation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#565656"
+            android:textSize="24sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/black" >
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/opration_scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="504dp" >
+        <LinearLayout
+            android:id="@+id/opration_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="56dp"
+            android:paddingRight="56dp" >
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/buttomDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="56dp"
+        android:background="@color/black" >
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/arrow_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/arrow_flag" />
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="150dip"
+        android:layout_height="50dip"
+        android:layout_gravity="right"
+        android:layout_marginRight="56dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/btn_square_selector"
+        android:gravity="center"
+        android:text="@string/dtv_search_guide_next"
+        android:textColor="#222222"
+        android:textSize="24sp"
+        android:visibility="gone" />
+</LinearLayout>

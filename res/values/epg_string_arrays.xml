@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- WEEK信息 -->
+    <string-array name="week_seven_days">
+        <item>日</item>
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+    </string-array>
+
+    
+    <!-- EPG信息 -->
+    <string name="menu_background_updown">选择</string>
+    <string name="menu_background_back">返回</string>
+    <string name="menu_background_sure">确定</string>
+    <string name="menu_background_adjust">调整</string>
+    <string name="menu_program_info">节目信息</string>
+    <string name="menu_reserve_table">预约列表</string>
+    <string name="menu_popup_reserve">节目预约</string>
+    <string name="menu_popup_record">预约录制</string>
+    <string name="menu_popup_cancell">取消预约</string>
+    <string name="menu_popup_play">播放</string>
+    <string name="menu_epg_pre_title">正在播放:</string>
+    <string name="menu_epg_program_null">无当前节目信息!</string>
+    <string name="menu_epg_event_null">无节目信息!</string>
+    <string name="epg_shedule_null">无预约节目！</string>
+    <string name="menu_help_reserve">预约</string>
+    <string name="menu_help_cancell">取消</string>
+    <string name="menu_epg_event">节目信息</string>
+    <string name="menu_epg_shedule">预约列表</string>
+    <string name="menu_epeg_shedule_none">您尚未预约任何节目</string>
+    <string name="menu_epg_program_noEPGdata">无节目数据,不能预约!</string>
+    <string name="menu_epg_program_outdated">该节目已过期,不能预约!</string>
+    <string name="menu_epg_schedule_count">已预约36个节目，不能再预约!</string>
+    <string name="menu_epg_schedule_conflict_title">预约时间冲突，是否替换掉之前预约的节目？\n点击\"是\"，将完成替换</string>
+    <string name="menu_epg_schedule_conflict_message">%s</string>
+    <string name="menu_epg_get_epg">正在获取节目预告信息，请等待！</string>
+    <string name="menu_epg_no_channel">没有此分类数据，请查看其他分类!</string>
+    <string name="menu_epg_schedule_success">节目预约成功</string>
+    <string name="menu_epg_unschedule_success">取消预约成功</string>
+    <string name="menu_epg_schedule_conflict_or_cancle">预约冲突,是否取消</string>
+    <string name="menu_epg_alreades_schedule">已预约</string>
+    <string name="menu_liveTV_list">电视直播</string>
+    <string name="menu_shedule_list">预约列表</string>
+    <string name="menu_channel_list">频道列表</string>
+    <string name="menu_program_list">节目列表</string>
+    <string name="menu_program_open">开启</string>
+    <string name="menu_program_off">关闭</string>
+    <string name="menu_program_switch">节目开关</string>
+    <string name="menu_program_swap">节目交换</string>
+    <string name="menu_program_swap_sure">交换</string>
+    <string name="menu_program_swap_cancel">取消</string>
+    <string name="menu_EPG_week_list_Monday">周一</string>
+    <string name="menu_EPG_week_list_Tuesday">周二</string>
+    <string name="menu_EPG_week_list_Wednesday">周三</string>
+    <string name="menu_EPG_week_list_Thursday">周四</string>
+    <string name="menu_EPG_week_list_Friday">周五</string>
+    <string name="menu_EPG_week_list_Saturday">周六</string>
+    <string name="menu_EPG_week_list_Sunday">周日</string>
+    <string name="menu_channel_list_Current_Popular">当前热门</string>
+    <string name="menu_channel_list_Common_Channel">常用频道</string>
+    <string name="menu_channel_list_HD_Channel">高清频道</string>
+    <string name="menu_channel_list_CCTV_Channel">央视频道</string>
+    <string name="menu_channel_list_Satellite_Channels">卫视频道</string>
+    <string name="menu_channel_list_Other_Channels">其他频道</string>
+    
+    
+    <!-- colors -->
+    <color name="chooseable">#FF565656</color>
+    <color name="unablechosse">#FF222222</color>
+    <color name="unselectedable">#FF999999</color>
+    <color name="selected">#FFd40000</color>
+    <color name="title_white">#FF565656</color>
+
+    
+    <!-- style -->
+    <style name="epg_tilte_style">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">#565656</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="smartgroup_date_font_style">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="app_menu_navigate_font_style">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">#222222</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="smartview_content_font_style">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">#fffefe</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="channel_list_focusable">
+        <item name="android:textColor">#FF565656</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="channel_list_unfocusable">
+        <item name="android:textColor">#FF999999</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="channel_list_helpstyle">
+        <item name="android:textColor">#FF222222</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="epg_curPlay_progress_style" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/epg_curplay_progress_drawable</item>
+    </style>
+
+</resources>

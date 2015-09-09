@@ -1,0 +1,419 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/epg_bg_board" />
+    <LinearLayout
+        android:id="@+id/group"
+        android:layout_width="430dip"
+        android:layout_height="627dip"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="73dp"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:id="@+id/choose_type_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <RelativeLayout
+                android:id="@+id/channel_btn_background"
+                android:layout_width="213dp"
+                android:layout_height="62dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="2dp" >
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/reserve_btn_background"
+                android:layout_width="213dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/channel_btn_background" >
+            </RelativeLayout>
+            <Button
+                android:id="@+id/channel_info"
+                android:layout_width="213dp"
+                android:layout_height="62dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/epg_btn_bg"
+                android:focusable="true"
+                android:text="@string/menu_program_info"
+                android:textColor="@drawable/btn_text_selector"
+                android:textSize="36sp" />
+            <Button
+                android:id="@+id/reserve_info"
+                android:layout_width="213dp"
+                android:layout_height="62dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/channel_info"
+                android:background="@drawable/epg_btn_bg"
+                android:focusable="true"
+                android:text="@string/menu_reserve_table"
+                android:textColor="@drawable/btn_text_selector"
+                android:textSize="36sp" />
+        </RelativeLayout>
+        <!-- smartview动画 -->
+        <RelativeLayout
+            android:id="@+id/week_line"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical" >
+            <LinearLayout
+                android:id="@+id/choose_week_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false" >
+                <ImageView
+                    android:id="@+id/bg_week1"
+                    android:layout_width="55dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="7dp"
+                    android:background="@drawable/epg_date1"
+                    android:focusable="false" />
+                <ImageView
+                    android:id="@+id/bg_week2"
+                    android:layout_width="55dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/epg_date2"
+                    android:focusable="false" />
+                <ImageView
+                    android:id="@+id/bg_week3"
+                    android:layout_width="55dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/epg_date3"
+                    android:focusable="false" />
+                <ImageView
+                    android:id="@+id/bg_week4"
+                    android:layout_width="55dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/epg_date4"
+                    android:focusable="false" />
+                <ImageView
+                    android:id="@+id/bg_week5"
+                    android:layout_width="55dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/epg_date5"
+                    android:focusable="false" />
+                <ImageView
+                    android:id="@+id/bg_week6"
+                    android:layout_width="55dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/epg_date6"
+                    android:focusable="false" />
+                <ImageView
+                    android:id="@+id/bg_week0"
+                    android:layout_width="55dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/epg_date7"
+                    android:focusable="false" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/choose_week_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <Button
+                    android:id="@+id/Btn_week1"
+                    android:layout_width="55dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="7dp"
+                    android:background="@drawable/epg_week_btn_bg"
+                    android:textColor="@drawable/btn_week_selector_not_curday"
+                    android:textSize="19sp" />
+                <Button
+                    android:id="@+id/Btn_week2"
+                    android:layout_width="55dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/epg_week_btn_bg"
+                    android:textColor="@drawable/btn_week_selector_not_curday"
+                    android:textSize="19sp" />
+                <Button
+                    android:id="@+id/Btn_week3"
+                    android:layout_width="55dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/epg_week_btn_bg"
+                    android:textColor="@drawable/btn_week_selector_not_curday"
+                    android:textSize="19sp" />
+                <Button
+                    android:id="@+id/Btn_week4"
+                    android:layout_width="55dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/epg_week_btn_bg"
+                    android:textColor="@drawable/btn_week_selector_not_curday"
+                    android:textSize="19sp" />
+                <Button
+                    android:id="@+id/Btn_week5"
+                    android:layout_width="55dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/epg_week_btn_bg"
+                    android:textColor="@drawable/btn_week_selector_not_curday"
+                    android:textSize="19sp" />
+                <Button
+                    android:id="@+id/Btn_week6"
+                    android:layout_width="55dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/epg_week_btn_bg"
+                    android:focusable="true"
+                    android:textColor="@drawable/btn_week_selector_not_curday"
+                    android:textSize="19sp" />
+                <Button
+                    android:id="@+id/Btn_week0"
+                    android:layout_width="55dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/epg_week_btn_bg"
+                    android:textColor="@drawable/btn_week_selector_not_curday"
+                    android:textSize="19sp" />
+            </LinearLayout>
+            <!--
+        <LinearLayout
+            android:id="@+id/week_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            
+            android:focusable="false"
+            >
+            
+           <TextView
+                android:id="@+id/week1"
+                android:layout_width="55dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="7dp"
+                
+                android:textSize="19sp"
+                android:gravity="center"
+                android:focusable="false" />
+           <TextView
+                android:id="@+id/week2"
+                android:layout_width="55dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="19sp"
+                android:gravity="center"
+                android:focusable="false" />
+           <TextView
+                android:id="@+id/week3"
+                android:layout_width="55dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="19sp"
+                android:gravity="center"
+                android:focusable="false" />
+           <TextView
+                android:id="@+id/week4"
+                android:layout_width="55dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                
+                android:textSize="19sp"
+                android:gravity="center"
+                android:focusable="false" />
+           <TextView
+                android:id="@+id/week5"
+                android:layout_width="55dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="19sp"
+                android:gravity="center"
+                android:focusable="false" />
+           <TextView
+                android:id="@+id/week6"
+                android:layout_width="55dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="19sp"
+                android:gravity="center"
+                android:focusable="false" />
+           
+           <TextView
+                android:id="@+id/week0"
+                android:layout_width="55dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                
+                android:textSize="19sp"
+                android:gravity="center"
+                android:focusable="false" />
+        </LinearLayout>
+            -->
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/curProgram"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="7dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="bottom" >
+            <TextView
+                android:id="@+id/logic_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="109"
+                android:textColor="#565656"
+                android:textSize="36sp" />
+            <TextView
+                android:id="@+id/date_text"
+                style="@style/smartgroup_date_font_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="1992.08.06 10:88" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp" >
+                <ImageView
+                    android:id="@+id/channel_logo"
+                    android:layout_width="170dip"
+                    android:layout_height="wrap_content" />
+                <com.changhong.tvos.dtv.util.ViewScrollingText
+                    android:id="@+id/channel_name"
+                    android:layout_width="165dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ellipsize="marquee"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="新闻练笔ACD"
+                    android:textSize="28sp" />
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="416dp"
+            android:layout_height="403dp"
+            android:layout_marginLeft="7dp" >
+            <!-- top 圆角背景+箭头 -->
+            <!--
+	    <RelativeLayout 
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:focusable="false"
+	        android:layout_width="414dp"  android:layout_height="15dp" >
+		    <ImageButton 
+		        android:id="@+id/ibt_up"
+		        android:focusable="false"
+		        android:background="@drawable/up"
+		        android:layout_centerInParent="true"
+		        android:layout_width="wrap_content"  android:layout_height="wrap_content"/>        
+	    </RelativeLayout>   
+            -->
+            <!-- smartview集合 -->
+            <ScrollView
+                android:id="@+id/scrollview_id"
+                android:layout_width="416dp"
+                android:layout_height="370dp"
+                android:layout_marginTop="6dp" >
+                <LinearLayout
+                    android:id="@+id/linear_smartview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </ScrollView>
+            <!-- bottom 圆角背景+箭头 -->
+            <RelativeLayout
+                android:id="@+id/ibt_down_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/epg_item_smartview_bg_default" >
+                <ImageView
+                    android:id="@+id/ibt_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:focusable="false"
+                    android:src="@drawable/epg_smart_item_down" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <!-- 底部帮助信息 -->
+        <LinearLayout
+            android:id="@+id/help_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dip"
+            android:gravity="center" >
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/help_all_direct" />
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/channel_list_helpstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:text="@string/menu_background_updown" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dip"
+                android:src="@drawable/app_menu_confirm_icon" />
+            <TextView
+                android:id="@+id/help_confirm"
+                style="@style/channel_list_helpstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:singleLine="true"
+                android:text="@string/menu_sure" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dip"
+                android:src="@drawable/help_flitter" />
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/channel_list_helpstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:text="@string/menu_help_page" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dip"
+                android:src="@drawable/main_help_back" />
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/channel_list_helpstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:singleLine="true"
+                android:text="@string/back" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

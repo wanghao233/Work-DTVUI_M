@@ -1,0 +1,2543 @@
+[
+  {
+    "name": "CCTV-1综合",
+    "memo": "tm,ＣＣＴＶ－１,CCTV-1综合,CCTV-1,cctv1,央视综合,CCTV－1,中央一套,CCTV-1 综合,CCTV1 综合,中央-1,CCTV1-综合,中央一,CCTV1,中央1台,中央1,中央,中央一台,cctv1-tv（八县）,CCTV 1,CCTV-1备份,中央电视台1,CCTV1 综合,CCTV1-,CCTV1-综合,CCTV－1,CCTV-,中央一台,中央1台,CCTV-1综合频道,CCTV_1,CCTV1",
+    "code": "cctv1",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/16/274/2530/1410253027416.png"
+  },
+  {
+    "name": "CCTV-2财经",
+    "memo": "中央电视台 经济频道,ＣＣＴＶ－２,央视财经,CCTV－2,中央二套,CCTV-2 财经,CCTV2 财经,中央-2,CCTV2-财经,CCTV-2,CCTV2,CCTV-2(选传),CCTV-2财经,CCTV2财经(选传),中央2台,中央2,中央二台,中央二,CCTV-2 经济,CCTV 2,中央电视台2,CCTV2 财经,CCTV2-,CCTV2-财经,CCTV－2,CCTV-2 ,中央2台,CCTV-2财经频道,CCTV_2,CCTV2",
+    "code": "cctv2",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/30/048/4319/1293431904830.png"
+  },
+  {
+    "name": "CCTV-3综艺",
+    "memo": "CCTV3,CCTV-3 综艺 HD,中央电视台3,CCTV3 综艺,中央-3,CCTV3-综艺,CCTV－3,CCTV-3,中央3台,中央三台,CCTV-3综艺频道,CCTV_3,CCTV3",
+    "code": "cctv3",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/49/093/4319/1293431909349.png"
+  },
+  {
+    "name": "CCTV-4中文国际(亚)",
+    "memo": "CCTV-4 亚洲,CCTV4,cctv-4,央视国际,CCTV-4,CCTV－4,中央四台,中央四套,CCTV-4 中文国际,CCTV4,CCTV4 中文国际,中央-4,CCTV4-中文国际,CCTV-4,中央四,中央4台,中央4,中央4台（选传）,CCTV-4中文国际,CCTV-4（选传）,中央电视台4,CCTV4 中文国际,中央-4,CCTV4,CCTV4-中文国际,CCTV－4,CCTV-4,中央4台,CCTV-4国际频道,CCTV-4中文国际,CCTV-4中文国际频道亚洲版,CCTV_4,CCTV 4",
+    "code": "cctv4_asia",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/03/146/4319/1293431914603.png"
+  },
+  {
+    "name": "CCTV-5体育",
+    "memo": "ＣＣＴＶ－５,央视体育,CCTV-5,CCTV－5,中央五台,中央五套,CCTV-5 体育,CCTV5,CCTV5 体育,中央-5,CCTV5-体育,CCTV-5（选传）,CCTV-5体育,CCTV5体育（选传）,中央5台（选传）,中央5台,中央5,中央五,中央电视台5,CCTV5 体育,中央-5,CCTV5-体育,CCTV－5,CCTV-5,中央5台,CCTV-5体育频道,CCTV_5,CCTV5",
+    "code": "cctv5",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/97/192/4319/1293431919297.png"
+  },
+  {
+    "name": "CCTV-6电影",
+    "memo": "ＣＣＴＶ－６,央视电影,CCTV－6,中央六台,中央六套,CCTV-6 电影,CCTV6,CCTV6 电影,中央-6,CCTV6-电影,中央六,中央6台,中央6,中央6台（选传）,CCTV6电影（选传）,CCTV6电影,CCTV-6,CCTV-6（选传）,中央电视台6,CCTV6 电影,中央-6,CCTV6-电影,CCTV－6,CCTV-6 ,中央6台,CCTV-6电影频道,CCTV_6,CCTV6",
+    "code": "cctv6",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/85/246/4319/1293431924685.png"
+  },
+  {
+    "name": "CCTV-7军事农业",
+    "memo": "ＣＣＴＶ－７,CCTV－7,中央七台,中央七套,CCTV-7 军事农业,CCTV7 军事 农业,中央-7,CCTV7-军事农业,CCTV-7,CCTV7,CCTV-7（选传）,CCTV-7军事农业,CCTV7军农（选传）,中央7台,中央7,中央七,cctv7-tv（八县）,CCTV 7,中央电视台7,农林科技,CCTV7-,CCTV7-军事农业,CCTV－7,CCTV-7,CCTV-7军事农业频道,CCTV-7 军事 农业,中央7台 ,CCTV-7军事农业频道,CCTV_7,CCTV7",
+    "code": "cctv7",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/52/282/4319/1293431928252.png"
+  },
+  {
+    "name": "CCTV-8电视剧",
+    "memo": "ＣＣＴＶ－８,央视电视剧,CCTV-8,CCTV－8,中央八台,中央八套,CCTV-8 电视剧,CCTV8,CCTV8 电视剧,中央-8,CCTV8-电视剧,ＣＣＴＶ－８,中央八,中央8台,中央8,中央8台（选传）,CCTV8电视剧（选传）,CCTV-8电视剧,CCTV-8（选传）,中央电视台8,CCTV8 电视剧,中央-8,CCTV8-电视剧,CCTV－8,CCTV-8,中央8台,CCTV-8电视剧频道,CCTV_8,CCTV8",
+    "code": "cctv8",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/03/338/4319/1293431933803.png"
+  },
+  {
+    "name": "CCTV-9纪录",
+    "memo": "CCTV9,CCTV_9,CCTV纪录,中央9台(纪录),中央9台（纪录）,CCTV－9,中央九套,CCTV-9 纪录,CCTV9,CCTV9 纪录,中央-9,CCTV9-纪录,CCTV-9纪录,CCTV 9 纪录,ＣＣＴＶ－９,ＣＣＴＶ－９纪录,ＣＣＴＶ－９doc,CCTV-9,CCTV-9（选传）,CCTV9记录（选传）,中央九台,中央九,中央9台,中央9,央视记录频道,CCTV-9 记录,中央电视台9,CCTV9 纪录,中央九台,中央-9,CCTV记录,CCTV-纪实,CCTV-9记录频道",
+    "code": "cctv9",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/63/382/4319/1293431938263.png"
+  },
+  {
+    "name": "CCTV-10科教",
+    "memo": "CCTV10,CCTV－10,中央十台,中央十套,CCTV-10 科教,CCTV10 科教,中央-10,CCTV10-科教,科教频道,中央十,中央10台,中央10,中央10台（选传）,CCTV-10科教（选传）,CCTV-10科教,CCTV-10,CCTV-10（选传）,CCTV10,CCTV 10,中央电视台10,CCTV10 科教,中央-10,CCTV10-,CCTV10-科教,CCTV－10,CCTV-10 ,中央10台,CCTV-10科教频道,CCTV_10",
+    "code": "cctv10",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/96/433/4319/1293431943396.png"
+  },
+  {
+    "name": "CCTV-11戏曲",
+    "memo": "CCTV11,CCTV－11,中央十一台,中央十一套,CCTV-11 戏曲,CCTV11 戏曲,中央-11,CCTV11-戏曲,CCTV-11,CCTV11,CCTV-11（选传）,CCTV-11戏曲,CCTV-11戏曲（选传）,中央11台（选传）,中央十一,中央11台,中央11,CCTV 11, \t中央-戏曲,中央电视台11,CCTV11 戏曲,中央戏曲频道,CCTV11-,CCTV11-戏曲,CCTV－11,CCTV-11,中央11台,CCTV-11戏曲频道,CCTV_11",
+    "code": "cctv11",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/72/489/4319/1293431948972.png"
+  },
+  {
+    "name": "CCTV-12社会与法",
+    "memo": "CCTV12,CCTV_12,CCTV-12 社会与法,CCTV-12社会与法,CCTV－12,中央十二台,中央十二套,CCTV12 社会与法,中央-12,CCTV12-社会与法,ＣＣＴＶ－１２,中央十二,中央12台,中央12,中央12台（选传）,CCTV-12社会（选传）,CCTV-12社会与法,CCTV-12（选传）,CCTV12,CCTV 12,中央电视台12,CCTV12 社会与法,CCTV12-,CCTV12-社会与法,CCTV－12,CCTV-12,中央12台 ,CCTV-12社会与法频道",
+    "code": "cctv12",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/38/537/4319/1293431953738.png"
+  },
+  {
+    "name": "CCTV-13新闻",
+    "memo": "央视新闻,CCTV新闻,CCTV-13,CCTV-新闻,中央十三套,CCTV-13 新闻,CCTV13 新闻,中央新闻,新闻频道,CCTV 新闻频道,CCTV-新闻,ＣＣＴＶ－新闻,中央十三台,中央十三,中央13台,中央13,CCTV-13新闻,CCTVNEWS（选传）,CCTV13新闻,CCTV-NEWS（选传）,CCTV－13,中央-新闻,中央电视台13,CCTV13 新闻,央视新闻,CCTV13-,CCTV－13,CCTV-13,CCTV-13新闻频道,CCTV-NEWS,CCTV_新闻",
+    "code": "cctv_news",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/79/947/4318/1293431894779.png"
+  },
+  {
+    "name": "CCTV-14少儿",
+    "memo": "少儿频道,CCTV少儿,ＣＣＴＶ－少儿,CCTV-14,中央十四套,CCTV-14 少儿,CCTV14 少儿,中央少儿,CCTV 少儿频道,ＣＣＴＶ－少儿,CCTV14少儿（选传）,CCTV-14少儿,CCTV-少儿,中央十四台,中央十四,中央14台,中央14,央视少儿,CCTV－14,中央-少儿,中央电视台14,cctv-14,CCTV14 少儿,央视少儿,CCTV14-,CCTV－14,CCTV-14,CCTV-14少儿,CCTV-14少儿频道,CCTV_少儿,CCTV 14",
+    "code": "cctv_kids",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/21/586/4319/1293431958621.png"
+  },
+  {
+    "name": "CCTV-15音乐",
+    "memo": "ＣＣＴＶ－音乐,ＣＣＴＶ－１５,中央音乐频道,中央十五套,CCTV-15 音乐,CCTV音乐,CCTV15 音乐,中央音乐,CCTV 音乐频道,ＣＣＴＶ－音乐,CCTV-音乐,CCTV-音乐（选传）,CCTV-15音乐,中央十五台,中央十五,中央15台,中央15,CCTV15音乐（选传）,中央音乐（选传）,央视音乐,CCTV－15,CCTV 15,CCTV-Music,中央-音乐,CCTV-15,CCTV15 音乐,中国音乐台,央视音乐,CCTV15-,CCTV-15音乐频道",
+    "code": "cctv_music",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/63/892/4318/1293431889263.png"
+  },
+  {
+    "name": "北京卫视",
+    "memo": "北京卫视(选传),北京卫视,BTV-1,北京",
+    "code": "5dfcaefe6e7203df9fbe61ffd64ed1c4",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/32/097/8299/1400829909732.png"
+  },
+  {
+    "name": "重庆卫视",
+    "memo": "重庆卫视（选传）,重庆卫视（订购）",
+    "code": "5731a167d79c432575056c4963dc8049",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/66/075/8299/1400829907566.png"
+  },
+  {
+    "name": "甘肃卫视",
+    "memo": "甘肃卫视（选传）,甘肃,甘肃卫视（付费）",
+    "code": "5ace8ddc54a4151bbcf76e56c8aa582a",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/62/723/4095/1422409572362.png"
+  },
+  {
+    "name": "广东卫视",
+    "memo": "广东,GDTV",
+    "code": "c8bf387b1824053bdb0423ef806a2227",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/17/353/4719/1353471935317.png"
+  },
+  {
+    "name": "深圳卫视",
+    "memo": "SZTV,深圳",
+    "code": "20831bb807a45638cfaf81df1122024d",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/58/313/3065/1294306531358.png"
+  },
+  {
+    "name": "广西卫视",
+    "memo": "广西卫视（选传）,广西,广西卫视",
+    "code": "5cbb108dbf59f2ae1849ec8d1126d1a5",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/43/144/8299/1400829914443.png"
+  },
+  {
+    "name": "贵州卫视",
+    "memo": "贵州卫视（选传）,贵州",
+    "code": "5a7d01661b5d9c64293860531374312b",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/97/165/8299/1400829916597.png"
+  },
+  {
+    "name": "旅游卫视",
+    "memo": "海南旅游卫视,旅游卫视（选传）,旅游,旅游卫视（付费）,旅游卫视(付费频道),旅游",
+    "code": "0d7b5dfe999fc5fd0140863f6e8910a5",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/50/237/8299/1400829923750.png"
+  },
+  {
+    "name": "河北卫视",
+    "memo": "河北,河北卫视（选传）,河北卫视（订购）,河北卫视（付费）",
+    "code": "ef1fce69a9e1b3a587ca734302400107",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/24/366/4240/1293424036624.png"
+  },
+  {
+    "name": "河南卫视",
+    "memo": "HNTV1-河南卫视,河南卫视（订购）,河南卫视（选传）,河南,HNTV1-河南卫视",
+    "code": "2c854868563485135dd486801057dd6e",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/60/223/8966/1355896622360.png"
+  },
+  {
+    "name": "黑龙江卫视",
+    "memo": "黑龙江卫视,黑龙江,黑龙江卫视（选传）,黑龙江卫视（订购）,黑龙江卫视（付费）",
+    "code": "1ce026a774dba0d13dc0cef453248fb7",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/88/204/8219/1355821920488.png"
+  },
+  {
+    "name": "湖北卫视",
+    "memo": "湖北卫视（选传）,湖北,湖北卫视（付费）,湖北卫视",
+    "code": "55fc65ef82e92d0e1ccb2b3f200a7529",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/14/754/4852/1353485275414.png"
+  },
+  {
+    "name": "湖南卫视",
+    "memo": "湖南卫视,湖南,湖南卫视（选传）,湖南卫视,湖南卫视",
+    "code": "c39a7a374d888bce3912df71bcb0d580",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/81/477/8220/1355822047781.png"
+  },
+  {
+    "name": "吉林卫视",
+    "memo": "吉林卫视（订购）,吉林,吉林卫视（选传）,吉林卫视（付费）",
+    "code": "45392a8be644f5b8903838436870c75d",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/88/212/8299/1400829921288.png"
+  },
+  {
+    "name": "江苏卫视",
+    "memo": "江苏卫视,江苏,江苏卫视（选传）,江苏卫视",
+    "code": "322fa7b66243b8d0edef9d761a42f263",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/99/592/3162/1353316259299.png"
+  },
+  {
+    "name": "江西卫视",
+    "memo": "江西卫视（选传）,江西,江西卫视",
+    "code": "535765a19ab55a12bbf64a1e98ae97dd",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/28/093/6358/1293635809328.png"
+  },
+  {
+    "name": "辽宁卫视",
+    "memo": "辽宁,辽宁卫视（选传）,辽宁卫视（付费）,辽宁卫视,辽宁台",
+    "code": "9291c40ec1cec1281638720c74c7245f",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/07/192/8963/1355896319207.png"
+  },
+  {
+    "name": "内蒙古卫视",
+    "memo": "内蒙古卫视,内蒙古卫视（订购）,内蒙古卫视（选传）,内蒙古,内蒙古卫视（付费）",
+    "code": "03295de404257fa9653b89bf2d0e47ac",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/70/266/8299/1400829926670.png"
+  },
+  {
+    "name": "宁夏卫视",
+    "memo": "宁夏卫视（选传）,宁夏,宁夏卫视（付费）,宁夏卫视,宁夏卫视",
+    "code": "a09ab19928a6b2bd616f7e2eba1056ee",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/34/681/4239/1293423968134.png"
+  },
+  {
+    "name": "青海卫视",
+    "memo": "青海卫视（订购）,青海卫视（选传）,青海,青海卫视（付费）",
+    "code": "4ec095f1d2564f82341275fff64edb5a",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/43/273/4241/1293424127343.png"
+  },
+  {
+    "name": "山东卫视",
+    "memo": "山东,山东卫视（选传） ",
+    "code": "28502a1b6bf5fbe7c6da9241db596237",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/97/282/8299/1400829928297.png"
+  },
+  {
+    "name": "山西卫视",
+    "memo": "山西卫视（订购）,山西卫视（选传）,山西,山西卫视（付费）",
+    "code": "2aeb585ccaca9fa893b0bdfdbc098c7f",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/93/519/6328/1293632851993.png"
+  },
+  {
+    "name": "陕西卫视",
+    "memo": "陕西,陕西卫视（选传）",
+    "code": "eb7330e363ceec8c6895eacc44a1a804",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/30/318/8299/1400829931830.png"
+  },
+  {
+    "name": "上海纪实频道",
+    "memo": "上海纪实",
+    "code": "8f8c1fce7cc7537a52056b0fd227679a",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/36/135/5255/1413525513536.jpg"
+  },
+  {
+    "name": "四川卫视",
+    "memo": "四川卫视（选传）,SCTV1-,四川卫视,四川",
+    "code": "b82fa4086c9a2c9442279efbb80cce31",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/74/353/4848/1353484835374.png"
+  },
+  {
+    "name": "天津卫视",
+    "memo": "天津卫视（选传）,天津",
+    "code": "5927c7a6dd31f38686fafa073e2e13bc",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/77/334/8299/1400829933477.png"
+  },
+  {
+    "name": "西藏卫视",
+    "memo": "西藏卫视（选传）,西藏卫视,西藏",
+    "code": "feccf21eb7e50753355efdab2d54d9e8",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/43/431/4206/1293420643143.png"
+  },
+  {
+    "name": "新疆卫视",
+    "memo": "新疆卫视（选传）,新疆卫视,新疆",
+    "code": "ad291a233f1fd3f24332e41461798a25",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/58/742/8954/1355895474258.png"
+  },
+  {
+    "name": "云南卫视",
+    "memo": "云南,云南卫视（选传） ,云南卫视（付费）",
+    "code": "c786da29f0f5cc5973444e3ad49413a6",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/32/351/8299/1400829935132.png"
+  },
+  {
+    "name": "浙江卫视",
+    "memo": "浙江-卫视频道,浙江卫视（选传）,浙江,ZTV-1,ZTV-1 浙江卫视,浙江卫视",
+    "code": "590e187a8799b1890175d25ec85ea352",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/57/159/4284/1293428415957.png"
+  },
+  {
+    "name": "安徽卫视",
+    "memo": "安徽,安徽卫视（选传）",
+    "code": "antv",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/81/341/4203/1293420334181.png"
+  },
+  {
+    "name": "东南卫视",
+    "memo": "福建卫视,福建东南卫视,福建东南（订购）,东南卫视（选传）,福建卫视（选传）,东南电视台,福建,东南卫视（付费）,福建东南",
+    "code": "fjtv",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/02/856/4243/1293424385602.png"
+  },
+  {
+    "name": "东方卫视",
+    "memo": "上海东方卫视-上海电,上海东方,上海东方卫视,上海卫视,上海,东方卫视（选传）,上海东方",
+    "code": "dragontv",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/31/125/8299/1400829912531.png"
+  },
+  {
+    "name": "浙江卫视 高清",
+    "memo": "浙江卫视 高清,浙江卫视高清,浙江卫视HD,浙江卫视-高清,浙江卫视高清,浙江-HD,浙江卫视 HD,浙江卫视(高清),浙江卫视-高清,浙江高清",
+    "code": "jztv_high",
+    "type": "tv,hd",
+    "logo": "http://image.epg.huan.tv/57/159/4284/1293428415957.png"
+  },
+  {
+    "name": "CCTV-NEWS",
+    "memo": "CCTV News,CCTVnews,CCTV NEWS,ＣＣＴＶ－news,cctv- news,CCTV-NEWS 英语, \tCCTV-news#,中央电视台NEWS,CCTV-News,CCTV-NEWS ,CCTV NEWSCCTV News,CCTVnews,CCTV NEWS,ＣＣＴＶ－news,cctv- news,CCTV-NEWS 英语,CCTV-news,中央电视台NEWS,CCTV-news,CCTV-NEWS ,CCTV NEWS",
+    "code": "CCTV-NEWS",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/43/234/8205/1355820523443.png"
+  },
+  {
+    "name": "央视高清",
+    "memo": "CCTV-22（高清）,CCTV 高清,CCTV-高清,CCTV高清,ＣＣＴＶ－高清",
+    "code": "cctv22",
+    "type": "cctv,hd",
+    "logo": "http://image.epg.huan.tv/30/399/4693/1402469339930.png"
+  },
+  {
+    "name": "CCTV-1综合 高清",
+    "memo": "CCTV-1 HD,cctv-1(高清),CCTV-1 高清,CCTV1-高清,CCTV1-高清,CCTV-1(高清),CCTV-1综合 HD,CCTV-1综合高清 ,ＣＣＴＶ－１(高清),CCTV1高清",
+    "code": "cctv1gaoqing",
+    "type": "cctv,hd",
+    "logo": "http://image.epg.huan.tv/58/994/4318/1293431899458.png"
+  },
+  {
+    "name": "江苏卫视 高清",
+    "memo": "江苏卫视（高清）,江苏卫视 高清,江苏卫视高清,江苏卫视HD,江苏卫视-高清,江苏卫视高清,江苏-HD,江苏卫视(高清),江苏卫视 HD,江苏卫视高清,江苏卫视-高清,江苏高清",
+    "code": "jiangsuweishigaoqing",
+    "type": "tv,hd",
+    "logo": "http://image.epg.huan.tv/99/592/3162/1353316259299.png"
+  },
+  {
+    "name": "湖南卫视 高清",
+    "memo": "湖南卫视（高清）,湖南卫视 高清,湖南卫视高清,湖南卫视-高清,湖南卫视高清,湖南-HD,湖南卫视 HD,湖南卫视-高清,湖南高清,湖南卫视(高清)",
+    "code": "hunanweishigaoqing",
+    "type": "tv,hd",
+    "logo": "http://image.epg.huan.tv/81/477/8220/1355822047781.png"
+  },
+  {
+    "name": "兵团卫视",
+    "memo": "兵团卫视,新疆兵团卫视",
+    "code": "bingtuanweishi",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/48/102/8242/1355824210248.png"
+  },
+  {
+    "name": "北京卫视 高清",
+    "memo": "BTV北京卫视（高清）,北京卫视 高清,北京卫视高清,北京卫视HD,BTV北京卫视高清,北京卫视-高清,北京卫视高清,北京-HD,北京卫视 HD,北京卫视(高清),北京卫视高清,北京卫视-高清,北京BTV高清",
+    "code": "bjweishigaoqing",
+    "type": "tv,hd",
+    "logo": "http://image.epg.huan.tv/32/097/8299/1400829909732.png"
+  },
+  {
+    "name": "幼儿教育",
+    "memo": "江苏幼儿教育,幼儿教育(付费频道)",
+    "code": "jstvyejy",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/84/245/4769/1419476924584.png"
+  },
+  {
+    "name": "东方卫视 高清",
+    "memo": "东方卫视（高清）,东方卫视 高清,东方卫视高清,东方卫视-高清,上海东方高清,上海卫视高清,上海卫视(高清),东方-HD,上海东方卫视（高清）,上海东方卫视高清,上海卫视 HD,东方卫视(高清),上海东方高清,上海东方高清 ,东方卫视-高,上海东方高清",
+    "code": "dfweishigaoqing",
+    "type": "tv,hd",
+    "logo": "http://image.epg.huan.tv/31/125/8299/1400829912531.png"
+  },
+  {
+    "name": "广东卫视 高清",
+    "memo": "广东卫视（高清）,广东卫视 高清,广东卫视高清,广东卫视HD,广东卫视-高清,广东-HD,广东高清,广东卫视-高清,广东高清,广东卫视(高清)",
+    "code": "gdweishigaoqing",
+    "type": "tv,hd",
+    "logo": "http://image.epg.huan.tv/17/353/4719/1353471935317.png"
+  },
+  {
+    "name": "黑龙江卫视 高清",
+    "memo": "黑龙江卫视（高清）,黑龙江卫视 高清,黑龙江卫视高清,黑龙江卫视HD,黑龙江-HD,黑龙江-高清,黑龙江卫视(高清),黑龙江卫视 HD,黑龙江高清",
+    "code": "hljweishigaoqing",
+    "type": "tv,hd",
+    "logo": "http://image.epg.huan.tv/88/204/8219/1355821920488.png"
+  },
+  {
+    "name": "深圳卫视 高清",
+    "memo": "深圳-HD,深圳高清卫视,深圳卫视 HD,深圳卫视高清,深圳高清,深圳卫视(高清)",
+    "code": "shenzhenweishigaoqing",
+    "type": "tv,hd",
+    "logo": "http://image.epg.huan.tv/50/658/8219/1355821965850.png"
+  },
+  {
+    "name": "CCTV-3综艺 高清",
+    "memo": "CCTV-3高清,CCTV3综艺高清,CCTV-3(高清),CCTV3HD,中央三台高清,CCTV-3 高清,CCTV3-高清,CCTV-3综艺 HD,CCTV3综艺高清,CCTV-3 综艺 HD",
+    "code": "cctv3gaoqing",
+    "type": "cctv,hd",
+    "logo": "http://image.epg.huan.tv/38/995/6820/1370682099538.png"
+  },
+  {
+    "name": "CCTV-5体育 高清",
+    "memo": "CCTV-5高清,CCTV5体育高清,CCTV-5 高清,CCTV-5(高清),CCTV5HD,中央五台高清,CCTV-5 体育赛事 HD,CCTV5-高清,CCTV-5体育 HD,CCTV5体育高清,CCTV-5 (高清),CCTV-5 HD,CCTV-5 体育 HD,CCTV5高清",
+    "code": "cctv5gaoqing",
+    "type": "cctv,hd",
+    "logo": "http://image.epg.huan.tv/82/916/6545/1405654591682.png"
+  },
+  {
+    "name": "CCTV-8电视剧 高清",
+    "memo": "CCTV-8高清,CCTV-8电视剧(高清),CCTV-8,CCTV8HD,中央八台高清,CCTV8-高清,cCTV-8高清,CCTV-8电视剧 HD,CCTV8电视剧高清,CCTV-8 电视剧 HD,CCTV-8 高清",
+    "code": "cctv8gaoqing",
+    "type": "cctv,hd",
+    "logo": "http://image.epg.huan.tv/33/429/6822/1370682242933.png"
+  },
+  {
+    "name": "CCTV-6电影 高清",
+    "memo": "CCTV-6高清,中央六台高清,CCTV-6 高清,CCTV6-高清,CCTV-6电影 HD,CCTV-6 电影 HD,CCTV-6电影(高清)",
+    "code": "cctv6gaoqing",
+    "type": "cctv,hd",
+    "logo": "http://image.epg.huan.tv/65/725/5969/1373596972565.png"
+  },
+  {
+    "name": "山东卫视 高清",
+    "memo": "山东卫视（高清）,山东卫视高清,山东卫视 高清,山东卫视 HD,山东卫视(高清)",
+    "code": "shandongweishigaoqing",
+    "type": "tv,hd",
+    "logo": "http://image.epg.huan.tv/97/282/8299/1400829928297.png"
+  },
+  {
+    "name": "CCTV-9（英文）",
+    "memo": "CCTV-9英文,CCTV-9（英文）",
+    "code": "CCTV-9（yingwen）",
+    "type": "cctv",
+    "logo": "http://image.epg.huan.tv/89/871/4793/1400479387189.png"
+  },
+  {
+    "name": "天津卫视 高清",
+    "memo": "天津卫视（高清）,天津卫视高清,天津卫视 高清,天津卫视 HD,天津卫视(高清)",
+    "code": "tianjinweishigaoqing",
+    "type": "tv,hd",
+    "logo": "http://image.epg.huan.tv/77/334/8299/1400829933477.png"
+  },
+  {
+    "name": "湖北卫视 高清",
+    "memo": "湖北卫视（高清）,湖北卫视高清,湖北卫视 高清,湖北卫视(高清)",
+    "code": "hubeiweishigaoqing",
+    "type": "tv,hd",
+    "logo": "http://image.epg.huan.tv/14/754/4852/1353485275414.png"
+  },
+  {
+    "name": "河北卫视 高清",
+    "memo": "河北卫视(高清)",
+    "code": "hebeiweishigaoqing",
+    "type": "tv,hd",
+    "logo": "http://image.epg.huan.tv/24/852/7426/1398742685224.png"
+  },
+  {
+    "name": "海峡卫视",
+    "memo": "海峡电视台,东南电视台国际频道",
+    "code": "haixiaweishi",
+    "type": "tv",
+    "logo": ""
+  },
+  {
+    "name": "CCTV-2财经 高清",
+    "memo": "CCTV-2高清,ＣＣＴＶ－２高清,央视财经高清,CCTV－2高清,中央二套高清,CCTV-2 财经高清,CCTV2 财经高清,中央-2高清,CCTV2-财经,CCTV-2,CCTV2,CCTV-2(选传),CCTV-2财经,CCTV2财经(选传),中央2台,中央2,中央二台高清,中央二高清,CCTV-2 经济高清,CCTV 2高清,中央电视台2高清,CCTV2 财经高清,CCTV2-高清,CCTV2-财经高清,CCTV－2高清,CCTV-2高清 ,中央2台高清,CCTV-2财经(高清)",
+    "code": "CCTV2HD",
+    "type": "cctv,hd",
+    "logo": "http://image.epg.huan.tv/56/063/1230/1413123006356.png"
+  },
+  {
+    "name": "动感音乐",
+    "memo": "",
+    "code": "dongganyingyue",
+    "type": "cctv",
+    "logo": ""
+  },
+  {
+    "name": "京视剧场",
+    "memo": "",
+    "code": "jingshijuchang",
+    "type": "cctv",
+    "logo": ""
+  },
+  {
+    "name": "环球购物",
+    "memo": "",
+    "code": "huanqiugouwu",
+    "type": "other",
+    "logo": ""
+  },
+  {
+    "name": "全国党教",
+    "memo": "",
+    "code": "quanguodangjiao",
+    "type": "cctv",
+    "logo": ""
+  },
+  {
+    "name": "CCTV-7军事农业 高清",
+    "memo": "ＣＣＴＶ－７高清,CCTV－7高清,中央七台高清,中央七套高清,CCTV-7 军事农业(高清),CCTV7 军事 农业高清,中央-7高清,CCTV7-军事农业高清,CCTV7高清,CCTV-7高清,CCTV-7军事农业高清,CCTV7军农高清,中央7台高清,中央7高清,中央七高清,CCTV 7高清,中央电视台7高清,农林科技高清,CCTV7-高清,CCTV7-军事农业高清,CCTV－7高清,CCTV-7高清,CCTV-7军事农业频道高清,CCTV-7 军事 农业高清",
+    "code": "CCTV7HD",
+    "type": "cctv,hd",
+    "logo": "http://image.epg.huan.tv/84/733/1232/1413123273384.png"
+  },
+  {
+    "name": "CCTV-9纪录 高清",
+    "memo": "CCTV-9纪录(高清),CCTV纪录高清,中央9台(纪录)高清,中央9台（纪录）高清,CCTV－9高清,中央九套高清,CCTV-9 纪录高清,CCTV9高清,CCTV9 纪录,中央-9,CCTV9-纪录,CCTV-9纪录高清,CCTV 9 纪录高清,ＣＣＴＶ－９高清,ＣＣＴＶ－９纪录高清,CCTV-9高清,中央九台高清,中央九高清,中央9台高清,CCTV-9纪录高清,中央电视台9高清,CCTV9 纪录高清,CCTV纪录高清,中央-9高清",
+    "code": "CCTV9HD",
+    "type": "cctv,hd",
+    "logo": "http://image.epg.huan.tv/78/386/1236/1413123638678.png"
+  },
+  {
+    "name": "CCTV-10科教 高清",
+    "memo": "ＣＣＴＶ－１０高清,CCTV－10高清,中央十台高清,中央十套高清,CCTV-10科教(高清),CCTV10 科教高清,中央-10高清,CCTV10-科教高清,科教频道高清,中央十高清,中央10台高清,中央10高清,CCTV-10科教高清,CCTV-10高清,CCTV10高清,CCTV 10高清",
+    "code": "CCTV10HD",
+    "type": "cctv,hd",
+    "logo": "http://image.epg.huan.tv/61/094/1242/1413124209461.png"
+  },
+  {
+    "name": "CCTV-12社会与法 高清",
+    "memo": "ＣＣＴＶ－１２高清,CCTV-12高清,CCTV-12 社会与法高清,CCTV-12社会与法(高清),CCTV－12高清,中央十二台高清,中央十二套高清,CCTV12 社会与法高清,中央-12高清,CCTV12-社会与法高清,ＣＣＴＶ－１２高清,中央十二高清,CCTV-12高清",
+    "code": "CCTV12HD",
+    "type": "cctv,hd",
+    "logo": "http://image.epg.huan.tv/61/094/1242/1413124209461.png"
+  },
+  {
+    "name": "CCTV-14少儿 高清",
+    "memo": "少儿频道高清,CCTV少儿高清,ＣＣＴＶ－少儿高清,CCTV-14高清,中央十四套高清,CCTV-14少儿(高清),CCTV14 少儿高清,中央少儿高清,CCTV 少儿频道高清,ＣＣＴＶ－少儿高清,CCTV-14少儿高清,CCTV-少儿高清,CCTV-14少儿高清,CCTV-14少儿频道高清",
+    "code": "cctv_kids_HD",
+    "type": "cctv,hd",
+    "logo": "http://image.epg.huan.tv/21/586/4319/1293431958621.png"
+  },
+  {
+    "name": "辽宁卫视 高清",
+    "memo": "辽宁高清,辽宁卫视高清,辽宁卫视(高清)",
+    "code": "Liaoning_HD",
+    "type": "tv,hd",
+    "logo": "http://image.epg.huan.tv/50/584/4206/1293420658450.png"
+  },
+  {
+    "name": "安徽卫视 高清",
+    "memo": "安徽卫视高清,安徽卫视(高清)",
+    "code": "Anhui_HD",
+    "type": "tv,hd",
+    "logo": "http://image.epg.huan.tv/95/545/4203/1293420354595.png"
+  },
+  {
+    "name": "上海纪实频道 高清",
+    "memo": "上海纪实高清",
+    "code": "Shanghai_DOC_HD",
+    "type": "tv,hd",
+    "logo": "http://image.epg.huan.tv/36/135/5255/1413525513536.jpg"
+  },
+  {
+    "name": "中央国际",
+    "memo": "中央国际频道",
+    "code": "zhongyangguoji",
+    "type": "cctv",
+    "logo": ""
+  },
+  {
+    "name": "时尚生活高清",
+    "memo": "时尚生活高清频道",
+    "code": "shishangshenghuogq",
+    "type": "tv,hd",
+    "logo": ""
+  },
+  {
+    "name": "浙江民生休闲",
+    "memo": "",
+    "code": "zhejiangminshengxiuxian",
+    "type": "tv",
+    "logo": ""
+  },
+  {
+    "name": "四川卫视 高清",
+    "memo": "四川卫视(高清),四川卫视高清",
+    "code": "scweishigaoqing",
+    "type": "tv,hd",
+    "logo": ""
+  },
+  {
+    "name": "弈坛春秋",
+    "memo": "",
+    "code": "yitanchunqiu",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "乐宅影视",
+    "memo": "",
+    "code": "lezhaiyingshi",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/37/744/6455/1400645574437.png"
+  },
+  {
+    "name": "家家购物",
+    "memo": "",
+    "code": "jiajiagouwu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/22/091/7456/1400745609122.png"
+  },
+  {
+    "name": "经典影院",
+    "memo": "",
+    "code": "jigndianyingyuan",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/12/153/7552/1400755215312.png"
+  },
+  {
+    "name": "欧美剧场",
+    "memo": "",
+    "code": "oumeijuchang",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/27/512/7556/1400755651227.png"
+  },
+  {
+    "name": "时尚娱乐",
+    "memo": "",
+    "code": "shishangyule",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/51/424/7556/1400755642451.png"
+  },
+  {
+    "name": "纪实频道",
+    "memo": "",
+    "code": "jishipd",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/24/031/8797/1399879703124.png"
+  },
+  {
+    "name": "东风卫视",
+    "memo": "",
+    "code": "49f125723313913558fcd66e867b6aa9",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "CCTV5+体育赛事",
+    "memo": "赛事频道,CCTV5加,CCTV5+高清,CCTV-5+高清, CCTV5+体育赛事(高清),CCTV-5+高清",
+    "code": "cctv5jia",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/01/752/2706/1406270675201.png"
+  },
+  {
+    "name": "央视高清",
+    "memo": "CCTV-22（高清）,CCTV 高清,CCTV-高清,CCTV高清,ＣＣＴＶ－高清",
+    "code": "cctv22",
+    "type": "cctv,hd",
+    "logo": "http://image.epg.huan.tv/30/399/4693/1402469339930.png"
+  },
+  {
+    "name": "央广购物",
+    "memo": "",
+    "code": "yangguanggouwu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/94/553/8086/1355808655394.png"
+  },
+  {
+    "name": "家庭健康",
+    "memo": "家庭健康(付费频道),家庭健康（付费）,家庭健康($),央广健康,家庭健康 5元 月",
+    "code": "jiatingjiankang",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "卫生健康",
+    "memo": "",
+    "code": "17f79002aa3904b69fc41b463c04cca3",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/90/924/3073/1294307392490.png"
+  },
+  {
+    "name": "法律服务",
+    "memo": "",
+    "code": "falvfuwu",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "考试在线",
+    "memo": "",
+    "code": "kaoshizaixian",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "动感音乐",
+    "memo": "",
+    "code": "dongganyingyue",
+    "type": "cctv",
+    "logo": ""
+  },
+  {
+    "name": "京视剧场",
+    "memo": "",
+    "code": "jingshijuchang",
+    "type": "cctv",
+    "logo": ""
+  },
+  {
+    "name": "尚健康",
+    "memo": "",
+    "code": "shangjiankang",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "资讯气象",
+    "memo": "",
+    "code": "zixunqixiang",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "贵州天元围棋频道",
+    "memo": "天元围棋(付费频道),天元围棋($),天元围棋10元 月,天元围棋($),天元围棋",
+    "code": "3d23c7fa7feae2ea2b6e3f7f1359aa7a",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/64/106/4663/1293466310664.png"
+  },
+  {
+    "name": "江苏靓妆频道",
+    "memo": "靓装频道,靓妆 5元 月",
+    "code": "6a12341152e41576d5107eae44a4fef8",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/88/467/4289/1293428946788.png"
+  },
+  {
+    "name": "SiTV首映剧场",
+    "memo": "首映剧场",
+    "code": "b73e58a5db1d1e991c639b9064c6736b",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV都市剧场",
+    "memo": "都市剧场",
+    "code": "8c2c76bce805d11f5ba0266f8a33c65e",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/75/017/3073/1294307301775.png"
+  },
+  {
+    "name": "SiTV白金剧场",
+    "memo": "白金剧场",
+    "code": "6442ecfd75afe2219a6298137b5cd3f0",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV欢笑剧场",
+    "memo": "欢笑剧场",
+    "code": "1800444c032205d1443af46a5111fbf1",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/63/522/4213/1293421352263.png"
+  },
+  {
+    "name": "SiTV经典剧场",
+    "memo": "经典剧场",
+    "code": "1cb2a982919d7a65a825ba986cdc68a0",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "游戏风云",
+    "memo": "",
+    "code": "a57bb859618877ab8cf2d2abf30b4f55",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/36/469/4216/1293421646936.png"
+  },
+  {
+    "name": "动漫秀场",
+    "memo": "动漫秀场(付费频道)",
+    "code": "5c8dbe3714f3544285a4c4922e2ed01a",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/15/151/4211/1293421115115.png"
+  },
+  {
+    "name": "全纪实",
+    "memo": "",
+    "code": "2e79089eeb8dfeb99cd21296facd2025",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/19/675/4278/1293427867519.png"
+  },
+  {
+    "name": "SiTV娱乐前线",
+    "memo": "娱乐前线",
+    "code": "21ede7c42c8ccfa34e875339454f6a9a",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV法制天地",
+    "memo": "法治天地频道,法制天地(付费频道),法治天地",
+    "code": "05d6693c933de13842e71023eee86cdd",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/60/564/8169/1355816956460.png"
+  },
+  {
+    "name": "SiTV七彩戏剧",
+    "memo": "七彩戏剧(付费频道),七彩戏剧",
+    "code": "8a29f3de1096334d5a784ebadf4895e3",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/81/579/4214/1293421457981.png"
+  },
+  {
+    "name": "SiTV魅力音乐",
+    "memo": "魅力音乐",
+    "code": "2ac392f31cfbacdee4cb042d6bd4ad75",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/10/045/4214/1293421404510.png"
+  },
+  {
+    "name": "SiTV英语教室",
+    "memo": "英语教室",
+    "code": "50affb5cabcf6d7fbde1851d5e97a5e2",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV学习考试",
+    "memo": "学习考试",
+    "code": "931af08b8cf0f4d5cae1257b8e3365a3",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV金色频道",
+    "memo": "金色频道",
+    "code": "a4d72876a289825786845866024a4765",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/82/473/3070/1294307047382.png"
+  },
+  {
+    "name": "SiTV极速汽车",
+    "memo": "极速汽车(付费频道),极速汽车",
+    "code": "6612405d22d72e43ac5dc9d1762c5109",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/02/173/7552/1400755217302.png"
+  },
+  {
+    "name": "SiTV幸福彩",
+    "memo": "幸福彩(付费频道),幸福彩",
+    "code": "0c387b6ead6bca8f1c6536c044d57a3c",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/57/967/3070/1294307096757.png"
+  },
+  {
+    "name": "SiTV华夏影院",
+    "memo": "",
+    "code": "ec17ed7955860104e3dd5d603c738c45",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV海外影院",
+    "memo": "海外影院",
+    "code": "980195147b187b5f06632d605db9ec24",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV情感影院",
+    "memo": "情感影院",
+    "code": "a7269d232e819aed29e86494a7c74745",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV动作影院",
+    "memo": "动作影院",
+    "code": "bb82282ed6d91a977cb2f1ce48cb1be9",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV怀旧影院",
+    "memo": "怀旧影院",
+    "code": "5efeca7e022b70edc65113e1edfd00d8",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV点播影院",
+    "memo": "点播影院",
+    "code": "4363023e5df99c787053f5a682fc2bfc",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV探索精选",
+    "memo": "",
+    "code": "c98a9b505c44c32765353c1d71446886",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV劲爆体育",
+    "memo": "劲暴体育",
+    "code": "2ccef4b3a8b8f1686594ab6a8c3ba802",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/55/311/3072/1294307231155.png"
+  },
+  {
+    "name": "SiTV劲爆足球",
+    "memo": "劲爆足球",
+    "code": "0540abd135c14f05d31f6b27038f2724",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV五星体育",
+    "memo": "五星体育",
+    "code": "38bb74f00b940f4e4471c09e88c306bf",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV爵士流行",
+    "memo": "爵士流行",
+    "code": "e481793f18920c539db6b9d20288d63f",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV恢宏古典",
+    "memo": "",
+    "code": "d1e054df8ee29f914c1fd8f26b8d51d5",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV华夏乐韵",
+    "memo": "华夏乐韵",
+    "code": "00d237b6fac4b3ae52be299b6bb4f979",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV轻松节拍",
+    "memo": "轻松节拍",
+    "code": "70748ad11b93cb44e82a829f736bc4f4",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV英语世界",
+    "memo": "英语世界",
+    "code": "f567e2ed305e7b15674e99eb86dc66d0",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV写意古典",
+    "memo": "",
+    "code": "cf432e05aba8a3d64d92cb59feca9f9b",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV华语风云",
+    "memo": "华语风云",
+    "code": "cf6b6a7abfcbd79cf221c0c7c4bcf20c",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV欧美劲爆",
+    "memo": "欧美劲爆",
+    "code": "4d1317030b8466a759ed5c8f58219f57",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV日韩潮流",
+    "memo": "日韩潮流",
+    "code": "47e672fee603b2962ea4664b3bd43077",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "SiTV动感地带",
+    "memo": "动感地带",
+    "code": "fb3441b3fbe789819fe38d5e4f06ecd5",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/878/3069/1294306987874.png"
+  },
+  {
+    "name": "卫视电影台",
+    "memo": "卫视电影台",
+    "code": "c73f35112e74ce77a8ecc4ddb5628bf2",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "卫视中文台",
+    "memo": null,
+    "code": "097340edc231b5856c93a5f41a4e1108",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "Star Movies",
+    "memo": "STAR MOVIES",
+    "code": "51e0dd9e95c49c84bc07b0676083439e",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/18/204/4763/1419476320418.png"
+  },
+  {
+    "name": "Star Movies(新加坡)",
+    "memo": null,
+    "code": "2707c2cac77cfb24362ae6822456b81c",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "华视IQ教育文化频道",
+    "memo": null,
+    "code": "5c19707e3b827ea2a65de049eedf9268",
+    "type": "edu",
+    "logo": ""
+  },
+  {
+    "name": "华视EQ休闲频道",
+    "memo": null,
+    "code": "0d29483c69620b27e4576019cb33207d",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "中视主频道",
+    "memo": null,
+    "code": "12a3d7914271a7d2281a382fe76629b2",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "中视综艺台",
+    "memo": null,
+    "code": "2aacf0cfc7d397a0562f65faf0a9cf45",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "中视新闻台",
+    "memo": null,
+    "code": "a315144d5c81e77db2da7b8caf9f118a",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "台湾家庭台",
+    "memo": null,
+    "code": "811f6ad5ce3de8bd300b6d6ffc8c7e99",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "台湾国际台",
+    "memo": null,
+    "code": "37dab69069ba9c551d111bf21f9981ad",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "台湾直播台",
+    "memo": null,
+    "code": "f5e95ffb178dfb8386a29f188155c8c1",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "台湾台",
+    "memo": null,
+    "code": "34325181e40061bcd215d71dd262800d",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "东森综合台",
+    "memo": null,
+    "code": "52d5cedf82b700354f699677b649e564",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "东森洋片",
+    "memo": null,
+    "code": "404c047310e78077b398d2b5999e8459",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "东森电影台",
+    "memo": null,
+    "code": "50c24d98ec6280f31256abf1ed23ca4a",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "东森戏剧台",
+    "memo": null,
+    "code": "de7f979d7f9911da2ff827a417159a27",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "东森娱乐频道",
+    "memo": null,
+    "code": "bb1dd58bded54b9628a60db6bf42fc32",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "东森幼幼台",
+    "memo": null,
+    "code": "2b51289da8ea9bfde8be044179549419",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "东森新闻台",
+    "memo": null,
+    "code": "287cb9ad49a87d8f3d60d2eea995be43",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "东森亚洲卫视",
+    "memo": null,
+    "code": "8dfc506bcd2548ab510b4a1b0f5f848b",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "公视主频道",
+    "memo": null,
+    "code": "b5a16d7d1d4bd49051dbd1b125e86114",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "三立都会台",
+    "memo": null,
+    "code": "168e9996f33410551c3f38777f7e8780",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "三立新闻台",
+    "memo": null,
+    "code": "db8e1e5ca873263badcb5fe80cf52d5f",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "三立台湾台",
+    "memo": null,
+    "code": "ab8296062e7e525ab1ff27a4c84547de",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "八大第一台",
+    "memo": null,
+    "code": "2f8a0d01bccc84dfa4cf9ba18557682a",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "八大综合台",
+    "memo": null,
+    "code": "4c3a712dc806012bee7f6f94c8feb558",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "八大戏剧台",
+    "memo": null,
+    "code": "1476762175b4e0d6f24cb9f7434610bb",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "TVBS",
+    "memo": null,
+    "code": "455473817406ed73cc2380985faa0089",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "TVBS-G",
+    "memo": null,
+    "code": "0c1d225ae4424a31fb269ca869d19a57",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "TVBS-ASIA",
+    "memo": null,
+    "code": "2b1486b5fb7b188952e89eb08f66df37",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "本港台",
+    "memo": "本港台（丹灶）",
+    "code": "03d1674376a4e346d69a2d566226f3cb",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "国际台",
+    "memo": null,
+    "code": "4d48c50e455f23d653cffbbde36ef20c",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "翡翠台",
+    "memo": "翡翠台（丹灶）",
+    "code": "ca9b19519b657d524c001ef858181b5d",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "明珠台",
+    "memo": null,
+    "code": "9776f5ec6a90c7ee625610a141488c2e",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "TVB8",
+    "memo": "TVB8(试播),测试TVB8",
+    "code": "1b2b30a7b682d1cb24a5ccd28f5161f6",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/33/509/9581/1399958150933.png"
+  },
+  {
+    "name": "星河频道",
+    "memo": null,
+    "code": "bd8e186f72439d0769b994e10ff8ef89",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "无线剧集台",
+    "memo": null,
+    "code": "18d93f17d1114121681b43fbe9f3d7f8",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "无线经典台",
+    "memo": null,
+    "code": "d5b2e76e2b18ef8acf14f06191d2a15d",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "无线音乐台",
+    "memo": null,
+    "code": "05a1c5947f140da5c899559e6212ad8c",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "无线新闻台",
+    "memo": null,
+    "code": "b94fd4de2afca65ea463964c973c43a1",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "无线生活台",
+    "memo": null,
+    "code": "2c0d302b11a292e14c9f43f49125663b",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "无线儿童台",
+    "memo": null,
+    "code": "11d886d7cafbd79e71cb7d33e2f92458",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "凤凰卫视",
+    "memo": "测试凤凰中文,凤凰卫视中文台",
+    "code": "bb8f7378ef7eefeea8ec82cf7e34f173",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/07/645/7487/1398748764507.png"
+  },
+  {
+    "name": "凤凰资讯台",
+    "memo": "凤凰资讯,凤凰资讯台,测试凤凰资讯,凤凰卫视资讯台",
+    "code": "b52ed95ecc9995cb7a418061040c740f",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/95/677/2698/1298269867795.png"
+  },
+  {
+    "name": "凤凰电影台",
+    "memo": "测试凤凰电影",
+    "code": "fd5e69184516f4e96a7f4d41e52b3bb0",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/69/962/7492/1398749296269.png"
+  },
+  {
+    "name": "星空卫视",
+    "memo": "星空卫视(试播),测试星空卫视,星空卫视",
+    "code": "bc420cf8383e85e20fbd61ff9d072254",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/86/449/7489/1398748944986.png"
+  },
+  {
+    "name": "阳光卫视",
+    "memo": "测试阳光卫视",
+    "code": "9c5e8689731d852528b281807f12c472",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "香港NOW",
+    "memo": null,
+    "code": "13bec0dc1753b55d0fd019e674c85958",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "有线足球台",
+    "memo": null,
+    "code": "1c2175b47f7357571afac7dad4ae755f",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "有线体育台",
+    "memo": null,
+    "code": "52faed1613876f3c5924250da2421c47",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "英超台",
+    "memo": null,
+    "code": "ca31cdbd9cd561ac68562bec80da93b3",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "儿童台",
+    "memo": null,
+    "code": "b14334232801ecbb905f9572c05be111",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "娱乐台",
+    "memo": null,
+    "code": "1938a8e4a6a1dcf9855fe1a5322b0843",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "财经资讯台",
+    "memo": null,
+    "code": "ee8ccbfc9ba3271f54e2e7b65111328e",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "有线A台",
+    "memo": null,
+    "code": "133a8db16a06779b241b2229008d2bb0",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "新知台",
+    "memo": null,
+    "code": "5ebc3441e2337134060fc1f511a9d412",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "荷里活影院(HMC)",
+    "memo": null,
+    "code": "7b378c5b86347dc94d8a4dcc93df5d5a",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "MGM亚洲电影频道",
+    "memo": "亚洲电影",
+    "code": "2357adab5fb307f4285a0cf663931d0d",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "NBA TV",
+    "memo": null,
+    "code": "ac36a3696ec781ba88e1469447723040",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "MTV中文频道",
+    "memo": null,
+    "code": "5e8b0772e50e1cb3c8d2fc028be982bd",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "动物星球频道",
+    "memo": null,
+    "code": "d0e98b31e26979df6f81fcc9548b1b2e",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "Fashion TV",
+    "memo": null,
+    "code": "43151260943da1adc32057346a36c6fc",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "东方财经",
+    "memo": "SiTV东方财经",
+    "code": "sitvdfcj",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/57/227/2669/1357266922757.png"
+  },
+  {
+    "name": "生活时尚",
+    "memo": "SiTV生活时尚,生活时尚(付费频道),生活时尚频道",
+    "code": "sitvshss",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/85/464/8993/1355899346485.png"
+  },
+  {
+    "name": "SITV新视觉高清",
+    "memo": "SiTV高清新视觉频道",
+    "code": "sitvxsjgaoqing",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "幼儿教育",
+    "memo": "江苏幼儿教育,幼儿教育(付费频道)",
+    "code": "jstvyejy",
+    "type": "tv",
+    "logo": "http://image.epg.huan.tv/84/245/4769/1419476924584.png"
+  },
+  {
+    "name": "网络棋牌",
+    "memo": "SiTV网络棋牌,网络棋牌(付费频道),网络棋牌($),网络棋牌-付费",
+    "code": "sitvwlqp",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "CNN",
+    "memo": "CNN,测试CNN",
+    "code": "xgyxcnn",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/41/768/9581/1399958176841.png"
+  },
+  {
+    "name": "BBC",
+    "memo": "BBC World News,测试BBC",
+    "code": "xgyxbbc",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/85/784/9581/1399958178485.png"
+  },
+  {
+    "name": "国家地理",
+    "memo": "国家地理",
+    "code": "xgyxgjdl",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/65/177/4763/1419476317765.png"
+  },
+  {
+    "name": "卫视音乐",
+    "memo": "卫视音乐台（Channel[V]）",
+    "code": "xgyxwsyy",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/79/182/7491/1398749118279.png"
+  },
+  {
+    "name": "Discovery",
+    "memo": "Discovery",
+    "code": "xgyxdiscovery",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "新动漫",
+    "memo": "新动漫($)",
+    "code": "liaoningxdm",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "早期教育",
+    "memo": "早期教育(付费频道),早期教育($),早期教育-付费,早期教育 4元 月,早期教育($)",
+    "code": "zaoqijiaoyu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/10/143/4713/1376471314310.png"
+  },
+  {
+    "name": "大众影院",
+    "memo": "",
+    "code": "dazhongyingyuan",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/26/062/5506/1376550606226.png"
+  },
+  {
+    "name": "第一导视",
+    "memo": "第一导视",
+    "code": "diyidaoshi",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/41/935/4433/1357443393541.png"
+  },
+  {
+    "name": "CHC高清电影",
+    "memo": "CHC高清电影,CHC高清电影 HD,CHC高清",
+    "code": "chcgaoqingdianying",
+    "type": "hd",
+    "logo": "http://image.epg.huan.tv/28/407/8230/1355823040728.png"
+  },
+  {
+    "name": "3D频道",
+    "memo": "3D测试频道,3D电视频道,3D电视试验频道",
+    "code": "3dpindao",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/67/453/8261/1355826145367.png"
+  },
+  {
+    "name": "DOX映画",
+    "memo": "DOX·映画",
+    "code": "doxyinghua",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/13/543/8235/1355823554313.png"
+  },
+  {
+    "name": "DOX剧场",
+    "memo": "DOXTV-HD",
+    "code": "doxjuchang",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/13/962/0779/1377077996213.png"
+  },
+  {
+    "name": "DOX新知",
+    "memo": "",
+    "code": "doxxinzhi",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "DOX新艺",
+    "memo": "",
+    "code": "doxxinyi",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "风云剧场",
+    "memo": "风云剧场(付费频道),风云剧场($),风云剧场 10元 月,风云剧场($)",
+    "code": "fengyunjuchang",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/92/193/7369/1400736919392.png"
+  },
+  {
+    "name": "央视精品",
+    "memo": "央视文化精品,央视精品($),央视精品 10元 月,央视精品",
+    "code": "yangshijingpin",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/91/485/7432/1400743248591.png"
+  },
+  {
+    "name": "风云音乐",
+    "memo": "风云音乐(付费频道),风云音乐($),风云音乐-付费,风云音乐 10元 月,风云音乐",
+    "code": "fengyunyinyue",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/84/552/7432/1400743255284.png"
+  },
+  {
+    "name": "风云足球",
+    "memo": "风云足球(付费频道),风云足球($),风云足球-付费,风云足球 10元 月,风云足球($),风云足球",
+    "code": "fengyunzuqiu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/58/205/7552/1400755220558.png"
+  },
+  {
+    "name": "高尔夫网球",
+    "memo": "高尔夫?网球",
+    "code": "gaoerfuwangqiu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/64/427/8230/1400823042764.png"
+  },
+  {
+    "name": "央视怀旧剧场",
+    "memo": "怀旧剧场($),怀旧剧场-付费,怀旧剧场 10元 月,怀旧剧场",
+    "code": "yangshihuaijiujuchang",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/45/571/7432/1400743257145.png"
+  },
+  {
+    "name": "世界地理",
+    "memo": "世界地理(付费频道),世界地理($),世界地理 10元 月,世界地理",
+    "code": "shijiedili",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/01/067/7552/1400755206701.png"
+  },
+  {
+    "name": "国防军事",
+    "memo": "国防军事（付费）,国防军事($),国防军事-精品,国防军事($),国防军事",
+    "code": "guofangjunshi",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/56/261/7552/1400755226156.png"
+  },
+  {
+    "name": "第一剧场",
+    "memo": "第一剧场(付费频道),第一剧场($),第一剧场 10元 月,第一剧场($),第一剧场",
+    "code": "diyijuchang",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/42/004/7374/1355737400442.png"
+  },
+  {
+    "name": "书画",
+    "memo": "书画(付费频道),书画频道($),书画,书画频道",
+    "code": "shuhua",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/95/141/7456/1400745614195.png"
+  },
+  {
+    "name": "数字电视指南",
+    "memo": "CCTV电视指南,电视指南 4元 月,电视指南",
+    "code": "szdianshizhinan",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/04/525/7432/1400743252504.png"
+  },
+  {
+    "name": "孕育指南",
+    "memo": "孕育指南(付费频道),孕育指南($),孕育指南",
+    "code": "yunyuzhinan",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/12/786/8133/1355813378612.png"
+  },
+  {
+    "name": "留学世界",
+    "memo": "留学世界(付费频道),留学世界 5元 月",
+    "code": "liuxueshijie",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/56/066/8147/1355814706656.png"
+  },
+  {
+    "name": "英语辅导",
+    "memo": "英语辅导(付费频道),英语辅导($),英语辅导 8元 月,英语辅导($)",
+    "code": "yingyufudao",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/00/865/8203/1355820386500.png"
+  },
+  {
+    "name": "中视购物",
+    "memo": "",
+    "code": "zhongshigouwu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/42/004/7374/1355737400442.png"
+  },
+  {
+    "name": "老年福",
+    "memo": "老年福（付费）,老年福($),老年福-付费",
+    "code": "laonianfu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/12/929/8112/1355811292912.png"
+  },
+  {
+    "name": "梨园",
+    "memo": "梨 园(付费),梨 园,梨园(付费频道),梨园频道(付费频道),梨园($),梨园 10元 月,梨园($)",
+    "code": "liyuan",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/44/212/8119/1355811921244.png"
+  },
+  {
+    "name": "环球奇观",
+    "memo": "环球奇观(付费频道),环球奇观($)",
+    "code": "huanqiuqiguan",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/08/935/6428/1376642893508.png"
+  },
+  {
+    "name": "游戏竞技",
+    "memo": "游戏竞技(付费频道),游戏竞技($),游戏竞技 5元 月,游戏竞技($),GTV游戏竞技",
+    "code": "youxijingji",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/04/259/8125/1355812525904.png"
+  },
+  {
+    "name": "先锋纪录",
+    "memo": "先锋纪录(付费频道),先锋纪录($),先锋纪录 10元 月,先锋纪录($)",
+    "code": "xianfengjilu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/59/154/8127/1355812715459.png"
+  },
+  {
+    "name": "发现之旅",
+    "memo": "发现之旅(付费频道),发现之旅($),发现之旅-付费,发现之旅",
+    "code": "faxianzhilv",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/44/392/8230/1400823039244.png"
+  },
+  {
+    "name": "中国气象",
+    "memo": "中国气象（付费）,中国气象频道",
+    "code": "zhongguoqixiang",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/65/654/8158/1355815865465.png"
+  },
+  {
+    "name": "快乐宠物",
+    "memo": "快乐宠物-付费,快乐宠物 5元 月,快乐宠物",
+    "code": "kuailechongwu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/75/835/8164/1355816483575.png"
+  },
+  {
+    "name": "收藏天下",
+    "memo": "收藏天下(付费频道),收藏天下($),收藏天下 8元 月",
+    "code": "shoucangtianxia",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/32/561/8184/1355818456132.png"
+  },
+  {
+    "name": "CHC家庭影院",
+    "memo": "家庭影院(付费频道),家庭影院($)",
+    "code": "chcjiatingyingyuan",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/83/213/8248/1355824821383.png"
+  },
+  {
+    "name": "CHC动作电影",
+    "memo": "动作电影(付费频道),动作电影($)",
+    "code": "chcdongzuody",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/53/611/8251/1355825161153.png"
+  },
+  {
+    "name": "中华美食",
+    "memo": "中华美食(付费频道),中华美食($),中华美食频道",
+    "code": "zhonghuameishi",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/74/011/7456/1400745601174.png"
+  },
+  {
+    "name": "先锋乒羽",
+    "memo": "先锋乒羽(付费频道),先锋乒羽($),先锋乒羽 中国移动专享,乒羽频道,乒羽频道,先锋乒羽",
+    "code": "xianfengpingyu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/81/477/8220/1355822047781.png"
+  },
+  {
+    "name": "DOXTV音像世界",
+    "memo": "DOXTV",
+    "code": "doxtvyinxiangsj",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/39/329/8154/1355815432939.png"
+  },
+  {
+    "name": "时代美食",
+    "memo": "时代美食(付费频道),时代美食（付费）,时代美食 4元 月",
+    "code": "shidaimeishi",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/81/132/8108/1355810813281.png"
+  },
+  {
+    "name": "欧洲足球",
+    "memo": "欧洲足球($)",
+    "code": "ouzhouzuqiu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/45/093/6449/1376644909345.png"
+  },
+  {
+    "name": "环球旅游",
+    "memo": "环球旅游($)",
+    "code": "huanqiulvyou",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/68/358/7552/1400755235868.png"
+  },
+  {
+    "name": "四海钓鱼",
+    "memo": "四海钓鱼($),四海钓鱼 中国移动专享,四海钓鱼-付费,四海钓鱼",
+    "code": "sihaidiaoyu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/84/727/8162/1355816272784.png"
+  },
+  {
+    "name": "车迷",
+    "memo": "车迷频道(付费频道),车迷频道($),车迷频道 4元 月,车迷频道",
+    "code": "chemi",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/00/562/8166/1355816656200.png"
+  },
+  {
+    "name": "优优宝贝",
+    "memo": "优优宝贝(付费频道),优优宝贝 10元 月,优优宝贝",
+    "code": "youyoubaobei",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/15/148/8195/1355819514815.png"
+  },
+  {
+    "name": "中央远教一套",
+    "memo": "",
+    "code": "zhongyangyuanjiao1t",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "中央远教二套",
+    "memo": "",
+    "code": "zhongyangyuanjiao2t",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "中央远教三套",
+    "memo": "中央3",
+    "code": "zhongyangyuanjiao3t",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "中央远教四套",
+    "memo": "",
+    "code": "zhongyangyuanjiao4t",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "优购物",
+    "memo": "",
+    "code": "yougouwu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/20/175/7456/1400745617520.png"
+  },
+  {
+    "name": "江苏远教一套",
+    "memo": "",
+    "code": "jiangsuyuanjiao1t",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "SITV新视觉",
+    "memo": "新视觉",
+    "code": "SITVxinshijue",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "南京信息",
+    "memo": "",
+    "code": "nanjingxinxi",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/63/266/7637/1358763726663.png"
+  },
+  {
+    "name": "好享购物",
+    "memo": "好享购2",
+    "code": "haoxianggouwu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/77/576/8947/1355894757677.png"
+  },
+  {
+    "name": "时代家居",
+    "memo": "",
+    "code": "szpd-shidaijiaju",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/20/462/4718/1376471846220.png"
+  },
+  {
+    "name": "高清探索栏目",
+    "memo": "",
+    "code": "gqtansuolm",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "天华高清体育",
+    "memo": "",
+    "code": "thgqtiyu",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "中数传媒DV生活",
+    "memo": "DV生活",
+    "code": "zscm-dvsh",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "乌鲁木齐维语频道",
+    "memo": "乌鲁木齐-2",
+    "code": "wlmqweiyu",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "天华高清体育(全国)",
+    "memo": "",
+    "code": "thgqtiyuqg",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "天华高清影视",
+    "memo": "天华高清影院",
+    "code": "thgqyingshi",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "天华高清影视(全国)",
+    "memo": "",
+    "code": "thgqyingshiqg",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "天华高清探索",
+    "memo": "",
+    "code": "thgqtansuo",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "天华高清探索(全国)",
+    "memo": "",
+    "code": "thgqtansuoqg",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "天华高清粤语",
+    "memo": "",
+    "code": "thgqyueyu",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "天华高清综艺",
+    "memo": "天华高清综合",
+    "code": "thgqzongyi",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "天华高清综艺(全国)",
+    "memo": "",
+    "code": "thgqzongyiqg",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "中数传媒汽摩频道",
+    "memo": "汽摩,汽摩 5元 月",
+    "code": "zscmqimo",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/76/326/5525/1376552532676.png"
+  },
+  {
+    "name": "新科动漫",
+    "memo": "",
+    "code": "cctv-xinkedongman",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/80/397/4719/1376471939780.png"
+  },
+  {
+    "name": "现代女性",
+    "memo": "",
+    "code": "xiandainvxing",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/76/669/4719/1376471966976.png"
+  },
+  {
+    "name": "ESPN",
+    "memo": "NOW宽频频道-ESPN,测试ESPN",
+    "code": "now-espn",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/23/947/4713/1376471394723.png"
+  },
+  {
+    "name": "CCTV中学生",
+    "memo": "",
+    "code": "cctv-zhongxuesheng",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/21/521/4714/1376471452121.png"
+  },
+  {
+    "name": "新视觉-旅游",
+    "memo": "",
+    "code": "sitv-travel",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "女性时尚",
+    "memo": "",
+    "code": "cctv-nvxingshishang",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/73/418/1873/1406187341873.png"
+  },
+  {
+    "name": "老故事",
+    "memo": "CCTV老故事",
+    "code": "cctv-laogushi",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/36/363/8230/1400823036336.png"
+  },
+  {
+    "name": "读书频道",
+    "memo": "",
+    "code": "szpd-dushu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/03/151/4718/1376471815103.png"
+  },
+  {
+    "name": "碟市",
+    "memo": "",
+    "code": "szpd-dieshi",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/97/855/4717/1376471785597.png"
+  },
+  {
+    "name": "城市建设",
+    "memo": "",
+    "code": "zscm-chegnshijianshe",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/21/588/4717/1376471758821.png"
+  },
+  {
+    "name": "彩民在线",
+    "memo": "彩民在线 4元 月",
+    "code": "zscm-caiminzaixian",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/29/339/4717/1376471733929.png"
+  },
+  {
+    "name": "宝贝家",
+    "memo": "",
+    "code": "zscm-baobeijia",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/99/814/4716/1376471681499.png"
+  },
+  {
+    "name": "百姓健康",
+    "memo": "百姓健康 8元 月",
+    "code": "zscm-beixingjiankang",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/32/378/4716/1376471637832.png"
+  },
+  {
+    "name": "新视觉-纪实 ",
+    "memo": "",
+    "code": "sitv-jishi",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/52/449/4715/1376471544952.png"
+  },
+  {
+    "name": "新视觉-体育",
+    "memo": "新视觉体育（NBA）,新视觉体育高清",
+    "code": "sitv-sports",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/22/165/4715/1376471516522.png"
+  },
+  {
+    "name": "新视觉-娱乐",
+    "memo": "",
+    "code": "sitv-yule",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/86/768/4714/1376471476886.png"
+  },
+  {
+    "name": "新视觉-电影 ",
+    "memo": "",
+    "code": "sitv-movie",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "新视觉-时尚",
+    "memo": "",
+    "code": "sitv-fashion",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "新视觉-少儿",
+    "memo": "",
+    "code": "sitv-baby",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "新视觉-游戏",
+    "memo": "新视觉游戏",
+    "code": "sitv-game",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "新视觉-武术世界",
+    "memo": "武术世界 8元 月",
+    "code": "sitv-wushushijie",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "高清影视栏目",
+    "memo": "",
+    "code": "gqyingshilm",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "快乐垂钓",
+    "memo": "",
+    "code": "kuailechuidiao",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/09/721/3832/1402383272109.png"
+  },
+  {
+    "name": "高清体育栏目",
+    "memo": "",
+    "code": "gqtiyulm",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "高清综艺栏目",
+    "memo": "",
+    "code": "gqzongyilm",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "中博高清剧场",
+    "memo": "",
+    "code": "zhongbogaoqingjc",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "中博高清时尚",
+    "memo": "中博时尚高清",
+    "code": "zhongbogaoqingss",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "中博高清影院",
+    "memo": "中博影院高清,中博高清影院",
+    "code": "zhongbogaoqingyy",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "中博高清综艺",
+    "memo": "中博综艺高清",
+    "code": "zhongbogaoqingzy",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "高清欧美院线",
+    "memo": "",
+    "code": "gqoumeiyuanxian",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "高清探索记录",
+    "memo": "",
+    "code": "gqtansuojilu",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "高清风尚音乐",
+    "memo": "风尚音乐",
+    "code": "gqfengshangyinyue",
+    "type": "hd",
+    "logo": ""
+  },
+  {
+    "name": "家有购物",
+    "memo": "家有购物",
+    "code": "jiayougouwu",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "新视觉影视",
+    "memo": "",
+    "code": "xinshijueyingshi",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "澳亚卫视",
+    "memo": "澳亚卫视",
+    "code": "aoyaweishi",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/90/062/7404/1398740406290.png"
+  },
+  {
+    "name": "DOX韩流",
+    "memo": "DOX·韩流,DOX韩流高清",
+    "code": "hanliu",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "篮球频道",
+    "memo": "篮球频道",
+    "code": "lanqiu",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "三佳购物",
+    "memo": "",
+    "code": "sanjiagouwu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/70/123/7456/1400745612370.png"
+  },
+  {
+    "name": "电子体育",
+    "memo": "电子体育 5元 月",
+    "code": "dianzitiyu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/29/376/8305/1400830537629.png"
+  },
+  {
+    "name": "杂技世界",
+    "memo": "河北杂技",
+    "code": "zajishijie",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/14/437/0530/1400053043714.png"
+  },
+  {
+    "name": "RTP",
+    "memo": "",
+    "code": "RTP",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "KBSWorld",
+    "memo": "",
+    "code": "KBSWorld",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "NHK",
+    "memo": "NHK",
+    "code": "NHK",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "华娱卫视",
+    "memo": "华娱卫视(试播),测试华娱卫视",
+    "code": "huayu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/88/217/9581/1399958121788.png"
+  },
+  {
+    "name": "HBO",
+    "memo": "测试HBO",
+    "code": "HBO,HBO",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/85/232/9582/1399958223285.png"
+  },
+  {
+    "name": "家庭理财",
+    "memo": "",
+    "code": "jaitinglicai",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/35/672/8307/1400830767235.png"
+  },
+  {
+    "name": "延边卫视",
+    "memo": "延边卫视",
+    "code": "yanbianweishi",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/10/477/8305/1400830547710.png"
+  },
+  {
+    "name": "职业指南",
+    "memo": "",
+    "code": "zhiyezhinan",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/68/321/8305/1400830532168.png"
+  },
+  {
+    "name": "财富天下",
+    "memo": "财富天下（付费）",
+    "code": "caifutianxia",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/17/357/8305/1400830535717.png"
+  },
+  {
+    "name": "人物",
+    "memo": "安徽电视台人物频道",
+    "code": "renwu",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/71/459/8305/1400830545971.png"
+  },
+  {
+    "name": "证券资讯",
+    "memo": "CCTV证券资讯",
+    "code": "zhengquanzixun",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/79/787/8233/1400823378779.png"
+  },
+  {
+    "name": "时代出行",
+    "memo": "时代出行（付费）,时代出行（鼎视传媒）",
+    "code": "shidaichuxing",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "时代风尚",
+    "memo": "时代风尚（付费），时代风尚（鼎视传媒）,时代风尚 4元 月",
+    "code": "shidaifengshang",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "广东少儿",
+    "memo": "广东电视台少儿频道",
+    "code": "guangdongshaoer",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "嘉丽购",
+    "memo": "",
+    "code": "jialigou",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "高尔夫",
+    "memo": "高尔夫（付费）",
+    "code": "gaoerfu",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "家政",
+    "memo": "家政（付费）",
+    "code": "jiazheng",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "央广健康",
+    "memo": "央广健康,央广健康",
+    "code": "yangguangjiankang",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "DOX院线",
+    "memo": "DOX院线（亚洲）",
+    "code": "yuanxian",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "DOX·怡家",
+    "memo": "DOX·怡家,DOX怡家高清",
+    "code": "yijia",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "DOX英伦",
+    "memo": "DOX·英伦,DOX英伦高清",
+    "code": "yinglun",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "中央国际",
+    "memo": "中央国际频道",
+    "code": "zhongyangguoji",
+    "type": "cctv",
+    "logo": ""
+  },
+  {
+    "name": "NOWⅠ",
+    "memo": "",
+    "code": "now1",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "时尚生活高清",
+    "memo": "时尚生活高清频道",
+    "code": "shishangshenghuogq",
+    "type": "tv,hd",
+    "logo": ""
+  },
+  {
+    "name": "国家地理高清",
+    "memo": "国家地理高清频道",
+    "code": "guojiadiligq",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "NBA篮球高清频道",
+    "memo": "",
+    "code": "nbalanqiugq",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "国家地理野生高清频道",
+    "memo": "",
+    "code": "guojiadilyeshenggq",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "V音乐台",
+    "memo": "Channel V,Channel[V]",
+    "code": "vyingyuetai",
+    "type": "pay",
+    "logo": "http://image.epg.huan.tv/04/688/4941/1419494168804.png"
+  },
+  {
+    "name": "卫视体育台",
+    "memo": "",
+    "code": "weishitiyue",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "发现探索台",
+    "memo": "",
+    "code": "faxiantansuo",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "天映频道",
+    "memo": "",
+    "code": "tianying",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "亚洲新闻台",
+    "memo": "",
+    "code": "yazhouxinwen",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "AXN",
+    "memo": "",
+    "code": "axn",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "CINEMAX",
+    "memo": "",
+    "code": "cinemax",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "全美运动频道",
+    "memo": "ASN",
+    "code": "quanmeiyundong",
+    "type": "pay",
+    "logo": ""
+  },
+  {
+    "name": "HBO家庭影院",
+    "memo": "",
+    "code": "hbojiatingyingyuan",
+    "type": "pay",
+    "logo": ""
+  }
+]

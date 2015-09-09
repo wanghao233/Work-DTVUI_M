@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>  
+<root> 
+     <version id="5">
+		<code>当前版本：MSTAR628_MSTAR628_HW4.0_MW2.0_141006 日期：2014-10-21 PM </code>            
+		<desc>
+	  	 1、BUGLIST 处理；
+	  	 2、本机按键菜单复用功能处理；
+	  	 3、优化返回键处理流程；
+	  	 4、优化快速列表节目名和图标处理；
+		</desc>
+    </version>  
+     <version id="4">
+		<code>当前版本：MSTAR628_MSTAR628_HW4.0_MW2.0_141005 日期：2014-10-20 PM </code>            
+		<desc>
+	  	 1、BUGLIST 处理；
+	  	 2、本机按键菜单复用功能处理；
+		</desc>
+    </version>   
+    <version id="3">
+		<code>版本：MSTAR628_MSTAR628_HW4.0_MW2.0_141004 日期：2014-10-17 PM </code>            
+		<desc>
+	  	 1、BUGLIST 处理；
+		</desc>
+    </version>   
+<version id="2">
+		<code>版本：MSTAR628_MSTAR628_HW4.0_MW2.0_141002 日期：2014-10-11 PM </code>            
+		<desc>
+	  	 1、新增快速换台、EPG;
+	  	 2、其他代码优化;
+		</desc>
+    </version>     
+    
+    <version id="1">
+		<code>版本：MSTAR628_MSTAR628_HW4.0_MW2.0_140703 日期：2014-07-24 AM </code>            
+		<desc>
+	  	 1、代码优化;
+		</desc>
+    </version> 
+  
+  
+</root>
+

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="vch_sportopt_array">
+    <item>Off</item>
+    <item>Low</item>
+    <item>Middle</item>
+    <item>High</item>
+  </string-array>
+</resources>

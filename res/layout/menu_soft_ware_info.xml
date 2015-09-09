@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/upgrade_detect_dialog"
+	android:layout_width="match_parent" 
+	android:layout_height="match_parent" >
+  <LinearLayout
+        android:id="@+id/upgrade_dialog_center"
+        android:layout_width="match_parent"
+        android:layout_height="500dip"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal" android:orientation="vertical">
+	
+	<com.changhong.tvos.dtv.util.ViewTipInfo
+	  	android:id="@+id/dtv_soft_ware_info"
+	  	android:layout_width="660dip"
+        android:layout_height="400dip"
+		android:background="@drawable/menu_scan_auto"/>
+
+	<LinearLayout android:orientation="horizontal"
+		android:gravity="center_horizontal" android:layout_below="@+id/dtv_soft_ware_info"
+		android:layout_marginTop="10dip" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<Button android:id="@+id/dtv_soft_ware_info_yes" android:textSize="20px"
+			android:textColor="@android:color/white" android:text="@string/sure"
+			android:layout_width="134dip" android:layout_height="54dip" android:gravity="center"
+			android:layout_marginRight="2dip" android:background="@drawable/menu_dialog_button" />
+	</LinearLayout>
+	
+	</LinearLayout>
+        
+</RelativeLayout>

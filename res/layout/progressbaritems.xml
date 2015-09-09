@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/progressbarmain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/progressbarbg"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="42dp"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/progressbar_title_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:singleLine="true"
+            android:textColor="@color/vch_text_title_Color"
+            android:textSize="21sp" />
+        <TextView
+            android:id="@+id/progressbar_title_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:alpha="0.8"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/vch_text_title_Color"
+            android:textSize="27sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/progressbar_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical" >
+        <com.vwidget.vview.SScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:scrollbars="none" >
+            <LinearLayout
+                android:id="@+id/progressbar_item"
+                android:layout_width="fill_parent"
+                android:layout_height="510dp"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </com.vwidget.vview.SScrollView>
+    </LinearLayout>
+</LinearLayout>

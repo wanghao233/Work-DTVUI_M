@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string-array name="menu_scan_mode">
+    <item>Auto search</item>
+    <item>Manual search</item>
+    <item>Full-band search</item>
+  </string-array>
+  <string-array name="menu_scan_modulation_dmbt">
+    <item>4_NR</item>
+    <item>4</item>
+    <item>16</item>
+    <item>32</item>
+    <item>64</item>
+  </string-array>
+  <string-array name="menu_scan_modulation">
+    <item>4</item>
+    <item>8</item>
+    <item>16</item>
+    <item>32</item>
+    <item>64</item>
+    <item>128</item>
+    <item>256</item>
+    <item>512</item>
+    <item>1024</item>
+  </string-array>
+  <string-array name="menu_scan_symbol_rate">
+    <item>6875</item>
+    <item>6900</item>
+  </string-array>
+  <string-array name="menu_scan_demod_type">
+    <item>DVB-C</item>
+    <item>DMBT-TH</item>
+  </string-array>
+  <string-array name="menu_scan_carrier_mode">
+    <item>single carrier</item>
+    <item>multi carrier</item>
+  </string-array>
+  <string-array name="menu_scan_ldpc_rate">
+    <item>LDPC 0.4</item>
+    <item>LDPC 0.6</item>
+    <item>LDPC 0.8</item>
+  </string-array>
+  <string-array name="menu_scan_frame_header">
+    <item>PN945</item>
+    <item>PN595</item>
+    <item>PN420</item>
+  </string-array>
+  <string-array name="menu_scan_inter_leaver_mod">
+    <item>M720</item>
+    <item>M240</item>
+  </string-array>
+  <string-array name="menu_audio_mode">
+    <item>Stereo</item>
+    <item>Left</item>
+    <item>Right</item>
+    <item>Mono</item>
+    <item>Auto</item>
+  </string-array>
+  <string-array name="menu_audio_track">
+    <item>English </item>
+    <item>China</item>
+    <item>Traditional Chinese</item>
+    <item>Hindi</item>
+    <item>Bengali</item>
+    <item>Germany</item>
+    <item>French </item>
+    <item>Russian</item>
+    <item>Hindi</item>
+    <item>Germany</item>
+    <item>Italian</item>
+    <item>Español</item>
+    <item>Polski</item>
+    <item>China</item>
+  </string-array>
+  <string-array name="menu_caption_language">
+    <item>English</item>
+    <item>Simplified China</item>
+  </string-array>
+  <string-array name="week_7_days">
+    <item>Sunday</item>
+    <item>Monday</item>
+    <item>Tuesday</item>
+    <item>Wednesday</item>
+    <item>Thursday</item>
+    <item>Friday</item>
+    <item>Saturday</item>
+  </string-array>
+  <string-array name="str_dtv_usrset_newchannelmode">
+    <item>Black screen</item>
+    <item>Static frame</item>
+  </string-array>
+  <string-array name="str_dtv_usrset_fav_switch">
+    <item>On</item>
+    <item>Off</item>
+  </string-array>
+  <string-array name="str_dtv_hotel_music_modes">
+    <item>Single channel</item>
+    <item>Multi channel</item>
+  </string-array>
+  <string-array name="str_scene_modes">
+    <item>Standard</item>
+    <item>Theater</item>
+    <item>UMAX</item>
+    <item>Reading</item>
+    <item>MV</item>
+    <item>Sports</item>
+    <item>Games</item>
+    <item>Custom</item>
+  </string-array>
+  <string-array name="str_signal_input_mode">
+    <item>DVBC</item>
+    <item>TH DTMB</item>
+  </string-array>
+  <string-array name="menu_scan_modulation_str">
+    <item>4QAM</item>
+    <item>8QAM</item>
+    <item>16QAM</item>
+    <item>32QAM</item>
+    <item>64QAM</item>
+    <item>128QAM</item>
+    <item>256QAM</item>
+    <item>512QAM</item>
+    <item>1024QAM</item>
+  </string-array>
+  <string-array name="str_dtv_3d_modes">
+    <item>3D Off</item>
+    <item>Left and right</item>
+    <item>Up and down</item>
+    <item>2D->3D</item>
+  </string-array>
+    
+</resources>

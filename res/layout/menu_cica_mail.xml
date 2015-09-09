@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+    <LinearLayout
+        android:id="@+id/dtv_cica_mail_bg"
+        android:layout_width="390dip"
+        android:layout_height="139dip"
+        android:background="@drawable/warning_bg1"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:id="@+id/dtv_cica_mail_info_bg"
+            android:layout_width="match_parent"
+            android:layout_height="70dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+            <ImageView
+                android:id="@+id/dtv_cica_mail_images"
+                android:layout_width="32dip"
+                android:layout_height="32dip"
+                android:src="@drawable/dtv_cica_mail1" />
+            <TextView
+                android:id="@+id/dtv_cica_mail_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dtv_cica_mail"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="70dip"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+                <Button
+                    android:id="@+id/dtv_cica_mail_ok"
+                    android:layout_width="134dip"
+                    android:layout_height="54dip"
+                    android:background="@drawable/dtv_cica_mail_selector"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/dtv_cica_mail_ok"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+                <Button
+                    android:id="@+id/dtv_cica_mail_cancle"
+                    android:layout_width="134dip"
+                    android:layout_height="54dip"
+                    android:background="@drawable/dtv_cica_mail_selector"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/dtv_cica_mail_cancle"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

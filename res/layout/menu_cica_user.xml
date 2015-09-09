@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="826dip"
+    android:layout_height="476dip"
+    android:alpha="70"
+    android:background="@drawable/dtv_cica_menu_bg1"
+    android:orientation="vertical"
+    android:paddingBottom="12dip"
+    android:paddingLeft="16dip"
+    android:paddingRight="16dip"
+    android:paddingTop="12dip" >
+
+    
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="78dip" 
+        android:orientation="vertical"
+        android:gravity="center">
+    
+    <TextView
+        android:id="@+id/id_ca_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/dtv_caci_system"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/id_ca_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/noText"
+        android:textColor="@color/black"
+        android:textSize="20sp" >
+    </TextView>
+	</LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="321dip" >
+
+        <!-- alpha00 -->
+        <com.changhong.tvos.dtv.util.SimpleListView
+            android:id="@+id/id_operater_listview"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:divider="@drawable/dtv_cica_split"
+            android:dividerHeight="3dip"
+            android:listSelector="@drawable/dtv_cica_item_list_selector" >
+        </com.changhong.tvos.dtv.util.SimpleListView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/dtv_cica_spilt_v" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="652dip"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.changhong.tvos.dtv.util.SimpleListView
+                android:id="@+id/id_title_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:background="@drawable/dark_gray" 
+                 android:paddingRight="2dip"
+                android:layout_marginRight="5dip">
+            </com.changhong.tvos.dtv.util.SimpleListView>
+
+            <!-- alpha00 -->
+            <com.changhong.tvos.dtv.util.SimpleListView
+                android:id="@+id/id_ca_main_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadeScrollbars="true"
+                android:listSelector="@drawable/dtv_cica_item_list_selector"
+                android:paddingRight="2dip"
+                android:layout_marginRight="5dip">
+                <!-- 修改纯色背景为边�?by yangliu -->
+            </com.changhong.tvos.dtv.util.SimpleListView>
+        </LinearLayout>
+    </LinearLayout>
+
+   <LinearLayout
+        android:id="@+id/mBgHelp"
+        android:layout_width="match_parent"
+        android:layout_height="58dip"
+        android:layout_marginLeft="150dip"
+        android:layout_marginRight="150dip"
+        android:gravity="center_vertical"
+        android:weightSum="4" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/help1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/main_help_up_down"
+                android:gravity="center"
+                android:text="@string/helpinfo_select"
+                android:textColor="#000000"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/help2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"               
+                android:drawableLeft="@drawable/main_help_left_right"
+                android:gravity="center"
+                android:text="@string/helpinfo_adjust"
+                android:textColor="#000000"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/help3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                
+                android:drawableLeft="@drawable/main_help_sure"
+                android:gravity="center"
+                android:text="@string/helpinfo_ok"
+                android:textColor="#000000"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/help4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"               
+                android:drawableLeft="@drawable/main_help_back"
+                android:gravity="center"
+                android:text="@string/helpinfo_return"
+                android:textColor="#000000"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

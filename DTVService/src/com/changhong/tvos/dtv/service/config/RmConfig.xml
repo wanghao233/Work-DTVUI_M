@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resources>
+ <Resource>
+   <ResouceID>0</ResouceID>
+   <ResouceType>0</ResouceType>
+   <ResouceTVOS>1</ResouceTVOS>
+ </Resource >
+ <Resource>
+   <ResouceID>0</ResouceID>
+   <ResouceType>1</ResouceType>
+   <ResouceTVOS>1</ResouceTVOS>
+ </Resource>
+ <Resource>
+   <ResouceID>0</ResouceID>
+   <ResouceType>2</ResouceType>
+   <ResouceTVOS>1</ResouceTVOS>
+ </Resource>
+</Resources>
